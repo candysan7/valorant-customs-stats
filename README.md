@@ -10,7 +10,7 @@
 | `winrate-over-time.csv`            | Individual win-rate in two-week blocks, starting on October 3rd, 2022          |
 | `cumulative-winrate-over-time.csv` | Cumuluative individual win-rate every two weeks, starting on October 3rd, 2022 |
 
-
+## Documentation
 ### Why Power BI over Tableau? 
 - Tableau was not able to display string and integer values on the same table 
 - Power BI also allows for *free* desktop version 
