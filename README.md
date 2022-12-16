@@ -1,3 +1,11 @@
-# valorant-customs-stats
+# Valorant Customs Stats
 
-<iframe title="december - Page 1" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZjlmMTFjNTYtMGE1Ni00M2MzLTgzN2MtNzU4NDljMjY3ZjM2IiwidCI6IjlkZGFhY2ExLTM4OWYtNGNiMS1hMTEzLTA4MWJlNmNjMjVmYyIsImMiOjZ9" frameborder="0" allowFullScreen="true"></iframe>
+| Dataset                            | Description                                                                    |
+| :--------------------------------- | :----------------------------------------------------------------------------- |
+| `data.csv`                         | Raw data                                                                       |
+| `individual.csv`                   | Individual win-rate and fraction of games won                                  |
+| `teammate-synergy.csv`             | Win-rate when with a specific player on your team                              |
+| `easiest-matchups.csv`             | Win-rate when a specific player is on the opposite team                        |
+| `maps.csv`                         | Map playtime                                                                   |
+| `winrate-over-time.csv`            | Individual win-rate in two-week blocks, starting on October 3rd, 2022          |
+| `cumulative-winrate-over-time.csv` | Cumuluative individual win-rate every two weeks, starting on October 3rd, 2022 |
