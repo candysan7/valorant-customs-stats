@@ -25,7 +25,7 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 ![Architecture](https://github.com/candysan7/valorant-customs-stats/blob/main/images/architecture4.png)
 
 ### Future improvements
-- Automate "Last Updated" text
+~~- Automate "Last Updated" text
 - Build discord bot or command to return dashboard link
 - Convert lifetime average to 60-day moving average
 - Convert Teammate Synergy and Matchup tables to bar charts with drop-down selector for player, fraction in hover
