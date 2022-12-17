@@ -22,7 +22,7 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 
 ### Architecture & Design 
 
-![Architecture](https://github.com/candysan7/valorant-customs-stats/blob/main/images/architecture.png)
+![Architecture](https://github.com/candysan7/valorant-customs-stats/blob/main/images/architecture4.png)
 
 ### Future improvements
 - Automate "Last Updated" text
