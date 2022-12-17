@@ -19,9 +19,6 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 | `cumulative-winrate-over-time.csv` | Cumuluative individual win-rate every two weeks, starting on October 3rd, 2022 |
 
 ## Documentation
-### Why Power BI over Tableau? 
-- Tableau was not able to display string and integer values on the same table 
-- Power BI also allows for **free** desktop version 
 
 ### Architecture & Design 
 
@@ -32,10 +29,14 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 - Add version number to dashboard
 - Build discord bot or command to return dashboard link
 
+### Why Power BI over Tableau? 
+- Tableau was not able to display string and integer values on the same table 
+- Power BI also allows for **free** desktop version 
+
 ### Credits
 
-| Contributor           | Role                    |
-| :---------------------| :-----------------------|
-| **Lindsey Wong**      | Back-end Developer      |
-| **Andy Xiang**        | Front-end Developer     |
-| **Steven Truong**     | Product Manager         |
+| Contributor              | Role                    |
+| :------------------------| :-----------------------|
+| **Lindsey Wong**         | Back-end Developer      |
+| **Andy Xiang**           | Front-end Developer     |
+| **Steven Truong**        | Product Manager         |
