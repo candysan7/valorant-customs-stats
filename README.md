@@ -1,5 +1,5 @@
 # Valorant Customs Stats
-Dashboard statistics tracking from DARWIN discord custom games. Using Power BI and VBA to automate data cleaning and visualization. 
+Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and VBA to automate data cleaning and visualization. 
 
 ![Dashboard](https://github.com/candysan7/valorant-customs-stats/blob/main/images/version1.1.png)
 
@@ -23,4 +23,7 @@ Dashboard statistics tracking from DARWIN discord custom games. Using Power BI a
 - Tableau was not able to display string and integer values on the same table 
 - Power BI also allows for **free** desktop version 
 
-#### Architecture
+### Future improvements
+- Automate "Last Updated" text
+- Add version number to dashboard
+- Build discord bot or command to return dashboard link
