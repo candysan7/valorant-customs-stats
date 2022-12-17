@@ -34,7 +34,6 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 
 ### Credits
 
-## Data 
 | Contributor           | Role                    |
 | :---------------------| :-----------------------|
 | **Lindsey Wong**      | Back-end Developer      |
