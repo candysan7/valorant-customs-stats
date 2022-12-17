@@ -23,6 +23,10 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 - Tableau was not able to display string and integer values on the same table 
 - Power BI also allows for **free** desktop version 
 
+### Architecture & Design 
+
+![Architecture](https://github.com/candysan7/valorant-customs-stats/blob/main/images/architecture.png)
+
 ### Future improvements
 - Automate "Last Updated" text
 - Add version number to dashboard
