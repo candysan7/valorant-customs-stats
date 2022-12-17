@@ -27,6 +27,7 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 ### Future improvements
 - Automate "Last Updated" text
 - Build discord bot or command to return dashboard link
+- Convert cumulative average to 60-day moving average
 
 ### Why Power BI over Tableau? 
 - Tableau was not able to display string and integer values on the same table 
