@@ -31,3 +31,12 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 - Automate "Last Updated" text
 - Add version number to dashboard
 - Build discord bot or command to return dashboard link
+
+### Credits
+
+## Data 
+| Contributor           | Role                    |
+| :---------------------| :-----------------------|
+| **Lindsey Wong**      | Back-end Developer      |
+| **Andy Xiang**        | Front-end Developer     |
+| **Steven Truong**     | Product Manager         |
