@@ -2,7 +2,6 @@
 Dashboard statistics tracking from DARWIN discord custom games. Using Power BI and VBA to automate data cleaning and visualization. 
 
 ![Dashboard](https://github.com/candysan7/valorant-customs-stats/blob/main/images/version1.1.png)
-*Version 1.1*
 
 ## Power BI Dashboard Report 
 
@@ -23,3 +22,5 @@ Dashboard statistics tracking from DARWIN discord custom games. Using Power BI a
 ### Why Power BI over Tableau? 
 - Tableau was not able to display string and integer values on the same table 
 - Power BI also allows for **free** desktop version 
+
+#### Architecture
