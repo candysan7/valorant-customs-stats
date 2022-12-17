@@ -1,5 +1,12 @@
 # Valorant Customs Stats
+Dashboard statistics tracking from DARWIN discord custom games. Using Power BI and VBA to automate data cleaning and visualization. 
+![Dashboard](https://github.com/candysan7/valorant-customs-stats/blob/main/images/version1.1.png)
 
+## Power BI Dashboard Report 
+
+[Click to see Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNGUzNzMyOTctNTg2OC00YTEyLThmNjktOTJiOTE3ZGM0NjI3IiwidCI6IjlkZGFhY2ExLTM4OWYtNGNiMS1hMTEzLTA4MWJlNmNjMjVmYyIsImMiOjZ9)
+
+## Data 
 | Dataset                            | Description                                                                    |
 | :--------------------------------- | :----------------------------------------------------------------------------- |
 | `data.csv`                         | Raw data                                                                       |
@@ -14,6 +21,3 @@
 ### Why Power BI over Tableau? 
 - Tableau was not able to display string and integer values on the same table 
 - Power BI also allows for *free* desktop version 
-
-### Improvement Ideas
-- Automate "Last Updated <date>" text on Power BI dashboard
