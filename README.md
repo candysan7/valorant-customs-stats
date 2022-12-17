@@ -27,7 +27,12 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 ### Future improvements
 - Automate "Last Updated" text
 - Build discord bot or command to return dashboard link
-- Convert cumulative average to 60-day moving average
+- Convert lifetime average to 60-day moving average
+- Convert Teammate Synergy and Matchup tables to bar charts with drop-down selector for player, fraction in hover
+- (Evaluate) Convert Teammate Synergy and Matchup win rates to 60-day rate instead of lifetime rate
+- Add role selection rate chart
+- (Evaluate) Add web scraping using tracker.gg api
+- Add a version history to readme
 
 ### Why Power BI over Tableau? 
 - Tableau was not able to display string and integer values on the same table 
