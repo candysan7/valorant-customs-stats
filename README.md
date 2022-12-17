@@ -16,3 +16,4 @@
 - Power BI also allows for *free* desktop version 
 
 ### Improvement Ideas
+- Automate "Last Updated <date>" text on Power BI dashboard
