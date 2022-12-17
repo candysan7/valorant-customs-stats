@@ -33,6 +33,7 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 - Add role selection rate chart
 - (Evaluate) Add web scraping using tracker.gg api
 - Add a version history to readme
+- Add player win rate by role
 
 ### Why Power BI over Tableau? 
 - Tableau was not able to display string and integer values on the same table 
