@@ -26,4 +26,5 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 
 ### Future improvements
 - Automate "Last Updated" text
+- Add version number to dashboard
 - Build discord bot or command to return dashboard link
