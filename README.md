@@ -23,3 +23,6 @@ Dashboard statistics tracking from DARWIN discord custom games. Using Power BI a
 ### Why Power BI over Tableau? 
 - Tableau was not able to display string and integer values on the same table 
 - Power BI also allows for **free** desktop version 
+
+### Future improvements
+- Automate "Last Updated" text
