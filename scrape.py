@@ -6,7 +6,33 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-urls = []
+urls = ["https://tracker.gg/valorant/match/bf09a9fe-8f9f-41b5-bcbb-6b8301ab26d7?handle=aylindsay%230613",
+        "https://tracker.gg/valorant/match/e8380c75-fe6c-42d6-84f3-78d3f6f88fc4?handle=aylindsay%230613",
+        "https://tracker.gg/valorant/match/6c87a77f-488e-4a8a-a0ad-9aa0cd1b808a?handle=aylindsay%230613",
+        "https://tracker.gg/valorant/match/bef040b2-e3b3-42b3-8c6b-bf4af9e5c9d7?handle=aylindsay%230613"]
+
+username_to_name = {
+    "RhythmKing": "cade",
+    "Candysan": "andy",
+    "tangy": "tang",
+    "chushberry": "sophie",
+    "BigBoiB": "brandon",
+    "Sequential": "sequential",
+    "Selintt": "steve",
+    "aylindsay": "lindsey",
+
+    "ChzGorditaCrunch": "darwin",
+    "Mirabel Madrigal": "darwin",
+    "Jeff Probst": "darwin",
+
+    "brianwoohoo": "brian",
+    "bot001341": "josh",
+    "sun": "sun",
+    "Tyblerone": "yang",
+    "youngsmasher": "steven",
+    "SusTwins": "susi",
+    "danielscutiegf": "susu"
+}
 
 image_url_to_agent = {
     "https://titles.trackercdn.com/valorant-api/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/displayicon.png": "Harbor",
@@ -62,7 +88,7 @@ with open("./scrape.json", mode="w") as f:
             agent_image = row.find_element(
                 By.TAG_NAME, "img").get_attribute("src")
             stats = row.find_elements(By.CLASS_NAME, "value")
-            match["team_a" if i < 5 else "team_b"][name] = {
+            match["team_a" if i < 5 else "team_b"][username_to_name[name] if name in username_to_name.keys() else name] = {
                 "agent": image_url_to_agent[agent_image],
                 "acs": stats[0].text,
                 "kills": stats[1].text,
@@ -78,6 +104,6 @@ with open("./scrape.json", mode="w") as f:
             }
         matches.append(match)
     json.dump(matches, f, indent=2)
+    f.close()
 
 driver.close()
-f.close()
