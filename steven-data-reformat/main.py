@@ -108,6 +108,10 @@ if __name__ == "__main__":
                         / out_json[player_name][opponent_name][GAMES]
                     )
 
+        for player_name in out_json:
+            out_json[player_name] = sorted(
+                out_json[player_name].values(), key=lambda x: x[OPPONENT_NAME]
+            )
         json.dump(out_json, f, indent=2)
         f.close()
 
