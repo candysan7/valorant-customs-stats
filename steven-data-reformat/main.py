@@ -20,6 +20,7 @@ if __name__ == "__main__":
             | {WINRATE: None, WINS: 0, GAMES: 0}
             for player_name in player_names
         }
+
         for match in matches:
             for player_name in player_names:
                 player_entry = out_json[player_name]
@@ -51,10 +52,14 @@ if __name__ == "__main__":
         for match in matches:
             for player_name in filter_players(match.winning_players):
                 for teammate_name in filter_players(match.winning_players):
+                    if player_name == teammate_name:
+                        continue
                     out_json[player_name][teammate_name][WINS] += 1
                     out_json[player_name][teammate_name][GAMES] += 1
             for player_name in filter_players(match.losing_players):
                 for teammate_name in filter_players(match.losing_players):
+                    if player_name == teammate_name:
+                        continue
                     out_json[player_name][teammate_name][GAMES] += 1
         for player_name in out_json:
             for teammate_name in out_json[player_name]:
@@ -64,14 +69,11 @@ if __name__ == "__main__":
                         * out_json[player_name][teammate_name][WINS]
                         / out_json[player_name][teammate_name][GAMES]
                     )
-                if player_name == teammate_name:
-                    out_json[player_name][teammate_name] = {
-                        TEAMMATE_NAME: teammate_name,
-                        WINRATE: None,
-                        WINS: 0,
-                        GAMES: 0,
-                    }
 
+        for player_name in out_json:
+            out_json[player_name] = sorted(
+                out_json[player_name].values(), key=lambda x: x[TEAMMATE_NAME]
+            )
         json.dump(out_json, f, indent=2)
         f.close()
 
