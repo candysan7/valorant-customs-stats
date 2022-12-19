@@ -16,7 +16,8 @@ with open("./steven-data-reformat/data.json", mode="r") as f:
 if __name__ == "__main__":
     with open(os.path.join(output_dir, "individual.json"), mode="w") as f:
         out_json = {
-            player_name: {WINRATE: None, WINS: 0, GAMES: 0}
+            player_name: player_info[player_name].copy()
+            | {WINRATE: None, WINS: 0, GAMES: 0}
             for player_name in player_names
         }
         for match in matches:
@@ -58,7 +59,18 @@ if __name__ == "__main__":
                         * out_json[player_name][teammate_name][WINS]
                         / out_json[player_name][teammate_name][GAMES]
                     )
+                if player_name == teammate_name:
+                    out_json[player_name][teammate_name] = {
+                        WINRATE: None,
+                        WINS: 0,
+                        GAMES: 0,
+                    }
 
+        for player_name, player_data in out_json.items():
+            out_json[player_name] = [
+                {TEAMMATE_NAME: teammate_name} | player_data[teammate_name]
+                for teammate_name in player_data
+            ]
         json.dump(out_json, f, indent=2)
         f.close()
 
@@ -88,6 +100,11 @@ if __name__ == "__main__":
                         / out_json[player_name][opponent_name][GAMES]
                     )
 
+        for player_name, player_data in out_json.items():
+            out_json[player_name] = [
+                {OPPONENT_NAME: opponent_name} | player_data[opponent_name]
+                for opponent_name in player_data
+            ]
         json.dump(out_json, f, indent=2)
         f.close()
 

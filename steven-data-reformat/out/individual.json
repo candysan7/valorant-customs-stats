@@ -1,80 +1,128 @@
 {
   "andy": {
+    "name": "Andy",
+    "valorant_tag": "Candysan",
+    "discord_pic": "https://i.ibb.co/x5xzfYQ/disc-pic-andy-circle-250-v2.png",
     "winrate": 54,
     "wins": 22,
     "games": 41
   },
   "brandon": {
+    "name": "Brandon",
+    "valorant_tag": "BigBoiB",
+    "discord_pic": "TODO",
     "winrate": 33,
     "wins": 3,
     "games": 9
   },
   "brian": {
+    "name": "Brian",
+    "valorant_tag": "brianwoohoo",
+    "discord_pic": "TODO",
     "winrate": 40,
     "wins": 14,
     "games": 35
   },
   "cade": {
+    "name": "Cade",
+    "valorant_tag": "RhythmKing",
+    "discord_pic": "https://i.ibb.co/c2S6nRZ/disc-pic-cade-circle-250.png",
     "winrate": 46,
     "wins": 16,
     "games": 35
   },
   "darwin": {
+    "name": "Darwin",
+    "valorant_tag": "ChzGorditaCrunch",
+    "discord_pic": "https://i.ibb.co/jVR2542/disc-pic-darwin-circle-250.png",
     "winrate": 60,
     "wins": 27,
     "games": 45
   },
   "josh": {
+    "name": "Josh",
+    "valorant_tag": "Bot001341",
+    "discord_pic": "https://i.ibb.co/nR7WYQV/disc-pic-josh-circle-250.png",
     "winrate": 55,
     "wins": 21,
     "games": 38
   },
   "lindsey": {
+    "name": "Lindsey",
+    "valorant_tag": "aylindsay",
+    "discord_pic": "https://i.ibb.co/kMZxKMy/disc-pic-lindsey-circle.png",
     "winrate": 49,
     "wins": 22,
     "games": 45
   },
   "sequential": {
+    "name": "Sequential",
+    "valorant_tag": "sequential",
+    "discord_pic": "TODO",
     "winrate": 50,
     "wins": 15,
     "games": 30
   },
   "sophie": {
+    "name": "Sophie",
+    "valorant_tag": "chushberry",
+    "discord_pic": "TODO",
     "winrate": 53,
     "wins": 24,
     "games": 45
   },
   "steve": {
+    "name": "Steve",
+    "valorant_tag": "Selintt",
+    "discord_pic": "TODO",
     "winrate": 48,
     "wins": 12,
     "games": 25
   },
   "steven": {
+    "name": "Steven",
+    "valorant_tag": "youngsmasher",
+    "discord_pic": "TODO",
     "winrate": 55,
     "wins": 12,
     "games": 22
   },
   "sun": {
+    "name": "Sun",
+    "valorant_tag": "sun",
+    "discord_pic": "TODO",
     "winrate": 33,
     "wins": 8,
     "games": 24
   },
   "susi": {
+    "name": "Susi",
+    "valorant_tag": "SusTwins",
+    "discord_pic": "TODO",
     "winrate": 42,
     "wins": 8,
     "games": 19
   },
   "susu": {
+    "name": "Susu",
+    "valorant_tag": "danielscutiegf",
+    "discord_pic": "TODO",
     "winrate": 43,
     "wins": 3,
     "games": 7
   },
   "tang": {
+    "name": "Tang",
+    "valorant_tag": "tangy",
+    "discord_pic": "TODO",
     "winrate": 77,
     "wins": 23,
     "games": 30
   },
   "yang": {
+    "name": "Yang",
+    "valorant_tag": "Tyblerone",
+    "discord_pic": "TODO",
     "winrate": 25,
     "wins": 1,
     "games": 4

@@ -1,1314 +1,1570 @@
 {
-  "andy": {
-    "andy": {
+  "andy": [
+    {
+      "opponent_name": "andy",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 100,
       "wins": 4,
       "games": 4
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 57,
       "wins": 8,
       "games": 14
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 56,
       "wins": 9,
       "games": 16
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 45,
       "wins": 9,
       "games": 20
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 44,
       "wins": 8,
       "games": 18
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 58,
       "wins": 14,
       "games": 24
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 52,
       "wins": 11,
       "games": 21
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 50,
       "wins": 7,
       "games": 14
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 54,
       "wins": 7,
       "games": 13
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 56,
       "wins": 5,
       "games": 9
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 64,
       "wins": 9,
       "games": 14
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 50,
       "wins": 7,
       "games": 14
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 25,
       "wins": 1,
       "games": 4
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 29,
       "wins": 2,
       "games": 7
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": 67,
       "wins": 2,
       "games": 3
     }
-  },
-  "brandon": {
-    "andy": {
+  ],
+  "brandon": [
+    {
+      "opponent_name": "andy",
       "winrate": 0,
       "wins": 0,
       "games": 4
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 29,
       "wins": 2,
       "games": 7
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 100,
       "wins": 2,
       "games": 2
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 29,
       "wins": 2,
       "games": 7
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 50,
       "wins": 2,
       "games": 4
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 40,
       "wins": 2,
       "games": 5
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 33,
       "wins": 1,
       "games": 3
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 25,
       "wins": 1,
       "games": 4
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 25,
       "wins": 1,
       "games": 4
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 0,
       "wins": 0,
       "games": 1
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 33,
       "wins": 1,
       "games": 3
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": null,
       "wins": 0,
       "games": 0
     }
-  },
-  "brian": {
-    "andy": {
+  ],
+  "brian": [
+    {
+      "opponent_name": "andy",
       "winrate": 43,
       "wins": 6,
       "games": 14
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 71,
       "wins": 5,
       "games": 7
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 38,
       "wins": 6,
       "games": 16
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 27,
       "wins": 4,
       "games": 15
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 40,
       "wins": 8,
       "games": 20
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 40,
       "wins": 6,
       "games": 15
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 40,
       "wins": 4,
       "games": 10
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 33,
       "wins": 8,
       "games": 24
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 50,
       "wins": 6,
       "games": 12
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 38,
       "wins": 3,
       "games": 8
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 50,
       "wins": 6,
       "games": 12
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 50,
       "wins": 3,
       "games": 6
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 33,
       "wins": 1,
       "games": 3
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 12,
       "wins": 1,
       "games": 8
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": null,
       "wins": 0,
       "games": 0
     }
-  },
-  "cade": {
-    "andy": {
+  ],
+  "cade": [
+    {
+      "opponent_name": "andy",
       "winrate": 44,
       "wins": 7,
       "games": 16
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 0,
       "wins": 0,
       "games": 2
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 62,
       "wins": 10,
       "games": 16
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 25,
       "wins": 4,
       "games": 16
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 42,
       "wins": 5,
       "games": 12
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 41,
       "wins": 7,
       "games": 17
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 50,
       "wins": 8,
       "games": 16
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 42,
       "wins": 8,
       "games": 19
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 36,
       "wins": 4,
       "games": 11
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 38,
       "wins": 3,
       "games": 8
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 43,
       "wins": 3,
       "games": 7
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 67,
       "wins": 6,
       "games": 9
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 80,
       "wins": 4,
       "games": 5
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 20,
       "wins": 2,
       "games": 10
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": 50,
       "wins": 1,
       "games": 2
     }
-  },
-  "darwin": {
-    "andy": {
+  ],
+  "darwin": [
+    {
+      "opponent_name": "andy",
       "winrate": 55,
       "wins": 11,
       "games": 20
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 71,
       "wins": 5,
       "games": 7
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 73,
       "wins": 11,
       "games": 15
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 75,
       "wins": 12,
       "games": 16
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 50,
       "wins": 9,
       "games": 18
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 58,
       "wins": 11,
       "games": 19
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 65,
       "wins": 11,
       "games": 17
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 57,
       "wins": 17,
       "games": 30
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 56,
       "wins": 9,
       "games": 16
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 47,
       "wins": 7,
       "games": 15
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 73,
       "wins": 8,
       "games": 11
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 73,
       "wins": 8,
       "games": 11
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 80,
       "wins": 4,
       "games": 5
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 31,
       "wins": 5,
       "games": 16
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": 75,
       "wins": 3,
       "games": 4
     }
-  },
-  "josh": {
-    "andy": {
+  ],
+  "josh": [
+    {
+      "opponent_name": "andy",
       "winrate": 56,
       "wins": 10,
       "games": 18
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 50,
       "wins": 2,
       "games": 4
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 60,
       "wins": 12,
       "games": 20
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 58,
       "wins": 7,
       "games": 12
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 50,
       "wins": 9,
       "games": 18
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 62,
       "wins": 8,
       "games": 13
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 64,
       "wins": 9,
       "games": 14
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 50,
       "wins": 10,
       "games": 20
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 50,
       "wins": 4,
       "games": 8
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 50,
       "wins": 7,
       "games": 14
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 70,
       "wins": 7,
       "games": 10
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 60,
       "wins": 6,
       "games": 10
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 50,
       "wins": 1,
       "games": 2
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 29,
       "wins": 4,
       "games": 14
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": 75,
       "wins": 3,
       "games": 4
     }
-  },
-  "lindsey": {
-    "andy": {
+  ],
+  "lindsey": [
+    {
+      "opponent_name": "andy",
       "winrate": 42,
       "wins": 10,
       "games": 24
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 60,
       "wins": 3,
       "games": 5
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 60,
       "wins": 9,
       "games": 15
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 59,
       "wins": 10,
       "games": 17
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 42,
       "wins": 8,
       "games": 19
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 38,
       "wins": 5,
       "games": 13
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 47,
       "wins": 8,
       "games": 17
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 46,
       "wins": 13,
       "games": 28
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 50,
       "wins": 6,
       "games": 12
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 44,
       "wins": 7,
       "games": 16
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 73,
       "wins": 8,
       "games": 11
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 54,
       "wins": 7,
       "games": 13
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 60,
       "wins": 3,
       "games": 5
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 28,
       "wins": 5,
       "games": 18
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": 75,
       "wins": 3,
       "games": 4
     }
-  },
-  "sequential": {
-    "andy": {
+  ],
+  "sequential": [
+    {
+      "opponent_name": "andy",
       "winrate": 48,
       "wins": 10,
       "games": 21
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 67,
       "wins": 2,
       "games": 3
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 60,
       "wins": 6,
       "games": 10
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 50,
       "wins": 8,
       "games": 16
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 35,
       "wins": 6,
       "games": 17
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 36,
       "wins": 5,
       "games": 14
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 53,
       "wins": 9,
       "games": 17
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 58,
       "wins": 7,
       "games": 12
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 75,
       "wins": 3,
       "games": 4
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 50,
       "wins": 2,
       "games": 4
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 75,
       "wins": 6,
       "games": 8
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 33,
       "wins": 1,
       "games": 3
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 100,
       "wins": 1,
       "games": 1
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 29,
       "wins": 4,
       "games": 14
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": null,
       "wins": 0,
       "games": 0
     }
-  },
-  "sophie": {
-    "andy": {
+  ],
+  "sophie": [
+    {
+      "opponent_name": "andy",
       "winrate": 50,
       "wins": 7,
       "games": 14
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 75,
       "wins": 3,
       "games": 4
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 67,
       "wins": 16,
       "games": 24
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 58,
       "wins": 11,
       "games": 19
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 43,
       "wins": 13,
       "games": 30
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 50,
       "wins": 10,
       "games": 20
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 54,
       "wins": 15,
       "games": 28
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 42,
       "wins": 5,
       "games": 12
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 53,
       "wins": 8,
       "games": 15
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 57,
       "wins": 4,
       "games": 7
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 77,
       "wins": 10,
       "games": 13
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 50,
       "wins": 6,
       "games": 12
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 40,
       "wins": 2,
       "games": 5
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 25,
       "wins": 3,
       "games": 12
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": null,
       "wins": 0,
       "games": 0
     }
-  },
-  "steve": {
-    "andy": {
+  ],
+  "steve": [
+    {
+      "opponent_name": "andy",
       "winrate": 46,
       "wins": 6,
       "games": 13
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 75,
       "wins": 3,
       "games": 4
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 50,
       "wins": 6,
       "games": 12
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 64,
       "wins": 7,
       "games": 11
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 44,
       "wins": 7,
       "games": 16
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 50,
       "wins": 4,
       "games": 8
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 50,
       "wins": 6,
       "games": 12
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 25,
       "wins": 1,
       "games": 4
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 47,
       "wins": 7,
       "games": 15
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 43,
       "wins": 3,
       "games": 7
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 57,
       "wins": 4,
       "games": 7
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 50,
       "wins": 1,
       "games": 2
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 31,
       "wins": 4,
       "games": 13
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": null,
       "wins": 0,
       "games": 0
     }
-  },
-  "steven": {
-    "andy": {
+  ],
+  "steven": [
+    {
+      "opponent_name": "andy",
       "winrate": 44,
       "wins": 4,
       "games": 9
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 100,
       "wins": 1,
       "games": 1
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 62,
       "wins": 5,
       "games": 8
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 62,
       "wins": 5,
       "games": 8
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 53,
       "wins": 8,
       "games": 15
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 50,
       "wins": 7,
       "games": 14
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 56,
       "wins": 9,
       "games": 16
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 50,
       "wins": 2,
       "games": 4
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 43,
       "wins": 3,
       "games": 7
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 57,
       "wins": 4,
       "games": 7
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 71,
       "wins": 5,
       "games": 7
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 0,
       "wins": 0,
       "games": 1
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 0,
       "wins": 0,
       "games": 1
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 38,
       "wins": 3,
       "games": 8
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": null,
       "wins": 0,
       "games": 0
     }
-  },
-  "sun": {
-    "andy": {
+  ],
+  "sun": [
+    {
+      "opponent_name": "andy",
       "winrate": 36,
       "wins": 5,
       "games": 14
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 50,
       "wins": 6,
       "games": 12
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 57,
       "wins": 4,
       "games": 7
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 27,
       "wins": 3,
       "games": 11
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 30,
       "wins": 3,
       "games": 10
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 27,
       "wins": 3,
       "games": 11
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 25,
       "wins": 2,
       "games": 8
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 23,
       "wins": 3,
       "games": 13
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 43,
       "wins": 3,
       "games": 7
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 29,
       "wins": 2,
       "games": 7
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 75,
       "wins": 3,
       "games": 4
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 50,
       "wins": 1,
       "games": 2
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 8,
       "wins": 1,
       "games": 13
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": null,
       "wins": 0,
       "games": 0
     }
-  },
-  "susi": {
-    "andy": {
+  ],
+  "susi": [
+    {
+      "opponent_name": "andy",
       "winrate": 50,
       "wins": 7,
       "games": 14
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 50,
       "wins": 3,
       "games": 6
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 33,
       "wins": 3,
       "games": 9
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 27,
       "wins": 3,
       "games": 11
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 40,
       "wins": 4,
       "games": 10
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 46,
       "wins": 6,
       "games": 13
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 67,
       "wins": 2,
       "games": 3
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 50,
       "wins": 6,
       "games": 12
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 50,
       "wins": 1,
       "games": 2
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 100,
       "wins": 1,
       "games": 1
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 25,
       "wins": 1,
       "games": 4
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 0,
       "wins": 0,
       "games": 6
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": 100,
       "wins": 1,
       "games": 1
     }
-  },
-  "susu": {
-    "andy": {
+  ],
+  "susu": [
+    {
+      "opponent_name": "andy",
       "winrate": 75,
       "wins": 3,
       "games": 4
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 67,
       "wins": 2,
       "games": 3
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 20,
       "wins": 1,
       "games": 5
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 20,
       "wins": 1,
       "games": 5
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 50,
       "wins": 1,
       "games": 2
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 40,
       "wins": 2,
       "games": 5
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 0,
       "wins": 0,
       "games": 1
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 60,
       "wins": 3,
       "games": 5
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 100,
       "wins": 1,
       "games": 1
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 50,
       "wins": 1,
       "games": 2
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 0,
       "wins": 0,
       "games": 1
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": null,
       "wins": 0,
       "games": 0
     }
-  },
-  "tang": {
-    "andy": {
+  ],
+  "tang": [
+    {
+      "opponent_name": "andy",
       "winrate": 71,
       "wins": 5,
       "games": 7
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": 67,
       "wins": 2,
       "games": 3
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": 88,
       "wins": 7,
       "games": 8
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 80,
       "wins": 8,
       "games": 10
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 69,
       "wins": 11,
       "games": 16
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 71,
       "wins": 10,
       "games": 14
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 72,
       "wins": 13,
       "games": 18
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": 71,
       "wins": 10,
       "games": 14
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": 75,
       "wins": 9,
       "games": 12
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": 69,
       "wins": 9,
       "games": 13
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": 62,
       "wins": 5,
       "games": 8
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": 92,
       "wins": 12,
       "games": 13
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 100,
       "wins": 6,
       "games": 6
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": 100,
       "wins": 1,
       "games": 1
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": 100,
       "wins": 2,
       "games": 2
     }
-  },
-  "yang": {
-    "andy": {
+  ],
+  "yang": [
+    {
+      "opponent_name": "andy",
       "winrate": 33,
       "wins": 1,
       "games": 3
     },
-    "brandon": {
+    {
+      "opponent_name": "brandon",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "brian": {
+    {
+      "opponent_name": "brian",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "cade": {
+    {
+      "opponent_name": "cade",
       "winrate": 50,
       "wins": 1,
       "games": 2
     },
-    "darwin": {
+    {
+      "opponent_name": "darwin",
       "winrate": 25,
       "wins": 1,
       "games": 4
     },
-    "josh": {
+    {
+      "opponent_name": "josh",
       "winrate": 25,
       "wins": 1,
       "games": 4
     },
-    "lindsey": {
+    {
+      "opponent_name": "lindsey",
       "winrate": 25,
       "wins": 1,
       "games": 4
     },
-    "sequential": {
+    {
+      "opponent_name": "sequential",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "sophie": {
+    {
+      "opponent_name": "sophie",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "steve": {
+    {
+      "opponent_name": "steve",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "steven": {
+    {
+      "opponent_name": "steven",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "sun": {
+    {
+      "opponent_name": "sun",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "susi": {
+    {
+      "opponent_name": "susi",
       "winrate": 0,
       "wins": 0,
       "games": 1
     },
-    "susu": {
+    {
+      "opponent_name": "susu",
       "winrate": null,
       "wins": 0,
       "games": 0
     },
-    "tang": {
+    {
+      "opponent_name": "tang",
       "winrate": 0,
       "wins": 0,
       "games": 2
     },
-    "yang": {
+    {
+      "opponent_name": "yang",
       "winrate": null,
       "wins": 0,
       "games": 0
     }
-  }
+  ]
 }
