@@ -1,0 +1,17 @@
+Player		Hex
+andy		#F6DE64
+brandon		#384268
+brian		#757E8A
+cade		#DBFF9E
+darwin		#CDDBFF
+josh		#FAA61A
+lindsey		#92CED5
+sequential	#A6735D
+sophie		#B15C5D
+steve 		#BBA9E3
+steven		#F8F4A6
+sun		#DCCDCA
+susi		#000000
+susu		#FF98CE
+tang		#CEA891
+yang		#C62C38
