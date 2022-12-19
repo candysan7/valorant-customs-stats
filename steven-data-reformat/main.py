@@ -1,177 +1,153 @@
+import json, os.path
+from datetime import datetime, timedelta
+
 from Match import Match
+from util import aggregate_matches, filter_players
+from constants import *
 
-import csv
-from datetime import date, timedelta
+output_dir = "./steven-data-reformat/out/"
 
-
-matches = []
-players = set()
-maps = set()
-
-with open(file="./data.csv", mode="r") as data:
-    reader = csv.reader(data)
-    next(reader)
-    for row in reader:
-        matches.append(Match(date.fromisoformat(row[0]),
-                             row[1], set(row[2:7]), set(row[7:])))
-        maps.add(row[1])
-        for player in row[2:]:
-            if player != "":
-                players.add(player)
-data.close()
-
-matches = sorted(matches, key=lambda x: x.date)
-players = sorted(list(players))
-maps = sorted(list(maps))
-
+matches: list[Match] = []
+with open("./steven-data-reformat/data.json", mode="r") as f:
+    data = json.load(f)
+    matches = sorted([Match(match_json) for match_json in data], key=lambda m: m.time)
+    f.close()
 
 if __name__ == "__main__":
-    with open("./out/individual.csv", mode="w", newline="") as out:
-        writer = csv.writer(out)
-        writer.writerow(["player", "winrate", "wins", "games"])
-        for player in players:
-            wins = len(
-                [match for match in matches if match.player_did_win(player)])
-            total = len(
-                [match for match in matches if match.player_did_play(player)])
-            writer.writerow(
-                [player, round(100 * wins/total), wins, total])
-        out.close()
+    with open(os.path.join(output_dir, "individual.json"), mode="w") as f:
+        out_json = {
+            player_name: {WINRATE: None, WINS: 0, GAMES: 0}
+            for player_name in player_names
+        }
+        for match in matches:
+            for player_name in player_names:
+                player_entry = out_json[player_name]
+                if match.player_did_win(player_name):
+                    player_entry[WINS] += 1
+                if match.player_did_play(player_name):
+                    player_entry[GAMES] += 1
+                if player_entry[GAMES] != 0:
+                    player_entry[WINRATE] = round(
+                        100 * player_entry[WINS] / player_entry[GAMES]
+                    )
+        json.dump(out_json, f, indent=2)
+        f.close()
 
-    with open("./out/teammate-synergy.csv", mode="w", newline="") as out:
-        writer = csv.writer(out)
-        writer.writerow(["player"] + players * 2)
-        for teammate in players:
-            row_start, row_percentage, row_fraction = [teammate], [], []
-            for player in players:
-                wins = len(
-                    [match for match in matches
-                     if all([match.player_did_win(teammate), match.player_did_win(player)])]
-                )
-                total = wins + len(
-                    [match for match in matches
-                     if all([match.player_did_lose(teammate), match.player_did_lose(player)])]
-                )
-                if total == 0:
-                    row_percentage += [""]
-                    row_fraction += [""]
-                else:
-                    row_percentage += [round(100 * wins / total)]
-                    row_fraction += [f"{wins}/{total}"]
-            writer.writerow(row_start + row_percentage + row_fraction)
-        out.close()
+    with open(os.path.join(output_dir, "teammate-synergy.json"), mode="w") as f:
+        out_json = {
+            player_name: {
+                teammate_name: {WINRATE: None, WINS: 0, GAMES: 0}
+                for teammate_name in player_names
+            }
+            for player_name in player_names
+        }
 
-    with open("./out/easiest-matchups.csv", mode="w", newline="") as out:
-        writer = csv.writer(out)
-        writer.writerow(["player"] + players * 2)
-        for opponent in players:
-            row_start, row_percentage, row_fraction = [opponent], [], []
-            for player in players:
-                wins = len(
-                    [match for match in matches
-                     if all([match.player_did_lose(opponent), match.player_did_win(player)])]
-                )
-                total = wins + len(
-                    [match for match in matches
-                     if all([match.player_did_win(opponent), match.player_did_lose(player)])]
-                )
-                if total == 0:
-                    row_percentage += [""]
-                    row_fraction += [""]
-                else:
-                    row_percentage += [round(100 * wins / total)]
-                    row_fraction += [f"{wins}/{total}"]
-            writer.writerow(row_start + row_percentage + row_fraction)
-        out.close()
+        for match in matches:
+            for player_name in filter_players(match.winning_players):
+                for teammate_name in filter_players(match.winning_players):
+                    out_json[player_name][teammate_name][WINS] += 1
+                    out_json[player_name][teammate_name][GAMES] += 1
+            for player_name in filter_players(match.losing_players):
+                for teammate_name in filter_players(match.losing_players):
+                    out_json[player_name][teammate_name][GAMES] += 1
+        for player_name in out_json:
+            for teammate_name in out_json[player_name]:
+                if out_json[player_name][teammate_name][GAMES] != 0:
+                    out_json[player_name][teammate_name][WINRATE] = round(
+                        100
+                        * out_json[player_name][teammate_name][WINS]
+                        / out_json[player_name][teammate_name][GAMES]
+                    )
 
-    with open("./out/maps.csv", mode="w", newline="") as out:
-        writer = csv.writer(out)
-        writer.writerow(["map", "percentage", "games"])
-        total = len(matches)
-        for map in maps:
-            count = len([match for match in matches if match.map == map])
-            writer.writerow([map, round(100 * count / total), count])
-        out.close()
+        json.dump(out_json, f, indent=2)
+        f.close()
 
-    with open("./out/winrate-over-time.csv", mode="w", newline="") as out:
-        writer = csv.writer(out)
+    with open(os.path.join(output_dir, "easiest-matchups.json"), mode="w") as f:
+        out_json = {
+            player_name: {
+                opponent_name: {WINRATE: None, WINS: 0, GAMES: 0}
+                for opponent_name in player_names
+            }
+            for player_name in player_names
+        }
 
-        # { player: [wins1, total1, wins2, total2, ...] }
-        player_to_stats = {player: [] for player in players}
+        for match in matches:
+            for player_name in filter_players(match.winning_players):
+                for opponent_name in filter_players(match.losing_players):
+                    out_json[player_name][opponent_name][WINS] += 1
+                    out_json[player_name][opponent_name][GAMES] += 1
+            for player_name in filter_players(match.losing_players):
+                for opponent_name in filter_players(match.winning_players):
+                    out_json[player_name][opponent_name][GAMES] += 1
+        for player_name in out_json:
+            for opponent_name in out_json[player_name]:
+                if out_json[player_name][opponent_name][GAMES] != 0:
+                    out_json[player_name][opponent_name][WINRATE] = round(
+                        100
+                        * out_json[player_name][opponent_name][WINS]
+                        / out_json[player_name][opponent_name][GAMES]
+                    )
 
-        # Two week blocks; first time is October 3rd, 2022, which is the week before the first recorded customs
-        start = date(year=2022, month=10, day=3)
-        end = start + timedelta(weeks=2)
-        header = ["player", start]
+        json.dump(out_json, f, indent=2)
+        f.close()
 
-        start_i, i = 0, 0
-        while i <= len(matches):
-            # Current window is [current date, end); corresponds to [start_i, i)
-            if i == len(matches) or matches[i].date >= end:
-                # Initialize the next set of stats
-                for player in players:
-                    player_to_stats[player] += [[0, 0]]
+    with open(os.path.join(output_dir, "maps.json"), mode="w") as f:
+        out_json = {map: 0 for map in maps}
+        for match in matches:
+            out_json[match.map] += 1
+        json.dump(out_json, f, indent=2)
+        f.close()
 
-                # Update the next set of stats
-                for match in matches[start_i:i]:
-                    for player in match.winners:
-                        player_to_stats[player][-1][0] += 1
-                    for player in match.winners | match.losers:
-                        player_to_stats[player][-1][1] += 1
+    with open(os.path.join(output_dir, "winrate-over-time.json"), mode="w") as f:
 
-                start = end
-                end = start + timedelta(weeks=2)
-                header += [start]
+        def winrate(matches: list[Match], previous_block):
+            block_data = {
+                player_name: {WINRATE: None, WINS: 0, GAMES: 0}
+                for player_name in player_names
+            }
+            for match in matches:
+                for winner_name in filter_players(match.winning_players):
+                    block_data[winner_name][WINS] += 1
+                for player_name in filter_players(match.all_players):
+                    block_data[player_name][GAMES] += 1
+            for player_name, player_stats in block_data.items():
+                if player_stats[GAMES] != 0:
+                    player_stats[WINRATE] = round(
+                        100 * player_stats[WINS] / player_stats[GAMES]
+                    )
+            return block_data
 
-                start_i = i
+        out_json = aggregate_matches(matches, winrate)
+        json.dump(out_json, f, indent=2, default=str)
+        f.close()
 
-            i += 1
+    with open(
+        os.path.join(output_dir, "cumulative-winrate-over-time.json"), mode="w"
+    ) as f:
 
-        writer.writerow(header)
-        for player in players:
-            writer.writerow([player] + [round(100 * x[0]/x[1]) if x[1]
-                            != 0 else "" for x in player_to_stats[player]])
-        out.close()
+        def cumulative_winrate(matches: list[Match], previous_block):
+            if previous_block is not None:
+                block_data = {
+                    player_name: previous_block["data"][player_name].copy()
+                    for player_name in player_names
+                }
+            else:
+                block_data = {
+                    player_name: {WINRATE: None, WINS: 0, GAMES: 0}
+                    for player_name in player_names
+                }
+            for match in matches:
+                for winner_name in filter_players(match.winning_players):
+                    block_data[winner_name][WINS] += 1
+                for player_name in filter_players(match.all_players):
+                    block_data[player_name][GAMES] += 1
+            for player_name, player_stats in block_data.items():
+                if player_stats[GAMES] != 0:
+                    player_stats[WINRATE] = round(
+                        100 * player_stats[WINS] / player_stats[GAMES]
+                    )
+            return block_data
 
-    with open("./out/cumulative-winrate-over-time.csv", mode="w", newline="") as out:
-        writer = csv.writer(out)
-
-        # { player: [wins1, total1, wins2, total2, ...] }
-        player_to_stats = {player: [] for player in players}
-
-        # Two week blocks; first time is October 3rd, 2022, which is the week before the first recorded customs
-        start = date(year=2022, month=10, day=3)
-        end = start + timedelta(weeks=2)
-        header = ["player", start]
-
-        start_i, i = 0, 0
-        while i <= len(matches):
-            # Current window is [current match date, end); corresponds to [start_i, i)
-            if i == len(matches) or matches[i].date >= end:
-                # Initialize the next set of stats
-                for player in players:
-                    if len(player_to_stats[player]) == 0:
-                        player_to_stats[player] += [[0, 0]]
-                    else:
-                        player_to_stats[player] += [player_to_stats[player][-1].copy()]
-
-                # Update the next set of stats
-                for match in matches[start_i:i]:
-                    for player in match.winners:
-                        player_to_stats[player][-1][0] += 1
-                    for player in match.winners | match.losers:
-                        player_to_stats[player][-1][1] += 1
-
-                start = end
-                end = start + timedelta(weeks=2)
-                header += [start]
-
-                start_i = i
-
-            i += 1
-
-        writer.writerow(header)
-        for player in players:
-            writer.writerow([player] + [round(100 * x[0]/x[1]) if x[1] != 0 else ""
-                                        for x in player_to_stats[player]])
-        out.close()
+        out_json = aggregate_matches(matches, cumulative_winrate)
+        json.dump(out_json, f, indent=2, default=str)
+        f.close()
