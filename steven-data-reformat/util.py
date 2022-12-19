@@ -17,8 +17,7 @@ def aggregate_matches(
     aggregate_fn: Callable[[list[Match], any], any],
     # Default first time is October 3rd, 2022, which is the week before the first tracked customs
     start_date: datetime = datetime(year=2022, month=10, day=3),
-    # Defaults to two-week blocks
-    interval: timedelta = timedelta(weeks=1),
+    interval: timedelta = timedelta(days=60),
 ) -> list[IntervalData]:
     """Aggregate matches into specified intervals. `matches` must be sorted from oldest to newest."""
     out = []
