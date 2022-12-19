@@ -8,10 +8,10 @@ josh		#FAA61A
 lindsey		#92CED5
 sequential	#A6735D
 sophie		#B15C5D
-steve 		#BBA9E3
+steve 		#2180BA
 steven		#F8F4A6
-sun		#DCCDCA
-susi		#000000
-susu		#FF98CE
+sun		    #DCCDCA
+susi		#334455
+susu		#CB759C
 tang		#CEA891
 yang		#C62C38
