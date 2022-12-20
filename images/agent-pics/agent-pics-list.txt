@@ -7,7 +7,6 @@ https://i.ibb.co/YWDbNSd/agent-skye.png
 https://i.ibb.co/tpFTDZP/agent-astra.png
 https://i.ibb.co/Q99BLjb/agent-reyna.png
 https://i.ibb.co/jV79G9x/agent-jett.png
-https://i.ibb.co/Q99BLjb/agent-reyna.png
 https://i.ibb.co/7nhNYq3/agent-sova.png
 https://i.ibb.co/m84byGB/agent-raze.png
 https://i.ibb.co/3Bjc4Ff/agent-sage.png
@@ -18,3 +17,4 @@ https://i.ibb.co/zGxz9WH/agent-kayo.png
 https://i.ibb.co/HpQ9nmj/agent-fade.png
 https://i.ibb.co/kX8npRV/agent-neon.png
 https://i.ibb.co/wwW5pw9/agent-chamber.png
+https://i.ibb.co/GtG7Z01/agent-breach.png
