@@ -9,6 +9,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 
+# Starting from 10/11/22
 urls = [
     "https://tracker.gg/valorant/match/9026099d-b7ab-4208-bf6d-8427b7c2c062?handle=youngsmasher%23NA1",
     "https://tracker.gg/valorant/match/1e31a061-81b9-44b4-b4e9-85ba682d4db1?handle=youngsmasher%23NA1",
