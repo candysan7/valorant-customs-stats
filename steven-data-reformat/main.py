@@ -1,12 +1,15 @@
 import json, os.path
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, time
 
 from Match import Match
 from util import aggregate_matches, filter_players
-from constants import *
+from constants.misc import *
+from constants.players import *
+from constants.valorant import *
 
 output_dir = "./steven-data-reformat/out/"
 
+data = {}
 matches: list[Match] = []
 with open("./steven-data-reformat/data.json", mode="r") as f:
     data = json.load(f)
@@ -14,15 +17,20 @@ with open("./steven-data-reformat/data.json", mode="r") as f:
     f.close()
 
 if __name__ == "__main__":
+    with open(os.path.join(output_dir, "data-frame-friendly.json"), mode="w") as f:
+        out_json = {i: match_json for i, match_json in enumerate(data)}
+        json.dump(out_json, f, indent=2)
+        f.close()
+
     with open(os.path.join(output_dir, "individual.json"), mode="w") as f:
         out_json = {
-            player_name: player_info[player_name].copy()
+            player_name: PLAYER_INFO[player_name].copy()
             | {WINRATE: None, WINS: 0, GAMES: 0}
-            for player_name in player_names
+            for player_name in PLAYER_NAMES
         }
 
         for match in matches:
-            for player_name in player_names:
+            for player_name in PLAYER_NAMES:
                 player_entry = out_json[player_name]
                 if match.player_did_win(player_name):
                     player_entry[WINS] += 1
@@ -44,9 +52,9 @@ if __name__ == "__main__":
                     WINS: 0,
                     GAMES: 0,
                 }
-                for teammate_name in player_names
+                for teammate_name in PLAYER_NAMES
             }
-            for player_name in player_names
+            for player_name in PLAYER_NAMES
         }
 
         for match in matches:
@@ -86,9 +94,9 @@ if __name__ == "__main__":
                     WINS: 0,
                     GAMES: 0,
                 }
-                for opponent_name in player_names
+                for opponent_name in PLAYER_NAMES
             }
-            for player_name in player_names
+            for player_name in PLAYER_NAMES
         }
 
         for match in matches:
@@ -116,7 +124,7 @@ if __name__ == "__main__":
         f.close()
 
     with open(os.path.join(output_dir, "maps.json"), mode="w") as f:
-        out_json = {map: 0 for map in maps}
+        out_json = {map: 0 for map in MAPS}
         for match in matches:
             out_json[match.map] += 1
         json.dump(out_json, f, indent=2)
@@ -124,10 +132,10 @@ if __name__ == "__main__":
 
     with open(os.path.join(output_dir, "winrate-over-time.json"), mode="w") as f:
 
-        def winrate(matches: list[Match], previous_block):
+        def winrate(matches: list[Match], accumulator):
             block_data = {
                 player_name: {WINRATE: None, WINS: 0, GAMES: 0}
-                for player_name in player_names
+                for player_name in PLAYER_NAMES
             }
             for match in matches:
                 for winner_name in filter_players(match.winning_players):
@@ -149,16 +157,16 @@ if __name__ == "__main__":
         os.path.join(output_dir, "cumulative-winrate-over-time.json"), mode="w"
     ) as f:
 
-        def cumulative_winrate(matches: list[Match], previous_block):
-            if previous_block is not None:
+        def cumulative_winrate(matches: list[Match], accumulator):
+            if len(accumulator) > 0:
                 block_data = {
-                    player_name: previous_block["data"][player_name].copy()
-                    for player_name in player_names
+                    player_name: accumulator[-1]["data"][player_name].copy()
+                    for player_name in PLAYER_NAMES
                 }
             else:
                 block_data = {
                     player_name: {WINRATE: None, WINS: 0, GAMES: 0}
-                    for player_name in player_names
+                    for player_name in PLAYER_NAMES
                 }
             for match in matches:
                 for winner_name in filter_players(match.winning_players):
@@ -173,5 +181,54 @@ if __name__ == "__main__":
             return block_data
 
         out_json = aggregate_matches(matches, cumulative_winrate)
+        json.dump(out_json, f, indent=2, default=str)
+        f.close()
+
+    with open(
+        os.path.join(output_dir, "running-winrate-over-time.json"), mode="w"
+    ) as f:
+
+        out_json = []
+
+        last_date = datetime.combine(datetime.today(), time.max)
+        curr_date = datetime.combine(datetime(year=2022, month=10, day=9), time.max)
+        time_increment = timedelta(weeks=1)
+
+        curr_block_start_date = curr_date - timedelta(days=60)
+
+        i = 0
+        j = 0
+        while j <= len(matches):
+            # Blocks look like (curr_block_start_date, curr_date]; should correspond to [i, j)
+            while j < len(matches) and matches[j].time <= curr_date:
+                j += 1
+            while i < len(matches) and matches[i].time < curr_block_start_date:
+                i += 1
+            if i == len(matches) or curr_date > last_date:
+                break
+
+            block_data = {
+                player_name: {WINRATE: None, WINS: 0, GAMES: 0}
+                for player_name in PLAYER_NAMES
+            }
+
+            for match in matches[i:j]:
+                for winner_name in filter_players(match.winning_players):
+                    block_data[winner_name][WINS] += 1
+                for player_name in filter_players(match.all_players):
+                    block_data[player_name][GAMES] += 1
+            for player_name, player_stats in block_data.items():
+                if player_stats[GAMES] != 0:
+                    player_stats[WINRATE] = round(
+                        100 * player_stats[WINS] / player_stats[GAMES]
+                    )
+
+            out_json.append({"block_end_time": curr_date, "data": block_data})
+
+            curr_date += time_increment
+            curr_block_start_date += time_increment
+
+        # Individually compute the present day
+
         json.dump(out_json, f, indent=2, default=str)
         f.close()

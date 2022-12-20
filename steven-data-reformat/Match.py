@@ -49,22 +49,22 @@ class Match:
     def player_did_play(self, player_name):
         return player_name in self.all_players
 
-    def all_players_did_play(self, *player_names):
-        return all([self.player_did_play(player_name) for player_name in player_names])
+    def all_players_did_play(self, *PLAYER_NAMES):
+        return all([self.player_did_play(player_name) for player_name in PLAYER_NAMES])
 
     def player_did_win(self, player_name):
         return player_name in self.winning_players
 
-    def all_players_did_win(self, *player_names):
-        return all([self.player_did_win(player_name) for player_name in player_names])
+    def all_players_did_win(self, *PLAYER_NAMES):
+        return all([self.player_did_win(player_name) for player_name in PLAYER_NAMES])
 
     def player_did_lose(self, player_name):
         return player_name in self.losing_players
 
-    def all_players_did_lose(self, *player_names):
-        return all([self.players_did_lose(player_name) for player_name in player_names])
+    def all_players_did_lose(self, *PLAYER_NAMES):
+        return all([self.players_did_lose(player_name) for player_name in PLAYER_NAMES])
 
-    def players_in_same_team(self, *player_names):
-        return all([player_name in self.team_a for player_name in player_names]) or all(
-            [player_name in self.team_b for player_name in player_names]
+    def players_in_same_team(self, *PLAYER_NAMES):
+        return all([player_name in self.team_a for player_name in PLAYER_NAMES]) or all(
+            [player_name in self.team_b for player_name in PLAYER_NAMES]
         )

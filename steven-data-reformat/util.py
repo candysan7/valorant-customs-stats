@@ -1,8 +1,8 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, time
 from typing import Callable
 
 from Match import Match
-from constants import player_names
+from constants.players import PLAYER_NAMES
 
 
 class IntervalData:
@@ -13,13 +13,13 @@ class IntervalData:
 
 def aggregate_matches(
     matches: list[Match],
-    # Second argument is the output from the previous block; None if it's the first block
+    # Second argument of aggregate_fn is the output from the previous block; None if it's the first block
     aggregate_fn: Callable[[list[Match], any], any],
     # Default first time is October 3rd, 2022, which is the week before the first tracked customs
     start_date: datetime = datetime(year=2022, month=10, day=3),
-    interval: timedelta = timedelta(days=60),
+    interval: timedelta = timedelta(weeks=1),
 ) -> list[IntervalData]:
-    """Aggregate matches into specified intervals. `matches` must be sorted from oldest to newest."""
+    """Aggregate matches into time intervals. `matches` must be sorted from oldest to newest."""
     out = []
 
     curr_block_start_i = 0
@@ -34,10 +34,7 @@ def aggregate_matches(
             out.append(
                 {
                     "block_start_time": curr_block_start_date,
-                    "data": aggregate_fn(
-                        matches[curr_block_start_i:i],
-                        out[-1] if len(out) > 0 else None,
-                    ),
+                    "data": aggregate_fn(matches[curr_block_start_i:i], out),
                 }
             )
             curr_block_start_date = curr_block_end_date
@@ -49,4 +46,4 @@ def aggregate_matches(
 
 
 def filter_players(player_list):
-    return list(filter(lambda player_name: player_name in player_names, player_list))
+    return list(filter(lambda player_name: player_name in PLAYER_NAMES, player_list))
