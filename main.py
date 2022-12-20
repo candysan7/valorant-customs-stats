@@ -7,11 +7,11 @@ from constants.misc import *
 from constants.players import *
 from constants.valorant import *
 
-output_dir = "./steven-data-reformat/out/"
+output_dir = "./out"
 
 data = {}
 matches: list[Match] = []
-with open("./steven-data-reformat/data.json", mode="r") as f:
+with open("./data.json", mode="r") as f:
     data = json.load(f)
     matches = sorted([Match(match_json) for match_json in data], key=lambda m: m.time)
     f.close()
@@ -40,6 +40,9 @@ if __name__ == "__main__":
                     player_entry[WINRATE] = round(
                         100 * player_entry[WINS] / player_entry[GAMES]
                     )
+
+        # TODO: Figure out most played roles/agents
+
         json.dump(out_json, f, indent=2)
         f.close()
 
@@ -127,6 +130,52 @@ if __name__ == "__main__":
         out_json = {map: 0 for map in MAPS}
         for match in matches:
             out_json[match.map] += 1
+        json.dump(out_json, f, indent=2)
+        f.close()
+
+    with open(os.path.join(output_dir, "portion-of-stats.json"), mode="w") as f:
+        metrics = {
+            "kills": lambda player_stats: player_stats.kills,
+            "deaths": lambda player_stats: player_stats.deaths,
+            "assists": lambda player_stats: player_stats.assists,
+            "first_kills": lambda player_stats: player_stats.first_kills,
+            "first_deaths": lambda player_stats: player_stats.first_deaths,
+        }
+
+        out_json = {
+            player_name: {
+                metric: {
+                    "percentage": None,
+                    "committed": 0,
+                    "witnessed": 0,
+                }
+                for metric in metrics
+            }
+            for player_name in PLAYER_NAMES
+        }
+
+        for match in matches:
+            for player_name in match.all_players:
+                player_stats = match.all_players[player_name]
+                for metric, fn in metrics.items():
+                    if player_name in PLAYER_NAMES:
+                        out_json[player_name][metric]["committed"] += fn(player_stats)
+                for player_name_to_update in filter_players(match.all_players):
+                    for metric, fn in metrics.items():
+                        out_json[player_name_to_update][metric]["witnessed"] += fn(
+                            player_stats
+                        )
+
+        for player_name in out_json:
+            for metric in metrics:
+                if out_json[player_name][metric]["witnessed"] == 0:
+                    continue
+                out_json[player_name][metric]["percentage"] = round(
+                    100
+                    * out_json[player_name][metric]["committed"]
+                    / out_json[player_name][metric]["witnessed"]
+                )
+
         json.dump(out_json, f, indent=2)
         f.close()
 
