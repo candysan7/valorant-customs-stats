@@ -40,5 +40,5 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 | Contributor               | Role                    |
 | :------------------------ | :-----------------------|
 | **Steven Truong**         | Back-end Developer      |
-| **Andy Xiang**            | Unknown Manager         |
-| **Lindsey Wong**          | Unknown Subordinate     |
+| **Andy Xiang**            | Unknown Subordinate 1   |
+| **Lindsey Wong**          | Unknown Subordinate 2   |
