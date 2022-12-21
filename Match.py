@@ -26,6 +26,7 @@ class Match:
         self.time: datetime = datetime.strptime(
             match_json["time"], "%m/%d/%y, %I:%M %p"
         )
+        self.url: str = match_json["url"]
         self.map: str = match_json["map"]
         self.score_a: int = match_json["score_a"]
         self.score_b: int = match_json["score_b"]

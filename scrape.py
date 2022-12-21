@@ -58,6 +58,8 @@ urls = [
     "https://tracker.gg/valorant/match/bf09a9fe-8f9f-41b5-bcbb-6b8301ab26d7?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/b5909ed7-9e7f-4317-8d84-b08ba97edfa1?handle=youngsmasher%23NA1",
     "https://tracker.gg/valorant/match/1a525de2-118e-45d9-983e-7c29b8e3d014?handle=youngsmasher%23NA1",
+    "https://tracker.gg/valorant/match/2a5da951-ed3d-4505-a47d-245a1ecd29d8?handle=youngsmasher%23NA1",
+    "https://tracker.gg/valorant/match/a5cdf99a-dec4-4c70-87bf-dc0614ec9a72?handle=youngsmasher%23NA1",
 ]
 
 username_to_name = {
@@ -116,8 +118,8 @@ driver = webdriver.Chrome(
 driver.set_window_size(1920, 1400)
 
 matches = []
-if os.path.exists("./steven-data-reformat/data.json"):
-    with open("./steven-data-reformat/data.json", mode="r") as f:
+if os.path.exists("./data.json"):
+    with open("./data.json", mode="r") as f:
         matches = json.load(f)
     f.close()
 
@@ -179,9 +181,11 @@ for url in urls:
         except:
             continue
 
-with open("./steven-data-reformat/data.json", mode="w") as f:
+print("Saving...")
+with open("./data.json", mode="w") as f:
     matches.sort(key=lambda m: datetime.strptime(m["time"], "%m/%d/%y, %I:%M %p"))
     json.dump(matches, f, indent=2)
     f.close()
+print("Done")
 
 driver.close()

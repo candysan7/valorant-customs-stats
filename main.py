@@ -25,13 +25,24 @@ if __name__ == "__main__":
     with open(os.path.join(output_dir, "individual.json"), mode="w") as f:
         out_json = {
             player_name: PLAYER_INFO[player_name].copy()
-            | {WINRATE: None, WINS: 0, GAMES: 0}
+            | {WINRATE: None, WINS: 0, GAMES: 0, TOP_AGENTS: [], TOP_ROLES: []}
+            for player_name in PLAYER_NAMES
+        }
+
+        player_agent_stats = {
+            player_name: {
+                AGENTS: {agent_name: 0 for agent_name in AGENT_NAMES},
+                ROLES: {role_name: 0 for role_name in ROLE_NAMES},
+            }
             for player_name in PLAYER_NAMES
         }
 
         for match in matches:
-            for player_name in PLAYER_NAMES:
+            for player_name in filter_players(match.all_players):
+                player_stats = match.all_players[player_name]
                 player_entry = out_json[player_name]
+
+                # Update winrate
                 if match.player_did_win(player_name):
                     player_entry[WINS] += 1
                 if match.player_did_play(player_name):
@@ -41,7 +52,35 @@ if __name__ == "__main__":
                         100 * player_entry[WINS] / player_entry[GAMES]
                     )
 
-        # TODO: Figure out most played roles/agents
+                # Update agents and roles
+                player_agent_stats[player_name][AGENTS][player_stats.agent] += 1
+                player_agent_stats[player_name][ROLES][
+                    AGENT_NAME_TO_ROLE[player_stats.agent]
+                ] += 1
+
+        for player_name in PLAYER_NAMES:
+            for role_name in ROLE_NAMES:
+                if (
+                    player_agent_stats[player_name][ROLES][role_name]
+                    / out_json[player_name][GAMES]
+                    > 0.3
+                ):
+                    out_json[player_name][TOP_ROLES].append(role_name)
+
+            agents_sorted_by_plays = sorted(
+                player_agent_stats[player_name][AGENTS],
+                key=lambda agent_name: (
+                    -player_agent_stats[player_name][AGENTS][agent_name],
+                    agent_name,
+                ),
+            )
+            out_json[player_name][TOP_AGENTS] = [
+                {
+                    AGENT: agent_name,
+                    FULL_BODY_IMAGE_URL: AGENT_NAME_TO_FULL_BODY_IMAGE_URL[agent_name],
+                }
+                for agent_name in agents_sorted_by_plays[:3]
+            ]
 
         json.dump(out_json, f, indent=2)
         f.close()
@@ -135,19 +174,19 @@ if __name__ == "__main__":
 
     with open(os.path.join(output_dir, "portion-of-stats.json"), mode="w") as f:
         metrics = {
-            "kills": lambda player_stats: player_stats.kills,
-            "deaths": lambda player_stats: player_stats.deaths,
-            "assists": lambda player_stats: player_stats.assists,
-            "first_kills": lambda player_stats: player_stats.first_kills,
-            "first_deaths": lambda player_stats: player_stats.first_deaths,
+            KILLS: lambda player_stats: player_stats.kills,
+            DEATHS: lambda player_stats: player_stats.deaths,
+            ASSISTS: lambda player_stats: player_stats.assists,
+            FIRST_KILLS: lambda player_stats: player_stats.first_kills,
+            FIRST_DEATHS: lambda player_stats: player_stats.first_deaths,
         }
 
         out_json = {
             player_name: {
                 metric: {
-                    "percentage": None,
-                    "committed": 0,
-                    "witnessed": 0,
+                    PERCENTAGE: None,
+                    COMMITTED: 0,
+                    WITNESSED: 0,
                 }
                 for metric in metrics
             }
@@ -159,21 +198,21 @@ if __name__ == "__main__":
                 player_stats = match.all_players[player_name]
                 for metric, fn in metrics.items():
                     if player_name in PLAYER_NAMES:
-                        out_json[player_name][metric]["committed"] += fn(player_stats)
+                        out_json[player_name][metric][COMMITTED] += fn(player_stats)
                 for player_name_to_update in filter_players(match.all_players):
                     for metric, fn in metrics.items():
-                        out_json[player_name_to_update][metric]["witnessed"] += fn(
+                        out_json[player_name_to_update][metric][WITNESSED] += fn(
                             player_stats
                         )
 
         for player_name in out_json:
             for metric in metrics:
-                if out_json[player_name][metric]["witnessed"] == 0:
+                if out_json[player_name][metric][WITNESSED] == 0:
                     continue
-                out_json[player_name][metric]["percentage"] = round(
+                out_json[player_name][metric][PERCENTAGE] = round(
                     100
-                    * out_json[player_name][metric]["committed"]
-                    / out_json[player_name][metric]["witnessed"]
+                    * out_json[player_name][metric][COMMITTED]
+                    / out_json[player_name][metric][WITNESSED]
                 )
 
         json.dump(out_json, f, indent=2)

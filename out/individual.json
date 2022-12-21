@@ -3,9 +3,26 @@
     "name": "Andy",
     "valorant_tag": "Candysan",
     "discord_pic": "https://i.ibb.co/x5xzfYQ/disc-pic-andy-circle-250-v2.png",
-    "winrate": 54,
-    "wins": 22,
-    "games": 41
+    "winrate": 53,
+    "wins": 23,
+    "games": 43,
+    "top_agents": [
+      {
+        "agent": "Phoenix",
+        "full_body_image_url": "https://i.ibb.co/jr62DmS/agent-phoenix.png"
+      },
+      {
+        "agent": "Breach",
+        "full_body_image_url": "https://i.ibb.co/GtG7Z01/agent-breach.png"
+      },
+      {
+        "agent": "Chamber",
+        "full_body_image_url": "https://i.ibb.co/wwW5pw9/agent-chamber.png"
+      }
+    ],
+    "top_roles": [
+      "Duelist"
+    ]
   },
   "brandon": {
     "name": "Brandon",
@@ -13,47 +30,151 @@
     "discord_pic": "https://i.ibb.co/fQWhXhv/disc-pic-brandon-circle-250.png",
     "winrate": 33,
     "wins": 3,
-    "games": 9
+    "games": 9,
+    "top_agents": [
+      {
+        "agent": "Omen",
+        "full_body_image_url": "https://i.ibb.co/gyF9RPn/agent-omen.png"
+      },
+      {
+        "agent": "Astra",
+        "full_body_image_url": "https://i.ibb.co/tpFTDZP/agent-astra.png"
+      },
+      {
+        "agent": "Breach",
+        "full_body_image_url": "https://i.ibb.co/GtG7Z01/agent-breach.png"
+      }
+    ],
+    "top_roles": [
+      "Controller"
+    ]
   },
   "brian": {
     "name": "Brian",
     "valorant_tag": "brianwoohoo",
     "discord_pic": "https://i.ibb.co/tsZ7h2m/disc-pic-brian-circle-250.png",
-    "winrate": 40,
-    "wins": 14,
-    "games": 35
+    "winrate": 43,
+    "wins": 16,
+    "games": 37,
+    "top_agents": [
+      {
+        "agent": "Sage",
+        "full_body_image_url": "https://i.ibb.co/3Bjc4Ff/agent-sage.png"
+      },
+      {
+        "agent": "Neon",
+        "full_body_image_url": "https://i.ibb.co/kX8npRV/agent-neon.png"
+      },
+      {
+        "agent": "Phoenix",
+        "full_body_image_url": "https://i.ibb.co/jr62DmS/agent-phoenix.png"
+      }
+    ],
+    "top_roles": [
+      "Sentinel"
+    ]
   },
   "cade": {
     "name": "Cade",
     "valorant_tag": "RhythmKing",
     "discord_pic": "https://i.ibb.co/c2S6nRZ/disc-pic-cade-circle-250.png",
     "winrate": 46,
-    "wins": 16,
-    "games": 35
+    "wins": 17,
+    "games": 37,
+    "top_agents": [
+      {
+        "agent": "Harbor",
+        "full_body_image_url": "https://i.ibb.co/cQWBVhF/agent-harbor.png"
+      },
+      {
+        "agent": "Brimstone",
+        "full_body_image_url": "https://i.ibb.co/RCygQtF/agent-brimstone.png"
+      },
+      {
+        "agent": "Omen",
+        "full_body_image_url": "https://i.ibb.co/gyF9RPn/agent-omen.png"
+      }
+    ],
+    "top_roles": [
+      "Controller"
+    ]
   },
   "darwin": {
     "name": "Darwin",
     "valorant_tag": "ChzGorditaCrunch",
     "discord_pic": "https://i.ibb.co/jVR2542/disc-pic-darwin-circle-250.png",
     "winrate": 60,
-    "wins": 27,
-    "games": 45
+    "wins": 28,
+    "games": 47,
+    "top_agents": [
+      {
+        "agent": "Cypher",
+        "full_body_image_url": "https://i.ibb.co/47jc4bW/agent-cypher.png"
+      },
+      {
+        "agent": "Neon",
+        "full_body_image_url": "https://i.ibb.co/kX8npRV/agent-neon.png"
+      },
+      {
+        "agent": "Killjoy",
+        "full_body_image_url": "https://i.ibb.co/sVZBy9y/agent-killjoy.png"
+      }
+    ],
+    "top_roles": [
+      "Duelist",
+      "Sentinel"
+    ]
   },
   "josh": {
     "name": "Josh",
     "valorant_tag": "Bot001341",
     "discord_pic": "https://i.ibb.co/nR7WYQV/disc-pic-josh-circle-250.png",
     "winrate": 55,
-    "wins": 21,
-    "games": 38
+    "wins": 22,
+    "games": 40,
+    "top_agents": [
+      {
+        "agent": "Sage",
+        "full_body_image_url": "https://i.ibb.co/3Bjc4Ff/agent-sage.png"
+      },
+      {
+        "agent": "Skye",
+        "full_body_image_url": "https://i.ibb.co/YWDbNSd/agent-skye.png"
+      },
+      {
+        "agent": "Viper",
+        "full_body_image_url": "https://i.ibb.co/Kxd71pz/agent-viper.png"
+      }
+    ],
+    "top_roles": [
+      "Sentinel"
+    ]
   },
   "lindsey": {
     "name": "Lindsey",
     "valorant_tag": "aylindsay",
     "discord_pic": "https://i.ibb.co/kMZxKMy/disc-pic-lindsey-circle.png",
     "winrate": 49,
-    "wins": 22,
-    "games": 45
+    "wins": 23,
+    "games": 47,
+    "top_agents": [
+      {
+        "agent": "Astra",
+        "full_body_image_url": "https://i.ibb.co/tpFTDZP/agent-astra.png"
+      },
+      {
+        "agent": "Skye",
+        "full_body_image_url": "https://i.ibb.co/YWDbNSd/agent-skye.png"
+      },
+      {
+        "agent": "Fade",
+        "full_body_image_url": "https://i.ibb.co/HpQ9nmj/agent-fade.png"
+      }
+    ],
+    "top_roles": [
+      "Controller",
+      "Initiator"
+    ]
   },
   "sequential": {
     "name": "Sequential",
@@ -61,31 +182,100 @@
     "discord_pic": "https://i.ibb.co/Mp7kmDR/disc-pic-sequential-circle-250.png",
     "winrate": 50,
     "wins": 15,
-    "games": 30
+    "games": 30,
+    "top_agents": [
+      {
+        "agent": "Reyna",
+        "full_body_image_url": "https://i.ibb.co/Q99BLjb/agent-reyna.png"
+      },
+      {
+        "agent": "Astra",
+        "full_body_image_url": "https://i.ibb.co/tpFTDZP/agent-astra.png"
+      },
+      {
+        "agent": "Phoenix",
+        "full_body_image_url": "https://i.ibb.co/jr62DmS/agent-phoenix.png"
+      }
+    ],
+    "top_roles": [
+      "Duelist"
+    ]
   },
   "sophie": {
     "name": "Sophie",
     "valorant_tag": "chushberry",
     "discord_pic": "https://i.ibb.co/qF5gcKh/disc-pic-sophie-circle-250.png",
-    "winrate": 53,
+    "winrate": 51,
     "wins": 24,
-    "games": 45
+    "games": 47,
+    "top_agents": [
+      {
+        "agent": "Jett",
+        "full_body_image_url": "https://i.ibb.co/jV79G9x/agent-jett.png"
+      },
+      {
+        "agent": "Brimstone",
+        "full_body_image_url": "https://i.ibb.co/RCygQtF/agent-brimstone.png"
+      },
+      {
+        "agent": "Fade",
+        "full_body_image_url": "https://i.ibb.co/HpQ9nmj/agent-fade.png"
+      }
+    ],
+    "top_roles": [
+      "Duelist"
+    ]
   },
   "steve": {
     "name": "Steve",
     "valorant_tag": "Selintt",
     "discord_pic": "https://i.ibb.co/0MjK5mG/disc-pic-steve-circle-250.png",
     "winrate": 48,
-    "wins": 12,
-    "games": 25
+    "wins": 13,
+    "games": 27,
+    "top_agents": [
+      {
+        "agent": "Reyna",
+        "full_body_image_url": "https://i.ibb.co/Q99BLjb/agent-reyna.png"
+      },
+      {
+        "agent": "Sage",
+        "full_body_image_url": "https://i.ibb.co/3Bjc4Ff/agent-sage.png"
+      },
+      {
+        "agent": "Chamber",
+        "full_body_image_url": "https://i.ibb.co/wwW5pw9/agent-chamber.png"
+      }
+    ],
+    "top_roles": [
+      "Duelist",
+      "Sentinel"
+    ]
   },
   "steven": {
     "name": "Steven",
     "valorant_tag": "youngsmasher",
     "discord_pic": "https://i.ibb.co/C5kh1Gb/disc-pic-steven-cricle-250.png",
-    "winrate": 55,
-    "wins": 12,
-    "games": 22
+    "winrate": 58,
+    "wins": 14,
+    "games": 24,
+    "top_agents": [
+      {
+        "agent": "Sova",
+        "full_body_image_url": "https://i.ibb.co/7nhNYq3/agent-sova.png"
+      },
+      {
+        "agent": "Chamber",
+        "full_body_image_url": "https://i.ibb.co/wwW5pw9/agent-chamber.png"
+      },
+      {
+        "agent": "Cypher",
+        "full_body_image_url": "https://i.ibb.co/47jc4bW/agent-cypher.png"
+      }
+    ],
+    "top_roles": [
+      "Initiator"
+    ]
   },
   "sun": {
     "name": "Sun",
@@ -93,7 +283,24 @@
     "discord_pic": "https://i.ibb.co/MPgJ9cs/disc-pic-sun-circle-250.png",
     "winrate": 33,
     "wins": 8,
-    "games": 24
+    "games": 24,
+    "top_agents": [
+      {
+        "agent": "Raze",
+        "full_body_image_url": "https://i.ibb.co/m84byGB/agent-raze.png"
+      },
+      {
+        "agent": "Fade",
+        "full_body_image_url": "https://i.ibb.co/HpQ9nmj/agent-fade.png"
+      },
+      {
+        "agent": "Phoenix",
+        "full_body_image_url": "https://i.ibb.co/jr62DmS/agent-phoenix.png"
+      }
+    ],
+    "top_roles": [
+      "Duelist"
+    ]
   },
   "susi": {
     "name": "Susi",
@@ -101,7 +308,25 @@
     "discord_pic": "https://i.ibb.co/k659mZS/disc-pic-susi-circle-250.png",
     "winrate": 42,
     "wins": 8,
-    "games": 19
+    "games": 19,
+    "top_agents": [
+      {
+        "agent": "Sage",
+        "full_body_image_url": "https://i.ibb.co/3Bjc4Ff/agent-sage.png"
+      },
+      {
+        "agent": "Sova",
+        "full_body_image_url": "https://i.ibb.co/7nhNYq3/agent-sova.png"
+      },
+      {
+        "agent": "Breach",
+        "full_body_image_url": "https://i.ibb.co/GtG7Z01/agent-breach.png"
+      }
+    ],
+    "top_roles": [
+      "Initiator",
+      "Sentinel"
+    ]
   },
   "susu": {
     "name": "Susu",
@@ -109,15 +334,51 @@
     "discord_pic": "https://i.ibb.co/9r0s0Kp/disc-pic-susu-circle-250.png",
     "winrate": 43,
     "wins": 3,
-    "games": 7
+    "games": 7,
+    "top_agents": [
+      {
+        "agent": "Brimstone",
+        "full_body_image_url": "https://i.ibb.co/RCygQtF/agent-brimstone.png"
+      },
+      {
+        "agent": "Fade",
+        "full_body_image_url": "https://i.ibb.co/HpQ9nmj/agent-fade.png"
+      },
+      {
+        "agent": "Sage",
+        "full_body_image_url": "https://i.ibb.co/3Bjc4Ff/agent-sage.png"
+      }
+    ],
+    "top_roles": [
+      "Controller",
+      "Initiator"
+    ]
   },
   "tang": {
     "name": "Tang",
     "valorant_tag": "tangy",
     "discord_pic": "https://i.ibb.co/GCSsLK7/disc-pic-tang-circle-250.png",
-    "winrate": 77,
+    "winrate": 72,
     "wins": 23,
-    "games": 30
+    "games": 32,
+    "top_agents": [
+      {
+        "agent": "Omen",
+        "full_body_image_url": "https://i.ibb.co/gyF9RPn/agent-omen.png"
+      },
+      {
+        "agent": "Yoru",
+        "full_body_image_url": "https://i.ibb.co/fC5Kcq1/agent-yoru.png"
+      },
+      {
+        "agent": "Brimstone",
+        "full_body_image_url": "https://i.ibb.co/RCygQtF/agent-brimstone.png"
+      }
+    ],
+    "top_roles": [
+      "Controller",
+      "Duelist"
+    ]
   },
   "yang": {
     "name": "Yang",
@@ -125,6 +386,23 @@
     "discord_pic": "https://i.ibb.co/kxFc1ng/disc-pic-yang-circle-250.png",
     "winrate": 25,
     "wins": 1,
-    "games": 4
+    "games": 4,
+    "top_agents": [
+      {
+        "agent": "Killjoy",
+        "full_body_image_url": "https://i.ibb.co/sVZBy9y/agent-killjoy.png"
+      },
+      {
+        "agent": "Sage",
+        "full_body_image_url": "https://i.ibb.co/3Bjc4Ff/agent-sage.png"
+      },
+      {
+        "agent": "Sova",
+        "full_body_image_url": "https://i.ibb.co/7nhNYq3/agent-sova.png"
+      }
+    ],
+    "top_roles": [
+      "Sentinel"
+    ]
   }
 }

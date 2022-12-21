@@ -933,5 +933,90 @@
         "games": 4
       }
     }
+  },
+  {
+    "block_start_time": "2022-12-19 00:00:00",
+    "data": {
+      "andy": {
+        "winrate": 53,
+        "wins": 23,
+        "games": 43
+      },
+      "brandon": {
+        "winrate": 33,
+        "wins": 3,
+        "games": 9
+      },
+      "brian": {
+        "winrate": 43,
+        "wins": 16,
+        "games": 37
+      },
+      "cade": {
+        "winrate": 46,
+        "wins": 17,
+        "games": 37
+      },
+      "darwin": {
+        "winrate": 60,
+        "wins": 28,
+        "games": 47
+      },
+      "josh": {
+        "winrate": 55,
+        "wins": 22,
+        "games": 40
+      },
+      "lindsey": {
+        "winrate": 49,
+        "wins": 23,
+        "games": 47
+      },
+      "sequential": {
+        "winrate": 50,
+        "wins": 15,
+        "games": 30
+      },
+      "sophie": {
+        "winrate": 51,
+        "wins": 24,
+        "games": 47
+      },
+      "steve": {
+        "winrate": 48,
+        "wins": 13,
+        "games": 27
+      },
+      "steven": {
+        "winrate": 58,
+        "wins": 14,
+        "games": 24
+      },
+      "sun": {
+        "winrate": 33,
+        "wins": 8,
+        "games": 24
+      },
+      "susi": {
+        "winrate": 42,
+        "wins": 8,
+        "games": 19
+      },
+      "susu": {
+        "winrate": 43,
+        "wins": 3,
+        "games": 7
+      },
+      "tang": {
+        "winrate": 72,
+        "wins": 23,
+        "games": 32
+      },
+      "yang": {
+        "winrate": 25,
+        "wins": 1,
+        "games": 4
+      }
+    }
   }
 ]
