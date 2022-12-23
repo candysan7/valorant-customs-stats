@@ -1,7 +1,7 @@
 # Valorant Customs Stats
 Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and VBA to automate data cleaning and visualization. 
 
-![Dashboard](https://github.com/candysan7/valorant-customs-stats/blob/main/images/dashboard-versions/version1.1.png)
+![Dashboard](https://github.com/candysan7/valorant-customs-stats/blob/main/images/dashboard-versions/version1.2.png)
 
 ## Power BI Dashboard Report 
 
