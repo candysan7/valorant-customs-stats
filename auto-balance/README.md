@@ -14,5 +14,6 @@ score-diff = score on winning team - score on losing team
 
 add the game that was 11-13 on haven 
 
-Model predicts - **score-diff**
+Model predicts: **score-diff** of every combination of players in 2 teams (10 choose 5)
+- lowest score difference is determined as the optimal combination of 2 teams 
 
