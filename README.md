@@ -26,10 +26,9 @@ Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and
 
 ### Future improvements
 - Build discord bot or command to return dashboard link
-- Convert lifetime average to 60-day moving average
-- Add role selection rate chart
 - Add a version history to readme
-- Add player win rate by role
+- Wall of shame leaderboard: Most time alive (best baiter), least time alive (best baited), bodyshot %, legshot %, damage dealt to allies/self, knifer/knifed, biggest spender/cheapest
+- Dashboard adds: Headshot %, most assisted by
 
 ### Why Power BI over Tableau? 
 - Tableau was not able to display string and integer values on the same table 
