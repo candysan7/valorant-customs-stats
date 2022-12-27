@@ -1,0 +1,21 @@
+ -- agent icons/headshots
+https://i.ibb.co/GRpQm8J/agent-icon-astra.png
+https://i.ibb.co/g6371bS/agent-icon-breach.png
+https://i.ibb.co/FYc5wyd/agent-icon-brimstone.png
+https://i.ibb.co/sVq73Nj/agent-icon-chamber.png
+https://i.ibb.co/jbPmBKx/agent-icon-cypher.png
+https://i.ibb.co/CQ0DQ4r/agent-icon-fade.png
+https://i.ibb.co/gPr53VK/agent-icon-harbor.png
+https://i.ibb.co/WB62hZf/agent-icon-jett.png
+https://i.ibb.co/nPtWSZ6/agent-icon-kayo.png
+https://i.ibb.co/NrXm1q8/agent-icon-killjoy.png
+https://i.ibb.co/Bck5QSr/agent-icon-neon.png
+https://i.ibb.co/HtW1cb6/agent-icon-omen.png
+https://i.ibb.co/5jF81zY/agent-icon-phoenix.png
+https://i.ibb.co/HG4JH20/agent-icon-raze.png
+https://i.ibb.co/g6fdPwK/agent-icon-reyna.png
+https://i.ibb.co/HFTRJQ6/agent-icon-sage.png
+https://i.ibb.co/dkn06hM/agent-icon-skye.png
+https://i.ibb.co/M9xYX2C/agent-icon-sova.png
+https://i.ibb.co/K5fnYtb/agent-icon-viper.png
+https://i.ibb.co/ckLCcLM/agent-icon-yoru.png
