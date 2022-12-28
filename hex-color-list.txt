@@ -1,5 +1,4 @@
 -- player hex colors
-
 Player      | Main Hex  | Hex #2    | Hex #3    | Hex #4
 andy        | #F6DE64   | #2F5C81   | #4E95C3   | #CFD0CC
 brandon     | #384268   | #833523   | #EAD77E   | #806D5A
