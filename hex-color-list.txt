@@ -1,3 +1,5 @@
+-- player hex colors
+
 Player      | Main Hex  | Hex #2    | Hex #3    | Hex #4
 andy        | #F6DE64   | #2F5C81   | #4E95C3   | #CFD0CC
 brandon     | #384268   | #833523   | #EAD77E   | #806D5A
@@ -15,3 +17,14 @@ susi        | #334455   | #556371   | #E7B897   | #F7C1D6
 susu        | #CB759C   | #8A5641   | #987D68   | #AFA392
 tang        | #CEA891   | #494851   | #998E91   | #F2D5CF
 yang        | #C62C38   | #955C4D   | #A7827A   | #C9BEB4
+
+-- map hex colors
+Map         | Hex
+Ascent      | #D5B7BE
+Bind        | #B9835D
+Split       | #808488
+Icebox      | #48609A
+Pearl       | #3CB7C6
+Fracture    | #4F6740
+Haven       | #8F5142
+Breeze      | #649AB1
