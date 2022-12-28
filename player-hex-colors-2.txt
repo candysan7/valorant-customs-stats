@@ -1,0 +1,17 @@
+Player      | Main Hex  | Hex #2    | Hex #3    | Hex #4
+andy        | #F6DE64   | #2F5C81   | #4E95C3   | #CFD0CC
+brandon     | #384268   | #833523   | #EAD77E   | #806D5A
+brian       | #757E8A   | #333333   | #CCCCCC   | #FFFFFF
+cade        | #DBFF9E   | #056437   | #479D56   | #91CB9E
+darwin      | #CDDBFF   | #7F8CEB   | #FFC561   | #FFFD8F
+josh        | #FAA61A   | #FF8000   | #FEAD5B   | #FDE7C1
+lindsey     | #92CED5   | #3B3E3F   | #767A7E   | #FFFFFF
+sequential  | #A6735D   | #4E6B32   | #7B8769   | #DCE1CC
+sophie      | #B15C5D   | #6D3907   | #DAA379   | #DBBF9C
+steve       | #2180BA   | #2B6254   | #43815F   | #7CA7A0
+steven      | #F8F4A6   | #E69470   | #8BBECE   | #EEC6C7
+sun         | #DCCDCA   | #514342   | #20878C   | #58BFC4
+susi        | #334455   | #556371   | #E7B897   | #F7C1D6
+susu        | #CB759C   | #8A5641   | #987D68   | #AFA392
+tang        | #CEA891   | #494851   | #998E91   | #F2D5CF
+yang        | #C62C38   | #955C4D   | #A7827A   | #C9BEB4
