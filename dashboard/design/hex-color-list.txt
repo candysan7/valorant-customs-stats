@@ -27,3 +27,7 @@ Pearl       | #3CB7C6
 Fracture    | #4F6740
 Haven       | #8F5142
 Breeze      | #649AB1
+
+-- background hex colors
+canvas      | #18222B
+modules     | #0E1821
