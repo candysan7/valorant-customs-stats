@@ -1,6 +1,8 @@
 import json
 import time
 import os.path
+import urllib.request
+from urllib.parse import urlparse
 from datetime import datetime
 
 from selenium import webdriver
@@ -60,6 +62,10 @@ urls = [
     "https://tracker.gg/valorant/match/1a525de2-118e-45d9-983e-7c29b8e3d014?handle=youngsmasher%23NA1",
     "https://tracker.gg/valorant/match/2a5da951-ed3d-4505-a47d-245a1ecd29d8?handle=youngsmasher%23NA1",
     "https://tracker.gg/valorant/match/a5cdf99a-dec4-4c70-87bf-dc0614ec9a72?handle=youngsmasher%23NA1",
+    "https://tracker.gg/valorant/match/c23c3452-b57e-4b19-a8dd-f0d8e75ca083?handle=youngsmasher%23NA1",
+    "https://tracker.gg/valorant/match/1130fc3a-89c2-4318-9e4d-3d28824d8292?handle=youngsmasher%23NA1",
+    "https://tracker.gg/valorant/match/b82d43e9-5b05-4c1b-a45e-8b357bb9109a?handle=aylindsay%230613",
+    "https://tracker.gg/valorant/match/2e0c5bc4-af8a-4044-ba2f-94673f0de9d4?handle=aylindsay%230613",
 ]
 
 username_to_name = {
@@ -180,6 +186,7 @@ for url in urls:
             break
         except:
             continue
+
 
 print("Saving...")
 with open("./data.json", mode="w") as f:

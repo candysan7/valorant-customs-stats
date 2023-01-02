@@ -11,6 +11,7 @@ AGENT = "agent"
 AGENTS = "agents"
 FULL_BODY_IMAGE_URL = "full_body_image_url"
 ROLES = "roles"
+ROLE = "role"
 
 KILLS = "kills"
 ASSISTS = "assists"

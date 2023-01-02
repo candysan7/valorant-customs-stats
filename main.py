@@ -25,14 +25,25 @@ if __name__ == "__main__":
     with open(os.path.join(output_dir, "individual.json"), mode="w") as f:
         out_json = {
             player_name: PLAYER_INFO[player_name].copy()
-            | {WINRATE: None, WINS: 0, GAMES: 0, TOP_AGENTS: [], TOP_ROLES: []}
-            for player_name in PLAYER_NAMES
-        }
-
-        player_agent_stats = {
-            player_name: {
-                AGENTS: {agent_name: 0 for agent_name in AGENT_NAMES},
-                ROLES: {role_name: 0 for role_name in ROLE_NAMES},
+            | {
+                WINRATE: None,
+                WINS: 0,
+                GAMES: 0,
+                AGENTS: {
+                    agent_name: {
+                        ROLE: AGENT_NAME_TO_ROLE[agent_name],
+                        WINRATE: None,
+                        WINS: 0,
+                        GAMES: 0,
+                    }
+                    for agent_name in AGENT_NAMES
+                },
+                ROLES: {
+                    role_name: {WINRATE: None, WINS: 0, GAMES: 0}
+                    for role_name in ROLE_NAMES
+                },
+                TOP_AGENTS: [],
+                TOP_ROLES: [],
             }
             for player_name in PLAYER_NAMES
         }
@@ -45,32 +56,52 @@ if __name__ == "__main__":
                 # Update winrate
                 if match.player_did_win(player_name):
                     player_entry[WINS] += 1
+                    player_entry[AGENTS][player_stats.agent][WINS] += 1
+                    player_entry[ROLES][AGENT_NAME_TO_ROLE[player_stats.agent]][
+                        WINS
+                    ] += 1
                 if match.player_did_play(player_name):
                     player_entry[GAMES] += 1
-                if player_entry[GAMES] != 0:
-                    player_entry[WINRATE] = round(
-                        100 * player_entry[WINS] / player_entry[GAMES]
-                    )
-
-                # Update agents and roles
-                player_agent_stats[player_name][AGENTS][player_stats.agent] += 1
-                player_agent_stats[player_name][ROLES][
-                    AGENT_NAME_TO_ROLE[player_stats.agent]
-                ] += 1
+                    player_entry[AGENTS][player_stats.agent][GAMES] += 1
+                    player_entry[ROLES][AGENT_NAME_TO_ROLE[player_stats.agent]][
+                        GAMES
+                    ] += 1
 
         for player_name in PLAYER_NAMES:
+            player_entry = out_json[player_name]
+
+            if player_entry[GAMES] != 0:
+                player_entry[WINRATE] = round(
+                    100 * player_entry[WINS] / player_entry[GAMES]
+                )
+
+            for agent_name in AGENT_NAMES:
+                if player_entry[AGENTS][agent_name][GAMES] != 0:
+                    player_entry[AGENTS][agent_name][WINRATE] = round(
+                        100
+                        * player_entry[AGENTS][agent_name][WINS]
+                        / player_entry[AGENTS][agent_name][GAMES]
+                    )
+
             for role_name in ROLE_NAMES:
-                if (
-                    player_agent_stats[player_name][ROLES][role_name]
-                    / out_json[player_name][GAMES]
-                    > 0.3
-                ):
+                if player_entry[ROLES][role_name][GAMES] != 0:
+                    player_entry[ROLES][role_name][WINRATE] = round(
+                        100
+                        * player_entry[ROLES][role_name][WINS]
+                        / player_entry[ROLES][role_name][GAMES]
+                    )
+
+        for player_name in PLAYER_NAMES:
+            player_entry = out_json[player_name]
+
+            for role_name in ROLE_NAMES:
+                if player_entry[ROLES][role_name][GAMES] / player_entry[GAMES] > 0.3:
                     out_json[player_name][TOP_ROLES].append(role_name)
 
             agents_sorted_by_plays = sorted(
-                player_agent_stats[player_name][AGENTS],
+                out_json[player_name][AGENTS],
                 key=lambda agent_name: (
-                    -player_agent_stats[player_name][AGENTS][agent_name],
+                    -out_json[player_name][AGENTS][agent_name][GAMES],
                     agent_name,
                 ),
             )
@@ -317,6 +348,38 @@ if __name__ == "__main__":
             curr_block_start_date += time_increment
 
         # Individually compute the present day
+        i = len(matches)
+        while matches[i - 1].time >= last_date - timedelta(days=60):
+            i -= 1
+
+        block_data = {
+            player_name: {WINRATE: None, WINS: 0, GAMES: 0}
+            for player_name in PLAYER_NAMES
+        }
+
+        for match in matches[i:]:
+            for winner_name in filter_players(match.winning_players):
+                block_data[winner_name][WINS] += 1
+            for player_name in filter_players(match.all_players):
+                block_data[player_name][GAMES] += 1
+        for player_name, player_stats in block_data.items():
+            if player_stats[GAMES] != 0:
+                player_stats[WINRATE] = round(
+                    100 * player_stats[WINS] / player_stats[GAMES]
+                )
+
+        out_json.append({"block_end_time": last_date, "data": block_data})
 
         json.dump(out_json, f, indent=2, default=str)
+        f.close()
+
+    with open(os.path.join(output_dir, "roles.json"), mode="w") as f:
+        out_json = {role_name: 0 for role_name in ROLE_NAMES}
+
+        for match in matches:
+            for player_name in filter_players(match.all_players):
+                player_stats = match.all_players[player_name]
+                out_json[AGENT_NAME_TO_ROLE[player_stats.agent]] += 1
+
+        json.dump(out_json, f, indent=2)
         f.close()

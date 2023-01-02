@@ -939,8 +939,8 @@
     "data": {
       "andy": {
         "winrate": 50,
-        "wins": 1,
-        "games": 2
+        "wins": 2,
+        "games": 4
       },
       "brandon": {
         "winrate": null,
@@ -948,24 +948,24 @@
         "games": 0
       },
       "brian": {
-        "winrate": 100,
-        "wins": 2,
-        "games": 2
+        "winrate": 75,
+        "wins": 3,
+        "games": 4
       },
       "cade": {
-        "winrate": 50,
+        "winrate": 25,
         "wins": 1,
-        "games": 2
+        "games": 4
       },
       "darwin": {
         "winrate": 50,
-        "wins": 1,
-        "games": 2
+        "wins": 2,
+        "games": 4
       },
       "josh": {
         "winrate": 50,
-        "wins": 1,
-        "games": 2
+        "wins": 2,
+        "games": 4
       },
       "lindsey": {
         "winrate": 50,
@@ -978,19 +978,19 @@
         "games": 0
       },
       "sophie": {
-        "winrate": 0,
-        "wins": 0,
-        "games": 2
+        "winrate": 25,
+        "wins": 1,
+        "games": 4
       },
       "steve": {
         "winrate": 50,
-        "wins": 1,
-        "games": 2
+        "wins": 2,
+        "games": 4
       },
       "steven": {
-        "winrate": 100,
-        "wins": 2,
-        "games": 2
+        "winrate": 75,
+        "wins": 3,
+        "games": 4
       },
       "sun": {
         "winrate": null,
@@ -1008,9 +1008,179 @@
         "games": 0
       },
       "tang": {
+        "winrate": 50,
+        "wins": 2,
+        "games": 4
+      },
+      "yang": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      }
+    }
+  },
+  {
+    "block_start_time": "2022-12-26 00:00:00",
+    "data": {
+      "andy": {
+        "winrate": 100,
+        "wins": 1,
+        "games": 1
+      },
+      "brandon": {
+        "winrate": 100,
+        "wins": 1,
+        "games": 1
+      },
+      "brian": {
         "winrate": 0,
         "wins": 0,
-        "games": 2
+        "games": 1
+      },
+      "cade": {
+        "winrate": 0,
+        "wins": 0,
+        "games": 1
+      },
+      "darwin": {
+        "winrate": 0,
+        "wins": 0,
+        "games": 1
+      },
+      "josh": {
+        "winrate": 0,
+        "wins": 0,
+        "games": 1
+      },
+      "lindsey": {
+        "winrate": 100,
+        "wins": 1,
+        "games": 1
+      },
+      "sequential": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      },
+      "sophie": {
+        "winrate": 100,
+        "wins": 1,
+        "games": 1
+      },
+      "steve": {
+        "winrate": 0,
+        "wins": 0,
+        "games": 1
+      },
+      "steven": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      },
+      "sun": {
+        "winrate": 100,
+        "wins": 1,
+        "games": 1
+      },
+      "susi": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      },
+      "susu": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      },
+      "tang": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      },
+      "yang": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      }
+    }
+  },
+  {
+    "block_start_time": "2023-01-02 00:00:00",
+    "data": {
+      "andy": {
+        "winrate": 100,
+        "wins": 1,
+        "games": 1
+      },
+      "brandon": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      },
+      "brian": {
+        "winrate": 0,
+        "wins": 0,
+        "games": 1
+      },
+      "cade": {
+        "winrate": 100,
+        "wins": 1,
+        "games": 1
+      },
+      "darwin": {
+        "winrate": 0,
+        "wins": 0,
+        "games": 1
+      },
+      "josh": {
+        "winrate": 0,
+        "wins": 0,
+        "games": 1
+      },
+      "lindsey": {
+        "winrate": 0,
+        "wins": 0,
+        "games": 1
+      },
+      "sequential": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      },
+      "sophie": {
+        "winrate": 100,
+        "wins": 1,
+        "games": 1
+      },
+      "steve": {
+        "winrate": 0,
+        "wins": 0,
+        "games": 1
+      },
+      "steven": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      },
+      "sun": {
+        "winrate": 100,
+        "wins": 1,
+        "games": 1
+      },
+      "susi": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      },
+      "susu": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
+      },
+      "tang": {
+        "winrate": null,
+        "wins": 0,
+        "games": 0
       },
       "yang": {
         "winrate": null,
