@@ -124,6 +124,7 @@ if __name__ == "__main__":
         out_json = {
             player_name: {
                 assistant_name: {
+                    ASSISTANT_NAME: assistant_name,
                     ASSISTS_PER_STANDARD_GAME: None,
                     ASSISTS: 0,
                     ROUNDS: 0,
@@ -165,6 +166,11 @@ if __name__ == "__main__":
                         )
                         / 10
                     )
+
+        for player_name in out_json:
+            out_json[player_name] = sorted(
+                out_json[player_name].values(), key=lambda x: x[ASSISTANT_NAME]
+            )
 
         json.dump(out_json, f, indent=2)
         f.close()
