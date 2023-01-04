@@ -1,4 +1,5 @@
-from datetime import datetime, timedelta, time
+from datetime import datetime, timedelta
+from pytz import timezone
 from typing import Callable
 
 from Match import Match
@@ -16,7 +17,9 @@ def aggregate_matches(
     # Second argument of aggregate_fn is the output from the previous block; None if it's the first block
     aggregate_fn: Callable[[list[Match], any], any],
     # Default first time is October 3rd, 2022, which is the week before the first tracked customs
-    start_date: datetime = datetime(year=2022, month=10, day=3),
+    start_date: datetime = datetime(
+        year=2022, month=10, day=3, tzinfo=timezone("US/Pacific")
+    ),
     interval: timedelta = timedelta(weeks=1),
 ) -> list[IntervalData]:
     """Aggregate matches into time intervals. `matches` must be sorted from oldest to newest."""

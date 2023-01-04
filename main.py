@@ -1,5 +1,6 @@
 import json, os.path
 from datetime import datetime, timedelta, time
+from pytz import timezone
 
 from Match import Match
 from util import aggregate_matches, filter_players
@@ -309,8 +310,14 @@ if __name__ == "__main__":
 
         out_json = []
 
-        last_date = datetime.combine(datetime.today(), time.max)
-        curr_date = datetime.combine(datetime(year=2022, month=10, day=9), time.max)
+        last_date = datetime.combine(
+            datetime.today(), time.max, tzinfo=timezone("US/Pacific")
+        )
+        curr_date = datetime.combine(
+            datetime(year=2022, month=10, day=9),
+            time.max,
+            tzinfo=timezone("US/Pacific"),
+        )
         time_increment = timedelta(weeks=1)
 
         curr_block_start_date = curr_date - timedelta(days=60)

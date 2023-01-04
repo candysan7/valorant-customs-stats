@@ -23,29 +23,27 @@ class Player:
 class Match:
     def __init__(self, match_json):
         # match_json.time looks like "10/11/22, 9:08 PM"
-        self.time: datetime = datetime.strptime(
-            match_json["time"], "%m/%d/%y, %I:%M %p"
-        )
+        self.time: datetime = datetime.fromisoformat(match_json["time"])
         self.url: str = match_json["url"]
         self.map: str = match_json["map"]
-        self.score_a: int = match_json["score_a"]
-        self.score_b: int = match_json["score_b"]
-        self.team_a: dict[str, Player] = {
+        self.score_red: int = match_json["score_red"]
+        self.score_blue: int = match_json["score_blue"]
+        self.team_red: dict[str, Player] = {
             player_json["player_name"]: Player(player_json)
-            for player_json in match_json["team_a"]
+            for player_json in match_json["team_red"]
         }
-        self.team_b: dict[str, Player] = {
+        self.team_blue: dict[str, Player] = {
             player_json["player_name"]: Player(player_json)
-            for player_json in match_json["team_b"]
+            for player_json in match_json["team_blue"]
         }
 
-        self.all_players = self.team_a | self.team_b
-        if self.score_a > self.score_b:
-            self.winning_players: dict[str, Player] = self.team_a
-            self.losing_players: dict[str, Player] = self.team_b
+        self.all_players = self.team_red | self.team_blue
+        if self.score_red > self.score_blue:
+            self.winning_players: dict[str, Player] = self.team_red
+            self.losing_players: dict[str, Player] = self.team_blue
         else:
-            self.winning_players: dict[str, Player] = self.team_b
-            self.losing_players: dict[str, Player] = self.team_a
+            self.winning_players: dict[str, Player] = self.team_blue
+            self.losing_players: dict[str, Player] = self.team_red
 
     def player_did_play(self, player_name):
         return player_name in self.all_players

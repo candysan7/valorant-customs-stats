@@ -1,6 +1,6 @@
 [
   {
-    "block_end_time": "2022-10-09 23:59:59.999999",
+    "block_end_time": "2022-10-09 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": null,
@@ -85,7 +85,7 @@
     }
   },
   {
-    "block_end_time": "2022-10-16 23:59:59.999999",
+    "block_end_time": "2022-10-16 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": null,
@@ -170,7 +170,7 @@
     }
   },
   {
-    "block_end_time": "2022-10-23 23:59:59.999999",
+    "block_end_time": "2022-10-23 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 43,
@@ -255,7 +255,7 @@
     }
   },
   {
-    "block_end_time": "2022-10-30 23:59:59.999999",
+    "block_end_time": "2022-10-30 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 43,
@@ -340,7 +340,7 @@
     }
   },
   {
-    "block_end_time": "2022-11-06 23:59:59.999999",
+    "block_end_time": "2022-11-06 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 38,
@@ -425,7 +425,7 @@
     }
   },
   {
-    "block_end_time": "2022-11-13 23:59:59.999999",
+    "block_end_time": "2022-11-13 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 38,
@@ -510,7 +510,7 @@
     }
   },
   {
-    "block_end_time": "2022-11-20 23:59:59.999999",
+    "block_end_time": "2022-11-20 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 53,
@@ -595,7 +595,7 @@
     }
   },
   {
-    "block_end_time": "2022-11-27 23:59:59.999999",
+    "block_end_time": "2022-11-27 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 57,
@@ -680,7 +680,7 @@
     }
   },
   {
-    "block_end_time": "2022-12-04 23:59:59.999999",
+    "block_end_time": "2022-12-04 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 52,
@@ -765,7 +765,7 @@
     }
   },
   {
-    "block_end_time": "2022-12-11 23:59:59.999999",
+    "block_end_time": "2022-12-11 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 57,
@@ -788,8 +788,8 @@
         "games": 30
       },
       "darwin": {
-        "winrate": 59,
-        "wins": 23,
+        "winrate": 56,
+        "wins": 22,
         "games": 39
       },
       "josh": {
@@ -813,8 +813,8 @@
         "games": 39
       },
       "steve": {
-        "winrate": 48,
-        "wins": 10,
+        "winrate": 43,
+        "wins": 9,
         "games": 21
       },
       "steven": {
@@ -850,7 +850,7 @@
     }
   },
   {
-    "block_end_time": "2022-12-18 23:59:59.999999",
+    "block_end_time": "2022-12-18 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 52,
@@ -873,8 +873,8 @@
         "games": 32
       },
       "darwin": {
-        "winrate": 60,
-        "wins": 26,
+        "winrate": 58,
+        "wins": 25,
         "games": 43
       },
       "josh": {
@@ -898,8 +898,8 @@
         "games": 42
       },
       "steve": {
-        "winrate": 48,
-        "wins": 11,
+        "winrate": 43,
+        "wins": 10,
         "games": 23
       },
       "steven": {
@@ -935,7 +935,7 @@
     }
   },
   {
-    "block_end_time": "2022-12-25 23:59:59.999999",
+    "block_end_time": "2022-12-25 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 55,
@@ -958,8 +958,8 @@
         "games": 29
       },
       "darwin": {
-        "winrate": 55,
-        "wins": 22,
+        "winrate": 52,
+        "wins": 21,
         "games": 40
       },
       "josh": {
@@ -983,8 +983,8 @@
         "games": 39
       },
       "steve": {
-        "winrate": 48,
-        "wins": 13,
+        "winrate": 44,
+        "wins": 12,
         "games": 27
       },
       "steven": {
@@ -1020,7 +1020,7 @@
     }
   },
   {
-    "block_end_time": "2023-01-01 23:59:59.999999",
+    "block_end_time": "2023-01-01 23:59:59.999999-07:53",
     "data": {
       "andy": {
         "winrate": 56,
@@ -1043,8 +1043,8 @@
         "games": 30
       },
       "darwin": {
-        "winrate": 54,
-        "wins": 22,
+        "winrate": 51,
+        "wins": 21,
         "games": 41
       },
       "josh": {
@@ -1068,8 +1068,8 @@
         "games": 40
       },
       "steve": {
-        "winrate": 46,
-        "wins": 13,
+        "winrate": 43,
+        "wins": 12,
         "games": 28
       },
       "steven": {
@@ -1105,12 +1105,12 @@
     }
   },
   {
-    "block_end_time": "2023-01-02 23:59:59.999999",
+    "block_end_time": "2023-01-03 23:59:59.999999-07:53",
     "data": {
       "andy": {
-        "winrate": 58,
-        "wins": 23,
-        "games": 40
+        "winrate": 59,
+        "wins": 24,
+        "games": 41
       },
       "brandon": {
         "winrate": 40,
@@ -1118,29 +1118,29 @@
         "games": 10
       },
       "brian": {
-        "winrate": 45,
+        "winrate": 44,
         "wins": 15,
-        "games": 33
+        "games": 34
       },
       "cade": {
-        "winrate": 39,
+        "winrate": 38,
         "wins": 12,
-        "games": 31
+        "games": 32
       },
       "darwin": {
+        "winrate": 51,
+        "wins": 22,
+        "games": 43
+      },
+      "josh": {
+        "winrate": 54,
+        "wins": 19,
+        "games": 35
+      },
+      "lindsey": {
         "winrate": 52,
         "wins": 22,
         "games": 42
-      },
-      "josh": {
-        "winrate": 56,
-        "wins": 19,
-        "games": 34
-      },
-      "lindsey": {
-        "winrate": 51,
-        "wins": 21,
-        "games": 41
       },
       "sequential": {
         "winrate": 52,
@@ -1148,14 +1148,14 @@
         "games": 25
       },
       "sophie": {
-        "winrate": 51,
-        "wins": 21,
-        "games": 41
+        "winrate": 52,
+        "wins": 22,
+        "games": 42
       },
       "steve": {
-        "winrate": 45,
+        "winrate": 43,
         "wins": 13,
-        "games": 29
+        "games": 30
       },
       "steven": {
         "winrate": 59,
@@ -1163,9 +1163,9 @@
         "games": 22
       },
       "sun": {
-        "winrate": 33,
+        "winrate": 32,
         "wins": 7,
-        "games": 21
+        "games": 22
       },
       "susi": {
         "winrate": 46,

@@ -66,6 +66,7 @@ urls = [
     "https://tracker.gg/valorant/match/1130fc3a-89c2-4318-9e4d-3d28824d8292?handle=youngsmasher%23NA1",
     "https://tracker.gg/valorant/match/b82d43e9-5b05-4c1b-a45e-8b357bb9109a?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/2e0c5bc4-af8a-4044-ba2f-94673f0de9d4?handle=aylindsay%230613",
+    "https://tracker.gg/valorant/match/c9930cfa-d79b-4da3-a643-d6a7d1f6c83e?handle=aylindsay%230613",
 ]
 
 username_to_name = {
@@ -124,74 +125,72 @@ driver = webdriver.Chrome(
 driver.set_window_size(1920, 1400)
 
 matches = []
-if os.path.exists("./data.json"):
-    with open("./data.json", mode="r") as f:
-        matches = json.load(f)
-    f.close()
+# if os.path.exists("./data.json"):
+#     with open("./data.json", mode="r") as f:
+#         matches = json.load(f)
+#     f.close()
 
 
-for match in matches:
-    if match["url"] in urls:
-        urls.remove(match["url"])
+# for match in matches:
+#     if match["url"] in urls:
+#         urls.remove(match["url"])
 
 for url in urls:
     print(f"Scraping from: {url}")
     while True:
         try:
-            driver.get(url)
+            api_url = f"https://api.tracker.gg/api/v2/valorant/standard/matches/{urlparse(url).path.split('/')[-1]}"
+            driver.get(api_url)
             time.sleep(1.5)
 
-            game_info_labels = driver.find_elements(
-                By.CLASS_NAME, "trn-match-drawer__header-label"
-            )
-            game_info = driver.find_elements(
-                By.CLASS_NAME, "trn-match-drawer__header-value"
-            )
+            match_json = json.loads(driver.find_element(By.CSS_SELECTOR, "pre").text)[
+                "data"
+            ]
+            match_json["tracker_url"] = url
 
-            match = {
-                "time": game_info_labels[4].text,
-                "url": url,
-                "map": game_info[0].text,
-                "score_a": int(game_info[1].text),
-                "score_b": int(game_info[3].text),
-                "team_a": [],
-                "team_b": [],
-            }
+            # game_info_labels = driver.find_elements(
+            #     By.CLASS_NAME, "trn-match-drawer__header-label"
+            # )
+            # game_info = driver.find_elements(
+            #     By.CLASS_NAME, "trn-match-drawer__header-value"
+            # )
 
-            rows = driver.find_elements(By.CLASS_NAME, "st-content__item")
-            for i, row in enumerate(rows):
-                name = row.find_element(By.CLASS_NAME, "trn-ign__username").text
-                agent_image = row.find_element(By.TAG_NAME, "img").get_attribute("src")
-                stats = row.find_elements(By.CLASS_NAME, "value")
-                match["team_a" if i < 5 else "team_b"].append(
-                    {
-                        "player_name": username_to_name[name]
-                        if name in username_to_name.keys()
-                        else name,
-                        "agent": image_url_to_agent[agent_image],
-                        "average_combat_score": int(stats[0].text),
-                        "kills": int(stats[1].text),
-                        "deaths": int(stats[2].text),
-                        "assists": int(stats[3].text),
-                        # "+/-": stats[4].text,
-                        "kill_deaths": float(stats[5].text),
-                        "kill_assist_survive_traded": int(stats[6].text[:-1]),
-                        "first_kills": int(stats[7].text),
-                        "first_deaths": int(stats[8].text),
-                        "multi_kills": int(stats[9].text),
-                        "econ": int(stats[10].text),
-                    }
-                )
-            matches.append(match)
+            # rows = driver.find_elements(By.CLASS_NAME, "st-content__item")
+            # for i, row in enumerate(rows):
+            #     name = row.find_element(By.CLASS_NAME, "trn-ign__username").text
+            #     agent_image = row.find_element(By.TAG_NAME, "img").get_attribute("src")
+            #     stats = row.find_elements(By.CLASS_NAME, "value")
+            #     match["team_a" if i < 5 else "team_b"].append(
+            #         {
+            #             "player_name": username_to_name[name]
+            #             if name in username_to_name.keys()
+            #             else name,
+            #             "agent": image_url_to_agent[agent_image],
+            #             "average_combat_score": int(stats[0].text),
+            #             "kills": int(stats[1].text),
+            #             "deaths": int(stats[2].text),
+            #             "assists": int(stats[3].text),
+            #             # "+/-": stats[4].text,
+            #             "kill_deaths": float(stats[5].text),
+            #             "kill_assist_survive_traded": int(stats[6].text[:-1]),
+            #             "first_kills": int(stats[7].text),
+            #             "first_deaths": int(stats[8].text),
+            #             "multi_kills": int(stats[9].text),
+            #             "econ": int(stats[10].text),
+            #         }
+            #     )
+
+            matches.append(match_json)
             break
-        except:
+        except Exception as e:
+            print(e)
             continue
 
 
 print("Saving...")
-with open("./data.json", mode="w") as f:
-    matches.sort(key=lambda m: datetime.strptime(m["time"], "%m/%d/%y, %I:%M %p"))
-    json.dump(matches, f, indent=2)
+with open("./scrape.json", mode="w") as f:
+    # matches.sort(key=lambda m: datetime.strptime(m["time"], "%m/%d/%y, %I:%M %p"))
+    json.dump(matches, f, separators=(",", ":"))
     f.close()
 print("Done")
 
