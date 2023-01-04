@@ -117,7 +117,11 @@ with open("./scrape.json", mode="r") as f:
                         )[0]
                     )
 
-                    if segment["metadata"]["finishingDamage"]["damageType"] != "Weapon":
+                    if segment["metadata"]["finishingDamage"]["damageType"] == "Bomb":
+                        weapon = "Bomb"
+                    elif (
+                        segment["metadata"]["finishingDamage"]["damageType"] != "Weapon"
+                    ):
                         # E.g., bomb or ability kills
                         weapon = segment["metadata"]["finishingDamage"]["damageItem"]
                     else:
@@ -128,7 +132,9 @@ with open("./scrape.json", mode="r") as f:
                             "victim_name": victim_name,
                             "assistants": list(
                                 map(
-                                    lambda d: d["platformUserIdentifier"].split("#")[0],
+                                    lambda d: username_to_name(
+                                        d["platformUserIdentifier"].split("#")[0]
+                                    ),
                                     segment["metadata"]["assistants"],
                                 )
                             ),

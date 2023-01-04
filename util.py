@@ -48,5 +48,9 @@ def aggregate_matches(
     return out
 
 
+def is_player_of_interest(player_name):
+    return player_name in PLAYER_NAMES
+
+
 def filter_players(player_list):
-    return list(filter(lambda player_name: player_name in PLAYER_NAMES, player_list))
+    return list(filter(is_player_of_interest, player_list))

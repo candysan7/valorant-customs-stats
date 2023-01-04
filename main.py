@@ -3,7 +3,7 @@ from datetime import datetime, timedelta, time
 from pytz import timezone
 
 from Match import Match
-from util import aggregate_matches, filter_players
+from util import aggregate_matches, filter_players, is_player_of_interest
 from constants.misc import *
 from constants.players import *
 from constants.valorant import *
@@ -107,12 +107,37 @@ if __name__ == "__main__":
                 ),
             )
             out_json[player_name][TOP_AGENTS] = [
-                {
-                    AGENT: agent_name,
-                    FULL_BODY_IMAGE_URL: AGENT_NAME_TO_FULL_BODY_IMAGE_URL[agent_name],
-                }
+                agent_name
                 for agent_name in agents_sorted_by_plays[:3]
+                # {
+                #     AGENT: agent_name,
+                #     FULL_BODY_IMAGE_URL: AGENT_NAME_TO_FULL_BODY_IMAGE_URL[agent_name],
+                # }
+                # for agent_name in agents_sorted_by_plays[:3]
             ]
+        json.dump(out_json, f, indent=2)
+        f.close()
+
+    with open(os.path.join(output_dir, "assistants.json"), mode="w") as f:
+        out_json = {
+            player_name: {
+                assistant_name: 0 if player_name != assistant_name else None
+                for assistant_name in PLAYER_NAMES
+            }
+            for player_name in PLAYER_NAMES
+        }
+
+        for match in matches:
+            for _round in match.rounds:
+                # This will overwrite the round() function otherwise
+                for kill in _round.kills:
+                    if kill.killer_name == kill.victim_name:
+                        continue
+                    player_name = kill.killer_name
+                    if not is_player_of_interest(player_name):
+                        continue
+                    for assistant_name in filter_players(kill.assistants):
+                        out_json[player_name][assistant_name] += 1
 
         json.dump(out_json, f, indent=2)
         f.close()
