@@ -1,0 +1,1314 @@
+{
+  "andy": {
+    "andy": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "brandon": {
+      "assists_per_standard_game": 2.6,
+      "assists": 14,
+      "rounds": 135
+    },
+    "brian": {
+      "assists_per_standard_game": 1.7,
+      "assists": 29,
+      "rounds": 439
+    },
+    "cade": {
+      "assists_per_standard_game": 2.0,
+      "assists": 24,
+      "rounds": 307
+    },
+    "darwin": {
+      "assists_per_standard_game": 2.9,
+      "assists": 52,
+      "rounds": 454
+    },
+    "josh": {
+      "assists_per_standard_game": 3.2,
+      "assists": 43,
+      "rounds": 341
+    },
+    "lindsey": {
+      "assists_per_standard_game": 1.9,
+      "assists": 29,
+      "rounds": 383
+    },
+    "sequential": {
+      "assists_per_standard_game": 3.3,
+      "assists": 13,
+      "rounds": 98
+    },
+    "sophie": {
+      "assists_per_standard_game": 1.4,
+      "assists": 36,
+      "rounds": 623
+    },
+    "steve": {
+      "assists_per_standard_game": 1.5,
+      "assists": 15,
+      "rounds": 250
+    },
+    "steven": {
+      "assists_per_standard_game": 3.6,
+      "assists": 38,
+      "rounds": 263
+    },
+    "sun": {
+      "assists_per_standard_game": 2.1,
+      "assists": 12,
+      "rounds": 143
+    },
+    "susi": {
+      "assists_per_standard_game": 4.2,
+      "assists": 16,
+      "rounds": 95
+    },
+    "susu": {
+      "assists_per_standard_game": 3.4,
+      "assists": 7,
+      "rounds": 52
+    },
+    "tang": {
+      "assists_per_standard_game": 3.1,
+      "assists": 48,
+      "rounds": 392
+    },
+    "yang": {
+      "assists_per_standard_game": 3.9,
+      "assists": 3,
+      "rounds": 19
+    }
+  },
+  "brandon": {
+    "andy": {
+      "assists_per_standard_game": 0.4,
+      "assists": 2,
+      "rounds": 135
+    },
+    "brandon": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "brian": {
+      "assists_per_standard_game": 0.0,
+      "assists": 0,
+      "rounds": 30
+    },
+    "cade": {
+      "assists_per_standard_game": 0.3,
+      "assists": 1,
+      "rounds": 84
+    },
+    "darwin": {
+      "assists_per_standard_game": 0.0,
+      "assists": 0,
+      "rounds": 40
+    },
+    "josh": {
+      "assists_per_standard_game": 0.0,
+      "assists": 0,
+      "rounds": 22
+    },
+    "lindsey": {
+      "assists_per_standard_game": 0.7,
+      "assists": 3,
+      "rounds": 110
+    },
+    "sequential": {
+      "assists_per_standard_game": 1.4,
+      "assists": 2,
+      "rounds": 37
+    },
+    "sophie": {
+      "assists_per_standard_game": 0.4,
+      "assists": 2,
+      "rounds": 112
+    },
+    "steve": {
+      "assists_per_standard_game": 1.8,
+      "assists": 8,
+      "rounds": 111
+    },
+    "steven": {
+      "assists_per_standard_game": 0.8,
+      "assists": 3,
+      "rounds": 100
+    },
+    "sun": {
+      "assists_per_standard_game": 1.8,
+      "assists": 5,
+      "rounds": 69
+    },
+    "susi": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "susu": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "tang": {
+      "assists_per_standard_game": 0.0,
+      "assists": 0,
+      "rounds": 46
+    },
+    "yang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    }
+  },
+  "brian": {
+    "andy": {
+      "assists_per_standard_game": 1.5,
+      "assists": 26,
+      "rounds": 439
+    },
+    "brandon": {
+      "assists_per_standard_game": 0.0,
+      "assists": 0,
+      "rounds": 30
+    },
+    "brian": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "cade": {
+      "assists_per_standard_game": 0.1,
+      "assists": 1,
+      "rounds": 333
+    },
+    "darwin": {
+      "assists_per_standard_game": 0.7,
+      "assists": 16,
+      "rounds": 549
+    },
+    "josh": {
+      "assists_per_standard_game": 2.1,
+      "assists": 22,
+      "rounds": 265
+    },
+    "lindsey": {
+      "assists_per_standard_game": 1.0,
+      "assists": 17,
+      "rounds": 425
+    },
+    "sequential": {
+      "assists_per_standard_game": 0.9,
+      "assists": 6,
+      "rounds": 174
+    },
+    "sophie": {
+      "assists_per_standard_game": 0.5,
+      "assists": 4,
+      "rounds": 189
+    },
+    "steve": {
+      "assists_per_standard_game": 0.2,
+      "assists": 2,
+      "rounds": 231
+    },
+    "steven": {
+      "assists_per_standard_game": 1.5,
+      "assists": 15,
+      "rounds": 248
+    },
+    "sun": {
+      "assists_per_standard_game": 0.7,
+      "assists": 4,
+      "rounds": 150
+    },
+    "susi": {
+      "assists_per_standard_game": 0.3,
+      "assists": 2,
+      "rounds": 148
+    },
+    "susu": {
+      "assists_per_standard_game": 3.2,
+      "assists": 8,
+      "rounds": 62
+    },
+    "tang": {
+      "assists_per_standard_game": 0.9,
+      "assists": 11,
+      "rounds": 291
+    },
+    "yang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    }
+  },
+  "cade": {
+    "andy": {
+      "assists_per_standard_game": 2.0,
+      "assists": 24,
+      "rounds": 307
+    },
+    "brandon": {
+      "assists_per_standard_game": 2.1,
+      "assists": 7,
+      "rounds": 84
+    },
+    "brian": {
+      "assists_per_standard_game": 1.3,
+      "assists": 17,
+      "rounds": 333
+    },
+    "cade": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.5,
+      "assists": 28,
+      "rounds": 468
+    },
+    "josh": {
+      "assists_per_standard_game": 1.9,
+      "assists": 34,
+      "rounds": 446
+    },
+    "lindsey": {
+      "assists_per_standard_game": 2.0,
+      "assists": 30,
+      "rounds": 384
+    },
+    "sequential": {
+      "assists_per_standard_game": 1.1,
+      "assists": 4,
+      "rounds": 87
+    },
+    "sophie": {
+      "assists_per_standard_game": 0.8,
+      "assists": 12,
+      "rounds": 399
+    },
+    "steve": {
+      "assists_per_standard_game": 0.3,
+      "assists": 2,
+      "rounds": 192
+    },
+    "steven": {
+      "assists_per_standard_game": 2.1,
+      "assists": 15,
+      "rounds": 180
+    },
+    "sun": {
+      "assists_per_standard_game": 2.0,
+      "assists": 16,
+      "rounds": 204
+    },
+    "susi": {
+      "assists_per_standard_game": 1.3,
+      "assists": 8,
+      "rounds": 149
+    },
+    "susu": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "tang": {
+      "assists_per_standard_game": 1.7,
+      "assists": 14,
+      "rounds": 209
+    },
+    "yang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    }
+  },
+  "darwin": {
+    "andy": {
+      "assists_per_standard_game": 2.0,
+      "assists": 37,
+      "rounds": 454
+    },
+    "brandon": {
+      "assists_per_standard_game": 2.5,
+      "assists": 4,
+      "rounds": 40
+    },
+    "brian": {
+      "assists_per_standard_game": 1.1,
+      "assists": 24,
+      "rounds": 549
+    },
+    "cade": {
+      "assists_per_standard_game": 2.2,
+      "assists": 41,
+      "rounds": 468
+    },
+    "darwin": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "josh": {
+      "assists_per_standard_game": 2.4,
+      "assists": 40,
+      "rounds": 412
+    },
+    "lindsey": {
+      "assists_per_standard_game": 3.5,
+      "assists": 88,
+      "rounds": 629
+    },
+    "sequential": {
+      "assists_per_standard_game": 0.9,
+      "assists": 8,
+      "rounds": 235
+    },
+    "sophie": {
+      "assists_per_standard_game": 0.9,
+      "assists": 11,
+      "rounds": 296
+    },
+    "steve": {
+      "assists_per_standard_game": 1.2,
+      "assists": 16,
+      "rounds": 347
+    },
+    "steven": {
+      "assists_per_standard_game": 2.1,
+      "assists": 11,
+      "rounds": 131
+    },
+    "sun": {
+      "assists_per_standard_game": 2.2,
+      "assists": 25,
+      "rounds": 285
+    },
+    "susi": {
+      "assists_per_standard_game": 1.8,
+      "assists": 11,
+      "rounds": 154
+    },
+    "susu": {
+      "assists_per_standard_game": 1.8,
+      "assists": 3,
+      "rounds": 42
+    },
+    "tang": {
+      "assists_per_standard_game": 2.3,
+      "assists": 26,
+      "rounds": 280
+    },
+    "yang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    }
+  },
+  "josh": {
+    "andy": {
+      "assists_per_standard_game": 1.6,
+      "assists": 22,
+      "rounds": 341
+    },
+    "brandon": {
+      "assists_per_standard_game": 2.3,
+      "assists": 2,
+      "rounds": 22
+    },
+    "brian": {
+      "assists_per_standard_game": 1.2,
+      "assists": 13,
+      "rounds": 265
+    },
+    "cade": {
+      "assists_per_standard_game": 1.7,
+      "assists": 31,
+      "rounds": 446
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.5,
+      "assists": 24,
+      "rounds": 412
+    },
+    "josh": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "lindsey": {
+      "assists_per_standard_game": 2.5,
+      "assists": 51,
+      "rounds": 508
+    },
+    "sequential": {
+      "assists_per_standard_game": 1.8,
+      "assists": 11,
+      "rounds": 152
+    },
+    "sophie": {
+      "assists_per_standard_game": 1.2,
+      "assists": 19,
+      "rounds": 410
+    },
+    "steve": {
+      "assists_per_standard_game": 1.5,
+      "assists": 18,
+      "rounds": 292
+    },
+    "steven": {
+      "assists_per_standard_game": 1.9,
+      "assists": 16,
+      "rounds": 207
+    },
+    "sun": {
+      "assists_per_standard_game": 1.2,
+      "assists": 12,
+      "rounds": 244
+    },
+    "susi": {
+      "assists_per_standard_game": 2.1,
+      "assists": 9,
+      "rounds": 108
+    },
+    "susu": {
+      "assists_per_standard_game": 2.1,
+      "assists": 2,
+      "rounds": 24
+    },
+    "tang": {
+      "assists_per_standard_game": 0.9,
+      "assists": 10,
+      "rounds": 269
+    },
+    "yang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    }
+  },
+  "lindsey": {
+    "andy": {
+      "assists_per_standard_game": 2.2,
+      "assists": 33,
+      "rounds": 383
+    },
+    "brandon": {
+      "assists_per_standard_game": 1.4,
+      "assists": 6,
+      "rounds": 110
+    },
+    "brian": {
+      "assists_per_standard_game": 1.9,
+      "assists": 33,
+      "rounds": 425
+    },
+    "cade": {
+      "assists_per_standard_game": 2.3,
+      "assists": 35,
+      "rounds": 384
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.8,
+      "assists": 45,
+      "rounds": 629
+    },
+    "josh": {
+      "assists_per_standard_game": 2.2,
+      "assists": 44,
+      "rounds": 508
+    },
+    "lindsey": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "sequential": {
+      "assists_per_standard_game": 2.2,
+      "assists": 21,
+      "rounds": 241
+    },
+    "sophie": {
+      "assists_per_standard_game": 1.0,
+      "assists": 17,
+      "rounds": 413
+    },
+    "steve": {
+      "assists_per_standard_game": 1.2,
+      "assists": 15,
+      "rounds": 312
+    },
+    "steven": {
+      "assists_per_standard_game": 1.8,
+      "assists": 10,
+      "rounds": 142
+    },
+    "sun": {
+      "assists_per_standard_game": 1.3,
+      "assists": 14,
+      "rounds": 261
+    },
+    "susi": {
+      "assists_per_standard_game": 1.6,
+      "assists": 5,
+      "rounds": 76
+    },
+    "susu": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "tang": {
+      "assists_per_standard_game": 2.3,
+      "assists": 26,
+      "rounds": 278
+    },
+    "yang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    }
+  },
+  "sequential": {
+    "andy": {
+      "assists_per_standard_game": 2.0,
+      "assists": 8,
+      "rounds": 98
+    },
+    "brandon": {
+      "assists_per_standard_game": 2.0,
+      "assists": 3,
+      "rounds": 37
+    },
+    "brian": {
+      "assists_per_standard_game": 1.7,
+      "assists": 12,
+      "rounds": 174
+    },
+    "cade": {
+      "assists_per_standard_game": 1.4,
+      "assists": 5,
+      "rounds": 87
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.7,
+      "assists": 16,
+      "rounds": 235
+    },
+    "josh": {
+      "assists_per_standard_game": 2.3,
+      "assists": 14,
+      "rounds": 152
+    },
+    "lindsey": {
+      "assists_per_standard_game": 3.3,
+      "assists": 32,
+      "rounds": 241
+    },
+    "sequential": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "sophie": {
+      "assists_per_standard_game": 0.9,
+      "assists": 12,
+      "rounds": 318
+    },
+    "steve": {
+      "assists_per_standard_game": 3.6,
+      "assists": 27,
+      "rounds": 190
+    },
+    "steven": {
+      "assists_per_standard_game": 1.3,
+      "assists": 4,
+      "rounds": 75
+    },
+    "sun": {
+      "assists_per_standard_game": 1.4,
+      "assists": 7,
+      "rounds": 124
+    },
+    "susi": {
+      "assists_per_standard_game": 2.2,
+      "assists": 24,
+      "rounds": 278
+    },
+    "susu": {
+      "assists_per_standard_game": 2.2,
+      "assists": 10,
+      "rounds": 112
+    },
+    "tang": {
+      "assists_per_standard_game": 2.2,
+      "assists": 9,
+      "rounds": 103
+    },
+    "yang": {
+      "assists_per_standard_game": 1.9,
+      "assists": 6,
+      "rounds": 79
+    }
+  },
+  "sophie": {
+    "andy": {
+      "assists_per_standard_game": 1.4,
+      "assists": 34,
+      "rounds": 623
+    },
+    "brandon": {
+      "assists_per_standard_game": 0.7,
+      "assists": 3,
+      "rounds": 112
+    },
+    "brian": {
+      "assists_per_standard_game": 1.1,
+      "assists": 8,
+      "rounds": 189
+    },
+    "cade": {
+      "assists_per_standard_game": 0.9,
+      "assists": 15,
+      "rounds": 399
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.0,
+      "assists": 12,
+      "rounds": 296
+    },
+    "josh": {
+      "assists_per_standard_game": 1.0,
+      "assists": 16,
+      "rounds": 410
+    },
+    "lindsey": {
+      "assists_per_standard_game": 1.4,
+      "assists": 23,
+      "rounds": 413
+    },
+    "sequential": {
+      "assists_per_standard_game": 1.0,
+      "assists": 13,
+      "rounds": 318
+    },
+    "sophie": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "steve": {
+      "assists_per_standard_game": 1.3,
+      "assists": 12,
+      "rounds": 225
+    },
+    "steven": {
+      "assists_per_standard_game": 1.6,
+      "assists": 20,
+      "rounds": 314
+    },
+    "sun": {
+      "assists_per_standard_game": 0.9,
+      "assists": 9,
+      "rounds": 257
+    },
+    "susi": {
+      "assists_per_standard_game": 1.1,
+      "assists": 7,
+      "rounds": 155
+    },
+    "susu": {
+      "assists_per_standard_game": 1.1,
+      "assists": 2,
+      "rounds": 46
+    },
+    "tang": {
+      "assists_per_standard_game": 1.3,
+      "assists": 21,
+      "rounds": 389
+    },
+    "yang": {
+      "assists_per_standard_game": 0.9,
+      "assists": 3,
+      "rounds": 79
+    }
+  },
+  "steve": {
+    "andy": {
+      "assists_per_standard_game": 2.0,
+      "assists": 20,
+      "rounds": 250
+    },
+    "brandon": {
+      "assists_per_standard_game": 1.6,
+      "assists": 7,
+      "rounds": 111
+    },
+    "brian": {
+      "assists_per_standard_game": 1.7,
+      "assists": 16,
+      "rounds": 231
+    },
+    "cade": {
+      "assists_per_standard_game": 0.5,
+      "assists": 4,
+      "rounds": 192
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.4,
+      "assists": 19,
+      "rounds": 347
+    },
+    "josh": {
+      "assists_per_standard_game": 2.0,
+      "assists": 23,
+      "rounds": 292
+    },
+    "lindsey": {
+      "assists_per_standard_game": 2.7,
+      "assists": 34,
+      "rounds": 312
+    },
+    "sequential": {
+      "assists_per_standard_game": 1.2,
+      "assists": 9,
+      "rounds": 190
+    },
+    "sophie": {
+      "assists_per_standard_game": 0.2,
+      "assists": 2,
+      "rounds": 225
+    },
+    "steve": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "steven": {
+      "assists_per_standard_game": 2.2,
+      "assists": 11,
+      "rounds": 123
+    },
+    "sun": {
+      "assists_per_standard_game": 1.9,
+      "assists": 11,
+      "rounds": 142
+    },
+    "susi": {
+      "assists_per_standard_game": 1.3,
+      "assists": 4,
+      "rounds": 78
+    },
+    "susu": {
+      "assists_per_standard_game": 5.4,
+      "assists": 12,
+      "rounds": 56
+    },
+    "tang": {
+      "assists_per_standard_game": 0.7,
+      "assists": 3,
+      "rounds": 102
+    },
+    "yang": {
+      "assists_per_standard_game": 0.6,
+      "assists": 1,
+      "rounds": 41
+    }
+  },
+  "steven": {
+    "andy": {
+      "assists_per_standard_game": 1.7,
+      "assists": 18,
+      "rounds": 263
+    },
+    "brandon": {
+      "assists_per_standard_game": 2.0,
+      "assists": 8,
+      "rounds": 100
+    },
+    "brian": {
+      "assists_per_standard_game": 2.6,
+      "assists": 26,
+      "rounds": 248
+    },
+    "cade": {
+      "assists_per_standard_game": 2.1,
+      "assists": 15,
+      "rounds": 180
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.9,
+      "assists": 10,
+      "rounds": 131
+    },
+    "josh": {
+      "assists_per_standard_game": 3.6,
+      "assists": 30,
+      "rounds": 207
+    },
+    "lindsey": {
+      "assists_per_standard_game": 3.0,
+      "assists": 17,
+      "rounds": 142
+    },
+    "sequential": {
+      "assists_per_standard_game": 0.7,
+      "assists": 2,
+      "rounds": 75
+    },
+    "sophie": {
+      "assists_per_standard_game": 1.3,
+      "assists": 16,
+      "rounds": 314
+    },
+    "steve": {
+      "assists_per_standard_game": 2.4,
+      "assists": 12,
+      "rounds": 123
+    },
+    "steven": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "sun": {
+      "assists_per_standard_game": 1.7,
+      "assists": 5,
+      "rounds": 73
+    },
+    "susi": {
+      "assists_per_standard_game": 1.6,
+      "assists": 3,
+      "rounds": 48
+    },
+    "susu": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "tang": {
+      "assists_per_standard_game": 2.5,
+      "assists": 17,
+      "rounds": 173
+    },
+    "yang": {
+      "assists_per_standard_game": 0.7,
+      "assists": 1,
+      "rounds": 38
+    }
+  },
+  "sun": {
+    "andy": {
+      "assists_per_standard_game": 3.5,
+      "assists": 20,
+      "rounds": 143
+    },
+    "brandon": {
+      "assists_per_standard_game": 0.7,
+      "assists": 2,
+      "rounds": 69
+    },
+    "brian": {
+      "assists_per_standard_game": 2.5,
+      "assists": 15,
+      "rounds": 150
+    },
+    "cade": {
+      "assists_per_standard_game": 2.6,
+      "assists": 21,
+      "rounds": 204
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.8,
+      "assists": 21,
+      "rounds": 285
+    },
+    "josh": {
+      "assists_per_standard_game": 3.1,
+      "assists": 30,
+      "rounds": 244
+    },
+    "lindsey": {
+      "assists_per_standard_game": 2.9,
+      "assists": 30,
+      "rounds": 261
+    },
+    "sequential": {
+      "assists_per_standard_game": 2.0,
+      "assists": 10,
+      "rounds": 124
+    },
+    "sophie": {
+      "assists_per_standard_game": 1.1,
+      "assists": 11,
+      "rounds": 257
+    },
+    "steve": {
+      "assists_per_standard_game": 2.3,
+      "assists": 13,
+      "rounds": 142
+    },
+    "steven": {
+      "assists_per_standard_game": 0.7,
+      "assists": 2,
+      "rounds": 73
+    },
+    "sun": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "susi": {
+      "assists_per_standard_game": 3.5,
+      "assists": 6,
+      "rounds": 43
+    },
+    "susu": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "tang": {
+      "assists_per_standard_game": 2.3,
+      "assists": 11,
+      "rounds": 118
+    },
+    "yang": {
+      "assists_per_standard_game": 0.7,
+      "assists": 1,
+      "rounds": 38
+    }
+  },
+  "susi": {
+    "andy": {
+      "assists_per_standard_game": 2.9,
+      "assists": 11,
+      "rounds": 95
+    },
+    "brandon": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "brian": {
+      "assists_per_standard_game": 1.0,
+      "assists": 6,
+      "rounds": 148
+    },
+    "cade": {
+      "assists_per_standard_game": 2.0,
+      "assists": 12,
+      "rounds": 149
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.5,
+      "assists": 9,
+      "rounds": 154
+    },
+    "josh": {
+      "assists_per_standard_game": 1.2,
+      "assists": 5,
+      "rounds": 108
+    },
+    "lindsey": {
+      "assists_per_standard_game": 1.6,
+      "assists": 5,
+      "rounds": 76
+    },
+    "sequential": {
+      "assists_per_standard_game": 0.6,
+      "assists": 7,
+      "rounds": 278
+    },
+    "sophie": {
+      "assists_per_standard_game": 0.5,
+      "assists": 3,
+      "rounds": 155
+    },
+    "steve": {
+      "assists_per_standard_game": 1.0,
+      "assists": 3,
+      "rounds": 78
+    },
+    "steven": {
+      "assists_per_standard_game": 3.1,
+      "assists": 6,
+      "rounds": 48
+    },
+    "sun": {
+      "assists_per_standard_game": 1.7,
+      "assists": 3,
+      "rounds": 43
+    },
+    "susi": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "susu": {
+      "assists_per_standard_game": 2.0,
+      "assists": 13,
+      "rounds": 164
+    },
+    "tang": {
+      "assists_per_standard_game": 2.3,
+      "assists": 2,
+      "rounds": 22
+    },
+    "yang": {
+      "assists_per_standard_game": 0.0,
+      "assists": 0,
+      "rounds": 22
+    }
+  },
+  "susu": {
+    "andy": {
+      "assists_per_standard_game": 3.4,
+      "assists": 7,
+      "rounds": 52
+    },
+    "brandon": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "brian": {
+      "assists_per_standard_game": 1.2,
+      "assists": 3,
+      "rounds": 62
+    },
+    "cade": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.2,
+      "assists": 2,
+      "rounds": 42
+    },
+    "josh": {
+      "assists_per_standard_game": 2.1,
+      "assists": 2,
+      "rounds": 24
+    },
+    "lindsey": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "sequential": {
+      "assists_per_standard_game": 3.3,
+      "assists": 15,
+      "rounds": 112
+    },
+    "sophie": {
+      "assists_per_standard_game": 1.6,
+      "assists": 3,
+      "rounds": 46
+    },
+    "steve": {
+      "assists_per_standard_game": 1.3,
+      "assists": 3,
+      "rounds": 56
+    },
+    "steven": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "sun": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "susi": {
+      "assists_per_standard_game": 2.9,
+      "assists": 19,
+      "rounds": 164
+    },
+    "susu": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "tang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "yang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    }
+  },
+  "tang": {
+    "andy": {
+      "assists_per_standard_game": 2.1,
+      "assists": 33,
+      "rounds": 392
+    },
+    "brandon": {
+      "assists_per_standard_game": 3.8,
+      "assists": 7,
+      "rounds": 46
+    },
+    "brian": {
+      "assists_per_standard_game": 2.6,
+      "assists": 30,
+      "rounds": 291
+    },
+    "cade": {
+      "assists_per_standard_game": 2.3,
+      "assists": 19,
+      "rounds": 209
+    },
+    "darwin": {
+      "assists_per_standard_game": 1.8,
+      "assists": 20,
+      "rounds": 280
+    },
+    "josh": {
+      "assists_per_standard_game": 2.6,
+      "assists": 28,
+      "rounds": 269
+    },
+    "lindsey": {
+      "assists_per_standard_game": 2.6,
+      "assists": 29,
+      "rounds": 278
+    },
+    "sequential": {
+      "assists_per_standard_game": 1.0,
+      "assists": 4,
+      "rounds": 103
+    },
+    "sophie": {
+      "assists_per_standard_game": 1.3,
+      "assists": 21,
+      "rounds": 389
+    },
+    "steve": {
+      "assists_per_standard_game": 2.0,
+      "assists": 8,
+      "rounds": 102
+    },
+    "steven": {
+      "assists_per_standard_game": 2.3,
+      "assists": 16,
+      "rounds": 173
+    },
+    "sun": {
+      "assists_per_standard_game": 2.3,
+      "assists": 11,
+      "rounds": 118
+    },
+    "susi": {
+      "assists_per_standard_game": 1.1,
+      "assists": 1,
+      "rounds": 22
+    },
+    "susu": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "tang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "yang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    }
+  },
+  "yang": {
+    "andy": {
+      "assists_per_standard_game": 1.3,
+      "assists": 1,
+      "rounds": 19
+    },
+    "brandon": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "brian": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "cade": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "darwin": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "josh": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "lindsey": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "sequential": {
+      "assists_per_standard_game": 0.9,
+      "assists": 3,
+      "rounds": 79
+    },
+    "sophie": {
+      "assists_per_standard_game": 1.3,
+      "assists": 4,
+      "rounds": 79
+    },
+    "steve": {
+      "assists_per_standard_game": 1.2,
+      "assists": 2,
+      "rounds": 41
+    },
+    "steven": {
+      "assists_per_standard_game": 1.3,
+      "assists": 2,
+      "rounds": 38
+    },
+    "sun": {
+      "assists_per_standard_game": 0.7,
+      "assists": 1,
+      "rounds": 38
+    },
+    "susi": {
+      "assists_per_standard_game": 1.1,
+      "assists": 1,
+      "rounds": 22
+    },
+    "susu": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "tang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    },
+    "yang": {
+      "assists_per_standard_game": null,
+      "assists": 0,
+      "rounds": 0
+    }
+  }
+}

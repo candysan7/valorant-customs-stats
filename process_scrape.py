@@ -117,15 +117,18 @@ with open("./scrape.json", mode="r") as f:
                         )[0]
                     )
 
-                    if segment["metadata"]["finishingDamage"]["damageType"] == "Bomb":
-                        weapon = "Bomb"
-                    elif (
-                        segment["metadata"]["finishingDamage"]["damageType"] != "Weapon"
-                    ):
-                        # E.g., bomb or ability kills
-                        weapon = segment["metadata"]["finishingDamage"]["damageItem"]
-                    else:
-                        weapon = segment["metadata"]["weaponName"]
+                    match segment["metadata"]["finishingDamage"]["damageType"]:
+                        case "Melee":
+                            weapon = "Melee"
+                        case "Bomb":
+                            weapon = "Bomb"
+                        case "Weapon":
+                            weapon = segment["metadata"]["weaponName"]
+                        case other:
+                            # Ability
+                            weapon = segment["metadata"]["finishingDamage"][
+                                "damageItem"
+                            ]
                     match["rounds"][round_index]["kills"].append(
                         {
                             "killer_name": killer_name,

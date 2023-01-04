@@ -118,6 +118,6 @@ class Match:
         return all([self.players_did_lose(player_name) for player_name in PLAYER_NAMES])
 
     def players_in_same_team(self, *PLAYER_NAMES):
-        return all([player_name in self.team_a for player_name in PLAYER_NAMES]) or all(
-            [player_name in self.team_b for player_name in PLAYER_NAMES]
-        )
+        return all(
+            [player_name in self.team_red for player_name in PLAYER_NAMES]
+        ) or all([player_name in self.team_blue for player_name in PLAYER_NAMES])

@@ -118,16 +118,30 @@ if __name__ == "__main__":
         json.dump(out_json, f, indent=2)
         f.close()
 
-    with open(os.path.join(output_dir, "assistants.json"), mode="w") as f:
+    with open(
+        os.path.join(output_dir, "assists-per-standard-game.json"), mode="w"
+    ) as f:
         out_json = {
             player_name: {
-                assistant_name: 0 if player_name != assistant_name else None
+                assistant_name: {
+                    ASSISTS_PER_STANDARD_GAME: None,
+                    ASSISTS: 0,
+                    ROUNDS: 0,
+                }
                 for assistant_name in PLAYER_NAMES
             }
             for player_name in PLAYER_NAMES
         }
 
         for match in matches:
+            for player_name in filter_players(match.all_players):
+                for assistant_name in filter_players(match.all_players):
+                    if match.players_in_same_team(player_name, assistant_name):
+                        if player_name == assistant_name:
+                            continue
+                        out_json[player_name][assistant_name][ROUNDS] += len(
+                            match.rounds
+                        )
             for _round in match.rounds:
                 # This will overwrite the round() function otherwise
                 for kill in _round.kills:
@@ -137,7 +151,20 @@ if __name__ == "__main__":
                     if not is_player_of_interest(player_name):
                         continue
                     for assistant_name in filter_players(kill.assistants):
-                        out_json[player_name][assistant_name] += 1
+                        out_json[player_name][assistant_name][ASSISTS] += 1
+
+        for player_name in PLAYER_NAMES:
+            for assistant_name in PLAYER_NAMES:
+                if out_json[player_name][assistant_name][ROUNDS] != 0:
+                    out_json[player_name][assistant_name][ASSISTS_PER_STANDARD_GAME] = (
+                        round(
+                            10
+                            * 25
+                            * out_json[player_name][assistant_name][ASSISTS]
+                            / out_json[player_name][assistant_name][ROUNDS]
+                        )
+                        / 10
+                    )
 
         json.dump(out_json, f, indent=2)
         f.close()
