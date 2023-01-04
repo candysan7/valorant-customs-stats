@@ -119,7 +119,7 @@ if __name__ == "__main__":
         f.close()
 
     with open(
-        os.path.join(output_dir, "assists-per-standard-game.json"), mode="w"
+        os.path.join(output_dir, "assists-received-per-standard-game.json"), mode="w"
     ) as f:
         out_json = {
             player_name: {
@@ -170,6 +170,63 @@ if __name__ == "__main__":
         for player_name in out_json:
             out_json[player_name] = sorted(
                 out_json[player_name].values(), key=lambda x: x[ASSISTANT_NAME]
+            )
+
+        json.dump(out_json, f, indent=2)
+        f.close()
+
+    with open(
+        os.path.join(output_dir, "assists-given-per-standard-game.json"), mode="w"
+    ) as f:
+        out_json = {
+            player_name: {
+                assisted_name: {
+                    ASSISTED_NAME: assisted_name,
+                    ASSISTS_PER_STANDARD_GAME: None,
+                    ASSISTS: 0,
+                    ROUNDS: 0,
+                }
+                for assisted_name in PLAYER_NAMES
+            }
+            for player_name in PLAYER_NAMES
+        }
+
+        for match in matches:
+            for player_name in filter_players(match.all_players):
+                for assistant_name in filter_players(match.all_players):
+                    if match.players_in_same_team(player_name, assistant_name):
+                        if player_name == assistant_name:
+                            continue
+                        out_json[player_name][assistant_name][ROUNDS] += len(
+                            match.rounds
+                        )
+            for _round in match.rounds:
+                # This will overwrite the round() function otherwise
+                for kill in _round.kills:
+                    if kill.killer_name == kill.victim_name:
+                        continue
+                    assisted_name = kill.killer_name
+                    if not is_player_of_interest(assisted_name):
+                        continue
+                    for player_name in filter_players(kill.assistants):
+                        out_json[player_name][assisted_name][ASSISTS] += 1
+
+        for player_name in PLAYER_NAMES:
+            for assistant_name in PLAYER_NAMES:
+                if out_json[player_name][assistant_name][ROUNDS] != 0:
+                    out_json[player_name][assistant_name][ASSISTS_PER_STANDARD_GAME] = (
+                        round(
+                            10
+                            * 25
+                            * out_json[player_name][assistant_name][ASSISTS]
+                            / out_json[player_name][assistant_name][ROUNDS]
+                        )
+                        / 10
+                    )
+
+        for player_name in out_json:
+            out_json[player_name] = sorted(
+                out_json[player_name].values(), key=lambda x: x[ASSISTED_NAME]
             )
 
         json.dump(out_json, f, indent=2)

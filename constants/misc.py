@@ -2,6 +2,7 @@
 TEAMMATE_NAME = "teammate_name"
 OPPONENT_NAME = "opponent_name"
 ASSISTANT_NAME = "assistant_name"
+ASSISTED_NAME = "assisted_name"
 
 WINRATE = "winrate"
 WINS = "wins"
