@@ -108,7 +108,7 @@ AGENT_NAME_TO_ROLE = {
 }
 
 # All maps
-MAPS = [
+MAP_NAMES = [
     ASCENT,
     BIND,
     BREEZE,

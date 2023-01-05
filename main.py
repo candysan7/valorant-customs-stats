@@ -30,6 +30,9 @@ if __name__ == "__main__":
                 WINRATE: None,
                 WINS: 0,
                 GAMES: 0,
+                MAPS: {
+                    map_name: {ACS: None, SCORE: 0, ROUNDS: 0} for map_name in MAP_NAMES
+                },
                 AGENTS: {
                     agent_name: {
                         ROLE: AGENT_NAME_TO_ROLE[agent_name],
@@ -63,6 +66,10 @@ if __name__ == "__main__":
                     ] += 1
                 if match.player_did_play(player_name):
                     player_entry[GAMES] += 1
+                    player_entry[MAPS][match.map][
+                        SCORE
+                    ] += player_stats.average_combat_score * len(match.rounds)
+                    player_entry[MAPS][match.map][ROUNDS] += len(match.rounds)
                     player_entry[AGENTS][player_stats.agent][GAMES] += 1
                     player_entry[ROLES][AGENT_NAME_TO_ROLE[player_stats.agent]][
                         GAMES
@@ -75,6 +82,13 @@ if __name__ == "__main__":
                 player_entry[WINRATE] = round(
                     100 * player_entry[WINS] / player_entry[GAMES]
                 )
+
+            for map_name in MAP_NAMES:
+                if player_entry[MAPS][map_name][ROUNDS] != 0:
+                    player_entry[MAPS][map_name][ACS] = round(
+                        player_entry[MAPS][map_name][SCORE]
+                        / player_entry[MAPS][map_name][ROUNDS]
+                    )
 
             for agent_name in AGENT_NAMES:
                 if player_entry[AGENTS][agent_name][GAMES] != 0:
@@ -232,6 +246,56 @@ if __name__ == "__main__":
         json.dump(out_json, f, indent=2)
         f.close()
 
+    with open(os.path.join(output_dir, "assists-per-game-over-time"), mode="w") as f:
+        out_json = {
+            player_name: {
+                assisted_name: [{ASSISTS_PER_STANDARD_GAME: 0, ASSISTS: 0, ROUNDS: 0}]
+                for assisted_name in PLAYER_NAMES
+            }
+            for player_name in PLAYER_NAMES
+        }
+
+        for match in matches:
+            for player_name in filter_players(match.all_players):
+                for assistant_name in filter_players(match.all_players):
+                    if match.players_in_same_team(player_name, assistant_name):
+                        if player_name == assistant_name:
+                            continue
+                        out_json[player_name][assistant_name][-1][ROUNDS] += len(
+                            match.rounds
+                        )
+            for _round in match.rounds:
+                # This will overwrite the round() function otherwise
+                for kill in _round.kills:
+                    if kill.killer_name == kill.victim_name:
+                        continue
+                    assisted_name = kill.killer_name
+                    if not is_player_of_interest(assisted_name):
+                        continue
+                    for player_name in filter_players(kill.assistants):
+                        out_json[player_name][assisted_name][-1][ASSISTS] += 1
+
+            for player_name in PLAYER_NAMES:
+                for assisted_name in PLAYER_NAMES:
+                    if out_json[player_name][assisted_name][-1][ROUNDS] != 0:
+                        out_json[player_name][assisted_name][-1][
+                            ASSISTS_PER_STANDARD_GAME
+                        ] = (
+                            round(
+                                10
+                                * 25
+                                * out_json[player_name][assisted_name][-1][ASSISTS]
+                                / out_json[player_name][assisted_name][-1][ROUNDS]
+                            )
+                            / 10
+                        )
+                    out_json[player_name][assisted_name].append(
+                        out_json[player_name][assisted_name][-1].copy()
+                    )
+
+        json.dump(out_json[LINDSEY][DARWIN][:-1], f, indent=2)
+        f.close()
+
     with open(os.path.join(output_dir, "teammate-synergy.json"), mode="w") as f:
         out_json = {
             player_name: {
@@ -313,7 +377,7 @@ if __name__ == "__main__":
         f.close()
 
     with open(os.path.join(output_dir, "maps.json"), mode="w") as f:
-        out_json = {map: 0 for map in MAPS}
+        out_json = {map: 0 for map in MAP_NAMES}
         for match in matches:
             out_json[match.map] += 1
         json.dump(out_json, f, indent=2)

@@ -1105,12 +1105,12 @@
     }
   },
   {
-    "block_end_time": "2023-01-03 23:59:59.999999-07:53",
+    "block_end_time": "2023-01-04 23:59:59.999999-07:53",
     "data": {
       "andy": {
-        "winrate": 59,
+        "winrate": 60,
         "wins": 24,
-        "games": 41
+        "games": 40
       },
       "brandon": {
         "winrate": 40,
@@ -1118,29 +1118,29 @@
         "games": 10
       },
       "brian": {
-        "winrate": 44,
-        "wins": 15,
-        "games": 34
+        "winrate": 42,
+        "wins": 14,
+        "games": 33
       },
       "cade": {
-        "winrate": 38,
+        "winrate": 39,
         "wins": 12,
-        "games": 32
+        "games": 31
       },
       "darwin": {
-        "winrate": 51,
-        "wins": 22,
-        "games": 43
+        "winrate": 50,
+        "wins": 21,
+        "games": 42
       },
       "josh": {
-        "winrate": 54,
+        "winrate": 56,
         "wins": 19,
-        "games": 35
+        "games": 34
       },
       "lindsey": {
-        "winrate": 52,
-        "wins": 22,
-        "games": 42
+        "winrate": 51,
+        "wins": 21,
+        "games": 41
       },
       "sequential": {
         "winrate": 52,
@@ -1148,9 +1148,9 @@
         "games": 25
       },
       "sophie": {
-        "winrate": 52,
+        "winrate": 54,
         "wins": 22,
-        "games": 42
+        "games": 41
       },
       "steve": {
         "winrate": 43,
@@ -1163,14 +1163,14 @@
         "games": 22
       },
       "sun": {
-        "winrate": 32,
-        "wins": 7,
-        "games": 22
+        "winrate": 29,
+        "wins": 6,
+        "games": 21
       },
       "susi": {
-        "winrate": 46,
+        "winrate": 50,
         "wins": 6,
-        "games": 13
+        "games": 12
       },
       "susu": {
         "winrate": 50,
@@ -1178,9 +1178,9 @@
         "games": 4
       },
       "tang": {
-        "winrate": 70,
-        "wins": 19,
-        "games": 27
+        "winrate": 69,
+        "wins": 18,
+        "games": 26
       },
       "yang": {
         "winrate": 25,

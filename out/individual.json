@@ -5,6 +5,48 @@
     "winrate": 56,
     "wins": 27,
     "games": 48,
+    "maps": {
+      "Ascent": {
+        "acs": 277,
+        "score": 41273,
+        "rounds": 149
+      },
+      "Bind": {
+        "acs": 323,
+        "score": 57190,
+        "rounds": 177
+      },
+      "Breeze": {
+        "acs": 356,
+        "score": 30957,
+        "rounds": 87
+      },
+      "Fracture": {
+        "acs": 301,
+        "score": 32506,
+        "rounds": 108
+      },
+      "Haven": {
+        "acs": 322,
+        "score": 46350,
+        "rounds": 144
+      },
+      "Icebox": {
+        "acs": 278,
+        "score": 25823,
+        "rounds": 93
+      },
+      "Pearl": {
+        "acs": 314,
+        "score": 41154,
+        "rounds": 131
+      },
+      "Split": {
+        "acs": 299,
+        "score": 46023,
+        "rounds": 154
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -164,6 +206,48 @@
     "winrate": 40,
     "wins": 4,
     "games": 10,
+    "maps": {
+      "Ascent": {
+        "acs": 119,
+        "score": 2856,
+        "rounds": 24
+      },
+      "Bind": {
+        "acs": 125,
+        "score": 9278,
+        "rounds": 74
+      },
+      "Breeze": {
+        "acs": 97,
+        "score": 8410,
+        "rounds": 87
+      },
+      "Fracture": {
+        "acs": 46,
+        "score": 736,
+        "rounds": 16
+      },
+      "Haven": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Icebox": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Pearl": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Split": {
+        "acs": 153,
+        "score": 3519,
+        "rounds": 23
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -323,6 +407,48 @@
     "winrate": 40,
     "wins": 17,
     "games": 42,
+    "maps": {
+      "Ascent": {
+        "acs": 124,
+        "score": 12914,
+        "rounds": 104
+      },
+      "Bind": {
+        "acs": 146,
+        "score": 26024,
+        "rounds": 178
+      },
+      "Breeze": {
+        "acs": 138,
+        "score": 11980,
+        "rounds": 87
+      },
+      "Fracture": {
+        "acs": 116,
+        "score": 14234,
+        "rounds": 123
+      },
+      "Haven": {
+        "acs": 141,
+        "score": 15471,
+        "rounds": 110
+      },
+      "Icebox": {
+        "acs": 111,
+        "score": 8521,
+        "rounds": 77
+      },
+      "Pearl": {
+        "acs": 167,
+        "score": 15006,
+        "rounds": 90
+      },
+      "Split": {
+        "acs": 94,
+        "score": 13861,
+        "rounds": 147
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -482,6 +608,48 @@
     "winrate": 43,
     "wins": 18,
     "games": 42,
+    "maps": {
+      "Ascent": {
+        "acs": 183,
+        "score": 18501,
+        "rounds": 101
+      },
+      "Bind": {
+        "acs": 243,
+        "score": 36495,
+        "rounds": 150
+      },
+      "Breeze": {
+        "acs": 259,
+        "score": 22490,
+        "rounds": 87
+      },
+      "Fracture": {
+        "acs": 260,
+        "score": 19003,
+        "rounds": 73
+      },
+      "Haven": {
+        "acs": 274,
+        "score": 30381,
+        "rounds": 111
+      },
+      "Icebox": {
+        "acs": 217,
+        "score": 24116,
+        "rounds": 111
+      },
+      "Pearl": {
+        "acs": 274,
+        "score": 29851,
+        "rounds": 109
+      },
+      "Split": {
+        "acs": 242,
+        "score": 35628,
+        "rounds": 147
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -641,6 +809,48 @@
     "winrate": 56,
     "wins": 29,
     "games": 52,
+    "maps": {
+      "Ascent": {
+        "acs": 243,
+        "score": 35525,
+        "rounds": 146
+      },
+      "Bind": {
+        "acs": 190,
+        "score": 37921,
+        "rounds": 200
+      },
+      "Breeze": {
+        "acs": 228,
+        "score": 19860,
+        "rounds": 87
+      },
+      "Fracture": {
+        "acs": 188,
+        "score": 23064,
+        "rounds": 123
+      },
+      "Haven": {
+        "acs": 227,
+        "score": 32644,
+        "rounds": 144
+      },
+      "Icebox": {
+        "acs": 244,
+        "score": 22436,
+        "rounds": 92
+      },
+      "Pearl": {
+        "acs": 213,
+        "score": 27890,
+        "rounds": 131
+      },
+      "Split": {
+        "acs": 194,
+        "score": 37513,
+        "rounds": 193
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -801,6 +1011,48 @@
     "winrate": 51,
     "wins": 23,
     "games": 45,
+    "maps": {
+      "Ascent": {
+        "acs": 179,
+        "score": 21813,
+        "rounds": 122
+      },
+      "Bind": {
+        "acs": 217,
+        "score": 32929,
+        "rounds": 152
+      },
+      "Breeze": {
+        "acs": 248,
+        "score": 17366,
+        "rounds": 70
+      },
+      "Fracture": {
+        "acs": 163,
+        "score": 12207,
+        "rounds": 75
+      },
+      "Haven": {
+        "acs": 151,
+        "score": 21699,
+        "rounds": 144
+      },
+      "Icebox": {
+        "acs": 201,
+        "score": 22305,
+        "rounds": 111
+      },
+      "Pearl": {
+        "acs": 218,
+        "score": 24218,
+        "rounds": 111
+      },
+      "Split": {
+        "acs": 206,
+        "score": 35075,
+        "rounds": 170
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -961,6 +1213,48 @@
     "winrate": 50,
     "wins": 25,
     "games": 50,
+    "maps": {
+      "Ascent": {
+        "acs": 244,
+        "score": 40583,
+        "rounds": 166
+      },
+      "Bind": {
+        "acs": 190,
+        "score": 38063,
+        "rounds": 200
+      },
+      "Breeze": {
+        "acs": 221,
+        "score": 19258,
+        "rounds": 87
+      },
+      "Fracture": {
+        "acs": 219,
+        "score": 22334,
+        "rounds": 102
+      },
+      "Haven": {
+        "acs": 224,
+        "score": 26849,
+        "rounds": 120
+      },
+      "Icebox": {
+        "acs": 222,
+        "score": 24679,
+        "rounds": 111
+      },
+      "Pearl": {
+        "acs": 213,
+        "score": 22832,
+        "rounds": 107
+      },
+      "Split": {
+        "acs": 205,
+        "score": 35839,
+        "rounds": 175
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -1121,6 +1415,48 @@
     "winrate": 50,
     "wins": 15,
     "games": 30,
+    "maps": {
+      "Ascent": {
+        "acs": 353,
+        "score": 44095,
+        "rounds": 125
+      },
+      "Bind": {
+        "acs": 311,
+        "score": 38201,
+        "rounds": 123
+      },
+      "Breeze": {
+        "acs": 388,
+        "score": 6596,
+        "rounds": 17
+      },
+      "Fracture": {
+        "acs": 424,
+        "score": 43218,
+        "rounds": 102
+      },
+      "Haven": {
+        "acs": 357,
+        "score": 12150,
+        "rounds": 34
+      },
+      "Icebox": {
+        "acs": 319,
+        "score": 18184,
+        "rounds": 57
+      },
+      "Pearl": {
+        "acs": 416,
+        "score": 25354,
+        "rounds": 61
+      },
+      "Split": {
+        "acs": 344,
+        "score": 35423,
+        "rounds": 103
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -1280,6 +1616,48 @@
     "winrate": 54,
     "wins": 28,
     "games": 52,
+    "maps": {
+      "Ascent": {
+        "acs": 175,
+        "score": 25707,
+        "rounds": 147
+      },
+      "Bind": {
+        "acs": 155,
+        "score": 26384,
+        "rounds": 170
+      },
+      "Breeze": {
+        "acs": 149,
+        "score": 12927,
+        "rounds": 87
+      },
+      "Fracture": {
+        "acs": 135,
+        "score": 16592,
+        "rounds": 123
+      },
+      "Haven": {
+        "acs": 136,
+        "score": 19615,
+        "rounds": 144
+      },
+      "Icebox": {
+        "acs": 151,
+        "score": 16785,
+        "rounds": 111
+      },
+      "Pearl": {
+        "acs": 138,
+        "score": 18124,
+        "rounds": 131
+      },
+      "Split": {
+        "acs": 129,
+        "score": 24902,
+        "rounds": 193
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -1439,6 +1817,48 @@
     "winrate": 44,
     "wins": 14,
     "games": 32,
+    "maps": {
+      "Ascent": {
+        "acs": 181,
+        "score": 19391,
+        "rounds": 107
+      },
+      "Bind": {
+        "acs": 242,
+        "score": 16242,
+        "rounds": 67
+      },
+      "Breeze": {
+        "acs": 165,
+        "score": 14320,
+        "rounds": 87
+      },
+      "Fracture": {
+        "acs": 223,
+        "score": 18702,
+        "rounds": 84
+      },
+      "Haven": {
+        "acs": 200,
+        "score": 25845,
+        "rounds": 129
+      },
+      "Icebox": {
+        "acs": 215,
+        "score": 7538,
+        "rounds": 35
+      },
+      "Pearl": {
+        "acs": 183,
+        "score": 11551,
+        "rounds": 63
+      },
+      "Split": {
+        "acs": 235,
+        "score": 25645,
+        "rounds": 109
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -1599,6 +2019,48 @@
     "winrate": 58,
     "wins": 15,
     "games": 26,
+    "maps": {
+      "Ascent": {
+        "acs": 259,
+        "score": 26966,
+        "rounds": 104
+      },
+      "Bind": {
+        "acs": 258,
+        "score": 27553,
+        "rounds": 107
+      },
+      "Breeze": {
+        "acs": 332,
+        "score": 14586,
+        "rounds": 44
+      },
+      "Fracture": {
+        "acs": 274,
+        "score": 10680,
+        "rounds": 39
+      },
+      "Haven": {
+        "acs": 238,
+        "score": 23811,
+        "rounds": 100
+      },
+      "Icebox": {
+        "acs": 272,
+        "score": 14667,
+        "rounds": 54
+      },
+      "Pearl": {
+        "acs": 207,
+        "score": 13425,
+        "rounds": 65
+      },
+      "Split": {
+        "acs": 249,
+        "score": 10693,
+        "rounds": 43
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -1758,6 +2220,48 @@
     "winrate": 37,
     "wins": 10,
     "games": 27,
+    "maps": {
+      "Ascent": {
+        "acs": 212,
+        "score": 16541,
+        "rounds": 78
+      },
+      "Bind": {
+        "acs": 256,
+        "score": 17380,
+        "rounds": 68
+      },
+      "Breeze": {
+        "acs": 219,
+        "score": 5694,
+        "rounds": 26
+      },
+      "Fracture": {
+        "acs": 226,
+        "score": 12231,
+        "rounds": 54
+      },
+      "Haven": {
+        "acs": 208,
+        "score": 12065,
+        "rounds": 58
+      },
+      "Icebox": {
+        "acs": 346,
+        "score": 11409,
+        "rounds": 33
+      },
+      "Pearl": {
+        "acs": 235,
+        "score": 16450,
+        "rounds": 70
+      },
+      "Split": {
+        "acs": 230,
+        "score": 39704,
+        "rounds": 173
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -1917,6 +2421,48 @@
     "winrate": 42,
     "wins": 8,
     "games": 19,
+    "maps": {
+      "Ascent": {
+        "acs": 134,
+        "score": 11522,
+        "rounds": 86
+      },
+      "Bind": {
+        "acs": 224,
+        "score": 17494,
+        "rounds": 78
+      },
+      "Breeze": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Fracture": {
+        "acs": 203,
+        "score": 10751,
+        "rounds": 53
+      },
+      "Haven": {
+        "acs": 169,
+        "score": 3211,
+        "rounds": 19
+      },
+      "Icebox": {
+        "acs": 188,
+        "score": 10722,
+        "rounds": 57
+      },
+      "Pearl": {
+        "acs": 110,
+        "score": 7228,
+        "rounds": 66
+      },
+      "Split": {
+        "acs": 208,
+        "score": 12702,
+        "rounds": 61
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -2077,6 +2623,48 @@
     "winrate": 43,
     "wins": 3,
     "games": 7,
+    "maps": {
+      "Ascent": {
+        "acs": 208,
+        "score": 4992,
+        "rounds": 24
+      },
+      "Bind": {
+        "acs": 242,
+        "score": 6776,
+        "rounds": 28
+      },
+      "Breeze": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Fracture": {
+        "acs": 237,
+        "score": 7584,
+        "rounds": 32
+      },
+      "Haven": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Icebox": {
+        "acs": 246,
+        "score": 4428,
+        "rounds": 18
+      },
+      "Pearl": {
+        "acs": 213,
+        "score": 9376,
+        "rounds": 44
+      },
+      "Split": {
+        "acs": 171,
+        "score": 3078,
+        "rounds": 18
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -2237,6 +2825,48 @@
     "winrate": 74,
     "wins": 25,
     "games": 34,
+    "maps": {
+      "Ascent": {
+        "acs": 304,
+        "score": 29840,
+        "rounds": 98
+      },
+      "Bind": {
+        "acs": 281,
+        "score": 34557,
+        "rounds": 123
+      },
+      "Breeze": {
+        "acs": 285,
+        "score": 4845,
+        "rounds": 17
+      },
+      "Fracture": {
+        "acs": 276,
+        "score": 19287,
+        "rounds": 70
+      },
+      "Haven": {
+        "acs": 252,
+        "score": 25177,
+        "rounds": 100
+      },
+      "Icebox": {
+        "acs": 180,
+        "score": 12930,
+        "rounds": 72
+      },
+      "Pearl": {
+        "acs": 264,
+        "score": 17174,
+        "rounds": 65
+      },
+      "Split": {
+        "acs": 246,
+        "score": 37810,
+        "rounds": 154
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
@@ -2397,6 +3027,48 @@
     "winrate": 25,
     "wins": 1,
     "games": 4,
+    "maps": {
+      "Ascent": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Bind": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Breeze": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Fracture": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Haven": {
+        "acs": 141,
+        "score": 4778,
+        "rounds": 34
+      },
+      "Icebox": {
+        "acs": null,
+        "score": 0,
+        "rounds": 0
+      },
+      "Pearl": {
+        "acs": 116,
+        "score": 2552,
+        "rounds": 22
+      },
+      "Split": {
+        "acs": 191,
+        "score": 4393,
+        "rounds": 23
+      }
+    },
     "agents": {
       "Astra": {
         "role": "Controller",
