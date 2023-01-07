@@ -1,42 +1,62 @@
 # Valorant Customs Stats
-Dashboard statistics tracking of DARWIN discord custom games. Using Power BI and VBA to automate data cleaning and visualization. 
+
+Dashboard statistics tracking of DARWIN Discord customs games. Using Power BI and VBA to automate data cleaning and visualization.
 
 ![Dashboard](https://github.com/candysan7/valorant-customs-stats/blob/main/images/dashboard-versions/version1.2.png)
 
-## Power BI Dashboard Report 
+## Dashboards
 
-[Click To See Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNGUzNzMyOTctNTg2OC00YTEyLThmNjktOTJiOTE3ZGM0NjI3IiwidCI6IjlkZGFhY2ExLTM4OWYtNGNiMS1hMTEzLTA4MWJlNmNjMjVmYyIsImMiOjZ9)
-
-## Data 
-| Dataset                            | Description                                                                    |
-| :--------------------------------- | :----------------------------------------------------------------------------- |
-| `data.csv`                         | Raw data                                                                       |
-| `individual.csv`                   | Individual win-rate and fraction of games won                                  |
-| `teammate-synergy.csv`             | Win-rate when with a specific player on your team                              |
-| `easiest-matchups.csv`             | Win-rate when a specific player is on the opposite team                        |
-| `maps.csv`                         | Map playtime                                                                   |
-| `winrate-over-time.csv`            | Individual win-rate in two-week blocks, starting on October 3rd, 2022          |
-| `cumulative-winrate-over-time.csv` | Cumuluative individual win-rate every two weeks, starting on October 3rd, 2022 |
+- [Website](https://valorant-customs-graphs.vercel.app/)
+- [Power BI](https://app.powerbi.com/view?r=eyJrIjoiNGUzNzMyOTctNTg2OC00YTEyLThmNjktOTJiOTE3ZGM0NjI3IiwidCI6IjlkZGFhY2ExLTM4OWYtNGNiMS1hMTEzLTA4MWJlNmNjMjVmYyIsImMiOjZ9)
 
 ## Documentation
 
-### Architecture & Design 
+### Datasets
+
+| Dataset                                   | Description                                                                   |
+| :---------------------------------------- | :---------------------------------------------------------------------------- |
+| `assists-given-per-standard-game.json`    | Average assists given per 25-round game                                       |
+| `assists-received-per-standard-game.json` | Average assists received per 25-round game                                    |
+| `cumulative-winrate-over-time.json`       | Cumulative win rate calculated every 2 weeks                                  |
+| `data-frame-friendly.json`                | Format more easily converted to a data frame for autobalancing                |
+| `easiest-matchups.json`                   | Win rate when a certain player is on the opposing team                        |
+| `individual.json`                         | Individual stats, e.g., per match, per agent, etc.                            |
+| `maps.json`                               | Overall play count on each map                                                |
+| `meta.json`                               | Extra data for the front-end                                                  |
+| `portion-of-stats.json`                   | E.g., portion of kills from the player out of all kills in all of their games |
+| `roles.json`                              | Overall role count                                                            |
+| `running-winrate-over-time.json`          | Win rate in the past 60 days calculated every 2 weeks                         |
+| `teammate-synergy.json`                   | Win rate when a certain player is on the same team                            |
+| `winrate-over-time.json`                  | Win rate over each 2 week block                                               |
+
+
+### Dataset Generation
+
+All data is derived from [tracker.gg](https://tracker.gg/valorant) until Riot releases the API for personal use. All datasets used for dashboards can be found in the `out` directory. To generate them yourself:
+
+1. Run `scrape.py` to scrape the raw data. It will be saved to a huge minified file (~70 MB) called `scrape.json`. For an example of what each match looks like in a readable format, see `tracker-sample.json`.
+2. Run `process_scrape.py` to transform the data into something the main Python script can handle. See `data.json` for the output and `Match.py` for its representation in the main script.
+3. Run `main.py` to generate all the smaller datasets used by the front-end.
+
+### Architecture & Design
 
 ![Architecture](https://github.com/candysan7/valorant-customs-stats/blob/main/images/documentation/architecture4.png)
 
-### Future improvements
+### Future
+
 - Build discord bot or command to return dashboard link
 - Add a version history to readme
 - Wall of shame leaderboard: Most time alive (best baiter), least time alive (best baited), bodyshot %, legshot %, damage dealt to allies/self, knifer/knifed, biggest spender/cheapest
 
-### Why Power BI over Tableau? 
-- Tableau was not able to display string and integer values on the same table 
-- Power BI also allows for **free** desktop version 
+### Why Power BI over Tableau?
+
+- Tableau was not able to display string and integer values on the same table
+- Power BI also allows for **free** desktop version
 
 ### Credits
 
-| Contributor               | Role                    |
-| :------------------------ | :-----------------------|
-| **Steven Truong**         | Back-end Developer      |
-| **Andy Xiang**            | Unknown Subordinate 1   |
-| **Lindsey Wong**          | Unknown Subordinate 2   |
+| Contributor       | Role                  |
+| :---------------- | :-------------------- |
+| **Steven Truong** | Back-end Developer    |
+| **Andy Xiang**    | Unknown Subordinate 1 |
+| **Lindsey Wong**  | Unknown Subordinate 2 |
