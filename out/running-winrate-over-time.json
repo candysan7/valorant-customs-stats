@@ -1105,12 +1105,12 @@
     }
   },
   {
-    "block_end_time": "2023-01-04 23:59:59.999999-07:53",
+    "block_end_time": "2023-01-06 23:59:59.999999-07:53",
     "data": {
       "andy": {
-        "winrate": 60,
+        "winrate": 59,
         "wins": 24,
-        "games": 40
+        "games": 41
       },
       "brandon": {
         "winrate": 40,
@@ -1118,29 +1118,29 @@
         "games": 10
       },
       "brian": {
-        "winrate": 42,
+        "winrate": 41,
         "wins": 14,
-        "games": 33
+        "games": 34
       },
       "cade": {
-        "winrate": 39,
-        "wins": 12,
-        "games": 31
+        "winrate": 41,
+        "wins": 13,
+        "games": 32
       },
       "darwin": {
+        "winrate": 49,
+        "wins": 21,
+        "games": 43
+      },
+      "josh": {
+        "winrate": 54,
+        "wins": 19,
+        "games": 35
+      },
+      "lindsey": {
         "winrate": 50,
         "wins": 21,
         "games": 42
-      },
-      "josh": {
-        "winrate": 56,
-        "wins": 19,
-        "games": 34
-      },
-      "lindsey": {
-        "winrate": 51,
-        "wins": 21,
-        "games": 41
       },
       "sequential": {
         "winrate": 52,
@@ -1148,14 +1148,14 @@
         "games": 25
       },
       "sophie": {
-        "winrate": 54,
-        "wins": 22,
-        "games": 41
+        "winrate": 55,
+        "wins": 23,
+        "games": 42
       },
       "steve": {
-        "winrate": 43,
-        "wins": 13,
-        "games": 30
+        "winrate": 45,
+        "wins": 14,
+        "games": 31
       },
       "steven": {
         "winrate": 59,
@@ -1163,9 +1163,9 @@
         "games": 22
       },
       "sun": {
-        "winrate": 29,
-        "wins": 6,
-        "games": 21
+        "winrate": 32,
+        "wins": 7,
+        "games": 22
       },
       "susi": {
         "winrate": 50,
@@ -1178,9 +1178,9 @@
         "games": 4
       },
       "tang": {
-        "winrate": 69,
-        "wins": 18,
-        "games": 26
+        "winrate": 70,
+        "wins": 19,
+        "games": 27
       },
       "yang": {
         "winrate": 25,

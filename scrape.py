@@ -67,73 +67,27 @@ urls = [
     "https://tracker.gg/valorant/match/b82d43e9-5b05-4c1b-a45e-8b357bb9109a?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/2e0c5bc4-af8a-4044-ba2f-94673f0de9d4?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/c9930cfa-d79b-4da3-a643-d6a7d1f6c83e?handle=aylindsay%230613",
+    "https://tracker.gg/valorant/match/8f2cbb25-fec7-48e7-b3f7-446bf444080c?handle=aylindsay%230613",
 ]
-
-username_to_name = {
-    "RhythmKing": "cade",
-    "Candysan": "andy",
-    "tangy": "tang",
-    "chushberry": "sophie",
-    "BigBoiB": "brandon",
-    "Sequential": "sequential",
-    "Selintt": "steve",
-    "aylindsay": "lindsey",
-    "ChzGorditaCrunch": "darwin",
-    "Mirabel Madrigal": "darwin",
-    "Jeff Probst": "darwin",
-    "brianwoohoo": "brian",
-    "bot001341": "josh",
-    "sun": "sun",
-    "Tyblerone": "yang",
-    "youngsmasher": "steven",
-    "SusTwins": "susi",
-    "danielscutiegf": "susu",
-}
-
-image_url_to_agent = {
-    "https://titles.trackercdn.com/valorant-api/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/displayicon.png": "Harbor",
-    "https://titles.trackercdn.com/valorant-api/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/displayicon.png": "Fade",
-    "https://titles.trackercdn.com/valorant-api/agents/bb2a4828-46eb-8cd1-e765-15848195d751/displayicon.png": "Neon",
-    "https://titles.trackercdn.com/valorant-api/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/displayicon.png": "Chamber",
-    "https://titles.trackercdn.com/valorant-api/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/displayicon.png": "Skye",
-    "https://titles.trackercdn.com/valorant-api/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/displayicon.png": "Yoru",
-    "https://titles.trackercdn.com/valorant-api/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/displayicon.png": "Astra",
-    "https://titles.trackercdn.com/valorant-api/agents/601dbbe7-43ce-be57-2a40-4abd24953621/displayicon.png": "KAY/O",
-    "https://titles.trackercdn.com/valorant-api/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/displayicon.png": "Phoenix",
-    "https://titles.trackercdn.com/valorant-api/agents/f94c3b30-42be-e959-889c-5aa313dba261/displayicon.png": "Raze",
-    "https://titles.trackercdn.com/valorant-api/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/displayicon.png": "Brimstone",
-    "https://titles.trackercdn.com/valorant-api/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayicon.png": "Jett",
-    "https://titles.trackercdn.com/valorant-api/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayicon.png": "Sage",
-    "https://titles.trackercdn.com/valorant-api/agents/707eab51-4836-f488-046a-cda6bf494859/displayicon.png": "Viper",
-    "https://titles.trackercdn.com/valorant-api/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/displayicon.png": "Breach",
-    "https://titles.trackercdn.com/valorant-api/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/displayicon.png": "Cypher",
-    "https://titles.trackercdn.com/valorant-api/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/displayicon.png": "Sova",
-    "https://titles.trackercdn.com/valorant-api/agents/8e253930-4c05-31dd-1b6c-968525494517/displayicon.png": "Omen",
-    "https://titles.trackercdn.com/valorant-api/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/displayicon.png": "Reyna",
-    "https://titles.trackercdn.com/valorant-api/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/displayicon.png": "Killjoy",
-}
 
 options = webdriver.ChromeOptions()
 options.add_argument("--ignore-certificate-errors")
 options.add_argument("--ignore-ssl-errors")
-options.add_extension(
-    "C:/Users/StevenTruong/Documents/Code/selenium/uBlock Origin 1.45.2.0.crx"
-)
 driver = webdriver.Chrome(
     service=Service(ChromeDriverManager().install()), options=options
 )
-driver.set_window_size(1920, 1400)
+driver.set_window_size(852, 480)
 
 matches = []
-# if os.path.exists("./data.json"):
-#     with open("./data.json", mode="r") as f:
-#         matches = json.load(f)
-#     f.close()
+if os.path.exists("./scrape.json"):
+    with open("./scrape.json", mode="r") as f:
+        matches = json.load(f)
+    f.close()
 
 
-# for match in matches:
-#     if match["url"] in urls:
-#         urls.remove(match["url"])
+for match in matches:
+    if match["url"] in urls:
+        urls.remove(match["url"])
 
 for url in urls:
     print(f"Scraping from: {url}")
@@ -141,44 +95,12 @@ for url in urls:
         try:
             api_url = f"https://api.tracker.gg/api/v2/valorant/standard/matches/{urlparse(url).path.split('/')[-1]}"
             driver.get(api_url)
-            time.sleep(1.5)
+            time.sleep(1)
 
             match_json = json.loads(driver.find_element(By.CSS_SELECTOR, "pre").text)[
                 "data"
             ]
             match_json["tracker_url"] = url
-
-            # game_info_labels = driver.find_elements(
-            #     By.CLASS_NAME, "trn-match-drawer__header-label"
-            # )
-            # game_info = driver.find_elements(
-            #     By.CLASS_NAME, "trn-match-drawer__header-value"
-            # )
-
-            # rows = driver.find_elements(By.CLASS_NAME, "st-content__item")
-            # for i, row in enumerate(rows):
-            #     name = row.find_element(By.CLASS_NAME, "trn-ign__username").text
-            #     agent_image = row.find_element(By.TAG_NAME, "img").get_attribute("src")
-            #     stats = row.find_elements(By.CLASS_NAME, "value")
-            #     match["team_a" if i < 5 else "team_b"].append(
-            #         {
-            #             "player_name": username_to_name[name]
-            #             if name in username_to_name.keys()
-            #             else name,
-            #             "agent": image_url_to_agent[agent_image],
-            #             "average_combat_score": int(stats[0].text),
-            #             "kills": int(stats[1].text),
-            #             "deaths": int(stats[2].text),
-            #             "assists": int(stats[3].text),
-            #             # "+/-": stats[4].text,
-            #             "kill_deaths": float(stats[5].text),
-            #             "kill_assist_survive_traded": int(stats[6].text[:-1]),
-            #             "first_kills": int(stats[7].text),
-            #             "first_deaths": int(stats[8].text),
-            #             "multi_kills": int(stats[9].text),
-            #             "econ": int(stats[10].text),
-            #         }
-            #     )
 
             matches.append(match_json)
             break
@@ -189,7 +111,6 @@ for url in urls:
 
 print("Saving...")
 with open("./scrape.json", mode="w") as f:
-    # matches.sort(key=lambda m: datetime.strptime(m["time"], "%m/%d/%y, %I:%M %p"))
     json.dump(matches, f, separators=(",", ":"))
     f.close()
 print("Done")

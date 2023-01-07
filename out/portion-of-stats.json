@@ -2,28 +2,28 @@
   "andy": {
     "kills": {
       "percentage": 14,
-      "committed": 1075,
-      "witnessed": 7500
+      "committed": 1098,
+      "witnessed": 7667
     },
     "deaths": {
       "percentage": 10,
-      "committed": 747,
-      "witnessed": 7503
+      "committed": 763,
+      "witnessed": 7670
     },
     "assists": {
       "percentage": 11,
-      "committed": 308,
-      "witnessed": 2927
+      "committed": 314,
+      "witnessed": 2985
     },
     "first_kills": {
       "percentage": 18,
-      "committed": 188,
-      "witnessed": 1022
+      "committed": 191,
+      "witnessed": 1044
     },
     "first_deaths": {
       "percentage": 10,
-      "committed": 102,
-      "witnessed": 1022
+      "committed": 103,
+      "witnessed": 1044
     }
   },
   "brandon": {
@@ -56,136 +56,136 @@
   "brian": {
     "kills": {
       "percentage": 6,
-      "committed": 394,
-      "witnessed": 6743
+      "committed": 409,
+      "witnessed": 6910
     },
     "deaths": {
       "percentage": 10,
-      "committed": 691,
-      "witnessed": 6746
+      "committed": 709,
+      "witnessed": 6913
     },
     "assists": {
       "percentage": 9,
-      "committed": 245,
-      "witnessed": 2641
+      "committed": 249,
+      "witnessed": 2699
     },
     "first_kills": {
       "percentage": 6,
       "committed": 53,
-      "witnessed": 913
+      "witnessed": 935
     },
     "first_deaths": {
       "percentage": 13,
-      "committed": 121,
-      "witnessed": 913
+      "committed": 124,
+      "witnessed": 935
     }
   },
   "cade": {
     "kills": {
       "percentage": 11,
-      "committed": 701,
-      "witnessed": 6420
+      "committed": 713,
+      "witnessed": 6587
     },
     "deaths": {
       "percentage": 11,
-      "committed": 686,
-      "witnessed": 6421
+      "committed": 705,
+      "witnessed": 6588
     },
     "assists": {
       "percentage": 10,
-      "committed": 241,
-      "witnessed": 2519
+      "committed": 248,
+      "witnessed": 2577
     },
     "first_kills": {
       "percentage": 10,
-      "committed": 86,
-      "witnessed": 873
+      "committed": 87,
+      "witnessed": 895
     },
     "first_deaths": {
       "percentage": 11,
-      "committed": 97,
-      "witnessed": 873
+      "committed": 100,
+      "witnessed": 895
     }
   },
   "darwin": {
     "kills": {
       "percentage": 10,
-      "committed": 801,
-      "witnessed": 8029
+      "committed": 832,
+      "witnessed": 8196
     },
     "deaths": {
       "percentage": 9,
-      "committed": 755,
-      "witnessed": 8032
+      "committed": 773,
+      "witnessed": 8199
     },
     "assists": {
       "percentage": 9,
-      "committed": 289,
-      "witnessed": 3123
+      "committed": 291,
+      "witnessed": 3181
     },
     "first_kills": {
-      "percentage": 9,
-      "committed": 102,
-      "witnessed": 1095
+      "percentage": 10,
+      "committed": 109,
+      "witnessed": 1117
     },
     "first_deaths": {
       "percentage": 9,
-      "committed": 96,
-      "witnessed": 1095
+      "committed": 99,
+      "witnessed": 1117
     }
   },
   "josh": {
     "kills": {
       "percentage": 9,
-      "committed": 599,
-      "witnessed": 6850
+      "committed": 606,
+      "witnessed": 7017
     },
     "deaths": {
       "percentage": 9,
-      "committed": 625,
-      "witnessed": 6852
+      "committed": 641,
+      "witnessed": 7019
     },
     "assists": {
-      "percentage": 13,
-      "committed": 342,
-      "witnessed": 2730
+      "percentage": 12,
+      "committed": 346,
+      "witnessed": 2788
     },
     "first_kills": {
       "percentage": 6,
-      "committed": 53,
-      "witnessed": 934
+      "committed": 54,
+      "witnessed": 956
     },
     "first_deaths": {
       "percentage": 5,
-      "committed": 48,
-      "witnessed": 934
+      "committed": 51,
+      "witnessed": 956
     }
   },
   "lindsey": {
     "kills": {
       "percentage": 10,
-      "committed": 771,
-      "witnessed": 7686
+      "committed": 777,
+      "witnessed": 7853
     },
     "deaths": {
       "percentage": 9,
-      "committed": 702,
-      "witnessed": 7688
+      "committed": 719,
+      "witnessed": 7855
     },
     "assists": {
-      "percentage": 13,
-      "committed": 400,
-      "witnessed": 2988
+      "percentage": 14,
+      "committed": 415,
+      "witnessed": 3046
     },
     "first_kills": {
       "percentage": 6,
       "committed": 59,
-      "witnessed": 1047
+      "witnessed": 1069
     },
     "first_deaths": {
       "percentage": 6,
-      "committed": 66,
-      "witnessed": 1047
+      "committed": 67,
+      "witnessed": 1069
     }
   },
   "sequential": {
@@ -218,55 +218,55 @@
   "sophie": {
     "kills": {
       "percentage": 7,
-      "committed": 530,
-      "witnessed": 7965
+      "committed": 541,
+      "witnessed": 8132
     },
     "deaths": {
       "percentage": 11,
-      "committed": 889,
-      "witnessed": 7968
+      "committed": 904,
+      "witnessed": 8135
     },
     "assists": {
       "percentage": 6,
-      "committed": 187,
-      "witnessed": 3106
+      "committed": 193,
+      "witnessed": 3164
     },
     "first_kills": {
       "percentage": 9,
-      "committed": 102,
-      "witnessed": 1085
+      "committed": 103,
+      "witnessed": 1107
     },
     "first_deaths": {
       "percentage": 17,
-      "committed": 189,
-      "witnessed": 1085
+      "committed": 191,
+      "witnessed": 1107
     }
   },
   "steve": {
     "kills": {
       "percentage": 10,
-      "committed": 470,
-      "witnessed": 4885
+      "committed": 491,
+      "witnessed": 5052
     },
     "deaths": {
       "percentage": 11,
-      "committed": 533,
-      "witnessed": 4888
+      "committed": 548,
+      "witnessed": 5055
     },
     "assists": {
       "percentage": 8,
-      "committed": 158,
-      "witnessed": 1873
+      "committed": 161,
+      "witnessed": 1931
     },
     "first_kills": {
       "percentage": 11,
-      "committed": 73,
-      "witnessed": 668
+      "committed": 74,
+      "witnessed": 690
     },
     "first_deaths": {
-      "percentage": 15,
+      "percentage": 14,
       "committed": 97,
-      "witnessed": 668
+      "witnessed": 690
     }
   },
   "steven": {
@@ -299,28 +299,28 @@
   "sun": {
     "kills": {
       "percentage": 11,
-      "committed": 449,
-      "witnessed": 4005
+      "committed": 464,
+      "witnessed": 4172
     },
     "deaths": {
       "percentage": 10,
-      "committed": 417,
-      "witnessed": 4007
+      "committed": 432,
+      "witnessed": 4174
     },
     "assists": {
       "percentage": 9,
-      "committed": 147,
-      "witnessed": 1555
+      "committed": 152,
+      "witnessed": 1613
     },
     "first_kills": {
       "percentage": 10,
       "committed": 56,
-      "witnessed": 552
+      "witnessed": 574
     },
     "first_deaths": {
       "percentage": 7,
-      "committed": 40,
-      "witnessed": 552
+      "committed": 43,
+      "witnessed": 574
     }
   },
   "susi": {
@@ -380,28 +380,28 @@
   "tang": {
     "kills": {
       "percentage": 12,
-      "committed": 612,
-      "witnessed": 5032
+      "committed": 638,
+      "witnessed": 5199
     },
     "deaths": {
       "percentage": 10,
-      "committed": 498,
-      "witnessed": 5035
+      "committed": 516,
+      "witnessed": 5202
     },
     "assists": {
       "percentage": 11,
-      "committed": 210,
-      "witnessed": 1938
+      "committed": 216,
+      "witnessed": 1996
     },
     "first_kills": {
-      "percentage": 14,
-      "committed": 100,
-      "witnessed": 694
+      "percentage": 15,
+      "committed": 108,
+      "witnessed": 716
     },
     "first_deaths": {
       "percentage": 10,
-      "committed": 69,
-      "witnessed": 694
+      "committed": 72,
+      "witnessed": 716
     }
   },
   "yang": {
