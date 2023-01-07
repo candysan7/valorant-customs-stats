@@ -8,9 +8,9 @@
     },
     {
       "teammate_name": "brandon",
-      "winrate": 67,
+      "winrate": 57,
       "wins": 4,
-      "games": 6
+      "games": 7
     },
     {
       "teammate_name": "brian",
@@ -26,21 +26,21 @@
     },
     {
       "teammate_name": "darwin",
-      "winrate": 55,
+      "winrate": 52,
       "wins": 12,
-      "games": 22
+      "games": 23
     },
     {
       "teammate_name": "josh",
-      "winrate": 59,
-      "wins": 10,
-      "games": 17
-    },
-    {
-      "teammate_name": "lindsey",
       "winrate": 56,
       "wins": 10,
       "games": 18
+    },
+    {
+      "teammate_name": "lindsey",
+      "winrate": 58,
+      "wins": 11,
+      "games": 19
     },
     {
       "teammate_name": "sequential",
@@ -50,15 +50,15 @@
     },
     {
       "teammate_name": "sophie",
-      "winrate": 59,
-      "wins": 17,
-      "games": 29
+      "winrate": 60,
+      "wins": 18,
+      "games": 30
     },
     {
       "teammate_name": "steve",
-      "winrate": 55,
-      "wins": 6,
-      "games": 11
+      "winrate": 58,
+      "wins": 7,
+      "games": 12
     },
     {
       "teammate_name": "steven",
@@ -80,9 +80,9 @@
     },
     {
       "teammate_name": "susu",
-      "winrate": 0,
-      "wins": 0,
-      "games": 2
+      "winrate": 25,
+      "wins": 1,
+      "games": 4
     },
     {
       "teammate_name": "tang",
@@ -100,9 +100,9 @@
   "brandon": [
     {
       "teammate_name": "andy",
-      "winrate": 67,
+      "winrate": 57,
       "wins": 4,
-      "games": 6
+      "games": 7
     },
     {
       "teammate_name": "brandon",
@@ -124,15 +124,15 @@
     },
     {
       "teammate_name": "darwin",
-      "winrate": 50,
+      "winrate": 25,
       "wins": 1,
-      "games": 2
+      "games": 4
     },
     {
       "teammate_name": "josh",
       "winrate": 0,
       "wins": 0,
-      "games": 1
+      "games": 3
     },
     {
       "teammate_name": "lindsey",
@@ -160,9 +160,9 @@
     },
     {
       "teammate_name": "steven",
-      "winrate": 50,
+      "winrate": 40,
       "wins": 2,
-      "games": 4
+      "games": 5
     },
     {
       "teammate_name": "sun",
@@ -178,9 +178,9 @@
     },
     {
       "teammate_name": "susu",
-      "winrate": null,
+      "winrate": 0,
       "wins": 0,
-      "games": 0
+      "games": 1
     },
     {
       "teammate_name": "tang",
@@ -394,15 +394,15 @@
   "darwin": [
     {
       "teammate_name": "andy",
-      "winrate": 55,
+      "winrate": 52,
       "wins": 12,
-      "games": 22
+      "games": 23
     },
     {
       "teammate_name": "brandon",
-      "winrate": 50,
+      "winrate": 25,
       "wins": 1,
-      "games": 2
+      "games": 4
     },
     {
       "teammate_name": "brian",
@@ -424,9 +424,9 @@
     },
     {
       "teammate_name": "josh",
-      "winrate": 52,
+      "winrate": 48,
       "wins": 11,
-      "games": 21
+      "games": 23
     },
     {
       "teammate_name": "lindsey",
@@ -454,9 +454,9 @@
     },
     {
       "teammate_name": "steven",
-      "winrate": 50,
+      "winrate": 43,
       "wins": 3,
-      "games": 6
+      "games": 7
     },
     {
       "teammate_name": "sun",
@@ -472,9 +472,9 @@
     },
     {
       "teammate_name": "susu",
-      "winrate": 100,
+      "winrate": 67,
       "wins": 2,
-      "games": 2
+      "games": 3
     },
     {
       "teammate_name": "tang",
@@ -492,15 +492,15 @@
   "josh": [
     {
       "teammate_name": "andy",
-      "winrate": 59,
+      "winrate": 56,
       "wins": 10,
-      "games": 17
+      "games": 18
     },
     {
       "teammate_name": "brandon",
       "winrate": 0,
       "wins": 0,
-      "games": 1
+      "games": 3
     },
     {
       "teammate_name": "brian",
@@ -516,9 +516,9 @@
     },
     {
       "teammate_name": "darwin",
-      "winrate": 52,
+      "winrate": 48,
       "wins": 11,
-      "games": 21
+      "games": 23
     },
     {
       "teammate_name": "josh",
@@ -552,9 +552,9 @@
     },
     {
       "teammate_name": "steven",
-      "winrate": 70,
+      "winrate": 64,
       "wins": 7,
-      "games": 10
+      "games": 11
     },
     {
       "teammate_name": "sun",
@@ -572,7 +572,7 @@
       "teammate_name": "susu",
       "winrate": 0,
       "wins": 0,
-      "games": 1
+      "games": 2
     },
     {
       "teammate_name": "tang",
@@ -590,9 +590,9 @@
   "lindsey": [
     {
       "teammate_name": "andy",
-      "winrate": 56,
-      "wins": 10,
-      "games": 18
+      "winrate": 58,
+      "wins": 11,
+      "games": 19
     },
     {
       "teammate_name": "brandon",
@@ -638,21 +638,21 @@
     },
     {
       "teammate_name": "sophie",
-      "winrate": 56,
-      "wins": 10,
-      "games": 18
+      "winrate": 60,
+      "wins": 12,
+      "games": 20
     },
     {
       "teammate_name": "steve",
-      "winrate": 44,
-      "wins": 7,
-      "games": 16
+      "winrate": 50,
+      "wins": 9,
+      "games": 18
     },
     {
       "teammate_name": "steven",
-      "winrate": 57,
-      "wins": 4,
-      "games": 7
+      "winrate": 62,
+      "wins": 5,
+      "games": 8
     },
     {
       "teammate_name": "sun",
@@ -668,9 +668,9 @@
     },
     {
       "teammate_name": "susu",
-      "winrate": null,
-      "wins": 0,
-      "games": 0
+      "winrate": 100,
+      "wins": 1,
+      "games": 1
     },
     {
       "teammate_name": "tang",
@@ -786,9 +786,9 @@
   "sophie": [
     {
       "teammate_name": "andy",
-      "winrate": 59,
-      "wins": 17,
-      "games": 29
+      "winrate": 60,
+      "wins": 18,
+      "games": 30
     },
     {
       "teammate_name": "brandon",
@@ -822,9 +822,9 @@
     },
     {
       "teammate_name": "lindsey",
-      "winrate": 56,
-      "wins": 10,
-      "games": 18
+      "winrate": 60,
+      "wins": 12,
+      "games": 20
     },
     {
       "teammate_name": "sequential",
@@ -840,15 +840,15 @@
     },
     {
       "teammate_name": "steve",
-      "winrate": 50,
-      "wins": 6,
-      "games": 12
+      "winrate": 57,
+      "wins": 8,
+      "games": 14
     },
     {
       "teammate_name": "steven",
-      "winrate": 60,
-      "wins": 9,
-      "games": 15
+      "winrate": 62,
+      "wins": 10,
+      "games": 16
     },
     {
       "teammate_name": "sun",
@@ -864,9 +864,9 @@
     },
     {
       "teammate_name": "susu",
-      "winrate": 0,
-      "wins": 0,
-      "games": 2
+      "winrate": 33,
+      "wins": 1,
+      "games": 3
     },
     {
       "teammate_name": "tang",
@@ -884,9 +884,9 @@
   "steve": [
     {
       "teammate_name": "andy",
-      "winrate": 55,
-      "wins": 6,
-      "games": 11
+      "winrate": 58,
+      "wins": 7,
+      "games": 12
     },
     {
       "teammate_name": "brandon",
@@ -920,9 +920,9 @@
     },
     {
       "teammate_name": "lindsey",
-      "winrate": 44,
-      "wins": 7,
-      "games": 16
+      "winrate": 50,
+      "wins": 9,
+      "games": 18
     },
     {
       "teammate_name": "sequential",
@@ -932,9 +932,9 @@
     },
     {
       "teammate_name": "sophie",
-      "winrate": 50,
-      "wins": 6,
-      "games": 12
+      "winrate": 57,
+      "wins": 8,
+      "games": 14
     },
     {
       "teammate_name": "steve",
@@ -944,9 +944,9 @@
     },
     {
       "teammate_name": "steven",
-      "winrate": 67,
-      "wins": 4,
-      "games": 6
+      "winrate": 71,
+      "wins": 5,
+      "games": 7
     },
     {
       "teammate_name": "sun",
@@ -963,8 +963,8 @@
     {
       "teammate_name": "susu",
       "winrate": 100,
-      "wins": 2,
-      "games": 2
+      "wins": 3,
+      "games": 3
     },
     {
       "teammate_name": "tang",
@@ -988,9 +988,9 @@
     },
     {
       "teammate_name": "brandon",
-      "winrate": 50,
+      "winrate": 40,
       "wins": 2,
-      "games": 4
+      "games": 5
     },
     {
       "teammate_name": "brian",
@@ -1006,21 +1006,21 @@
     },
     {
       "teammate_name": "darwin",
-      "winrate": 50,
+      "winrate": 43,
       "wins": 3,
-      "games": 6
+      "games": 7
     },
     {
       "teammate_name": "josh",
-      "winrate": 70,
+      "winrate": 64,
       "wins": 7,
-      "games": 10
+      "games": 11
     },
     {
       "teammate_name": "lindsey",
-      "winrate": 57,
-      "wins": 4,
-      "games": 7
+      "winrate": 62,
+      "wins": 5,
+      "games": 8
     },
     {
       "teammate_name": "sequential",
@@ -1030,15 +1030,15 @@
     },
     {
       "teammate_name": "sophie",
-      "winrate": 60,
-      "wins": 9,
-      "games": 15
+      "winrate": 62,
+      "wins": 10,
+      "games": 16
     },
     {
       "teammate_name": "steve",
-      "winrate": 67,
-      "wins": 4,
-      "games": 6
+      "winrate": 71,
+      "wins": 5,
+      "games": 7
     },
     {
       "teammate_name": "steven",
@@ -1276,15 +1276,15 @@
   "susu": [
     {
       "teammate_name": "andy",
-      "winrate": 0,
-      "wins": 0,
-      "games": 2
+      "winrate": 25,
+      "wins": 1,
+      "games": 4
     },
     {
       "teammate_name": "brandon",
-      "winrate": null,
+      "winrate": 0,
       "wins": 0,
-      "games": 0
+      "games": 1
     },
     {
       "teammate_name": "brian",
@@ -1300,21 +1300,21 @@
     },
     {
       "teammate_name": "darwin",
-      "winrate": 100,
+      "winrate": 67,
       "wins": 2,
-      "games": 2
+      "games": 3
     },
     {
       "teammate_name": "josh",
       "winrate": 0,
       "wins": 0,
-      "games": 1
+      "games": 2
     },
     {
       "teammate_name": "lindsey",
-      "winrate": null,
-      "wins": 0,
-      "games": 0
+      "winrate": 100,
+      "wins": 1,
+      "games": 1
     },
     {
       "teammate_name": "sequential",
@@ -1324,15 +1324,15 @@
     },
     {
       "teammate_name": "sophie",
-      "winrate": 0,
-      "wins": 0,
-      "games": 2
+      "winrate": 33,
+      "wins": 1,
+      "games": 3
     },
     {
       "teammate_name": "steve",
       "winrate": 100,
-      "wins": 2,
-      "games": 2
+      "wins": 3,
+      "games": 3
     },
     {
       "teammate_name": "steven",

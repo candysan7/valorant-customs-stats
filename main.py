@@ -30,6 +30,46 @@ if __name__ == "__main__":
         json.dump(out_json, f, indent=2)
         f.close()
 
+    with open(os.path.join(output_dir, "recent-lobby-win-rates.json"), mode="w") as f:
+        out_json = {
+            player_name: {
+                WINRATE: None,
+                WINS: 0,
+                GAMES: 0,
+            }
+            for player_name in PLAYER_NAMES
+        }
+
+        curr_date = datetime.combine(
+            datetime(year=2022, month=10, day=9),
+            time.max,
+            tzinfo=timezone("US/Pacific"),
+        )
+        start_date = curr_date - timedelta(days=90)
+
+        for match in matches:
+            if match.time > start_date:
+                for player_name in filter_players(match.all_players):
+                    player_stats = match.all_players[player_name]
+                    player_entry = out_json[player_name]
+
+                    # Update winrate
+                    if match.player_did_win(player_name):
+                        player_entry[WINS] += 1
+                    if match.player_did_play(player_name):
+                        player_entry[GAMES] += 1
+
+        for player_name in PLAYER_NAMES:
+            player_entry = out_json[player_name]
+
+            if player_entry[GAMES] != 0:
+                player_entry[WINRATE] = round(
+                    100 * player_entry[WINS] / player_entry[GAMES]
+                )
+
+        json.dump(out_json, f, indent=2)
+        f.close()
+
     with open(os.path.join(output_dir, "individual.json"), mode="w") as f:
         out_json = {
             player_name: PLAYER_INFO[player_name].copy()
@@ -508,7 +548,7 @@ if __name__ == "__main__":
         )
         time_increment = timedelta(weeks=1)
 
-        curr_block_start_date = curr_date - timedelta(days=60)
+        curr_block_start_date = curr_date - timedelta(days=90)
 
         i = 0
         j = 0
@@ -544,7 +584,7 @@ if __name__ == "__main__":
 
         # Individually compute the present day
         i = len(matches)
-        while matches[i - 1].time >= last_date - timedelta(days=60):
+        while i > 0 and matches[i - 1].time >= last_date - timedelta(days=90):
             i -= 1
 
         block_data = {
