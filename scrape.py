@@ -68,6 +68,8 @@ urls = [
     "https://tracker.gg/valorant/match/2e0c5bc4-af8a-4044-ba2f-94673f0de9d4?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/c9930cfa-d79b-4da3-a643-d6a7d1f6c83e?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/8f2cbb25-fec7-48e7-b3f7-446bf444080c?handle=aylindsay%230613",
+    "https://tracker.gg/valorant/match/7fc820f4-9191-4f92-8121-f33a47c046d3?handle=youngsmasher%23NA1",
+    "https://tracker.gg/valorant/match/e0e9eba6-c3c9-4963-9fb6-66fb9db1e6af?handle=youngsmasher%23NA1",
 ]
 
 options = webdriver.ChromeOptions()
@@ -86,8 +88,8 @@ if os.path.exists("./scrape.json"):
 
 
 for match in matches:
-    if match["url"] in urls:
-        urls.remove(match["url"])
+    if match["tracker_url"] in urls:
+        urls.remove(match["tracker_url"])
 
 for url in urls:
     print(f"Scraping from: {url}")
