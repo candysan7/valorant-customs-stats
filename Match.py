@@ -1,3 +1,4 @@
+from dateutil.parser import isoparse
 from datetime import datetime
 
 
@@ -80,7 +81,7 @@ class Round:
 class Match:
     def __init__(self, match_json):
         # match_json.time looks like "10/11/22, 9:08 PM"
-        self.time: datetime = datetime.fromisoformat(match_json["time"])
+        self.time: datetime = isoparse(match_json["time"])
         self.url: str = match_json["url"]
         self.map: str = match_json["map"]
         self.score_red: int = match_json["score_red"]
