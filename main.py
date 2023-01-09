@@ -10,7 +10,6 @@ from constants.valorant import *
 
 output_dir = "./out"
 
-data = {}
 matches: list[Match] = []
 with open("./data.json", mode="r") as f:
     data = json.load(f)
@@ -27,6 +26,74 @@ if __name__ == "__main__":
 
     with open(os.path.join(output_dir, "data-frame-friendly.json"), mode="w") as f:
         out_json = {i: match_json for i, match_json in enumerate(data)}
+        json.dump(out_json, f, indent=2)
+        f.close()
+
+    with open(os.path.join(output_dir, "wall-of-shame.json"), mode="w") as f:
+        out_json = {
+            player_name: {
+                HEADSHOTS: 0,
+                HEADSHOT_RATE: None,
+                BODYSHOTS: 0,
+                BODYSHOT_RATE: None,
+                LEGSHOTS: 0,
+                LEGSHOT_RATE: None,
+                BULLETS: 0,
+                KNIFE_KILLS: 0,
+                KNIFE_DEATHS: 0,
+                TEAM_DAMAGE: 0,
+                SELF_DAMAGE: 0,
+            }
+            for player_name in PLAYER_NAMES
+        }
+
+        for match in matches:
+            for _round in match.rounds:
+                for damage_event in _round.damage_events:
+                    giver_name = damage_event.giver_name
+                    receiver_name = damage_event.receiver_name
+
+                    if giver_name in PLAYER_NAMES:
+                        if (
+                            match.players_in_same_team(giver_name, receiver_name)
+                            and damage_event.damage < 800
+                        ):
+                            if giver_name == receiver_name:
+                                out_json[giver_name][SELF_DAMAGE] += damage_event.damage
+                            else:
+                                out_json[giver_name][TEAM_DAMAGE] += damage_event.damage
+                        else:
+                            out_json[giver_name][HEADSHOTS] += damage_event.headshots
+                            out_json[giver_name][BODYSHOTS] += damage_event.bodyshots
+                            out_json[giver_name][LEGSHOTS] += damage_event.legshots
+
+                        out_json[giver_name][BULLETS] += (
+                            damage_event.headshots
+                            + damage_event.bodyshots
+                            + damage_event.legshots
+                        )
+
+                for kill in _round.kills:
+                    killer_name = kill.killer_name
+                    victim_name = kill.victim_name
+
+                    if kill.weapon_name == "Melee":
+                        if killer_name in PLAYER_NAMES:
+                            out_json[killer_name][KNIFE_KILLS] += 1
+                        if victim_name in PLAYER_NAMES:
+                            out_json[victim_name][KNIFE_DEATHS] += 1
+
+        for player_name in PLAYER_NAMES:
+            out_json[player_name][HEADSHOT_RATE] = round(
+                100 * out_json[player_name][HEADSHOTS] / out_json[player_name][BULLETS]
+            )
+            out_json[player_name][BODYSHOT_RATE] = round(
+                100 * out_json[player_name][BODYSHOTS] / out_json[player_name][BULLETS]
+            )
+            out_json[player_name][LEGSHOT_RATE] = round(
+                100 * out_json[player_name][LEGSHOTS] / out_json[player_name][BULLETS]
+            )
+
         json.dump(out_json, f, indent=2)
         f.close()
 
@@ -293,58 +360,6 @@ if __name__ == "__main__":
         json.dump(out_json, f, indent=2)
         f.close()
 
-    # with open(
-    #     os.path.join(output_dir, "assists-per-game-over-time.json"), mode="w"
-    # ) as f:
-    #     out_json = {
-    #         player_name: {
-    #             assisted_name: [{ASSISTS_PER_STANDARD_GAME: 0, ASSISTS: 0, ROUNDS: 0}]
-    #             for assisted_name in PLAYER_NAMES
-    #         }
-    #         for player_name in PLAYER_NAMES
-    #     }
-
-    #     for match in matches:
-    #         for player_name in filter_players(match.all_players):
-    #             for assistant_name in filter_players(match.all_players):
-    #                 if match.players_in_same_team(player_name, assistant_name):
-    #                     if player_name == assistant_name:
-    #                         continue
-    #                     out_json[player_name][assistant_name][-1][ROUNDS] += len(
-    #                         match.rounds
-    #                     )
-    #         for _round in match.rounds:
-    #             # This will overwrite the round() function otherwise
-    #             for kill in _round.kills:
-    #                 if kill.killer_name == kill.victim_name:
-    #                     continue
-    #                 assisted_name = kill.killer_name
-    #                 if not is_player_of_interest(assisted_name):
-    #                     continue
-    #                 for player_name in filter_players(kill.assistants):
-    #                     out_json[player_name][assisted_name][-1][ASSISTS] += 1
-
-    #         for player_name in PLAYER_NAMES:
-    #             for assisted_name in PLAYER_NAMES:
-    #                 if out_json[player_name][assisted_name][-1][ROUNDS] != 0:
-    #                     out_json[player_name][assisted_name][-1][
-    #                         ASSISTS_PER_STANDARD_GAME
-    #                     ] = (
-    #                         round(
-    #                             10
-    #                             * 25
-    #                             * out_json[player_name][assisted_name][-1][ASSISTS]
-    #                             / out_json[player_name][assisted_name][-1][ROUNDS]
-    #                         )
-    #                         / 10
-    #                     )
-    #                 out_json[player_name][assisted_name].append(
-    #                     out_json[player_name][assisted_name][-1].copy()
-    #                 )
-
-    #     json.dump(out_json[SUSI][ANDY][:-1], f, indent=2)
-    #     f.close()
-
     with open(os.path.join(output_dir, "teammate-synergy.json"), mode="w") as f:
         out_json = {
             player_name: {
@@ -430,106 +445,6 @@ if __name__ == "__main__":
         for match in matches:
             out_json[match.map] += 1
         json.dump(out_json, f, indent=2)
-        f.close()
-
-    with open(os.path.join(output_dir, "portion-of-stats.json"), mode="w") as f:
-        metrics = {
-            KILLS: lambda player_stats: player_stats.kills,
-            DEATHS: lambda player_stats: player_stats.deaths,
-            ASSISTS: lambda player_stats: player_stats.assists,
-            FIRST_KILLS: lambda player_stats: player_stats.first_kills,
-            FIRST_DEATHS: lambda player_stats: player_stats.first_deaths,
-        }
-
-        out_json = {
-            player_name: {
-                metric: {
-                    PERCENTAGE: None,
-                    COMMITTED: 0,
-                    WITNESSED: 0,
-                }
-                for metric in metrics
-            }
-            for player_name in PLAYER_NAMES
-        }
-
-        for match in matches:
-            for player_name in match.all_players:
-                player_stats = match.all_players[player_name]
-                for metric, fn in metrics.items():
-                    if player_name in PLAYER_NAMES:
-                        out_json[player_name][metric][COMMITTED] += fn(player_stats)
-                for player_name_to_update in filter_players(match.all_players):
-                    for metric, fn in metrics.items():
-                        out_json[player_name_to_update][metric][WITNESSED] += fn(
-                            player_stats
-                        )
-
-        for player_name in out_json:
-            for metric in metrics:
-                if out_json[player_name][metric][WITNESSED] == 0:
-                    continue
-                out_json[player_name][metric][PERCENTAGE] = round(
-                    100
-                    * out_json[player_name][metric][COMMITTED]
-                    / out_json[player_name][metric][WITNESSED]
-                )
-
-        json.dump(out_json, f, indent=2)
-        f.close()
-
-    with open(os.path.join(output_dir, "winrate-over-time.json"), mode="w") as f:
-
-        def winrate(matches: list[Match], accumulator):
-            block_data = {
-                player_name: {WINRATE: None, WINS: 0, GAMES: 0}
-                for player_name in PLAYER_NAMES
-            }
-            for match in matches:
-                for winner_name in filter_players(match.winning_players):
-                    block_data[winner_name][WINS] += 1
-                for player_name in filter_players(match.all_players):
-                    block_data[player_name][GAMES] += 1
-            for player_name, player_stats in block_data.items():
-                if player_stats[GAMES] != 0:
-                    player_stats[WINRATE] = round(
-                        100 * player_stats[WINS] / player_stats[GAMES]
-                    )
-            return block_data
-
-        out_json = aggregate_matches(matches, winrate)
-        json.dump(out_json, f, indent=2, default=str)
-        f.close()
-
-    with open(
-        os.path.join(output_dir, "cumulative-winrate-over-time.json"), mode="w"
-    ) as f:
-
-        def cumulative_winrate(matches: list[Match], accumulator):
-            if len(accumulator) > 0:
-                block_data = {
-                    player_name: accumulator[-1]["data"][player_name].copy()
-                    for player_name in PLAYER_NAMES
-                }
-            else:
-                block_data = {
-                    player_name: {WINRATE: None, WINS: 0, GAMES: 0}
-                    for player_name in PLAYER_NAMES
-                }
-            for match in matches:
-                for winner_name in filter_players(match.winning_players):
-                    block_data[winner_name][WINS] += 1
-                for player_name in filter_players(match.all_players):
-                    block_data[player_name][GAMES] += 1
-            for player_name, player_stats in block_data.items():
-                if player_stats[GAMES] != 0:
-                    player_stats[WINRATE] = round(
-                        100 * player_stats[WINS] / player_stats[GAMES]
-                    )
-            return block_data
-
-        out_json = aggregate_matches(matches, cumulative_winrate)
-        json.dump(out_json, f, indent=2, default=str)
         f.close()
 
     with open(
@@ -618,3 +533,157 @@ if __name__ == "__main__":
 
         json.dump(out_json, f, indent=2)
         f.close()
+
+# Unused dataset functions
+
+# with open(os.path.join(output_dir, "portion-of-stats.json"), mode="w") as f:
+#     metrics = {
+#         KILLS: lambda player_stats: player_stats.kills,
+#         DEATHS: lambda player_stats: player_stats.deaths,
+#         ASSISTS: lambda player_stats: player_stats.assists,
+#         FIRST_KILLS: lambda player_stats: player_stats.first_kills,
+#         FIRST_DEATHS: lambda player_stats: player_stats.first_deaths,
+#     }
+
+#     out_json = {
+#         player_name: {
+#             metric: {
+#                 PERCENTAGE: None,
+#                 COMMITTED: 0,
+#                 WITNESSED: 0,
+#             }
+#             for metric in metrics
+#         }
+#         for player_name in PLAYER_NAMES
+#     }
+
+#     for match in matches:
+#         for player_name in match.all_players:
+#             player_stats = match.all_players[player_name]
+#             for metric, fn in metrics.items():
+#                 if player_name in PLAYER_NAMES:
+#                     out_json[player_name][metric][COMMITTED] += fn(player_stats)
+#             for player_name_to_update in filter_players(match.all_players):
+#                 for metric, fn in metrics.items():
+#                     out_json[player_name_to_update][metric][WITNESSED] += fn(
+#                         player_stats
+#                     )
+
+#     for player_name in out_json:
+#         for metric in metrics:
+#             if out_json[player_name][metric][WITNESSED] == 0:
+#                 continue
+#             out_json[player_name][metric][PERCENTAGE] = round(
+#                 100
+#                 * out_json[player_name][metric][COMMITTED]
+#                 / out_json[player_name][metric][WITNESSED]
+#             )
+
+#     json.dump(out_json, f, indent=2)
+#     f.close()
+
+# with open(os.path.join(output_dir, "winrate-over-time.json"), mode="w") as f:
+
+#     def winrate(matches: list[Match], accumulator):
+#         block_data = {
+#             player_name: {WINRATE: None, WINS: 0, GAMES: 0}
+#             for player_name in PLAYER_NAMES
+#         }
+#         for match in matches:
+#             for winner_name in filter_players(match.winning_players):
+#                 block_data[winner_name][WINS] += 1
+#             for player_name in filter_players(match.all_players):
+#                 block_data[player_name][GAMES] += 1
+#         for player_name, player_stats in block_data.items():
+#             if player_stats[GAMES] != 0:
+#                 player_stats[WINRATE] = round(
+#                     100 * player_stats[WINS] / player_stats[GAMES]
+#                 )
+#         return block_data
+
+#     out_json = aggregate_matches(matches, winrate)
+#     json.dump(out_json, f, indent=2, default=str)
+#     f.close()
+
+# with open(
+#     os.path.join(output_dir, "cumulative-winrate-over-time.json"), mode="w"
+# ) as f:
+
+#     def cumulative_winrate(matches: list[Match], accumulator):
+#         if len(accumulator) > 0:
+#             block_data = {
+#                 player_name: accumulator[-1]["data"][player_name].copy()
+#                 for player_name in PLAYER_NAMES
+#             }
+#         else:
+#             block_data = {
+#                 player_name: {WINRATE: None, WINS: 0, GAMES: 0}
+#                 for player_name in PLAYER_NAMES
+#             }
+#         for match in matches:
+#             for winner_name in filter_players(match.winning_players):
+#                 block_data[winner_name][WINS] += 1
+#             for player_name in filter_players(match.all_players):
+#                 block_data[player_name][GAMES] += 1
+#         for player_name, player_stats in block_data.items():
+#             if player_stats[GAMES] != 0:
+#                 player_stats[WINRATE] = round(
+#                     100 * player_stats[WINS] / player_stats[GAMES]
+#                 )
+#         return block_data
+
+#     out_json = aggregate_matches(matches, cumulative_winrate)
+#     json.dump(out_json, f, indent=2, default=str)
+#     f.close()
+
+# with open(
+#     os.path.join(output_dir, "assists-per-game-over-time.json"), mode="w"
+# ) as f:
+#     out_json = {
+#         player_name: {
+#             assisted_name: [{ASSISTS_PER_STANDARD_GAME: 0, ASSISTS: 0, ROUNDS: 0}]
+#             for assisted_name in PLAYER_NAMES
+#         }
+#         for player_name in PLAYER_NAMES
+#     }
+
+#     for match in matches:
+#         for player_name in filter_players(match.all_players):
+#             for assistant_name in filter_players(match.all_players):
+#                 if match.players_in_same_team(player_name, assistant_name):
+#                     if player_name == assistant_name:
+#                         continue
+#                     out_json[player_name][assistant_name][-1][ROUNDS] += len(
+#                         match.rounds
+#                     )
+#         for _round in match.rounds:
+#             # This will overwrite the round() function otherwise
+#             for kill in _round.kills:
+#                 if kill.killer_name == kill.victim_name:
+#                     continue
+#                 assisted_name = kill.killer_name
+#                 if not is_player_of_interest(assisted_name):
+#                     continue
+#                 for player_name in filter_players(kill.assistants):
+#                     out_json[player_name][assisted_name][-1][ASSISTS] += 1
+
+#         for player_name in PLAYER_NAMES:
+#             for assisted_name in PLAYER_NAMES:
+#                 if out_json[player_name][assisted_name][-1][ROUNDS] != 0:
+#                     out_json[player_name][assisted_name][-1][
+#                         ASSISTS_PER_STANDARD_GAME
+#                     ] = (
+#                         round(
+#                             10
+#                             * 25
+#                             * out_json[player_name][assisted_name][-1][ASSISTS]
+#                             / out_json[player_name][assisted_name][-1][ROUNDS]
+#                         )
+#                         / 10
+#                     )
+#                 out_json[player_name][assisted_name].append(
+#                     out_json[player_name][assisted_name][-1].copy()
+#                 )
+
+#     json.dump(out_json[SUSI][ANDY][:-1], f, indent=2)
+#     f.close()

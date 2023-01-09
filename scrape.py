@@ -70,6 +70,11 @@ urls = [
     "https://tracker.gg/valorant/match/8f2cbb25-fec7-48e7-b3f7-446bf444080c?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/7fc820f4-9191-4f92-8121-f33a47c046d3?handle=youngsmasher%23NA1",
     "https://tracker.gg/valorant/match/e0e9eba6-c3c9-4963-9fb6-66fb9db1e6af?handle=youngsmasher%23NA1",
+    "https://tracker.gg/valorant/match/9cc3048f-e28a-4577-b1c9-fa1a3495ee60?handle=Candysan%23NA7",
+    "https://tracker.gg/valorant/match/9eba2d2e-a48f-4b24-b1dd-fce1b779449a?handle=Candysan%23NA7",
+    "https://tracker.gg/valorant/match/536889a5-d5a2-41d4-be3f-467f81e818ed?handle=Candysan%23NA7",
+    "https://tracker.gg/valorant/match/af80e60b-1b96-40f0-9283-a37e58a34468?handle=youngsmasher%23NA1",
+    "https://tracker.gg/valorant/match/657e3142-f0aa-4b5a-8e7e-e861793efcdf?handle=youngsmasher%23NA1",
 ]
 
 options = webdriver.ChromeOptions()

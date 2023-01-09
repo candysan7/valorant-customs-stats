@@ -70,6 +70,12 @@ class Round:
         ]
         self.kills: list[Kill] = [Kill(kill_json) for kill_json in round_json["kills"]]
 
+    def player_did_die(self, player_name):
+        for kill in self.kills:
+            if player_name == kill.victim_name:
+                return True
+        return False
+
 
 class Match:
     def __init__(self, match_json):

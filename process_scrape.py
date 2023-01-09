@@ -8,6 +8,8 @@ player_tags = {
     "BigBoiB": "brandon",
     "Sequential": "sequential",
     "Selintt": "steve",
+    "alomeirca": "steve",
+    "spookslayer1": "steve",
     "aylindsay": "lindsey",
     "ChzGorditaCrunch": "darwin",
     "Mirabel Madrigal": "darwin",

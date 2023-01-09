@@ -8,9 +8,9 @@
     },
     {
       "assistant_name": "brandon",
-      "assists_per_standard_game": 2.3,
+      "assists_per_standard_game": 2.0,
       "assists": 14,
-      "rounds": 152
+      "rounds": 171
     },
     {
       "assistant_name": "brian",
@@ -27,20 +27,20 @@
     {
       "assistant_name": "darwin",
       "assists_per_standard_game": 2.7,
-      "assists": 53,
-      "rounds": 493
+      "assists": 55,
+      "rounds": 512
     },
     {
       "assistant_name": "josh",
-      "assists_per_standard_game": 3.0,
-      "assists": 46,
-      "rounds": 380
+      "assists_per_standard_game": 2.9,
+      "assists": 47,
+      "rounds": 399
     },
     {
       "assistant_name": "lindsey",
       "assists_per_standard_game": 2.0,
-      "assists": 34,
-      "rounds": 426
+      "assists": 38,
+      "rounds": 466
     },
     {
       "assistant_name": "sequential",
@@ -56,21 +56,21 @@
     },
     {
       "assistant_name": "steve",
-      "assists_per_standard_game": 1.5,
+      "assists_per_standard_game": 1.4,
       "assists": 16,
-      "rounds": 271
+      "rounds": 290
     },
     {
       "assistant_name": "steven",
       "assists_per_standard_game": 3.6,
-      "assists": 38,
-      "rounds": 263
+      "assists": 41,
+      "rounds": 284
     },
     {
       "assistant_name": "sun",
       "assists_per_standard_game": 2.1,
-      "assists": 12,
-      "rounds": 143
+      "assists": 14,
+      "rounds": 164
     },
     {
       "assistant_name": "susi",
@@ -86,9 +86,9 @@
     },
     {
       "assistant_name": "tang",
-      "assists_per_standard_game": 3.1,
-      "assists": 48,
-      "rounds": 392
+      "assists_per_standard_game": 3.0,
+      "assists": 49,
+      "rounds": 411
     },
     {
       "assistant_name": "yang",
@@ -100,9 +100,9 @@
   "brandon": [
     {
       "assistant_name": "andy",
-      "assists_per_standard_game": 1.0,
+      "assists_per_standard_game": 0.9,
       "assists": 6,
-      "rounds": 152
+      "rounds": 171
     },
     {
       "assistant_name": "brandon",
@@ -130,9 +130,9 @@
     },
     {
       "assistant_name": "josh",
-      "assists_per_standard_game": 0.4,
-      "assists": 1,
-      "rounds": 60
+      "assists_per_standard_game": 0.6,
+      "assists": 2,
+      "rounds": 79
     },
     {
       "assistant_name": "lindsey",
@@ -186,7 +186,7 @@
       "assistant_name": "tang",
       "assists_per_standard_game": 0.0,
       "assists": 0,
-      "rounds": 46
+      "rounds": 65
     },
     {
       "assistant_name": "yang",
@@ -223,14 +223,14 @@
     {
       "assistant_name": "darwin",
       "assists_per_standard_game": 0.7,
-      "assists": 16,
-      "rounds": 571
+      "assists": 17,
+      "rounds": 592
     },
     {
       "assistant_name": "josh",
-      "assists_per_standard_game": 2.0,
-      "assists": 23,
-      "rounds": 287
+      "assists_per_standard_game": 1.8,
+      "assists": 24,
+      "rounds": 327
     },
     {
       "assistant_name": "lindsey",
@@ -248,13 +248,13 @@
       "assistant_name": "sophie",
       "assists_per_standard_game": 0.5,
       "assists": 4,
-      "rounds": 189
+      "rounds": 208
     },
     {
       "assistant_name": "steve",
-      "assists_per_standard_game": 0.2,
-      "assists": 2,
-      "rounds": 231
+      "assists_per_standard_game": 0.4,
+      "assists": 4,
+      "rounds": 252
     },
     {
       "assistant_name": "steven",
@@ -264,9 +264,9 @@
     },
     {
       "assistant_name": "sun",
-      "assists_per_standard_game": 0.7,
+      "assists_per_standard_game": 0.6,
       "assists": 4,
-      "rounds": 150
+      "rounds": 169
     },
     {
       "assistant_name": "susi",
@@ -282,9 +282,9 @@
     },
     {
       "assistant_name": "tang",
-      "assists_per_standard_game": 0.9,
-      "assists": 11,
-      "rounds": 291
+      "assists_per_standard_game": 1.0,
+      "assists": 13,
+      "rounds": 331
     },
     {
       "assistant_name": "yang",
@@ -394,9 +394,9 @@
   "darwin": [
     {
       "assistant_name": "andy",
-      "assists_per_standard_game": 2.0,
-      "assists": 40,
-      "rounds": 493
+      "assists_per_standard_game": 2.1,
+      "assists": 43,
+      "rounds": 512
     },
     {
       "assistant_name": "brandon",
@@ -408,7 +408,7 @@
       "assistant_name": "brian",
       "assists_per_standard_game": 1.1,
       "assists": 26,
-      "rounds": 571
+      "rounds": 592
     },
     {
       "assistant_name": "cade",
@@ -424,15 +424,15 @@
     },
     {
       "assistant_name": "josh",
-      "assists_per_standard_game": 2.3,
-      "assists": 44,
-      "rounds": 472
+      "assists_per_standard_game": 2.4,
+      "assists": 47,
+      "rounds": 493
     },
     {
       "assistant_name": "lindsey",
-      "assists_per_standard_game": 3.6,
+      "assists_per_standard_game": 3.5,
       "assists": 95,
-      "rounds": 651
+      "rounds": 670
     },
     {
       "assistant_name": "sequential",
@@ -444,25 +444,25 @@
       "assistant_name": "sophie",
       "assists_per_standard_game": 0.9,
       "assists": 11,
-      "rounds": 296
+      "rounds": 315
     },
     {
       "assistant_name": "steve",
-      "assists_per_standard_game": 1.2,
-      "assists": 16,
-      "rounds": 347
+      "assists_per_standard_game": 1.3,
+      "assists": 21,
+      "rounds": 406
     },
     {
       "assistant_name": "steven",
-      "assists_per_standard_game": 2.1,
-      "assists": 13,
-      "rounds": 152
+      "assists_per_standard_game": 2.3,
+      "assists": 16,
+      "rounds": 171
     },
     {
       "assistant_name": "sun",
-      "assists_per_standard_game": 2.2,
-      "assists": 25,
-      "rounds": 285
+      "assists_per_standard_game": 2.1,
+      "assists": 26,
+      "rounds": 304
     },
     {
       "assistant_name": "susi",
@@ -478,9 +478,9 @@
     },
     {
       "assistant_name": "tang",
-      "assists_per_standard_game": 2.3,
+      "assists_per_standard_game": 2.2,
       "assists": 26,
-      "rounds": 280
+      "rounds": 301
     },
     {
       "assistant_name": "yang",
@@ -493,20 +493,20 @@
     {
       "assistant_name": "andy",
       "assists_per_standard_game": 1.8,
-      "assists": 27,
-      "rounds": 380
+      "assists": 29,
+      "rounds": 399
     },
     {
       "assistant_name": "brandon",
-      "assists_per_standard_game": 0.8,
+      "assists_per_standard_game": 0.6,
       "assists": 2,
-      "rounds": 60
+      "rounds": 79
     },
     {
       "assistant_name": "brian",
-      "assists_per_standard_game": 1.1,
-      "assists": 13,
-      "rounds": 287
+      "assists_per_standard_game": 1.4,
+      "assists": 18,
+      "rounds": 327
     },
     {
       "assistant_name": "cade",
@@ -518,7 +518,7 @@
       "assistant_name": "darwin",
       "assists_per_standard_game": 1.4,
       "assists": 27,
-      "rounds": 472
+      "rounds": 493
     },
     {
       "assistant_name": "josh",
@@ -540,15 +540,15 @@
     },
     {
       "assistant_name": "sophie",
-      "assists_per_standard_game": 1.2,
+      "assists_per_standard_game": 1.1,
       "assists": 19,
-      "rounds": 410
+      "rounds": 429
     },
     {
       "assistant_name": "steve",
-      "assists_per_standard_game": 1.5,
-      "assists": 18,
-      "rounds": 292
+      "assists_per_standard_game": 1.6,
+      "assists": 20,
+      "rounds": 313
     },
     {
       "assistant_name": "steven",
@@ -558,9 +558,9 @@
     },
     {
       "assistant_name": "sun",
-      "assists_per_standard_game": 1.2,
+      "assists_per_standard_game": 1.1,
       "assists": 12,
-      "rounds": 244
+      "rounds": 263
     },
     {
       "assistant_name": "susi",
@@ -576,9 +576,9 @@
     },
     {
       "assistant_name": "tang",
-      "assists_per_standard_game": 0.9,
-      "assists": 10,
-      "rounds": 269
+      "assists_per_standard_game": 1.1,
+      "assists": 15,
+      "rounds": 328
     },
     {
       "assistant_name": "yang",
@@ -590,9 +590,9 @@
   "lindsey": [
     {
       "assistant_name": "andy",
-      "assists_per_standard_game": 2.1,
-      "assists": 35,
-      "rounds": 426
+      "assists_per_standard_game": 2.0,
+      "assists": 38,
+      "rounds": 466
     },
     {
       "assistant_name": "brandon",
@@ -614,9 +614,9 @@
     },
     {
       "assistant_name": "darwin",
-      "assists_per_standard_game": 1.8,
+      "assists_per_standard_game": 1.7,
       "assists": 46,
-      "rounds": 651
+      "rounds": 670
     },
     {
       "assistant_name": "josh",
@@ -646,19 +646,19 @@
       "assistant_name": "steve",
       "assists_per_standard_game": 1.2,
       "assists": 17,
-      "rounds": 350
+      "rounds": 369
     },
     {
       "assistant_name": "steven",
-      "assists_per_standard_game": 1.6,
-      "assists": 10,
-      "rounds": 159
+      "assists_per_standard_game": 1.7,
+      "assists": 12,
+      "rounds": 180
     },
     {
       "assistant_name": "sun",
-      "assists_per_standard_game": 1.3,
+      "assists_per_standard_game": 1.2,
       "assists": 14,
-      "rounds": 261
+      "rounds": 282
     },
     {
       "assistant_name": "susi",
@@ -799,8 +799,8 @@
     {
       "assistant_name": "brian",
       "assists_per_standard_game": 1.1,
-      "assists": 8,
-      "rounds": 189
+      "assists": 9,
+      "rounds": 208
     },
     {
       "assistant_name": "cade",
@@ -812,13 +812,13 @@
       "assistant_name": "darwin",
       "assists_per_standard_game": 1.0,
       "assists": 12,
-      "rounds": 296
+      "rounds": 315
     },
     {
       "assistant_name": "josh",
       "assists_per_standard_game": 1.0,
-      "assists": 16,
-      "rounds": 410
+      "assists": 18,
+      "rounds": 429
     },
     {
       "assistant_name": "lindsey",
@@ -840,21 +840,21 @@
     },
     {
       "assistant_name": "steve",
-      "assists_per_standard_game": 1.4,
+      "assists_per_standard_game": 1.3,
       "assists": 16,
-      "rounds": 285
+      "rounds": 304
     },
     {
       "assistant_name": "steven",
       "assists_per_standard_game": 1.6,
-      "assists": 21,
-      "rounds": 331
+      "assists": 23,
+      "rounds": 350
     },
     {
       "assistant_name": "sun",
       "assists_per_standard_game": 0.9,
-      "assists": 10,
-      "rounds": 279
+      "assists": 12,
+      "rounds": 317
     },
     {
       "assistant_name": "susi",
@@ -870,9 +870,9 @@
     },
     {
       "assistant_name": "tang",
-      "assists_per_standard_game": 1.3,
-      "assists": 22,
-      "rounds": 411
+      "assists_per_standard_game": 1.4,
+      "assists": 24,
+      "rounds": 430
     },
     {
       "assistant_name": "yang",
@@ -884,9 +884,9 @@
   "steve": [
     {
       "assistant_name": "andy",
-      "assists_per_standard_game": 2.0,
-      "assists": 22,
-      "rounds": 271
+      "assists_per_standard_game": 2.4,
+      "assists": 28,
+      "rounds": 290
     },
     {
       "assistant_name": "brandon",
@@ -897,8 +897,8 @@
     {
       "assistant_name": "brian",
       "assists_per_standard_game": 1.7,
-      "assists": 16,
-      "rounds": 231
+      "assists": 17,
+      "rounds": 252
     },
     {
       "assistant_name": "cade",
@@ -909,20 +909,20 @@
     {
       "assistant_name": "darwin",
       "assists_per_standard_game": 1.4,
-      "assists": 19,
-      "rounds": 347
+      "assists": 23,
+      "rounds": 406
     },
     {
       "assistant_name": "josh",
-      "assists_per_standard_game": 2.0,
-      "assists": 23,
-      "rounds": 292
+      "assists_per_standard_game": 1.9,
+      "assists": 24,
+      "rounds": 313
     },
     {
       "assistant_name": "lindsey",
-      "assists_per_standard_game": 2.8,
-      "assists": 39,
-      "rounds": 350
+      "assists_per_standard_game": 2.7,
+      "assists": 40,
+      "rounds": 369
     },
     {
       "assistant_name": "sequential",
@@ -932,9 +932,9 @@
     },
     {
       "assistant_name": "sophie",
-      "assists_per_standard_game": 0.6,
-      "assists": 7,
-      "rounds": 285
+      "assists_per_standard_game": 0.7,
+      "assists": 8,
+      "rounds": 304
     },
     {
       "assistant_name": "steve",
@@ -944,15 +944,15 @@
     },
     {
       "assistant_name": "steven",
-      "assists_per_standard_game": 2.3,
-      "assists": 13,
-      "rounds": 140
+      "assists_per_standard_game": 2.5,
+      "assists": 16,
+      "rounds": 159
     },
     {
       "assistant_name": "sun",
-      "assists_per_standard_game": 1.7,
+      "assists_per_standard_game": 1.5,
       "assists": 11,
-      "rounds": 164
+      "rounds": 183
     },
     {
       "assistant_name": "susi",
@@ -968,9 +968,9 @@
     },
     {
       "assistant_name": "tang",
-      "assists_per_standard_game": 0.8,
-      "assists": 4,
-      "rounds": 124
+      "assists_per_standard_game": 1.2,
+      "assists": 7,
+      "rounds": 145
     },
     {
       "assistant_name": "yang",
@@ -982,9 +982,9 @@
   "steven": [
     {
       "assistant_name": "andy",
-      "assists_per_standard_game": 1.7,
-      "assists": 18,
-      "rounds": 263
+      "assists_per_standard_game": 1.9,
+      "assists": 22,
+      "rounds": 284
     },
     {
       "assistant_name": "brandon",
@@ -1006,9 +1006,9 @@
     },
     {
       "assistant_name": "darwin",
-      "assists_per_standard_game": 2.1,
-      "assists": 13,
-      "rounds": 152
+      "assists_per_standard_game": 2.0,
+      "assists": 14,
+      "rounds": 171
     },
     {
       "assistant_name": "josh",
@@ -1018,9 +1018,9 @@
     },
     {
       "assistant_name": "lindsey",
-      "assists_per_standard_game": 3.0,
-      "assists": 19,
-      "rounds": 159
+      "assists_per_standard_game": 3.1,
+      "assists": 22,
+      "rounds": 180
     },
     {
       "assistant_name": "sequential",
@@ -1030,15 +1030,15 @@
     },
     {
       "assistant_name": "sophie",
-      "assists_per_standard_game": 1.3,
+      "assists_per_standard_game": 1.2,
       "assists": 17,
-      "rounds": 331
+      "rounds": 350
     },
     {
       "assistant_name": "steve",
-      "assists_per_standard_game": 2.1,
-      "assists": 12,
-      "rounds": 140
+      "assists_per_standard_game": 2.4,
+      "assists": 15,
+      "rounds": 159
     },
     {
       "assistant_name": "steven",
@@ -1048,9 +1048,9 @@
     },
     {
       "assistant_name": "sun",
-      "assists_per_standard_game": 1.7,
-      "assists": 5,
-      "rounds": 73
+      "assists_per_standard_game": 2.7,
+      "assists": 12,
+      "rounds": 113
     },
     {
       "assistant_name": "susi",
@@ -1080,9 +1080,9 @@
   "sun": [
     {
       "assistant_name": "andy",
-      "assists_per_standard_game": 3.5,
-      "assists": 20,
-      "rounds": 143
+      "assists_per_standard_game": 3.2,
+      "assists": 21,
+      "rounds": 164
     },
     {
       "assistant_name": "brandon",
@@ -1093,8 +1093,8 @@
     {
       "assistant_name": "brian",
       "assists_per_standard_game": 2.5,
-      "assists": 15,
-      "rounds": 150
+      "assists": 17,
+      "rounds": 169
     },
     {
       "assistant_name": "cade",
@@ -1104,21 +1104,21 @@
     },
     {
       "assistant_name": "darwin",
-      "assists_per_standard_game": 1.8,
-      "assists": 21,
-      "rounds": 285
+      "assists_per_standard_game": 1.9,
+      "assists": 23,
+      "rounds": 304
     },
     {
       "assistant_name": "josh",
-      "assists_per_standard_game": 3.1,
-      "assists": 30,
-      "rounds": 244
+      "assists_per_standard_game": 3.4,
+      "assists": 36,
+      "rounds": 263
     },
     {
       "assistant_name": "lindsey",
-      "assists_per_standard_game": 2.9,
-      "assists": 30,
-      "rounds": 261
+      "assists_per_standard_game": 2.7,
+      "assists": 31,
+      "rounds": 282
     },
     {
       "assistant_name": "sequential",
@@ -1128,21 +1128,21 @@
     },
     {
       "assistant_name": "sophie",
-      "assists_per_standard_game": 1.1,
-      "assists": 12,
-      "rounds": 279
+      "assists_per_standard_game": 1.2,
+      "assists": 15,
+      "rounds": 317
     },
     {
       "assistant_name": "steve",
-      "assists_per_standard_game": 2.3,
-      "assists": 15,
-      "rounds": 164
+      "assists_per_standard_game": 2.2,
+      "assists": 16,
+      "rounds": 183
     },
     {
       "assistant_name": "steven",
-      "assists_per_standard_game": 0.7,
-      "assists": 2,
-      "rounds": 73
+      "assists_per_standard_game": 2.2,
+      "assists": 10,
+      "rounds": 113
     },
     {
       "assistant_name": "sun",
@@ -1164,9 +1164,9 @@
     },
     {
       "assistant_name": "tang",
-      "assists_per_standard_game": 2.1,
-      "assists": 12,
-      "rounds": 140
+      "assists_per_standard_game": 2.5,
+      "assists": 16,
+      "rounds": 159
     },
     {
       "assistant_name": "yang",
@@ -1374,21 +1374,21 @@
   "tang": [
     {
       "assistant_name": "andy",
-      "assists_per_standard_game": 2.1,
-      "assists": 33,
-      "rounds": 392
+      "assists_per_standard_game": 2.2,
+      "assists": 36,
+      "rounds": 411
     },
     {
       "assistant_name": "brandon",
-      "assists_per_standard_game": 3.8,
+      "assists_per_standard_game": 2.7,
       "assists": 7,
-      "rounds": 46
+      "rounds": 65
     },
     {
       "assistant_name": "brian",
-      "assists_per_standard_game": 2.6,
-      "assists": 30,
-      "rounds": 291
+      "assists_per_standard_game": 2.3,
+      "assists": 31,
+      "rounds": 331
     },
     {
       "assistant_name": "cade",
@@ -1398,15 +1398,15 @@
     },
     {
       "assistant_name": "darwin",
-      "assists_per_standard_game": 1.8,
+      "assists_per_standard_game": 1.7,
       "assists": 20,
-      "rounds": 280
+      "rounds": 301
     },
     {
       "assistant_name": "josh",
-      "assists_per_standard_game": 2.6,
-      "assists": 28,
-      "rounds": 269
+      "assists_per_standard_game": 2.5,
+      "assists": 33,
+      "rounds": 328
     },
     {
       "assistant_name": "lindsey",
@@ -1422,15 +1422,15 @@
     },
     {
       "assistant_name": "sophie",
-      "assists_per_standard_game": 1.4,
+      "assists_per_standard_game": 1.3,
       "assists": 23,
-      "rounds": 411
+      "rounds": 430
     },
     {
       "assistant_name": "steve",
-      "assists_per_standard_game": 1.6,
+      "assists_per_standard_game": 1.4,
       "assists": 8,
-      "rounds": 124
+      "rounds": 145
     },
     {
       "assistant_name": "steven",
@@ -1440,9 +1440,9 @@
     },
     {
       "assistant_name": "sun",
-      "assists_per_standard_game": 2.5,
-      "assists": 14,
-      "rounds": 140
+      "assists_per_standard_game": 3.3,
+      "assists": 21,
+      "rounds": 159
     },
     {
       "assistant_name": "susi",

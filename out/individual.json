@@ -2,9 +2,9 @@
   "andy": {
     "name": "Andy",
     "valorant_tag": "Candysan",
-    "winrate": 55,
-    "wins": 28,
-    "games": 51,
+    "winrate": 54,
+    "wins": 29,
+    "games": 54,
     "maps": {
       "Ascent": {
         "acs": 277,
@@ -12,9 +12,9 @@
         "rounds": 149
       },
       "Bind": {
-        "acs": 323,
-        "score": 57190,
-        "rounds": 177
+        "acs": 314,
+        "score": 62167,
+        "rounds": 198
       },
       "Breeze": {
         "acs": 356,
@@ -22,14 +22,14 @@
         "rounds": 87
       },
       "Fracture": {
-        "acs": 301,
-        "score": 32506,
-        "rounds": 108
+        "acs": 307,
+        "score": 38966,
+        "rounds": 127
       },
       "Haven": {
-        "acs": 322,
-        "score": 46350,
-        "rounds": 144
+        "acs": 317,
+        "score": 51613,
+        "rounds": 163
       },
       "Icebox": {
         "acs": 278,
@@ -98,9 +98,9 @@
       },
       "KAY/O": {
         "role": "Initiator",
-        "winrate": 60,
+        "winrate": 43,
         "wins": 3,
-        "games": 5
+        "games": 7
       },
       "Killjoy": {
         "role": "Sentinel",
@@ -147,8 +147,8 @@
       "Skye": {
         "role": "Initiator",
         "winrate": 100,
-        "wins": 1,
-        "games": 1
+        "wins": 2,
+        "games": 2
       },
       "Sova": {
         "role": "Initiator",
@@ -181,9 +181,9 @@
         "games": 21
       },
       "Initiator": {
-        "winrate": 50,
-        "wins": 7,
-        "games": 14
+        "winrate": 47,
+        "wins": 8,
+        "games": 17
       },
       "Sentinel": {
         "winrate": 70,
@@ -193,19 +193,20 @@
     },
     "top_agents": [
       "Phoenix",
-      "Breach",
-      "KAY/O"
+      "KAY/O",
+      "Breach"
     ],
     "top_roles": [
-      "Duelist"
+      "Duelist",
+      "Initiator"
     ]
   },
   "brandon": {
     "name": "Brandon",
     "valorant_tag": "BigBoiB",
-    "winrate": 33,
+    "winrate": 31,
     "wins": 4,
-    "games": 12,
+    "games": 13,
     "maps": {
       "Ascent": {
         "acs": 119,
@@ -228,9 +229,9 @@
         "rounds": 16
       },
       "Haven": {
-        "acs": null,
-        "score": 0,
-        "rounds": 0
+        "acs": 94,
+        "score": 1786,
+        "rounds": 19
       },
       "Icebox": {
         "acs": 115,
@@ -317,9 +318,9 @@
       },
       "Omen": {
         "role": "Controller",
-        "winrate": 33,
+        "winrate": 31,
         "wins": 4,
-        "games": 12
+        "games": 13
       },
       "Phoenix": {
         "role": "Duelist",
@@ -372,9 +373,9 @@
     },
     "roles": {
       "Controller": {
-        "winrate": 33,
+        "winrate": 31,
         "wins": 4,
-        "games": 12
+        "games": 13
       },
       "Duelist": {
         "winrate": null,
@@ -405,8 +406,8 @@
     "name": "Brian",
     "valorant_tag": "brianwoohoo",
     "winrate": 40,
-    "wins": 17,
-    "games": 43,
+    "wins": 18,
+    "games": 45,
     "maps": {
       "Ascent": {
         "acs": 124,
@@ -414,9 +415,9 @@
         "rounds": 104
       },
       "Bind": {
-        "acs": 146,
-        "score": 26024,
-        "rounds": 178
+        "acs": 150,
+        "score": 29846,
+        "rounds": 199
       },
       "Breeze": {
         "acs": 138,
@@ -424,9 +425,9 @@
         "rounds": 87
       },
       "Fracture": {
-        "acs": 116,
-        "score": 14234,
-        "rounds": 123
+        "acs": 111,
+        "score": 15735,
+        "rounds": 142
       },
       "Haven": {
         "acs": 141,
@@ -543,8 +544,8 @@
       "Sage": {
         "role": "Sentinel",
         "winrate": 38,
-        "wins": 15,
-        "games": 40
+        "wins": 16,
+        "games": 42
       },
       "Skye": {
         "role": "Initiator",
@@ -589,8 +590,8 @@
       },
       "Sentinel": {
         "winrate": 38,
-        "wins": 15,
-        "games": 40
+        "wins": 16,
+        "games": 42
       }
     },
     "top_agents": [
@@ -806,9 +807,9 @@
   "darwin": {
     "name": "Darwin",
     "valorant_tag": "ChzGorditaCrunch",
-    "winrate": 53,
-    "wins": 29,
-    "games": 55,
+    "winrate": 52,
+    "wins": 30,
+    "games": 58,
     "maps": {
       "Ascent": {
         "acs": 243,
@@ -816,9 +817,9 @@
         "rounds": 146
       },
       "Bind": {
-        "acs": 190,
-        "score": 37921,
-        "rounds": 200
+        "acs": 187,
+        "score": 41218,
+        "rounds": 221
       },
       "Breeze": {
         "acs": 228,
@@ -826,14 +827,14 @@
         "rounds": 87
       },
       "Fracture": {
-        "acs": 188,
-        "score": 23064,
-        "rounds": 123
+        "acs": 193,
+        "score": 27377,
+        "rounds": 142
       },
       "Haven": {
-        "acs": 227,
-        "score": 32644,
-        "rounds": 144
+        "acs": 231,
+        "score": 37717,
+        "rounds": 163
       },
       "Icebox": {
         "acs": 229,
@@ -878,9 +879,9 @@
       },
       "Cypher": {
         "role": "Sentinel",
-        "winrate": 53,
+        "winrate": 50,
         "wins": 10,
-        "games": 19
+        "games": 20
       },
       "Fade": {
         "role": "Initiator",
@@ -908,15 +909,15 @@
       },
       "Killjoy": {
         "role": "Sentinel",
-        "winrate": 40,
+        "winrate": 33,
         "wins": 2,
-        "games": 5
+        "games": 6
       },
       "Neon": {
         "role": "Duelist",
-        "winrate": 45,
-        "wins": 5,
-        "games": 11
+        "winrate": 50,
+        "wins": 6,
+        "games": 12
       },
       "Omen": {
         "role": "Controller",
@@ -980,9 +981,9 @@
         "games": 8
       },
       "Duelist": {
-        "winrate": 44,
-        "wins": 8,
-        "games": 18
+        "winrate": 47,
+        "wins": 9,
+        "games": 19
       },
       "Initiator": {
         "winrate": 75,
@@ -990,9 +991,9 @@
         "games": 4
       },
       "Sentinel": {
-        "winrate": 52,
+        "winrate": 48,
         "wins": 13,
-        "games": 25
+        "games": 27
       }
     },
     "top_agents": [
@@ -1008,9 +1009,9 @@
   "josh": {
     "name": "Josh",
     "valorant_tag": "Bot001341",
-    "winrate": 48,
-    "wins": 23,
-    "games": 48,
+    "winrate": 47,
+    "wins": 24,
+    "games": 51,
     "maps": {
       "Ascent": {
         "acs": 179,
@@ -1018,9 +1019,9 @@
         "rounds": 122
       },
       "Bind": {
-        "acs": 217,
-        "score": 32929,
-        "rounds": 152
+        "acs": 215,
+        "score": 37234,
+        "rounds": 173
       },
       "Breeze": {
         "acs": 248,
@@ -1028,14 +1029,14 @@
         "rounds": 70
       },
       "Fracture": {
-        "acs": 163,
-        "score": 12207,
-        "rounds": 75
+        "acs": 169,
+        "score": 15874,
+        "rounds": 94
       },
       "Haven": {
-        "acs": 151,
-        "score": 21699,
-        "rounds": 144
+        "acs": 161,
+        "score": 26164,
+        "rounds": 163
       },
       "Icebox": {
         "acs": 212,
@@ -1146,15 +1147,15 @@
       },
       "Sage": {
         "role": "Sentinel",
-        "winrate": 67,
+        "winrate": 62,
         "wins": 8,
-        "games": 12
+        "games": 13
       },
       "Skye": {
         "role": "Initiator",
-        "winrate": 15,
-        "wins": 2,
-        "games": 13
+        "winrate": 20,
+        "wins": 3,
+        "games": 15
       },
       "Sova": {
         "role": "Initiator",
@@ -1187,14 +1188,14 @@
         "games": 4
       },
       "Initiator": {
-        "winrate": 14,
-        "wins": 2,
-        "games": 14
+        "winrate": 19,
+        "wins": 3,
+        "games": 16
       },
       "Sentinel": {
-        "winrate": 63,
+        "winrate": 60,
         "wins": 12,
-        "games": 19
+        "games": 20
       }
     },
     "top_agents": [
@@ -1203,6 +1204,7 @@
       "Viper"
     ],
     "top_roles": [
+      "Initiator",
       "Sentinel"
     ]
   },
@@ -1210,8 +1212,8 @@
     "name": "Lindsey",
     "valorant_tag": "aylindsay",
     "winrate": 51,
-    "wins": 27,
-    "games": 53,
+    "wins": 28,
+    "games": 55,
     "maps": {
       "Ascent": {
         "acs": 244,
@@ -1219,9 +1221,9 @@
         "rounds": 166
       },
       "Bind": {
-        "acs": 190,
-        "score": 38063,
-        "rounds": 200
+        "acs": 189,
+        "score": 41780,
+        "rounds": 221
       },
       "Breeze": {
         "acs": 221,
@@ -1229,9 +1231,9 @@
         "rounds": 87
       },
       "Fracture": {
-        "acs": 219,
-        "score": 22334,
-        "rounds": 102
+        "acs": 216,
+        "score": 26134,
+        "rounds": 121
       },
       "Haven": {
         "acs": 224,
@@ -1269,9 +1271,9 @@
       },
       "Brimstone": {
         "role": "Controller",
-        "winrate": 50,
+        "winrate": 33,
         "wins": 1,
-        "games": 2
+        "games": 3
       },
       "Chamber": {
         "role": "Sentinel",
@@ -1336,8 +1338,8 @@
       "Raze": {
         "role": "Duelist",
         "winrate": 100,
-        "wins": 1,
-        "games": 1
+        "wins": 2,
+        "games": 2
       },
       "Reyna": {
         "role": "Duelist",
@@ -1378,14 +1380,14 @@
     },
     "roles": {
       "Controller": {
-        "winrate": 50,
+        "winrate": 48,
         "wins": 14,
-        "games": 28
+        "games": 29
       },
       "Duelist": {
-        "winrate": 50,
-        "wins": 1,
-        "games": 2
+        "winrate": 67,
+        "wins": 2,
+        "games": 3
       },
       "Initiator": {
         "winrate": 53,
@@ -1612,9 +1614,9 @@
   "sophie": {
     "name": "Sophie",
     "valorant_tag": "chushberry",
-    "winrate": 56,
-    "wins": 31,
-    "games": 55,
+    "winrate": 58,
+    "wins": 33,
+    "games": 57,
     "maps": {
       "Ascent": {
         "acs": 175,
@@ -1632,14 +1634,14 @@
         "rounds": 87
       },
       "Fracture": {
-        "acs": 135,
-        "score": 16592,
-        "rounds": 123
+        "acs": 143,
+        "score": 20240,
+        "rounds": 142
       },
       "Haven": {
-        "acs": 136,
-        "score": 19615,
-        "rounds": 144
+        "acs": 135,
+        "score": 22066,
+        "rounds": 163
       },
       "Icebox": {
         "acs": 172,
@@ -1702,9 +1704,9 @@
       },
       "Jett": {
         "role": "Duelist",
-        "winrate": 58,
-        "wins": 26,
-        "games": 45
+        "winrate": 60,
+        "wins": 28,
+        "games": 47
       },
       "KAY/O": {
         "role": "Initiator",
@@ -1786,9 +1788,9 @@
         "games": 3
       },
       "Duelist": {
-        "winrate": 57,
-        "wins": 26,
-        "games": 46
+        "winrate": 58,
+        "wins": 28,
+        "games": 48
       },
       "Initiator": {
         "winrate": 80,
@@ -1813,9 +1815,9 @@
   "steve": {
     "name": "Steve",
     "valorant_tag": "Selintt",
-    "winrate": 49,
-    "wins": 17,
-    "games": 35,
+    "winrate": 47,
+    "wins": 18,
+    "games": 38,
     "maps": {
       "Ascent": {
         "acs": 181,
@@ -1823,9 +1825,9 @@
         "rounds": 107
       },
       "Bind": {
-        "acs": 242,
-        "score": 16242,
-        "rounds": 67
+        "acs": 260,
+        "score": 22920,
+        "rounds": 88
       },
       "Breeze": {
         "acs": 165,
@@ -1833,14 +1835,14 @@
         "rounds": 87
       },
       "Fracture": {
-        "acs": 223,
-        "score": 18702,
-        "rounds": 84
+        "acs": 218,
+        "score": 22445,
+        "rounds": 103
       },
       "Haven": {
-        "acs": 200,
-        "score": 25845,
-        "rounds": 129
+        "acs": 208,
+        "score": 30785,
+        "rounds": 148
       },
       "Icebox": {
         "acs": 229,
@@ -1915,9 +1917,9 @@
       },
       "Killjoy": {
         "role": "Sentinel",
-        "winrate": 67,
-        "wins": 2,
-        "games": 3
+        "winrate": 75,
+        "wins": 3,
+        "games": 4
       },
       "Neon": {
         "role": "Duelist",
@@ -1945,9 +1947,9 @@
       },
       "Reyna": {
         "role": "Duelist",
-        "winrate": 60,
+        "winrate": 50,
         "wins": 6,
-        "games": 10
+        "games": 12
       },
       "Sage": {
         "role": "Sentinel",
@@ -1987,9 +1989,9 @@
         "games": 5
       },
       "Duelist": {
-        "winrate": 59,
+        "winrate": 53,
         "wins": 10,
-        "games": 17
+        "games": 19
       },
       "Initiator": {
         "winrate": 0,
@@ -1997,9 +1999,9 @@
         "games": 2
       },
       "Sentinel": {
-        "winrate": 55,
-        "wins": 6,
-        "games": 11
+        "winrate": 58,
+        "wins": 7,
+        "games": 12
       }
     },
     "top_agents": [
@@ -2015,9 +2017,9 @@
   "steven": {
     "name": "Steven",
     "valorant_tag": "youngsmasher",
-    "winrate": 57,
-    "wins": 16,
-    "games": 28,
+    "winrate": 60,
+    "wins": 18,
+    "games": 30,
     "maps": {
       "Ascent": {
         "acs": 259,
@@ -2025,9 +2027,9 @@
         "rounds": 104
       },
       "Bind": {
-        "acs": 258,
-        "score": 27553,
-        "rounds": 107
+        "acs": 285,
+        "score": 36436,
+        "rounds": 128
       },
       "Breeze": {
         "acs": 332,
@@ -2040,9 +2042,9 @@
         "rounds": 39
       },
       "Haven": {
-        "acs": 238,
-        "score": 23811,
-        "rounds": 100
+        "acs": 271,
+        "score": 32266,
+        "rounds": 119
       },
       "Icebox": {
         "acs": 284,
@@ -2165,9 +2167,9 @@
       },
       "Sova": {
         "role": "Initiator",
-        "winrate": 60,
-        "wins": 15,
-        "games": 25
+        "winrate": 63,
+        "wins": 17,
+        "games": 27
       },
       "Viper": {
         "role": "Controller",
@@ -2194,9 +2196,9 @@
         "games": 0
       },
       "Initiator": {
-        "winrate": 60,
-        "wins": 15,
-        "games": 25
+        "winrate": 63,
+        "wins": 17,
+        "games": 27
       },
       "Sentinel": {
         "winrate": 33,
@@ -2216,9 +2218,9 @@
   "sun": {
     "name": "Sun",
     "valorant_tag": "sun",
-    "winrate": 39,
-    "wins": 11,
-    "games": 28,
+    "winrate": 45,
+    "wins": 14,
+    "games": 31,
     "maps": {
       "Ascent": {
         "acs": 212,
@@ -2226,9 +2228,9 @@
         "rounds": 78
       },
       "Bind": {
-        "acs": 256,
-        "score": 17380,
-        "rounds": 68
+        "acs": 243,
+        "score": 21643,
+        "rounds": 89
       },
       "Breeze": {
         "acs": 219,
@@ -2236,14 +2238,14 @@
         "rounds": 26
       },
       "Fracture": {
-        "acs": 226,
-        "score": 12231,
-        "rounds": 54
+        "acs": 267,
+        "score": 19527,
+        "rounds": 73
       },
       "Haven": {
-        "acs": 208,
-        "score": 12065,
-        "rounds": 58
+        "acs": 192,
+        "score": 14763,
+        "rounds": 77
       },
       "Icebox": {
         "acs": 346,
@@ -2276,9 +2278,9 @@
       },
       "Brimstone": {
         "role": "Controller",
-        "winrate": 0,
-        "wins": 0,
-        "games": 1
+        "winrate": 75,
+        "wins": 3,
+        "games": 4
       },
       "Chamber": {
         "role": "Sentinel",
@@ -2385,9 +2387,9 @@
     },
     "roles": {
       "Controller": {
-        "winrate": 0,
-        "wins": 0,
-        "games": 3
+        "winrate": 50,
+        "wins": 3,
+        "games": 6
       },
       "Duelist": {
         "winrate": 23,
@@ -2407,8 +2409,8 @@
     },
     "top_agents": [
       "Raze",
-      "Fade",
-      "Sage"
+      "Brimstone",
+      "Fade"
     ],
     "top_roles": [
       "Duelist"
@@ -2822,9 +2824,9 @@
   "tang": {
     "name": "Tang",
     "valorant_tag": "tangy",
-    "winrate": 74,
-    "wins": 26,
-    "games": 35,
+    "winrate": 71,
+    "wins": 27,
+    "games": 38,
     "maps": {
       "Ascent": {
         "acs": 304,
@@ -2832,9 +2834,9 @@
         "rounds": 98
       },
       "Bind": {
-        "acs": 281,
-        "score": 34557,
-        "rounds": 123
+        "acs": 269,
+        "score": 38757,
+        "rounds": 144
       },
       "Breeze": {
         "acs": 285,
@@ -2842,14 +2844,14 @@
         "rounds": 17
       },
       "Fracture": {
-        "acs": 276,
-        "score": 19287,
-        "rounds": 70
+        "acs": 288,
+        "score": 25633,
+        "rounds": 89
       },
       "Haven": {
-        "acs": 252,
-        "score": 25177,
-        "rounds": 100
+        "acs": 239,
+        "score": 28426,
+        "rounds": 119
       },
       "Icebox": {
         "acs": 180,
@@ -2882,9 +2884,9 @@
       },
       "Brimstone": {
         "role": "Controller",
-        "winrate": 88,
+        "winrate": 78,
         "wins": 7,
-        "games": 8
+        "games": 9
       },
       "Chamber": {
         "role": "Sentinel",
@@ -2942,9 +2944,9 @@
       },
       "Phoenix": {
         "role": "Duelist",
-        "winrate": 67,
-        "wins": 2,
-        "games": 3
+        "winrate": 75,
+        "wins": 3,
+        "games": 4
       },
       "Raze": {
         "role": "Duelist",
@@ -2984,21 +2986,21 @@
       },
       "Yoru": {
         "role": "Duelist",
-        "winrate": 78,
+        "winrate": 70,
         "wins": 7,
-        "games": 9
+        "games": 10
       }
     },
     "roles": {
       "Controller": {
-        "winrate": 78,
+        "winrate": 74,
         "wins": 14,
-        "games": 18
+        "games": 19
       },
       "Duelist": {
-        "winrate": 71,
-        "wins": 10,
-        "games": 14
+        "winrate": 69,
+        "wins": 11,
+        "games": 16
       },
       "Initiator": {
         "winrate": 50,
