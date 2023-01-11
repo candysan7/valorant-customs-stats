@@ -33,6 +33,7 @@ BREEZE = "Breeze"
 FRACTURE = "Fracture"
 HAVEN = "Haven"
 ICEBOX = "Icebox"
+LOTUS = "Lotus"
 PEARL = "Pearl"
 SPLIT = "Split"
 
@@ -115,6 +116,7 @@ MAP_NAMES = [
     FRACTURE,
     HAVEN,
     ICEBOX,
+    LOTUS,
     PEARL,
     SPLIT,
 ]
