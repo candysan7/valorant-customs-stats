@@ -19,7 +19,7 @@ yang        | #C62C38   | #C64049   | #E86f68   | #FFFFFF
 
 -- map hex colors
 Map         | Hex
-Ascent      | #D5B7BE
+Ascent      | #A79CD0
 Bind        | #B9835D
 Split       | #808488
 Icebox      | #48609A
@@ -27,6 +27,7 @@ Pearl       | #3CB7C6
 Fracture    | #4F6740
 Haven       | #8F5142
 Breeze      | #649AB1
+Lotus       | #FAA3D1
 
 -- background hex colors
 canvas      | #18222B
