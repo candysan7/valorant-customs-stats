@@ -167,6 +167,8 @@ with open("./scrape.json", mode="r") as f:
                             "kill_assist_survive_traded": round(
                                 segment["stats"]["kast"]["value"]
                             ),
+                            "plants": segment["stats"]["plants"]["value"],
+                            "defuses": segment["stats"]["defuses"]["value"],
                             "first_kills": segment["stats"]["firstKills"]["value"],
                             "first_deaths": segment["stats"]["firstDeaths"]["value"],
                             "multi_kills": segment["stats"]["multiKills"]["value"],
