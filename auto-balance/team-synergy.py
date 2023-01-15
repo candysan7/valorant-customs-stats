@@ -342,5 +342,5 @@ for key,values in final_answer.items():
             counter = counter + 1 
             
 print('Predicted score difference:',smallest_value)            
-print(team_1)
-print(team_2)
+print(sorted(team_1))
+print(sorted(team_2))

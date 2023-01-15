@@ -1,4 +1,5 @@
-''' PICK ORDER BY ACS '''
+#minimize average acs difference between 2 teams 
+
 import pandas as pd
 import json
 from statistics import mean
@@ -95,43 +96,35 @@ for p_name in players:
     key_name = p_name + "_acs" # we are "predicting" the player's acs by taking their average 
     player_x_predict[key_name] = player_x_predict.get(key_name, 0) + acs_average
 
-
-'''ADD NEW PLAYER HERE '''
-# # ### add new player here 
-# final_answer_sliced['brandon_brother'] = 150
-
 # need to sort from greatest to least
-final_answer_sliced=dict(sorted(player_x_predict.items(), key=lambda x: -x[1]))
+acs_player_data=dict(sorted(player_x_predict.items(), key=lambda x: -x[1]))
 
+print('acs data',acs_player_data)  
 
-#print(final_answer_sliced)
-''' SORTING TEAMS BY ACS '''
-
-# https://arxiv.org/pdf/2012.10171.pdf#:~:text=Drafting%20alternates%20between%20two%20teams,two%20heroes%2C%20and%20so%20on.
-#"1-2-2-1-1-2-2-1-1-2"
-team_1_players = []
-team_2_players = []
-# ABBAABBABA
-team_1_order = [0,3,4,7,8] 
-team_2_order = [1,2,5,6,9] 
-
-# find optimal pick order.... 
-counter = 0 
-for keys,values in final_answer_sliced.items():
+''' Get all combinations here 10 choose 5'''
+all_combinations = []
+for comb in itertools.combinations(players, 5):
+    both_combs = {} 
     
-    if counter <=9: 
-        index = index = list(final_answer_sliced).index(keys) #keys = "andy" # get the index per key 
-        if index in team_1_order: 
-            team_1_players.append(keys)
-#             print(keys)
-        else: 
-            team_2_players.append(keys)
-#             print('2',keys)
-    #     print(keys,values)
-    counter += 1 
+    comb = list(comb) # first combination
+    both_combs[1] = comb
     
-print(sorted(team_1_players))
-print(sorted(team_2_players))
+    # run every possible combination of 10 choose 5 
+    other_comb = list(set(players)-set(comb))# other combination 
+    both_combs[2] = other_comb
+    
+#     print(other_comb)
+    all_combinations.append(both_combs) 
 
 
+''' calc average acs per team and minimize '''
+for i in all_combinations: 
+    print(i)
 
+    sum_team1_average = 0 
+
+    for player in i[1]:
+        print(player)
+        print(acs_player_data[player+"_acs"])
+
+    break

@@ -13,7 +13,7 @@ map_name = "Icebox"
 print('num of players entered',len(players))
 
 rank_storage = {
-    "andy":2,
+    "andy":3,
     "brandon":15,
     "brian":14,
     "cade":5,
@@ -23,7 +23,7 @@ rank_storage = {
     "sequential":1,
     "sophie":11,
     "steve":10,
-    "steven":3,
+    "steven":2,
     "sun":8,
     "susi":12,
     "susu":13,
@@ -39,7 +39,7 @@ for names,values in rank_storage.items():
     if names not in players:
         players_not_involved.append(names)
 
-# print(players_not_involved)
+# print(players_not_involved)  
 
 # now remove the people not involved
 for remove_name in players_not_involved: 
@@ -51,7 +51,8 @@ for remove_name in players_not_involved:
 
 
 # #print(final_answer_sliced)
-''' SORTING TEAMS BY ACS '''
+''' SORTING TEAMS BY impact '''
+rank_storage=dict(sorted(rank_storage.items(), key=lambda x: x[1])) # sorting 
 
 # # https://arxiv.org/pdf/2012.10171.pdf#:~:text=Drafting%20alternates%20between%20two%20teams,two%20heroes%2C%20and%20so%20on.
 # #"1-2-2-1-1-2-2-1-1-2"
@@ -76,7 +77,9 @@ for keys,values in rank_storage.items():
     #     print(keys,values)
     counter += 1 
     
-print(team_1_players,team_2_players)
+print(sorted(team_1_players))
+print(sorted(team_2_players))
+
 
 
 
