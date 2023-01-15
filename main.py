@@ -43,11 +43,16 @@ if __name__ == "__main__":
                 KNIFE_DEATHS: 0,
                 TEAM_DAMAGE: 0,
                 SELF_DAMAGE: 0,
+                PLANTS: 0,
+                BOMB_DEATHS: 0,
             }
             for player_name in PLAYER_NAMES
         }
 
         for match in matches:
+            for player_name in filter_players(match.all_players):
+                out_json[player_name][PLANTS] += match.all_players[player_name].plants
+
             for _round in match.rounds:
                 for damage_event in _round.damage_events:
                     giver_name = damage_event.giver_name
@@ -82,6 +87,10 @@ if __name__ == "__main__":
                             out_json[killer_name][KNIFE_KILLS] += 1
                         if victim_name in PLAYER_NAMES:
                             out_json[victim_name][KNIFE_DEATHS] += 1
+
+                    if kill.weapon_name == "Bomb":
+                        if victim_name in PLAYER_NAMES:
+                            out_json[victim_name][BOMB_DEATHS] += 1
 
         for player_name in PLAYER_NAMES:
             out_json[player_name][HEADSHOT_RATE] = round(

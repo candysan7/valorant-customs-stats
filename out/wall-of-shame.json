@@ -10,7 +10,9 @@
     "knife_kills": 10,
     "knife_deaths": 7,
     "team_damage": 259,
-    "self_damage": 398
+    "self_damage": 398,
+    "plants": 36,
+    "bomb_deaths": 12
   },
   "brandon": {
     "headshots": 77,
@@ -23,7 +25,9 @@
     "knife_kills": 0,
     "knife_deaths": 1,
     "team_damage": 0,
-    "self_damage": 22
+    "self_damage": 22,
+    "plants": 35,
+    "bomb_deaths": 3
   },
   "brian": {
     "headshots": 294,
@@ -36,7 +40,9 @@
     "knife_kills": 2,
     "knife_deaths": 4,
     "team_damage": 0,
-    "self_damage": 122
+    "self_damage": 122,
+    "plants": 98,
+    "bomb_deaths": 8
   },
   "cade": {
     "headshots": 560,
@@ -49,7 +55,9 @@
     "knife_kills": 4,
     "knife_deaths": 3,
     "team_damage": 168,
-    "self_damage": 209
+    "self_damage": 209,
+    "plants": 55,
+    "bomb_deaths": 6
   },
   "darwin": {
     "headshots": 607,
@@ -62,7 +70,9 @@
     "knife_kills": 9,
     "knife_deaths": 7,
     "team_damage": 55,
-    "self_damage": 60
+    "self_damage": 60,
+    "plants": 110,
+    "bomb_deaths": 19
   },
   "josh": {
     "headshots": 330,
@@ -75,7 +85,9 @@
     "knife_kills": 0,
     "knife_deaths": 5,
     "team_damage": 58,
-    "self_damage": 57
+    "self_damage": 57,
+    "plants": 121,
+    "bomb_deaths": 19
   },
   "lindsey": {
     "headshots": 645,
@@ -88,7 +100,9 @@
     "knife_kills": 2,
     "knife_deaths": 2,
     "team_damage": 149,
-    "self_damage": 36
+    "self_damage": 36,
+    "plants": 184,
+    "bomb_deaths": 18
   },
   "sequential": {
     "headshots": 582,
@@ -101,7 +115,9 @@
     "knife_kills": 3,
     "knife_deaths": 3,
     "team_damage": 59,
-    "self_damage": 164
+    "self_damage": 164,
+    "plants": 16,
+    "bomb_deaths": 1
   },
   "sophie": {
     "headshots": 562,
@@ -114,7 +130,9 @@
     "knife_kills": 4,
     "knife_deaths": 3,
     "team_damage": 38,
-    "self_damage": 102
+    "self_damage": 102,
+    "plants": 20,
+    "bomb_deaths": 6
   },
   "steve": {
     "headshots": 407,
@@ -127,7 +145,9 @@
     "knife_kills": 1,
     "knife_deaths": 1,
     "team_damage": 20,
-    "self_damage": 110
+    "self_damage": 110,
+    "plants": 50,
+    "bomb_deaths": 4
   },
   "steven": {
     "headshots": 485,
@@ -140,7 +160,9 @@
     "knife_kills": 3,
     "knife_deaths": 1,
     "team_damage": 421,
-    "self_damage": 36
+    "self_damage": 36,
+    "plants": 21,
+    "bomb_deaths": 3
   },
   "sun": {
     "headshots": 421,
@@ -153,7 +175,9 @@
     "knife_kills": 2,
     "knife_deaths": 1,
     "team_damage": 201,
-    "self_damage": 176
+    "self_damage": 176,
+    "plants": 34,
+    "bomb_deaths": 5
   },
   "susi": {
     "headshots": 201,
@@ -166,7 +190,9 @@
     "knife_kills": 0,
     "knife_deaths": 2,
     "team_damage": 107,
-    "self_damage": 31
+    "self_damage": 31,
+    "plants": 23,
+    "bomb_deaths": 3
   },
   "susu": {
     "headshots": 143,
@@ -179,7 +205,9 @@
     "knife_kills": 2,
     "knife_deaths": 0,
     "team_damage": 108,
-    "self_damage": 0
+    "self_damage": 0,
+    "plants": 21,
+    "bomb_deaths": 4
   },
   "tang": {
     "headshots": 525,
@@ -192,7 +220,9 @@
     "knife_kills": 2,
     "knife_deaths": 4,
     "team_damage": 110,
-    "self_damage": 133
+    "self_damage": 133,
+    "plants": 33,
+    "bomb_deaths": 4
   },
   "yang": {
     "headshots": 31,
@@ -205,6 +235,8 @@
     "knife_kills": 0,
     "knife_deaths": 0,
     "team_damage": 0,
-    "self_damage": 33
+    "self_damage": 33,
+    "plants": 2,
+    "bomb_deaths": 0
   }
 }

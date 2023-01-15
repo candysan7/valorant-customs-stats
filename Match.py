@@ -12,6 +12,8 @@ class Player:
         self.assists: int = player_json["assists"]
         self.kill_deaths: float = player_json["kill_deaths"]
         self.kill_assist_survive_traded: int = player_json["kill_assist_survive_traded"]
+        self.plants: int = player_json["plants"]
+        self.defuses: int = player_json["defuses"]
         self.first_kills: int = player_json["first_kills"]
         self.first_deaths: int = player_json["first_deaths"]
         self.multi_kills: int = player_json["multi_kills"]
