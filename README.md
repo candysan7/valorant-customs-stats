@@ -45,8 +45,12 @@ All data is derived from [tracker.gg](https://tracker.gg/valorant) until Riot re
 ### Future
 
 - Build discord bot or command to return dashboard link
-- Add a version history to readme
-- Wall of shame leaderboard: Most time alive (best baiter), least time alive (best baited), bodyshot %, legshot %, damage dealt to allies/self, knifer/knifed, biggest spender/cheapest
+- Home page implementation
+- Dashboard design update
+- Wall of shame leaderboard: best bait (lowest order of death on lost attack rounds), best baiter (highest order of death on lost attack rounds), bomb bitches, most bomb deaths, best sacrifice/most traded, worst trader (dies to same person)
+- Wall of shame landing page
+- Clip gallery
+- Autobalance implementation
 
 ### Why Power BI over Tableau?
 
