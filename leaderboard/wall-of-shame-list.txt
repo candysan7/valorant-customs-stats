@@ -1,4 +1,3 @@
-Title
 BODYSHOT BARRY'S
 	> Highest body shot percent
 	> "So no head?"
