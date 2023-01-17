@@ -13,7 +13,8 @@ output_dir = "./out"
 matches: list[Match] = []
 with open("./data.json", mode="r") as f:
     data = json.load(f)
-    matches = sorted([Match(match_json) for match_json in data], key=lambda m: m.time)
+    # data.json is sorted in process_scrape.py
+    # matches = sorted([Match(match_json) for match_json in data], key=lambda m: m.time)
     f.close()
 
 if __name__ == "__main__":

@@ -1,3 +1,4 @@
+from dateutil.parser import isoparse
 import json
 
 player_tags = {
@@ -66,6 +67,7 @@ with open("./scrape.json", mode="r") as f:
                 {
                     "winning_team": "",
                     "win_method": "",
+                    "duration": None,
                     "player_stats": [],
                     "damage_events": [],
                     "kills": [],
@@ -81,7 +83,7 @@ with open("./scrape.json", mode="r") as f:
                     match["rounds"][round_index]["winning_team"] = segment["stats"][
                         "winningTeam"
                     ]["value"].lower()
-                    match["rounds"][round_index - 1]["win_method"] = segment["stats"][
+                    match["rounds"][round_index]["win_method"] = segment["stats"][
                         "roundResult"
                     ]["value"].lower()
 
@@ -152,6 +154,7 @@ with open("./scrape.json", mode="r") as f:
                             weapon = segment["metadata"]["finishingDamage"][
                                 "damageItem"
                             ]
+
                     match["rounds"][round_index]["kills"].append(
                         {
                             "killer_name": killer_name,
@@ -165,6 +168,7 @@ with open("./scrape.json", mode="r") as f:
                                 )
                             ),
                             "weapon_name": weapon,
+                            "game_time": segment["metadata"]["gameTime"],
                             "round_time": segment["metadata"]["roundTime"],
                             "damage": segment["stats"]["damage"]["value"],
                         }
@@ -212,16 +216,42 @@ with open("./scrape.json", mode="r") as f:
                 case other:
                     print(f"Missed type: {segment['type']}")
 
-        for i, round_data in enumerate(match["rounds"]):
-            round_data["kills"].sort(key=lambda x: x["round_time"])
+        for i in range(len(match["rounds"])):
+            match["rounds"][i]["kills"].sort(key=lambda x: x["round_time"])
 
-            # round start time = (game time of first kill) - (round time of first kill)
-            if i == 0:
+            # Some surrender rounds are marked as elimination
+            # Not the most robust method, but no-kill rounds are extremely rare
+            if len(match["rounds"][i]["kills"]) == 0:
+                match["rounds"][i]["win_method"] = "surrendered"
+                match["rounds"][i]["duration"] = 0
                 continue
+
+            round_start = (
+                match["rounds"][i]["kills"][0]["game_time"]
+                - match["rounds"][i]["kills"][0]["round_time"]
+            )
+
+            if (
+                i < len(match["rounds"]) - 1
+                and len(match["rounds"][i + 1]["kills"]) > 0
+            ):
+                # round end = (next round first kill round time) - (next round first kill game time) - (buy phase)
+                round_end = (
+                    match["rounds"][i + 1]["kills"][0]["game_time"]
+                    - match["rounds"][i + 1]["kills"][0]["round_time"]
+                    - 1000
+                    * (30 if i + 1 != 12 else 45)  # Round 13 has a longer buy phase
+                )
+            else:
+                # round end is just the end of the match for the last round or rounds before surrenders
+                round_end = match_json["metadata"]["duration"]
+
+            match["rounds"][i]["duration"] = round_end - round_start
 
         matches.append(match)
     f.close()
 
 with open("./data.json", mode="w") as f:
+    matches.sort(key=lambda m: isoparse(m["time"]))
     json.dump(matches, f, indent=2)
     f.close()
