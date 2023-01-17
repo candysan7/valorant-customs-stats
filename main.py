@@ -116,7 +116,10 @@ if __name__ == "__main__":
                             out_json[victim_name][BOMB_DEATHS] += 1
 
                 for player_name in filter_players(match.all_players):
-                    if _round.player_stats[player_name].side == ATTACKERS and _round.win_method != "surrendered":
+                    if (
+                        _round.player_stats[player_name].side == ATTACKERS
+                        and _round.win_method != "surrendered"
+                    ):
                         attack_rounds[player_name] += 1
 
                     # If a player didn't die, they survived the whole round
