@@ -21,7 +21,7 @@ TOP SABOTAGERS
 
 BEST BAIT
 	> Least time alive on lost attack rounds
-	> "Smoke? What smoke?"
+	> "Your duty is ... over."
 BEST BAITERS
 	> Most time alive on lost attack rounds
 	> "Time to start holding W." or,
@@ -39,11 +39,11 @@ BEST SACRIFICE
 	> "Doing God's work out there."
 WORST TRADER
 	> Most deaths trying to trade
-	> "You'll get 'em next time... probably."
+	> "You'll get 'em next time ... probably."
 
 TOP RAT
 	> Most extremely short-range kills
-	> "Corners, everywhere."
+	> "No honor."
 MOST RATTED
 	> Most extremely short-range deaths
 	> "YOU DIDN'T CHECK IT FULLY!"
