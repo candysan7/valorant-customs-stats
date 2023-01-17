@@ -1,0 +1,50 @@
+Title
+BODYSHOT BARRY'S
+	> Highest body shot percent
+	> "So no head?"
+FOOT HUNTERS
+	> Highest leg shot percent
+	> "Toes? We don't judge."
+
+TOP KNIFERS
+	> Most knife kills
+	> "Put backstabbing on the resume."
+TOP KNIFEES
+	> Most deaths to knife
+	> "Poor souls."
+
+TOP MASOCHISTS
+	> Most damage done to self
+	> "Game was too easy, had to add a challenge."
+TOP SABOTAGERS
+	> Most damage done to allies
+	> "You didn't do /that/ much damage."
+
+BEST BAIT
+	> Least time alive on lost attack rounds
+	> "Smoke? What smoke?"
+BEST BAITERS
+	> Most time alive on lost attack rounds
+	> "Time to start holding W." or,
+	> "-e -ant to kno- -here our double u key -ent too."
+
+BOMB BITCHES
+	> Most bomb plants
+	> "You're not just their spike planter!"
+TORTOISES
+	> Most bomb deaths
+	> "Took slow and steady too literally."
+
+BEST SACRIFICE
+	> Most traded deaths
+	> "Doing God's work out there."
+WORST TRADER
+	> Most deaths trying to trade
+	> "You'll get 'em next time... probably."
+
+TOP RAT
+	> Most extremely short-range kills
+	> "Corners, everywhere."
+MOST RATTED
+	> Most extremely short-range deaths
+	> "Drone should've moved faster, right?"
