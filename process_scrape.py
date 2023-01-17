@@ -23,6 +23,27 @@ player_tags = {
     "danielscutiegf": "susu",
 }
 
+# Account identifiers from VALORANT; used for player locations
+player_ids = {
+    "KOim9KyXvSPhXO6eRFhe_sdVWQ-J6rdj8QAsfqudhJiYMNcNbfkkhlf5cBhLanULZ_J09lsQVYHebA": "andy",
+    "RujpEbc0IH314j9VAhPjv0pEBI3OU1q5jPlWMRruJGpkeIrt6rk1ZjyklEnNCzaIIhNfxybDmTPS6g": "brandon",
+    "RReD4zGGEQBPZ01t7etkv8VDpaca8kmLMqR9X4t2htNfxLciKXzQUNKc4FBlA5h2a35_65kT6DdIRA": "brian",
+    "Bm4jdT7LyDkfAamnd3Pxfr79kkrgW-PDXyYhjnCKlHNhqzBSYa3ObumWCjxk07i9Jm1VA-ogVY86QQ": "cade",
+    "x4VQ1y3s1A4GOSoFjHnYrOuRKUW2nM5B7Lyy-L_1hPEFj-_Wde6ZYN4f2_4uz9t5Ga7XkWZpzZ4Tfw": "darwin",
+    "C_tY6a_w5RZM-Q4-o4lXmYWyHwR47CdIhc6RqdojrFvYP4__H6fTcEsl9NyeERHG5GhU77fjdPVvaQ": "josh",
+    "HdmC1fwo6fs0IR5aF8YPr_d8Y9O4mGvLEte-ZobPyIIGY_rgprMUsKVcU1bgNGrO64cY0mVe3wLyIA": "lindsey",
+    "cc0hfNaF5_tny7jaSf8N7Bar87EQJt3fLsy85NKGFHBjixtmXfwYgZ9iaIqfaHSwyDvb6HbzOCCuCQ": "sequential",
+    "QUesI_kn1ehLlxurIHZtD9Ww-9qESBRQ_RodxkG7q_jWaVB5p7eh1VxnKUiuRmW_ABu8l2Elqr7MtQ": "sophie",
+    "g5ab9-AFyFHyaAzvd2E3YDPxyd_o7XMBQ3oMJEKvVcoCdD5DSWijihWgt4lO3RdeQ6glRVQVQZowTQ": "steve",
+    "9AEt5kjyF3Ho7ZiXaaZA03mCw8_CCF4dP6J8QExrVssTB_5HDXaDhrsgwPzs_Y0o3QVxmN2iqoVpyA": "steve",
+    "ocm6y5CVE3L4l1dIcYoyKzZombwCuVx3vP7pqFe79wCdk_oCAUcaJ0mf7MGwK2lGMx4kt9xirfEq6Q": "steven",
+    "Ef0d2--EnEXjUkAjOCdoG8l-I6xhsTiwBYfO_hGiNc1ageb7ojel5_ih2GbI68EijY3i_wxgL0_E_A": "sun",
+    "QkVviF0Z7UsFptwr0fg-KEMlgbeL7Wg-WpcISvEKUc7CGkBrCt9e1t82Ma7wFwc_CL2Oi0R6Gn0-Fg": "susi",
+    "0JBuaLG15FiA7fEkE3ps24-anUziLtNoowIDmEV7ZBH5wu8gwojY3LKKYtAbKJM90UJY9Tmg7OhLwQ": "susu",
+    "LISiqRtWZpeNmJqirqfyBDFfgTMUNHFz-TuTmNqCGZ4OZSnHcx20SnJc1mDG28w40LHbkCO6ftm3YA": "tang",
+    "fxBAnDFK0NgQ00iLw-G2hML2r4E3HAV11OIb-DTCMm77OHfSPogllCktnjup6AglEp2RrNNcgzWdYQ": "yang",
+}
+
 
 def username_to_name(username):
     return player_tags[username] if username in player_tags else username
@@ -191,8 +212,13 @@ with open("./scrape.json", mode="r") as f:
                 case other:
                     print(f"Missed type: {segment['type']}")
 
-        for round_data in match["rounds"]:
+        for i, round_data in enumerate(match["rounds"]):
             round_data["kills"].sort(key=lambda x: x["round_time"])
+
+            # round start time = (game time of first kill) - (round time of first kill)
+            if i == 0:
+                continue
+
         matches.append(match)
     f.close()
 

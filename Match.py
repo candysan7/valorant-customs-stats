@@ -72,6 +72,7 @@ class Round:
             for damage_event_json in round_json["damage_events"]
         ]
         self.kills: list[Kill] = [Kill(kill_json) for kill_json in round_json["kills"]]
+        self.duration: int = round_json["duration"]
 
     def player_did_die(self, player_name):
         for kill in self.kills:
