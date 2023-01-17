@@ -66,6 +66,7 @@ with open("./scrape.json", mode="r") as f:
             "rounds": [
                 {
                     "winning_team": "",
+                    "winning_side": "",
                     "win_method": "",
                     "duration": None,
                     "player_stats": [],
@@ -96,7 +97,7 @@ with open("./scrape.json", mode="r") as f:
                         {
                             "player_name": player_name,
                             "team": segment["metadata"]["teamId"].lower(),
-                            "side": segment["metadata"]["teamSide"],
+                            "side": segment["metadata"]["teamSide"] + "s",
                             "score": segment["stats"]["score"]["value"],
                             "kills": segment["stats"]["kills"]["value"],
                             "deaths": segment["stats"]["deaths"]["value"],
@@ -218,6 +219,19 @@ with open("./scrape.json", mode="r") as f:
 
         for i in range(len(match["rounds"])):
             match["rounds"][i]["kills"].sort(key=lambda x: x["round_time"])
+            if (
+                match["rounds"][i]["player_stats"][0]["team"]
+                == match["rounds"][i]["winning_team"]
+            ):
+                match["rounds"][i]["winning_side"] = match["rounds"][i]["player_stats"][
+                    0
+                ]["side"]
+            else:
+                match["rounds"][i]["winning_side"] = (
+                    "attackers"
+                    if match["rounds"][i]["player_stats"][0]["side"] == "defenders"
+                    else "defenders"
+                )
 
             # Some surrender rounds are marked as elimination
             # Not the most robust method, but no-kill rounds are extremely rare

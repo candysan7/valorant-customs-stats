@@ -1,3 +1,7 @@
+# Sides
+ATTACKERS = "attackers"
+DEFENDERS = "defenders"
+
 # Agent names
 ASTRA = "Astra"
 BREACH = "Breach"

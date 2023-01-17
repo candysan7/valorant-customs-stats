@@ -12,7 +12,9 @@
     "team_damage": 294,
     "self_damage": 403,
     "plants": 38,
-    "bomb_deaths": 13
+    "bomb_deaths": 13,
+    "average_time_alive_on_won_attack_rounds": 28,
+    "average_time_alive_on_lost_attack_rounds": 21
   },
   "brandon": {
     "headshots": 77,
@@ -27,7 +29,9 @@
     "team_damage": 0,
     "self_damage": 22,
     "plants": 35,
-    "bomb_deaths": 3
+    "bomb_deaths": 3,
+    "average_time_alive_on_won_attack_rounds": 23,
+    "average_time_alive_on_lost_attack_rounds": 24
   },
   "brian": {
     "headshots": 304,
@@ -42,7 +46,9 @@
     "team_damage": 0,
     "self_damage": 122,
     "plants": 106,
-    "bomb_deaths": 8
+    "bomb_deaths": 8,
+    "average_time_alive_on_won_attack_rounds": 27,
+    "average_time_alive_on_lost_attack_rounds": 23
   },
   "cade": {
     "headshots": 589,
@@ -57,7 +63,9 @@
     "team_damage": 223,
     "self_damage": 209,
     "plants": 56,
-    "bomb_deaths": 6
+    "bomb_deaths": 6,
+    "average_time_alive_on_won_attack_rounds": 27,
+    "average_time_alive_on_lost_attack_rounds": 20
   },
   "darwin": {
     "headshots": 657,
@@ -72,7 +80,9 @@
     "team_damage": 60,
     "self_damage": 63,
     "plants": 120,
-    "bomb_deaths": 19
+    "bomb_deaths": 19,
+    "average_time_alive_on_won_attack_rounds": 31,
+    "average_time_alive_on_lost_attack_rounds": 21
   },
   "josh": {
     "headshots": 351,
@@ -87,7 +97,9 @@
     "team_damage": 58,
     "self_damage": 57,
     "plants": 128,
-    "bomb_deaths": 19
+    "bomb_deaths": 19,
+    "average_time_alive_on_won_attack_rounds": 31,
+    "average_time_alive_on_lost_attack_rounds": 27
   },
   "lindsey": {
     "headshots": 666,
@@ -102,7 +114,9 @@
     "team_damage": 149,
     "self_damage": 36,
     "plants": 191,
-    "bomb_deaths": 19
+    "bomb_deaths": 19,
+    "average_time_alive_on_won_attack_rounds": 32,
+    "average_time_alive_on_lost_attack_rounds": 21
   },
   "sequential": {
     "headshots": 582,
@@ -117,7 +131,9 @@
     "team_damage": 59,
     "self_damage": 164,
     "plants": 16,
-    "bomb_deaths": 1
+    "bomb_deaths": 1,
+    "average_time_alive_on_won_attack_rounds": 23,
+    "average_time_alive_on_lost_attack_rounds": 21
   },
   "sophie": {
     "headshots": 585,
@@ -132,7 +148,9 @@
     "team_damage": 38,
     "self_damage": 102,
     "plants": 20,
-    "bomb_deaths": 6
+    "bomb_deaths": 6,
+    "average_time_alive_on_won_attack_rounds": 25,
+    "average_time_alive_on_lost_attack_rounds": 18
   },
   "steve": {
     "headshots": 451,
@@ -147,7 +165,9 @@
     "team_damage": 20,
     "self_damage": 110,
     "plants": 58,
-    "bomb_deaths": 5
+    "bomb_deaths": 5,
+    "average_time_alive_on_won_attack_rounds": 27,
+    "average_time_alive_on_lost_attack_rounds": 18
   },
   "steven": {
     "headshots": 531,
@@ -162,7 +182,9 @@
     "team_damage": 421,
     "self_damage": 55,
     "plants": 23,
-    "bomb_deaths": 4
+    "bomb_deaths": 4,
+    "average_time_alive_on_won_attack_rounds": 32,
+    "average_time_alive_on_lost_attack_rounds": 20
   },
   "sun": {
     "headshots": 478,
@@ -177,7 +199,9 @@
     "team_damage": 201,
     "self_damage": 176,
     "plants": 43,
-    "bomb_deaths": 7
+    "bomb_deaths": 7,
+    "average_time_alive_on_won_attack_rounds": 25,
+    "average_time_alive_on_lost_attack_rounds": 23
   },
   "susi": {
     "headshots": 215,
@@ -192,7 +216,9 @@
     "team_damage": 107,
     "self_damage": 31,
     "plants": 24,
-    "bomb_deaths": 3
+    "bomb_deaths": 3,
+    "average_time_alive_on_won_attack_rounds": 25,
+    "average_time_alive_on_lost_attack_rounds": 31
   },
   "susu": {
     "headshots": 143,
@@ -207,7 +233,9 @@
     "team_damage": 108,
     "self_damage": 0,
     "plants": 21,
-    "bomb_deaths": 4
+    "bomb_deaths": 4,
+    "average_time_alive_on_won_attack_rounds": 27,
+    "average_time_alive_on_lost_attack_rounds": 28
   },
   "tang": {
     "headshots": 553,
@@ -222,7 +250,9 @@
     "team_damage": 110,
     "self_damage": 148,
     "plants": 34,
-    "bomb_deaths": 5
+    "bomb_deaths": 5,
+    "average_time_alive_on_won_attack_rounds": 30,
+    "average_time_alive_on_lost_attack_rounds": 21
   },
   "yang": {
     "headshots": 36,
@@ -237,6 +267,8 @@
     "team_damage": 0,
     "self_damage": 33,
     "plants": 2,
-    "bomb_deaths": 0
+    "bomb_deaths": 0,
+    "average_time_alive_on_won_attack_rounds": 21,
+    "average_time_alive_on_lost_attack_rounds": 30
   }
 }

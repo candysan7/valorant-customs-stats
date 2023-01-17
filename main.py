@@ -15,6 +15,7 @@ with open("./data.json", mode="r") as f:
     data = json.load(f)
     # data.json is sorted in process_scrape.py
     # matches = sorted([Match(match_json) for match_json in data], key=lambda m: m.time)
+    matches = [Match(match_json) for match_json in data]
     f.close()
 
 if __name__ == "__main__":
@@ -46,9 +47,13 @@ if __name__ == "__main__":
                 SELF_DAMAGE: 0,
                 PLANTS: 0,
                 BOMB_DEATHS: 0,
+                AVERAGE_TIME_ALIVE_ON_WON_ATTACK_ROUNDS: 0,
+                AVERAGE_TIME_ALIVE_ON_LOST_ATTACK_ROUNDS: 0,
             }
             for player_name in PLAYER_NAMES
         }
+
+        attack_rounds = {player_name: 0 for player_name in PLAYER_NAMES}
 
         for match in matches:
             for player_name in filter_players(match.all_players):
@@ -79,9 +84,26 @@ if __name__ == "__main__":
                             + damage_event.legshots
                         )
 
+                # If a player is resurrected, we only want to add their time alive once
+                handled_players = set()
                 for kill in _round.kills:
                     killer_name = kill.killer_name
                     victim_name = kill.victim_name
+
+                    if (
+                        victim_name not in handled_players
+                        and _round.player_stats[victim_name].side == ATTACKERS
+                        and victim_name in PLAYER_NAMES
+                    ):
+                        handled_players.add(victim_name)
+                        if _round.winning_side == ATTACKERS:
+                            out_json[victim_name][
+                                AVERAGE_TIME_ALIVE_ON_WON_ATTACK_ROUNDS
+                            ] += kill.round_time
+                        else:
+                            out_json[victim_name][
+                                AVERAGE_TIME_ALIVE_ON_LOST_ATTACK_ROUNDS
+                            ] += kill.round_time
 
                     if kill.weapon_name == "Melee":
                         if killer_name in PLAYER_NAMES:
@@ -93,6 +115,24 @@ if __name__ == "__main__":
                         if victim_name in PLAYER_NAMES:
                             out_json[victim_name][BOMB_DEATHS] += 1
 
+                for player_name in filter_players(match.all_players):
+                    if _round.player_stats[player_name].side == ATTACKERS and _round.win_method != "surrendered":
+                        attack_rounds[player_name] += 1
+
+                    # If a player didn't die, they survived the whole round
+                    if (
+                        _round.player_stats[player_name].deaths == 0
+                        and _round.player_stats[player_name].side == ATTACKERS
+                    ):
+                        if _round.winning_side == ATTACKERS:
+                            out_json[player_name][
+                                AVERAGE_TIME_ALIVE_ON_WON_ATTACK_ROUNDS
+                            ] += _round.duration
+                        else:
+                            out_json[player_name][
+                                AVERAGE_TIME_ALIVE_ON_LOST_ATTACK_ROUNDS
+                            ] += _round.duration
+
         for player_name in PLAYER_NAMES:
             out_json[player_name][HEADSHOT_RATE] = round(
                 100 * out_json[player_name][HEADSHOTS] / out_json[player_name][BULLETS]
@@ -102,6 +142,14 @@ if __name__ == "__main__":
             )
             out_json[player_name][LEGSHOT_RATE] = round(
                 100 * out_json[player_name][LEGSHOTS] / out_json[player_name][BULLETS]
+            )
+            out_json[player_name][AVERAGE_TIME_ALIVE_ON_WON_ATTACK_ROUNDS] = round(
+                out_json[player_name][AVERAGE_TIME_ALIVE_ON_WON_ATTACK_ROUNDS]
+                / (attack_rounds[player_name] * 1000)
+            )
+            out_json[player_name][AVERAGE_TIME_ALIVE_ON_LOST_ATTACK_ROUNDS] = round(
+                out_json[player_name][AVERAGE_TIME_ALIVE_ON_LOST_ATTACK_ROUNDS]
+                / (attack_rounds[player_name] * 1000)
             )
 
         json.dump(out_json, f, indent=2)

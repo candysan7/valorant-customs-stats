@@ -60,7 +60,9 @@ class Kill:
 class Round:
     def __init__(self, round_json):
         self.winning_team: str = round_json["winning_team"]
+        self.winning_side: str = round_json["winning_side"]
         self.win_method: str = round_json["win_method"]
+        self.duration: int = round_json["duration"]  # milliseconds
         self.player_stats: dict[str, PlayerRoundStats] = {
             player_round_stats_json["player_name"]: PlayerRoundStats(
                 player_round_stats_json
@@ -72,7 +74,6 @@ class Round:
             for damage_event_json in round_json["damage_events"]
         ]
         self.kills: list[Kill] = [Kill(kill_json) for kill_json in round_json["kills"]]
-        self.duration: int = round_json["duration"]  # milliseconds
 
     def player_did_die(self, player_name):
         for kill in self.kills:
@@ -83,7 +84,6 @@ class Round:
 
 class Match:
     def __init__(self, match_json):
-        # match_json.time looks like "10/11/22, 9:08 PM"
         self.time: datetime = isoparse(match_json["time"])
         self.url: str = match_json["url"]
         self.map: str = match_json["map"]
