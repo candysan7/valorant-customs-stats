@@ -24,8 +24,7 @@ BIGGEST BAIT
 	> "Your duty is ... over."
 MASTER BAITERS
 	> Most time alive on lost attack rounds
-	> "Time to start holding W." or,
-	> "-e -ant to kno- -here our double u key -ent too."
+	> "Time to start holding W."
 
 BOMB BITCHES
 	> Most bomb plants
