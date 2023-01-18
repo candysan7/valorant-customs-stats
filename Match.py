@@ -53,6 +53,7 @@ class Kill:
         self.victim_name: str = kill_json["victim_name"]
         self.assistants: list[str] = kill_json["assistants"]
         self.weapon_name: str = kill_json["weapon_name"]
+        self.game_time: int = kill_json["game_time"]
         self.round_time: int = kill_json["round_time"]
         self.damage: int = kill_json["damage"]
 
