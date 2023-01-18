@@ -19,10 +19,10 @@ TOP SABOTAGERS
 	> Most damage done to allies
 	> "You didn't do /that/ much damage."
 
-BEST BAIT
+BIGGEST BAIT
 	> Least time alive on lost attack rounds
 	> "Your duty is ... over."
-BEST BAITERS
+MASTER BAITERS
 	> Most time alive on lost attack rounds
 	> "Time to start holding W." or,
 	> "-e -ant to kno- -here our double u key -ent too."
