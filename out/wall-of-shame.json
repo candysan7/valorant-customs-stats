@@ -13,8 +13,8 @@
     "self_damage": 403,
     "plants": 38,
     "bomb_deaths": 13,
-    "average_time_alive_on_won_attack_rounds": 28,
-    "average_time_alive_on_lost_attack_rounds": 21
+    "average_time_alive_on_won_attack_rounds": 56,
+    "average_time_alive_on_lost_attack_rounds": 42
   },
   "brandon": {
     "headshots": 77,
@@ -30,8 +30,8 @@
     "self_damage": 22,
     "plants": 35,
     "bomb_deaths": 3,
-    "average_time_alive_on_won_attack_rounds": 23,
-    "average_time_alive_on_lost_attack_rounds": 24
+    "average_time_alive_on_won_attack_rounds": 54,
+    "average_time_alive_on_lost_attack_rounds": 43
   },
   "brian": {
     "headshots": 304,
@@ -47,8 +47,8 @@
     "self_damage": 122,
     "plants": 106,
     "bomb_deaths": 8,
-    "average_time_alive_on_won_attack_rounds": 27,
-    "average_time_alive_on_lost_attack_rounds": 23
+    "average_time_alive_on_won_attack_rounds": 55,
+    "average_time_alive_on_lost_attack_rounds": 45
   },
   "cade": {
     "headshots": 589,
@@ -64,8 +64,8 @@
     "self_damage": 209,
     "plants": 56,
     "bomb_deaths": 6,
-    "average_time_alive_on_won_attack_rounds": 27,
-    "average_time_alive_on_lost_attack_rounds": 20
+    "average_time_alive_on_won_attack_rounds": 53,
+    "average_time_alive_on_lost_attack_rounds": 41
   },
   "darwin": {
     "headshots": 657,
@@ -81,8 +81,8 @@
     "self_damage": 63,
     "plants": 120,
     "bomb_deaths": 19,
-    "average_time_alive_on_won_attack_rounds": 31,
-    "average_time_alive_on_lost_attack_rounds": 21
+    "average_time_alive_on_won_attack_rounds": 59,
+    "average_time_alive_on_lost_attack_rounds": 42
   },
   "josh": {
     "headshots": 351,
@@ -98,8 +98,8 @@
     "self_damage": 57,
     "plants": 128,
     "bomb_deaths": 19,
-    "average_time_alive_on_won_attack_rounds": 31,
-    "average_time_alive_on_lost_attack_rounds": 27
+    "average_time_alive_on_won_attack_rounds": 62,
+    "average_time_alive_on_lost_attack_rounds": 52
   },
   "lindsey": {
     "headshots": 666,
@@ -115,8 +115,8 @@
     "self_damage": 36,
     "plants": 191,
     "bomb_deaths": 19,
-    "average_time_alive_on_won_attack_rounds": 32,
-    "average_time_alive_on_lost_attack_rounds": 21
+    "average_time_alive_on_won_attack_rounds": 62,
+    "average_time_alive_on_lost_attack_rounds": 43
   },
   "sequential": {
     "headshots": 582,
@@ -132,8 +132,8 @@
     "self_damage": 164,
     "plants": 16,
     "bomb_deaths": 1,
-    "average_time_alive_on_won_attack_rounds": 23,
-    "average_time_alive_on_lost_attack_rounds": 21
+    "average_time_alive_on_won_attack_rounds": 49,
+    "average_time_alive_on_lost_attack_rounds": 39
   },
   "sophie": {
     "headshots": 585,
@@ -149,8 +149,8 @@
     "self_damage": 102,
     "plants": 20,
     "bomb_deaths": 6,
-    "average_time_alive_on_won_attack_rounds": 25,
-    "average_time_alive_on_lost_attack_rounds": 18
+    "average_time_alive_on_won_attack_rounds": 49,
+    "average_time_alive_on_lost_attack_rounds": 37
   },
   "steve": {
     "headshots": 451,
@@ -166,8 +166,8 @@
     "self_damage": 110,
     "plants": 58,
     "bomb_deaths": 5,
-    "average_time_alive_on_won_attack_rounds": 27,
-    "average_time_alive_on_lost_attack_rounds": 18
+    "average_time_alive_on_won_attack_rounds": 54,
+    "average_time_alive_on_lost_attack_rounds": 36
   },
   "steven": {
     "headshots": 531,
@@ -183,8 +183,8 @@
     "self_damage": 55,
     "plants": 23,
     "bomb_deaths": 4,
-    "average_time_alive_on_won_attack_rounds": 32,
-    "average_time_alive_on_lost_attack_rounds": 20
+    "average_time_alive_on_won_attack_rounds": 61,
+    "average_time_alive_on_lost_attack_rounds": 42
   },
   "sun": {
     "headshots": 478,
@@ -200,8 +200,8 @@
     "self_damage": 176,
     "plants": 43,
     "bomb_deaths": 7,
-    "average_time_alive_on_won_attack_rounds": 25,
-    "average_time_alive_on_lost_attack_rounds": 23
+    "average_time_alive_on_won_attack_rounds": 55,
+    "average_time_alive_on_lost_attack_rounds": 43
   },
   "susi": {
     "headshots": 215,
@@ -217,8 +217,8 @@
     "self_damage": 31,
     "plants": 24,
     "bomb_deaths": 3,
-    "average_time_alive_on_won_attack_rounds": 25,
-    "average_time_alive_on_lost_attack_rounds": 31
+    "average_time_alive_on_won_attack_rounds": 62,
+    "average_time_alive_on_lost_attack_rounds": 52
   },
   "susu": {
     "headshots": 143,
@@ -234,8 +234,8 @@
     "self_damage": 0,
     "plants": 21,
     "bomb_deaths": 4,
-    "average_time_alive_on_won_attack_rounds": 27,
-    "average_time_alive_on_lost_attack_rounds": 28
+    "average_time_alive_on_won_attack_rounds": 60,
+    "average_time_alive_on_lost_attack_rounds": 51
   },
   "tang": {
     "headshots": 553,
@@ -251,8 +251,8 @@
     "self_damage": 148,
     "plants": 34,
     "bomb_deaths": 5,
-    "average_time_alive_on_won_attack_rounds": 30,
-    "average_time_alive_on_lost_attack_rounds": 21
+    "average_time_alive_on_won_attack_rounds": 56,
+    "average_time_alive_on_lost_attack_rounds": 43
   },
   "yang": {
     "headshots": 36,
@@ -268,7 +268,7 @@
     "self_damage": 33,
     "plants": 2,
     "bomb_deaths": 0,
-    "average_time_alive_on_won_attack_rounds": 21,
-    "average_time_alive_on_lost_attack_rounds": 30
+    "average_time_alive_on_won_attack_rounds": 62,
+    "average_time_alive_on_lost_attack_rounds": 44
   }
 }

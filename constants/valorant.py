@@ -2,6 +2,13 @@
 ATTACKERS = "attackers"
 DEFENDERS = "defenders"
 
+# Win methods
+SURRENDERED = "surrendered"
+ELIMINIATION = "elimination"
+DEFUSE = "defuse"
+DETONATE = "detonate"
+TIME = "time"
+
 # Agent names
 ASTRA = "Astra"
 BREACH = "Breach"

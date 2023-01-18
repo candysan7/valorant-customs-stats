@@ -53,7 +53,8 @@ if __name__ == "__main__":
             for player_name in PLAYER_NAMES
         }
 
-        attack_rounds = {player_name: 0 for player_name in PLAYER_NAMES}
+        won_attack_rounds = {player_name: 0 for player_name in PLAYER_NAMES}
+        lost_attack_rounds = {player_name: 0 for player_name in PLAYER_NAMES}
 
         for match in matches:
             for player_name in filter_players(match.all_players):
@@ -117,16 +118,18 @@ if __name__ == "__main__":
 
                 for player_name in filter_players(match.all_players):
                     if (
-                        _round.player_stats[player_name].side == ATTACKERS
-                        and _round.win_method != "surrendered"
+                        _round.player_stats[player_name].side != ATTACKERS
+                        or _round.win_method == SURRENDERED
                     ):
-                        attack_rounds[player_name] += 1
+                        continue
+
+                    if _round.winning_side == ATTACKERS:
+                        won_attack_rounds[player_name] += 1
+                    else:
+                        lost_attack_rounds[player_name] += 1
 
                     # If a player didn't die, they survived the whole round
-                    if (
-                        _round.player_stats[player_name].deaths == 0
-                        and _round.player_stats[player_name].side == ATTACKERS
-                    ):
+                    if _round.player_stats[player_name].deaths == 0:
                         if _round.winning_side == ATTACKERS:
                             out_json[player_name][
                                 AVERAGE_TIME_ALIVE_ON_WON_ATTACK_ROUNDS
@@ -148,11 +151,11 @@ if __name__ == "__main__":
             )
             out_json[player_name][AVERAGE_TIME_ALIVE_ON_WON_ATTACK_ROUNDS] = round(
                 out_json[player_name][AVERAGE_TIME_ALIVE_ON_WON_ATTACK_ROUNDS]
-                / (attack_rounds[player_name] * 1000)
+                / (won_attack_rounds[player_name] * 1000)
             )
             out_json[player_name][AVERAGE_TIME_ALIVE_ON_LOST_ATTACK_ROUNDS] = round(
                 out_json[player_name][AVERAGE_TIME_ALIVE_ON_LOST_ATTACK_ROUNDS]
-                / (attack_rounds[player_name] * 1000)
+                / (lost_attack_rounds[player_name] * 1000)
             )
 
         json.dump(out_json, f, indent=2)
