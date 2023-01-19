@@ -2,14 +2,14 @@
   "andy": {
     "name": "Andy",
     "valorant_tag": "Candysan",
-    "winrate": 50,
+    "winrate": 49,
     "wins": 32,
-    "games": 64,
+    "games": 65,
     "maps": {
       "Ascent": {
-        "acs": 266,
-        "score": 51124,
-        "rounds": 192
+        "acs": 259,
+        "score": 55996,
+        "rounds": 216
       },
       "Bind": {
         "acs": 314,
@@ -97,9 +97,9 @@
       },
       "Jett": {
         "role": "Duelist",
-        "winrate": null,
+        "winrate": 0,
         "wins": 0,
-        "games": 0
+        "games": 1
       },
       "KAY/O": {
         "role": "Initiator",
@@ -181,9 +181,9 @@
         "games": 6
       },
       "Duelist": {
-        "winrate": 44,
+        "winrate": 43,
         "wins": 12,
-        "games": 27
+        "games": 28
       },
       "Initiator": {
         "winrate": 53,
@@ -208,14 +208,14 @@
   "brandon": {
     "name": "Brandon",
     "valorant_tag": "BigBoiB",
-    "winrate": 33,
+    "winrate": 31,
     "wins": 5,
-    "games": 15,
+    "games": 16,
     "maps": {
       "Ascent": {
-        "acs": 119,
-        "score": 2856,
-        "rounds": 24
+        "acs": 126,
+        "score": 6048,
+        "rounds": 48
       },
       "Bind": {
         "acs": 125,
@@ -327,9 +327,9 @@
       },
       "Omen": {
         "role": "Controller",
-        "winrate": 33,
+        "winrate": 31,
         "wins": 5,
-        "games": 15
+        "games": 16
       },
       "Phoenix": {
         "role": "Duelist",
@@ -382,9 +382,9 @@
     },
     "roles": {
       "Controller": {
-        "winrate": 33,
+        "winrate": 31,
         "wins": 5,
-        "games": 15
+        "games": 16
       },
       "Duelist": {
         "winrate": null,
@@ -620,14 +620,14 @@
   "cade": {
     "name": "Cade",
     "valorant_tag": "RhythmKing",
-    "winrate": 47,
-    "wins": 23,
-    "games": 49,
+    "winrate": 46,
+    "wins": 24,
+    "games": 52,
     "maps": {
       "Ascent": {
-        "acs": 202,
-        "score": 24612,
-        "rounds": 122
+        "acs": 221,
+        "score": 32316,
+        "rounds": 146
       },
       "Bind": {
         "acs": 243,
@@ -655,9 +655,9 @@
         "rounds": 111
       },
       "Lotus": {
-        "acs": 310,
-        "score": 23594,
-        "rounds": 76
+        "acs": 303,
+        "score": 28472,
+        "rounds": 94
       },
       "Pearl": {
         "acs": 257,
@@ -665,9 +665,9 @@
         "rounds": 131
       },
       "Split": {
-        "acs": 253,
-        "score": 42495,
-        "rounds": 168
+        "acs": 254,
+        "score": 47997,
+        "rounds": 189
       }
     },
     "agents": {
@@ -697,15 +697,15 @@
       },
       "Cypher": {
         "role": "Sentinel",
-        "winrate": null,
-        "wins": 0,
-        "games": 0
+        "winrate": 100,
+        "wins": 1,
+        "games": 1
       },
       "Fade": {
         "role": "Initiator",
-        "winrate": 50,
+        "winrate": 33,
         "wins": 1,
-        "games": 2
+        "games": 3
       },
       "Harbor": {
         "role": "Controller",
@@ -787,9 +787,9 @@
       },
       "Yoru": {
         "role": "Duelist",
-        "winrate": null,
+        "winrate": 0,
         "wins": 0,
-        "games": 0
+        "games": 1
       }
     },
     "roles": {
@@ -799,19 +799,19 @@
         "games": 26
       },
       "Duelist": {
-        "winrate": 50,
+        "winrate": 45,
         "wins": 5,
-        "games": 10
+        "games": 11
       },
       "Initiator": {
-        "winrate": 50,
+        "winrate": 44,
         "wins": 4,
-        "games": 8
+        "games": 9
       },
       "Sentinel": {
-        "winrate": 80,
-        "wins": 4,
-        "games": 5
+        "winrate": 83,
+        "wins": 5,
+        "games": 6
       }
     },
     "top_agents": [
@@ -826,14 +826,14 @@
   "darwin": {
     "name": "Darwin",
     "valorant_tag": "ChzGorditaCrunch",
-    "winrate": 51,
-    "wins": 35,
-    "games": 68,
+    "winrate": 54,
+    "wins": 38,
+    "games": 71,
     "maps": {
       "Ascent": {
-        "acs": 249,
-        "score": 47150,
-        "rounds": 189
+        "acs": 235,
+        "score": 50150,
+        "rounds": 213
       },
       "Bind": {
         "acs": 187,
@@ -861,9 +861,9 @@
         "rounds": 126
       },
       "Lotus": {
-        "acs": 255,
-        "score": 23712,
-        "rounds": 93
+        "acs": 251,
+        "score": 27888,
+        "rounds": 111
       },
       "Pearl": {
         "acs": 243,
@@ -871,17 +871,17 @@
         "rounds": 153
       },
       "Split": {
-        "acs": 203,
-        "score": 47719,
-        "rounds": 235
+        "acs": 201,
+        "score": 51457,
+        "rounds": 256
       }
     },
     "agents": {
       "Astra": {
         "role": "Controller",
-        "winrate": 0,
-        "wins": 0,
-        "games": 2
+        "winrate": 33,
+        "wins": 1,
+        "games": 3
       },
       "Breach": {
         "role": "Initiator",
@@ -939,15 +939,15 @@
       },
       "Neon": {
         "role": "Duelist",
-        "winrate": 50,
-        "wins": 7,
-        "games": 14
+        "winrate": 53,
+        "wins": 8,
+        "games": 15
       },
       "Omen": {
         "role": "Controller",
-        "winrate": 33,
-        "wins": 1,
-        "games": 3
+        "winrate": 50,
+        "wins": 2,
+        "games": 4
       },
       "Phoenix": {
         "role": "Duelist",
@@ -1000,14 +1000,14 @@
     },
     "roles": {
       "Controller": {
-        "winrate": 50,
-        "wins": 6,
-        "games": 12
+        "winrate": 57,
+        "wins": 8,
+        "games": 14
       },
       "Duelist": {
-        "winrate": 50,
-        "wins": 12,
-        "games": 24
+        "winrate": 52,
+        "wins": 13,
+        "games": 25
       },
       "Initiator": {
         "winrate": 75,
@@ -1033,9 +1033,9 @@
   "josh": {
     "name": "Josh",
     "valorant_tag": "Bot001341",
-    "winrate": 44,
-    "wins": 25,
-    "games": 57,
+    "winrate": 46,
+    "wins": 27,
+    "games": 59,
     "maps": {
       "Ascent": {
         "acs": 171,
@@ -1068,9 +1068,9 @@
         "rounds": 128
       },
       "Lotus": {
-        "acs": 183,
-        "score": 14634,
-        "rounds": 80
+        "acs": 193,
+        "score": 18918,
+        "rounds": 98
       },
       "Pearl": {
         "acs": 198,
@@ -1078,9 +1078,9 @@
         "rounds": 133
       },
       "Split": {
-        "acs": 211,
-        "score": 44651,
-        "rounds": 212
+        "acs": 215,
+        "score": 50027,
+        "rounds": 233
       }
     },
     "agents": {
@@ -1159,8 +1159,8 @@
       "Phoenix": {
         "role": "Duelist",
         "winrate": 100,
-        "wins": 1,
-        "games": 1
+        "wins": 2,
+        "games": 2
       },
       "Raze": {
         "role": "Duelist",
@@ -1182,9 +1182,9 @@
       },
       "Skye": {
         "role": "Initiator",
-        "winrate": 18,
-        "wins": 3,
-        "games": 17
+        "winrate": 22,
+        "wins": 4,
+        "games": 18
       },
       "Sova": {
         "role": "Initiator",
@@ -1212,14 +1212,14 @@
         "games": 11
       },
       "Duelist": {
-        "winrate": 75,
-        "wins": 3,
-        "games": 4
+        "winrate": 80,
+        "wins": 4,
+        "games": 5
       },
       "Initiator": {
-        "winrate": 16,
-        "wins": 3,
-        "games": 19
+        "winrate": 20,
+        "wins": 4,
+        "games": 20
       },
       "Sentinel": {
         "winrate": 57,
@@ -1240,14 +1240,14 @@
   "lindsey": {
     "name": "Lindsey",
     "valorant_tag": "aylindsay",
-    "winrate": 54,
-    "wins": 34,
-    "games": 63,
+    "winrate": 55,
+    "wins": 35,
+    "games": 64,
     "maps": {
       "Ascent": {
-        "acs": 241,
-        "score": 45335,
-        "rounds": 188
+        "acs": 235,
+        "score": 49727,
+        "rounds": 212
       },
       "Bind": {
         "acs": 189,
@@ -1299,9 +1299,9 @@
       },
       "Breach": {
         "role": "Initiator",
-        "winrate": 56,
-        "wins": 5,
-        "games": 9
+        "winrate": 60,
+        "wins": 6,
+        "games": 10
       },
       "Brimstone": {
         "role": "Controller",
@@ -1424,9 +1424,9 @@
         "games": 3
       },
       "Initiator": {
-        "winrate": 54,
-        "wins": 13,
-        "games": 24
+        "winrate": 56,
+        "wins": 14,
+        "games": 25
       },
       "Sentinel": {
         "winrate": 50,
@@ -1436,8 +1436,8 @@
     },
     "top_agents": [
       "Astra",
-      "Viper",
-      "Breach"
+      "Breach",
+      "Viper"
     ],
     "top_roles": [
       "Controller",
@@ -1447,14 +1447,14 @@
   "sequential": {
     "name": "Sequential",
     "valorant_tag": "sequential",
-    "winrate": 50,
-    "wins": 15,
-    "games": 30,
+    "winrate": 52,
+    "wins": 16,
+    "games": 31,
     "maps": {
       "Ascent": {
-        "acs": 353,
-        "score": 44095,
-        "rounds": 125
+        "acs": 360,
+        "score": 53623,
+        "rounds": 149
       },
       "Bind": {
         "acs": 311,
@@ -1542,9 +1542,9 @@
       },
       "Jett": {
         "role": "Duelist",
-        "winrate": 50,
-        "wins": 1,
-        "games": 2
+        "winrate": 67,
+        "wins": 2,
+        "games": 3
       },
       "KAY/O": {
         "role": "Initiator",
@@ -1626,9 +1626,9 @@
         "games": 6
       },
       "Duelist": {
-        "winrate": 56,
-        "wins": 10,
-        "games": 18
+        "winrate": 58,
+        "wins": 11,
+        "games": 19
       },
       "Initiator": {
         "winrate": 67,
@@ -1653,9 +1653,9 @@
   "sophie": {
     "name": "Sophie",
     "valorant_tag": "chushberry",
-    "winrate": 59,
-    "wins": 38,
-    "games": 64,
+    "winrate": 61,
+    "wins": 40,
+    "games": 66,
     "maps": {
       "Ascent": {
         "acs": 170,
@@ -1688,9 +1688,9 @@
         "rounds": 145
       },
       "Lotus": {
-        "acs": 158,
-        "score": 8222,
-        "rounds": 52
+        "acs": 167,
+        "score": 11696,
+        "rounds": 70
       },
       "Pearl": {
         "acs": 137,
@@ -1698,9 +1698,9 @@
         "rounds": 153
       },
       "Split": {
-        "acs": 136,
-        "score": 31958,
-        "rounds": 235
+        "acs": 141,
+        "score": 36179,
+        "rounds": 256
       }
     },
     "agents": {
@@ -1748,9 +1748,9 @@
       },
       "Jett": {
         "role": "Duelist",
-        "winrate": 61,
-        "wins": 33,
-        "games": 54
+        "winrate": 62,
+        "wins": 35,
+        "games": 56
       },
       "KAY/O": {
         "role": "Initiator",
@@ -1832,9 +1832,9 @@
         "games": 3
       },
       "Duelist": {
-        "winrate": 60,
-        "wins": 33,
-        "games": 55
+        "winrate": 61,
+        "wins": 35,
+        "games": 57
       },
       "Initiator": {
         "winrate": 80,
@@ -1859,9 +1859,9 @@
   "steve": {
     "name": "Steve",
     "valorant_tag": "Selintt",
-    "winrate": 53,
-    "wins": 24,
-    "games": 45,
+    "winrate": 55,
+    "wins": 26,
+    "games": 47,
     "maps": {
       "Ascent": {
         "acs": 185,
@@ -1894,9 +1894,9 @@
         "rounds": 69
       },
       "Lotus": {
-        "acs": 197,
-        "score": 5902,
-        "rounds": 30
+        "acs": 200,
+        "score": 9610,
+        "rounds": 48
       },
       "Pearl": {
         "acs": 207,
@@ -1904,9 +1904,9 @@
         "rounds": 85
       },
       "Split": {
-        "acs": 239,
-        "score": 36103,
-        "rounds": 151
+        "acs": 243,
+        "score": 41857,
+        "rounds": 172
       }
     },
     "agents": {
@@ -1996,15 +1996,15 @@
       },
       "Reyna": {
         "role": "Duelist",
-        "winrate": 54,
-        "wins": 7,
-        "games": 13
+        "winrate": 57,
+        "wins": 8,
+        "games": 14
       },
       "Sage": {
         "role": "Sentinel",
-        "winrate": 67,
-        "wins": 4,
-        "games": 6
+        "winrate": 71,
+        "wins": 5,
+        "games": 7
       },
       "Skye": {
         "role": "Initiator",
@@ -2038,9 +2038,9 @@
         "games": 8
       },
       "Duelist": {
-        "winrate": 57,
-        "wins": 12,
-        "games": 21
+        "winrate": 59,
+        "wins": 13,
+        "games": 22
       },
       "Initiator": {
         "winrate": 33,
@@ -2048,9 +2048,9 @@
         "games": 3
       },
       "Sentinel": {
-        "winrate": 62,
-        "wins": 8,
-        "games": 13
+        "winrate": 64,
+        "wins": 9,
+        "games": 14
       }
     },
     "top_agents": [
@@ -2065,14 +2065,14 @@
   "steven": {
     "name": "Steven",
     "valorant_tag": "youngsmasher",
-    "winrate": 60,
-    "wins": 24,
-    "games": 40,
+    "winrate": 61,
+    "wins": 25,
+    "games": 41,
     "maps": {
       "Ascent": {
         "acs": 263,
-        "score": 38664,
-        "rounds": 147
+        "score": 44904,
+        "rounds": 171
       },
       "Bind": {
         "acs": 285,
@@ -2220,9 +2220,9 @@
       },
       "Sova": {
         "role": "Initiator",
-        "winrate": 62,
-        "wins": 23,
-        "games": 37
+        "winrate": 63,
+        "wins": 24,
+        "games": 38
       },
       "Viper": {
         "role": "Controller",
@@ -2249,9 +2249,9 @@
         "games": 0
       },
       "Initiator": {
-        "winrate": 62,
-        "wins": 23,
-        "games": 37
+        "winrate": 63,
+        "wins": 24,
+        "games": 38
       },
       "Sentinel": {
         "winrate": 33,
@@ -2272,8 +2272,8 @@
     "name": "Sun",
     "valorant_tag": "sun",
     "winrate": 41,
-    "wins": 16,
-    "games": 39,
+    "wins": 17,
+    "games": 41,
     "maps": {
       "Ascent": {
         "acs": 225,
@@ -2306,9 +2306,9 @@
         "rounds": 50
       },
       "Lotus": {
-        "acs": 202,
-        "score": 18800,
-        "rounds": 93
+        "acs": 216,
+        "score": 24020,
+        "rounds": 111
       },
       "Pearl": {
         "acs": 222,
@@ -2316,9 +2316,9 @@
         "rounds": 92
       },
       "Split": {
-        "acs": 213,
-        "score": 41384,
-        "rounds": 194
+        "acs": 221,
+        "score": 47600,
+        "rounds": 215
       }
     },
     "agents": {
@@ -2378,9 +2378,9 @@
       },
       "Killjoy": {
         "role": "Sentinel",
-        "winrate": 50,
+        "winrate": 33,
         "wins": 1,
-        "games": 2
+        "games": 3
       },
       "Neon": {
         "role": "Duelist",
@@ -2402,9 +2402,9 @@
       },
       "Raze": {
         "role": "Duelist",
-        "winrate": 22,
-        "wins": 2,
-        "games": 9
+        "winrate": 30,
+        "wins": 3,
+        "games": 10
       },
       "Reyna": {
         "role": "Duelist",
@@ -2450,9 +2450,9 @@
         "games": 7
       },
       "Duelist": {
-        "winrate": 27,
-        "wins": 4,
-        "games": 15
+        "winrate": 31,
+        "wins": 5,
+        "games": 16
       },
       "Initiator": {
         "winrate": 45,
@@ -2460,9 +2460,9 @@
         "games": 11
       },
       "Sentinel": {
-        "winrate": 67,
+        "winrate": 57,
         "wins": 4,
-        "games": 6
+        "games": 7
       }
     },
     "top_agents": [
@@ -2477,9 +2477,9 @@
   "susi": {
     "name": "Susi",
     "valorant_tag": "SusTwins",
-    "winrate": 39,
+    "winrate": 36,
     "wins": 9,
-    "games": 23,
+    "games": 25,
     "maps": {
       "Ascent": {
         "acs": 133,
@@ -2512,9 +2512,9 @@
         "rounds": 57
       },
       "Lotus": {
-        "acs": 110,
-        "score": 5705,
-        "rounds": 52
+        "acs": 121,
+        "score": 8459,
+        "rounds": 70
       },
       "Pearl": {
         "acs": 110,
@@ -2522,9 +2522,9 @@
         "rounds": 66
       },
       "Split": {
-        "acs": 208,
-        "score": 12702,
-        "rounds": 61
+        "acs": 230,
+        "score": 18876,
+        "rounds": 82
       }
     },
     "agents": {
@@ -2578,9 +2578,9 @@
       },
       "KAY/O": {
         "role": "Initiator",
-        "winrate": null,
+        "winrate": 0,
         "wins": 0,
-        "games": 0
+        "games": 1
       },
       "Killjoy": {
         "role": "Sentinel",
@@ -2638,9 +2638,9 @@
       },
       "Viper": {
         "role": "Controller",
-        "winrate": null,
+        "winrate": 0,
         "wins": 0,
-        "games": 0
+        "games": 1
       },
       "Yoru": {
         "role": "Duelist",
@@ -2651,9 +2651,9 @@
     },
     "roles": {
       "Controller": {
-        "winrate": 33,
+        "winrate": 25,
         "wins": 1,
-        "games": 3
+        "games": 4
       },
       "Duelist": {
         "winrate": 0,
@@ -2661,9 +2661,9 @@
         "games": 3
       },
       "Initiator": {
-        "winrate": 67,
+        "winrate": 57,
         "wins": 4,
-        "games": 6
+        "games": 7
       },
       "Sentinel": {
         "winrate": 36,
@@ -2683,9 +2683,9 @@
   "susu": {
     "name": "Susu",
     "valorant_tag": "danielscutiegf",
-    "winrate": 50,
+    "winrate": 43,
     "wins": 6,
-    "games": 12,
+    "games": 14,
     "maps": {
       "Ascent": {
         "acs": 208,
@@ -2718,9 +2718,9 @@
         "rounds": 35
       },
       "Lotus": {
-        "acs": 157,
-        "score": 9880,
-        "rounds": 63
+        "acs": 148,
+        "score": 12022,
+        "rounds": 81
       },
       "Pearl": {
         "acs": 213,
@@ -2728,9 +2728,9 @@
         "rounds": 44
       },
       "Split": {
-        "acs": 151,
-        "score": 5871,
-        "rounds": 39
+        "acs": 139,
+        "score": 8349,
+        "rounds": 60
       }
     },
     "agents": {
@@ -2766,9 +2766,9 @@
       },
       "Fade": {
         "role": "Initiator",
-        "winrate": 75,
+        "winrate": 60,
         "wins": 3,
-        "games": 4
+        "games": 5
       },
       "Harbor": {
         "role": "Controller",
@@ -2826,9 +2826,9 @@
       },
       "Sage": {
         "role": "Sentinel",
-        "winrate": 33,
+        "winrate": 25,
         "wins": 1,
-        "games": 3
+        "games": 4
       },
       "Skye": {
         "role": "Initiator",
@@ -2867,20 +2867,20 @@
         "games": 0
       },
       "Initiator": {
-        "winrate": 50,
+        "winrate": 43,
         "wins": 3,
-        "games": 6
+        "games": 7
       },
       "Sentinel": {
-        "winrate": 33,
+        "winrate": 25,
         "wins": 1,
-        "games": 3
+        "games": 4
       }
     },
     "top_agents": [
       "Fade",
-      "Brimstone",
-      "Sage"
+      "Sage",
+      "Brimstone"
     ],
     "top_roles": [
       "Initiator"
@@ -2889,9 +2889,9 @@
   "tang": {
     "name": "Tang",
     "valorant_tag": "tangy",
-    "winrate": 70,
+    "winrate": 67,
     "wins": 30,
-    "games": 43,
+    "games": 45,
     "maps": {
       "Ascent": {
         "acs": 294,
@@ -2924,9 +2924,9 @@
         "rounds": 89
       },
       "Lotus": {
-        "acs": 376,
-        "score": 4888,
-        "rounds": 13
+        "acs": 276,
+        "score": 8560,
+        "rounds": 31
       },
       "Pearl": {
         "acs": 295,
@@ -2934,9 +2934,9 @@
         "rounds": 87
       },
       "Split": {
-        "acs": 246,
-        "score": 37810,
-        "rounds": 154
+        "acs": 243,
+        "score": 42535,
+        "rounds": 175
       }
     },
     "agents": {
@@ -2960,9 +2960,9 @@
       },
       "Chamber": {
         "role": "Sentinel",
-        "winrate": null,
+        "winrate": 0,
         "wins": 0,
-        "games": 0
+        "games": 1
       },
       "Cypher": {
         "role": "Sentinel",
@@ -2984,9 +2984,9 @@
       },
       "Jett": {
         "role": "Duelist",
-        "winrate": 50,
+        "winrate": 40,
         "wins": 2,
-        "games": 4
+        "games": 5
       },
       "KAY/O": {
         "role": "Initiator",
@@ -3068,9 +3068,9 @@
         "games": 21
       },
       "Duelist": {
-        "winrate": 68,
+        "winrate": 65,
         "wins": 13,
-        "games": 19
+        "games": 20
       },
       "Initiator": {
         "winrate": 50,
@@ -3078,9 +3078,9 @@
         "games": 2
       },
       "Sentinel": {
-        "winrate": 100,
+        "winrate": 50,
         "wins": 1,
-        "games": 1
+        "games": 2
       }
     },
     "top_agents": [
@@ -3096,14 +3096,14 @@
   "yang": {
     "name": "Yang",
     "valorant_tag": "Tyblerone",
-    "winrate": 33,
-    "wins": 2,
-    "games": 6,
+    "winrate": 43,
+    "wins": 3,
+    "games": 7,
     "maps": {
       "Ascent": {
-        "acs": null,
-        "score": 0,
-        "rounds": 0
+        "acs": 175,
+        "score": 4200,
+        "rounds": 24
       },
       "Bind": {
         "acs": null,
@@ -3203,9 +3203,9 @@
       },
       "Killjoy": {
         "role": "Sentinel",
-        "winrate": 50,
-        "wins": 1,
-        "games": 2
+        "winrate": 67,
+        "wins": 2,
+        "games": 3
       },
       "Neon": {
         "role": "Duelist",
@@ -3285,9 +3285,9 @@
         "games": 1
       },
       "Sentinel": {
-        "winrate": 40,
-        "wins": 2,
-        "games": 5
+        "winrate": 50,
+        "wins": 3,
+        "games": 6
       }
     },
     "top_agents": [

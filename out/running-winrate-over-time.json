@@ -1209,18 +1209,18 @@
       },
       "cade": {
         "winrate": 47,
-        "wins": 22,
-        "games": 47
+        "wins": 23,
+        "games": 49
       },
       "darwin": {
-        "winrate": 52,
-        "wins": 34,
-        "games": 66
+        "winrate": 53,
+        "wins": 36,
+        "games": 68
       },
       "josh": {
-        "winrate": 45,
-        "wins": 25,
-        "games": 55
+        "winrate": 47,
+        "wins": 27,
+        "games": 57
       },
       "lindsey": {
         "winrate": 54,
@@ -1233,14 +1233,14 @@
         "games": 30
       },
       "sophie": {
-        "winrate": 58,
-        "wins": 36,
-        "games": 62
+        "winrate": 59,
+        "wins": 38,
+        "games": 64
       },
       "steve": {
-        "winrate": 53,
-        "wins": 23,
-        "games": 43
+        "winrate": 56,
+        "wins": 25,
+        "games": 45
       },
       "steven": {
         "winrate": 61,
@@ -1249,23 +1249,23 @@
       },
       "sun": {
         "winrate": 41,
-        "wins": 15,
-        "games": 37
+        "wins": 16,
+        "games": 39
       },
       "susi": {
-        "winrate": 39,
+        "winrate": 36,
         "wins": 9,
-        "games": 23
+        "games": 25
       },
       "susu": {
-        "winrate": 50,
+        "winrate": 43,
         "wins": 6,
-        "games": 12
+        "games": 14
       },
       "tang": {
-        "winrate": 68,
+        "winrate": 65,
         "wins": 28,
-        "games": 41
+        "games": 43
       },
       "yang": {
         "winrate": 33,
@@ -1275,17 +1275,17 @@
     }
   },
   {
-    "block_end_time": "2023-01-17 23:59:59.999999-07:53",
+    "block_end_time": "2023-01-18 23:59:59.999999-07:53",
     "data": {
       "andy": {
-        "winrate": 49,
+        "winrate": 48,
         "wins": 31,
-        "games": 63
+        "games": 64
       },
       "brandon": {
-        "winrate": 33,
+        "winrate": 31,
         "wins": 5,
-        "games": 15
+        "games": 16
       },
       "brian": {
         "winrate": 40,
@@ -1293,69 +1293,69 @@
         "games": 50
       },
       "cade": {
-        "winrate": 46,
-        "wins": 21,
-        "games": 46
+        "winrate": 45,
+        "wins": 22,
+        "games": 49
       },
       "darwin": {
-        "winrate": 52,
-        "wins": 34,
-        "games": 66
+        "winrate": 54,
+        "wins": 37,
+        "games": 69
       },
       "josh": {
-        "winrate": 44,
-        "wins": 24,
-        "games": 54
+        "winrate": 46,
+        "wins": 26,
+        "games": 56
       },
       "lindsey": {
-        "winrate": 55,
-        "wins": 33,
-        "games": 60
-      },
-      "sequential": {
-        "winrate": 50,
-        "wins": 15,
-        "games": 30
-      },
-      "sophie": {
-        "winrate": 57,
-        "wins": 35,
+        "winrate": 56,
+        "wins": 34,
         "games": 61
       },
+      "sequential": {
+        "winrate": 52,
+        "wins": 16,
+        "games": 31
+      },
+      "sophie": {
+        "winrate": 59,
+        "wins": 37,
+        "games": 63
+      },
       "steve": {
-        "winrate": 53,
-        "wins": 23,
-        "games": 43
+        "winrate": 56,
+        "wins": 25,
+        "games": 45
       },
       "steven": {
-        "winrate": 59,
-        "wins": 22,
-        "games": 37
+        "winrate": 61,
+        "wins": 23,
+        "games": 38
       },
       "sun": {
         "winrate": 41,
-        "wins": 15,
-        "games": 37
+        "wins": 16,
+        "games": 39
       },
       "susi": {
-        "winrate": 39,
+        "winrate": 36,
         "wins": 9,
-        "games": 23
+        "games": 25
       },
       "susu": {
-        "winrate": 50,
+        "winrate": 43,
         "wins": 6,
-        "games": 12
+        "games": 14
       },
       "tang": {
-        "winrate": 70,
+        "winrate": 67,
         "wins": 28,
-        "games": 40
+        "games": 42
       },
       "yang": {
-        "winrate": 33,
-        "wins": 2,
-        "games": 6
+        "winrate": 43,
+        "wins": 3,
+        "games": 7
       }
     }
   }
