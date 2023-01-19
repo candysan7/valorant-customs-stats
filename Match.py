@@ -1,5 +1,6 @@
 from dateutil.parser import isoparse
 from datetime import datetime
+from typing import Optional
 
 
 class Player:
@@ -47,10 +48,35 @@ class DamageEvent:
         self.headshots: int = damage_event_json["headshots"]
 
 
+class Location:
+    def __init__(self, location_json):
+        self.x: int = location_json["x"]
+        self.y: int = location_json["y"]
+
+
+class LocationWithAngle:
+    def __init__(self, location_with_angle_json):
+        self.angle: float = location_with_angle_json["angle"]
+        self.x: int = location_with_angle_json["location"]["x"]
+        self.y: int = location_with_angle_json["location"]["y"]
+
+
 class Kill:
     def __init__(self, kill_json):
         self.killer_name: str = kill_json["killer_name"]
         self.victim_name: str = kill_json["victim_name"]
+        self.killer_location: Optional[LocationWithAngle] = (
+            LocationWithAngle(kill_json["killer_location"])
+            if kill_json["killer_location"]
+            else None
+        )
+        self.victim_location: Location = Location(kill_json["victim_location"])
+        self.player_locations: dict[str, LocationWithAngle] = {
+            player_locations_json["player_name"]: LocationWithAngle(
+                player_locations_json
+            )
+            for player_locations_json in kill_json["player_locations"]
+        }
         self.assistants: list[str] = kill_json["assistants"]
         self.weapon_name: str = kill_json["weapon_name"]
         self.game_time: int = kill_json["game_time"]

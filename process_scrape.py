@@ -47,7 +47,11 @@ player_ids = {
 
 
 def username_to_name(username):
-    return player_tags[username] if username in player_tags else username
+    return player_tags.get(username, username)
+
+
+def puuid_to_name(puuid):
+    return player_ids.get(puuid, puuid)
 
 
 matches = []
@@ -156,6 +160,25 @@ with open("./scrape.json", mode="r") as f:
                                 "damageItem"
                             ]
 
+                    player_locations = list(
+                        map(
+                            lambda d: {
+                                "player_name": puuid_to_name(d["puuid"]),
+                                "angle": d["viewRadians"],
+                                "location": {
+                                    "x": d["location"]["x"],
+                                    "y": d["location"]["y"],
+                                },
+                            },
+                            segment["metadata"]["playerLocations"],
+                        ),
+                    )
+
+                    killer_location = None
+                    for d in player_locations:
+                        if d["player_name"] == killer_name:
+                            killer_location = d
+
                     match["rounds"][round_index]["kills"].append(
                         {
                             "killer_name": killer_name,
@@ -168,6 +191,12 @@ with open("./scrape.json", mode="r") as f:
                                     segment["metadata"]["assistants"],
                                 )
                             ),
+                            "killer_location": killer_location,
+                            "victim_location": {
+                                "x": segment["metadata"]["opponentLocation"]["x"],
+                                "y": segment["metadata"]["opponentLocation"]["y"],
+                            },
+                            "player_locations": player_locations,
                             "weapon_name": weapon,
                             "game_time": segment["metadata"]["gameTime"],
                             "round_time": segment["metadata"]["roundTime"],
