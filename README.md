@@ -45,12 +45,9 @@ All data is derived from [tracker.gg](https://tracker.gg/valorant) until Riot re
 ### Future
 
 - Build discord bot or command to return dashboard link
-- Home page implementation
-- Dashboard design update
-- Wall of shame leaderboard: best bait (lowest order of death on lost attack rounds), best baiter (highest order of death on lost attack rounds), bomb bitches, most bomb deaths, best sacrifice/most traded, worst trader (dies to same person), top rat, top flanker
-- Wall of shame landing page
-- Clip gallery
-- Autobalance implementation
+- Calculation: Biggest rat, most ratted, best duo role synergy, most games played together
+- Design: clip gallery, dashboard re-design
+- Front-end implementation: home page, wall of shame updates (biggest bait, master baiter, bomb bitches, turtles, biggest rat, most ratted), autobalance
 
 ### Why Power BI over Tableau?
 
