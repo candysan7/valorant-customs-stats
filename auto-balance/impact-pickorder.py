@@ -8,8 +8,8 @@ from xgboost import XGBRegressor
 import copy 
 
 # this is where you input the player names and map 
-players = ["andy","darwin","steve","steven","sophie","brandon","lindsey","josh","susu","cade"] # 10 players
-map_name = "Icebox"
+players = ["andy","darwin","yang","steven","susu","steve","lindsey","josh","cade","sophie"] # 10 players
+map_name = "Haven"
 print('num of players entered',len(players))
 
 rank_storage = {

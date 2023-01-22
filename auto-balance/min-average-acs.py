@@ -53,8 +53,8 @@ for main_index,main_row in df1.iterrows():
 new_df = pd.DataFrame(row_storage)
 
 # this is where you input the player names and map 
-players = ["andy","darwin","steve","steven","sophie","brandon","lindsey","josh","susu","cade"] # 10 players
-map_name = "Icebox"
+players = ["andy","darwin","steve","steven","sophie","cade","lindsey","sun","susi","tang"] # 10 players
+map_name = "Lotus"
 print('num of players entered',len(players))
 
 player_x_predict = {
@@ -117,14 +117,28 @@ for comb in itertools.combinations(players, 5):
     all_combinations.append(both_combs) 
 
 
-''' calc average acs per team and minimize '''
+
+total_acs_counter = 500 # need outside for loop
+''' Calc average acs per team and minimize '''
 for i in all_combinations: 
-    print(i)
+    # print(i)
 
-    sum_team1_average = 0 
-
+    sum_team1_total = 0 
+    sum_team2_total = 0 
+    
     for player in i[1]:
-        print(player)
-        print(acs_player_data[player+"_acs"])
+        player_acs = acs_player_data[player+"_acs"]
+        sum_team1_total =+ player_acs
 
-    break
+    for player in i[2]:
+        player_acs = acs_player_data[player+"_acs"]
+        sum_team2_total =+ player_acs
+
+    # print(i[1],i[2])
+    # print(sum_team1_total,sum_team2_total)
+    acs_difference = sum_team1_total - sum_team2_total
+    if abs(acs_difference) < total_acs_counter: 
+        total_acs_counter = abs(acs_difference)
+        print(abs(acs_difference))
+        print(i[1],i[2])
+    

@@ -164,8 +164,8 @@ xgb_model.fit(x_train,y_train)
 
 import itertools
 # this is where you input the player names and map 
-players = ["andy","darwin","steve","steven","sophie","brandon","lindsey","josh","susu","cade"] # 10 players
-map_name = "Icebox"
+players = ["andy","darwin","steve","steven","sophie","cade","lindsey","sun","susi","tang"] # 10 players
+map_name = "Lotus"
 print('num of players',len(players)) # players should be 10, only works with 10 players
 
 all_combinations = []
