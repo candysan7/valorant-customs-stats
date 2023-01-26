@@ -1,21 +1,20 @@
 {
   "andy": {
-    "headshots": 1199,
-    "headshot_rate": 26,
-    "bodyshots": 3049,
+    "headshots": 1231,
+    "headshot_rate": 27,
+    "bodyshots": 3114,
     "bodyshot_rate": 67,
-    "legshots": 268,
+    "legshots": 271,
     "legshot_rate": 6,
-    "bullets": 4537,
-    "knife_kills": 13,
+    "bullets": 4637,
+    "knife_kills": 14,
     "knife_deaths": 8,
-    "team_damage": 294,
+    "team_damage": 372,
     "self_damage": 442,
-    "plants": 38,
-    "bomb_deaths": 13,
+    "plants": 41,
+    "bomb_deaths": 14,
     "average_time_alive_on_won_attack_rounds": 55,
-    "average_time_alive_on_lost_attack_rounds": 42,
-    "shorty_kills": 2.6
+    "average_time_alive_on_lost_attack_rounds": 42
   },
   "brandon": {
     "headshots": 88,
@@ -32,8 +31,7 @@
     "plants": 40,
     "bomb_deaths": 3,
     "average_time_alive_on_won_attack_rounds": 54,
-    "average_time_alive_on_lost_attack_rounds": 43,
-    "shorty_kills": 2.2
+    "average_time_alive_on_lost_attack_rounds": 43
   },
   "brian": {
     "headshots": 308,
@@ -50,71 +48,67 @@
     "plants": 112,
     "bomb_deaths": 8,
     "average_time_alive_on_won_attack_rounds": 55,
-    "average_time_alive_on_lost_attack_rounds": 45,
-    "shorty_kills": 3.3
+    "average_time_alive_on_lost_attack_rounds": 45
   },
   "cade": {
-    "headshots": 672,
+    "headshots": 701,
     "headshot_rate": 16,
-    "bodyshots": 3186,
+    "bodyshots": 3284,
     "bodyshot_rate": 77,
-    "legshots": 290,
+    "legshots": 292,
     "legshot_rate": 7,
-    "bullets": 4160,
+    "bullets": 4289,
     "knife_kills": 4,
     "knife_deaths": 4,
-    "team_damage": 278,
+    "team_damage": 299,
     "self_damage": 224,
-    "plants": 62,
+    "plants": 65,
     "bomb_deaths": 6,
     "average_time_alive_on_won_attack_rounds": 54,
-    "average_time_alive_on_lost_attack_rounds": 40,
-    "shorty_kills": 2.5
+    "average_time_alive_on_lost_attack_rounds": 41
   },
   "darwin": {
-    "headshots": 728,
-    "headshot_rate": 15,
-    "bodyshots": 3755,
+    "headshots": 747,
+    "headshot_rate": 14,
+    "bodyshots": 3943,
     "bodyshot_rate": 75,
-    "legshots": 529,
+    "legshots": 551,
     "legshot_rate": 11,
-    "bullets": 5012,
+    "bullets": 5241,
     "knife_kills": 11,
     "knife_deaths": 7,
     "team_damage": 60,
     "self_damage": 78,
-    "plants": 135,
+    "plants": 141,
     "bomb_deaths": 20,
     "average_time_alive_on_won_attack_rounds": 58,
-    "average_time_alive_on_lost_attack_rounds": 42,
-    "shorty_kills": 2.2
+    "average_time_alive_on_lost_attack_rounds": 42
   },
   "josh": {
-    "headshots": 392,
+    "headshots": 400,
     "headshot_rate": 10,
-    "bodyshots": 2981,
+    "bodyshots": 3076,
     "bodyshot_rate": 75,
-    "legshots": 592,
+    "legshots": 607,
     "legshot_rate": 15,
-    "bullets": 3965,
+    "bullets": 4083,
     "knife_kills": 0,
     "knife_deaths": 7,
     "team_damage": 72,
     "self_damage": 73,
-    "plants": 144,
-    "bomb_deaths": 19,
+    "plants": 146,
+    "bomb_deaths": 20,
     "average_time_alive_on_won_attack_rounds": 61,
-    "average_time_alive_on_lost_attack_rounds": 51,
-    "shorty_kills": 1.6
+    "average_time_alive_on_lost_attack_rounds": 51
   },
   "lindsey": {
-    "headshots": 721,
+    "headshots": 730,
     "headshot_rate": 16,
-    "bodyshots": 3404,
+    "bodyshots": 3440,
     "bodyshot_rate": 76,
-    "legshots": 381,
+    "legshots": 385,
     "legshot_rate": 8,
-    "bullets": 4507,
+    "bullets": 4556,
     "knife_kills": 2,
     "knife_deaths": 2,
     "team_damage": 149,
@@ -122,8 +116,7 @@
     "plants": 208,
     "bomb_deaths": 20,
     "average_time_alive_on_won_attack_rounds": 62,
-    "average_time_alive_on_lost_attack_rounds": 43,
-    "shorty_kills": 1.5
+    "average_time_alive_on_lost_attack_rounds": 43
   },
   "sequential": {
     "headshots": 611,
@@ -140,62 +133,58 @@
     "plants": 16,
     "bomb_deaths": 1,
     "average_time_alive_on_won_attack_rounds": 49,
-    "average_time_alive_on_lost_attack_rounds": 39,
-    "shorty_kills": 2.9
+    "average_time_alive_on_lost_attack_rounds": 39
   },
   "sophie": {
-    "headshots": 640,
+    "headshots": 657,
     "headshot_rate": 8,
-    "bodyshots": 5844,
+    "bodyshots": 6068,
     "bodyshot_rate": 76,
-    "legshots": 1179,
+    "legshots": 1216,
     "legshot_rate": 15,
-    "bullets": 7663,
+    "bullets": 7941,
     "knife_kills": 4,
     "knife_deaths": 3,
     "team_damage": 38,
     "self_damage": 122,
     "plants": 22,
-    "bomb_deaths": 6,
+    "bomb_deaths": 7,
     "average_time_alive_on_won_attack_rounds": 48,
-    "average_time_alive_on_lost_attack_rounds": 37,
-    "shorty_kills": 4.0
+    "average_time_alive_on_lost_attack_rounds": 37
   },
   "steve": {
-    "headshots": 529,
+    "headshots": 548,
     "headshot_rate": 17,
-    "bodyshots": 2267,
+    "bodyshots": 2334,
     "bodyshot_rate": 74,
-    "legshots": 253,
+    "legshots": 263,
     "legshot_rate": 8,
-    "bullets": 3051,
+    "bullets": 3147,
     "knife_kills": 1,
     "knife_deaths": 1,
     "team_damage": 20,
     "self_damage": 110,
-    "plants": 73,
+    "plants": 76,
     "bomb_deaths": 5,
     "average_time_alive_on_won_attack_rounds": 53,
-    "average_time_alive_on_lost_attack_rounds": 36,
-    "shorty_kills": 3.1
+    "average_time_alive_on_lost_attack_rounds": 37
   },
   "steven": {
-    "headshots": 584,
+    "headshots": 608,
     "headshot_rate": 26,
-    "bodyshots": 1455,
+    "bodyshots": 1534,
     "bodyshot_rate": 66,
-    "legshots": 179,
+    "legshots": 194,
     "legshot_rate": 8,
-    "bullets": 2218,
+    "bullets": 2336,
     "knife_kills": 3,
     "knife_deaths": 3,
     "team_damage": 421,
     "self_damage": 55,
-    "plants": 23,
-    "bomb_deaths": 5,
-    "average_time_alive_on_won_attack_rounds": 60,
-    "average_time_alive_on_lost_attack_rounds": 41,
-    "shorty_kills": 2.4
+    "plants": 24,
+    "bomb_deaths": 6,
+    "average_time_alive_on_won_attack_rounds": 61,
+    "average_time_alive_on_lost_attack_rounds": 41
   },
   "sun": {
     "headshots": 525,
@@ -212,26 +201,24 @@
     "plants": 48,
     "bomb_deaths": 7,
     "average_time_alive_on_won_attack_rounds": 55,
-    "average_time_alive_on_lost_attack_rounds": 42,
-    "shorty_kills": 1.8
+    "average_time_alive_on_lost_attack_rounds": 42
   },
   "susi": {
-    "headshots": 249,
+    "headshots": 266,
     "headshot_rate": 18,
-    "bodyshots": 1025,
+    "bodyshots": 1089,
     "bodyshot_rate": 74,
-    "legshots": 112,
+    "legshots": 121,
     "legshot_rate": 8,
-    "bullets": 1387,
+    "bullets": 1477,
     "knife_kills": 2,
-    "knife_deaths": 3,
+    "knife_deaths": 4,
     "team_damage": 117,
     "self_damage": 31,
-    "plants": 25,
-    "bomb_deaths": 4,
-    "average_time_alive_on_won_attack_rounds": 61,
-    "average_time_alive_on_lost_attack_rounds": 52,
-    "shorty_kills": 1.7
+    "plants": 26,
+    "bomb_deaths": 5,
+    "average_time_alive_on_won_attack_rounds": 62,
+    "average_time_alive_on_lost_attack_rounds": 51
   },
   "susu": {
     "headshots": 169,
@@ -248,8 +235,7 @@
     "plants": 29,
     "bomb_deaths": 5,
     "average_time_alive_on_won_attack_rounds": 61,
-    "average_time_alive_on_lost_attack_rounds": 51,
-    "shorty_kills": 1.2
+    "average_time_alive_on_lost_attack_rounds": 51
   },
   "tang": {
     "headshots": 577,
@@ -266,8 +252,7 @@
     "plants": 34,
     "bomb_deaths": 6,
     "average_time_alive_on_won_attack_rounds": 56,
-    "average_time_alive_on_lost_attack_rounds": 43,
-    "shorty_kills": 2.5
+    "average_time_alive_on_lost_attack_rounds": 43
   },
   "yang": {
     "headshots": 48,
@@ -284,7 +269,6 @@
     "plants": 3,
     "bomb_deaths": 0,
     "average_time_alive_on_won_attack_rounds": 58,
-    "average_time_alive_on_lost_attack_rounds": 44,
-    "shorty_kills": 1.5
+    "average_time_alive_on_lost_attack_rounds": 44
   }
 }

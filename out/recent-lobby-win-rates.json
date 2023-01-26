@@ -1,8 +1,8 @@
 {
   "andy": {
     "winrate": 48,
-    "wins": 33,
-    "games": 69
+    "wins": 34,
+    "games": 71
   },
   "brandon": {
     "winrate": 31,
@@ -16,23 +16,23 @@
   },
   "cade": {
     "winrate": 47,
-    "wins": 26,
-    "games": 55
+    "wins": 27,
+    "games": 57
   },
   "darwin": {
-    "winrate": 53,
+    "winrate": 52,
     "wins": 40,
-    "games": 75
+    "games": 77
   },
   "josh": {
-    "winrate": 44,
-    "wins": 28,
-    "games": 63
+    "winrate": 45,
+    "wins": 29,
+    "games": 65
   },
   "lindsey": {
-    "winrate": 57,
-    "wins": 39,
-    "games": 68
+    "winrate": 58,
+    "wins": 40,
+    "games": 69
   },
   "sequential": {
     "winrate": 52,
@@ -40,19 +40,19 @@
     "games": 31
   },
   "sophie": {
-    "winrate": 63,
-    "wins": 44,
-    "games": 70
+    "winrate": 64,
+    "wins": 46,
+    "games": 72
   },
   "steve": {
     "winrate": 55,
-    "wins": 28,
-    "games": 51
+    "wins": 29,
+    "games": 53
   },
   "steven": {
     "winrate": 62,
-    "wins": 28,
-    "games": 45
+    "wins": 29,
+    "games": 47
   },
   "sun": {
     "winrate": 40,
@@ -60,9 +60,9 @@
     "games": 43
   },
   "susi": {
-    "winrate": 35,
-    "wins": 9,
-    "games": 26
+    "winrate": 36,
+    "wins": 10,
+    "games": 28
   },
   "susu": {
     "winrate": 44,
