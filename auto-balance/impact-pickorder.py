@@ -8,7 +8,7 @@ from xgboost import XGBRegressor
 import copy 
 
 # this is where you input the player names and map 
-players = ["andy","darwin","yang","steven","susu","steve","lindsey","josh","cade","sophie"] # 10 players
+players = ["andy","darwin","steve","josh","sophie","cade","lindsey","sun","susi","yang"]  # 10 players
 map_name = "Haven"
 print('num of players entered',len(players))
 
@@ -29,6 +29,7 @@ rank_storage = {
     "susu":13,
     "tang":4,
     "yang":16,
+    "bree":17
 }
 
 rank_storage=dict(sorted(rank_storage.items(), key=lambda x: x[1])) # sorting 
