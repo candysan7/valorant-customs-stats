@@ -1,14 +1,11 @@
 import json
 import time
+from random import uniform
 import os.path
-import urllib.request
 from urllib.parse import urlparse
-from datetime import datetime
 
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+import undetected_chromedriver as uc
 
 
 # Starting from 10/11/22
@@ -97,13 +94,11 @@ urls = [
     "https://tracker.gg/valorant/match/36ff4933-9919-46c1-988c-20e0cb3fecd7?handle=aylindsay%230613",
 ]
 
-options = webdriver.ChromeOptions()
+options = uc.ChromeOptions()
 options.add_argument("--ignore-certificate-errors")
 options.add_argument("--ignore-ssl-errors")
-driver = webdriver.Chrome(
-    service=Service(ChromeDriverManager().install()), options=options
-)
-driver.set_window_size(852, 480)
+options.headless = True
+driver = uc.Chrome(options=options, version_main=109)
 
 matches = []
 if os.path.exists("./scrape.json"):
@@ -116,13 +111,13 @@ for match in matches:
     if match["tracker_url"] in urls:
         urls.remove(match["tracker_url"])
 
-for url in urls:
-    print(f"Scraping from: {url}")
+for i, url in enumerate(urls, start=1):
+    print(f"[{i}/{len(urls)}]: {url}")
     while True:
         try:
             api_url = f"https://api.tracker.gg/api/v2/valorant/standard/matches/{urlparse(url).path.split('/')[-1]}"
             driver.get(api_url)
-            time.sleep(1)
+            time.sleep(0.5 + uniform(-0.125, 0.125))
 
             match_json = json.loads(driver.find_element(By.CSS_SELECTOR, "pre").text)[
                 "data"
