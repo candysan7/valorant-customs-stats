@@ -51,7 +51,6 @@ urls = [
     "https://tracker.gg/valorant/match/6df1e7ff-d33d-4ea9-abd0-e97f33fa5900?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/046c8909-4212-4fab-9ad6-26f75e25492a?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/8293a75b-c366-43cc-840d-da3cadbcdef2?handle=aylindsay%230613",
-    "https://tracker.gg/valorant/match/bef040b2-e3b3-42b3-8c6b-bf4af9e5c9d7?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/6c87a77f-488e-4a8a-a0ad-9aa0cd1b808a?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/e8380c75-fe6c-42d6-84f3-78d3f6f88fc4?handle=aylindsay%230613",
     "https://tracker.gg/valorant/match/bf09a9fe-8f9f-41b5-bcbb-6b8301ab26d7?handle=aylindsay%230613",
