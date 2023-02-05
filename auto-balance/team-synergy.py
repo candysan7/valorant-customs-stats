@@ -164,8 +164,8 @@ xgb_model.fit(x_train,y_train)
 
 import itertools
 # this is where you input the player names and map 
-players = ["andy","darwin","steve","josh","sophie","cade","lindsey","sun","susi","yang"] # 10 players
-map_name = "Pearl"
+players = ["andy","darwin","steve","josh","sophie","cade","lindsey","sun","steven","yang"] # 10 players
+map_name = "Fracture"
 print('num of players',len(players)) # players should be 10, only works with 10 players
 
 all_combinations = []
@@ -217,9 +217,8 @@ new_df = pd.DataFrame(row_storage)
 ### calculate player acs 
 def calc_player_acs(player_name,map_name): # we are taking the top
 #     player_name = "brian"
-    # def calc_player_average
 
-    recent3_maps = new_df.loc[(new_df['player_name']==player_name)&(new_df['map']==map_name)]['average_combat_score'][-5:].tolist()
+    recent3_maps = new_df.loc[(new_df['player_name']==player_name)&(new_df['map']==map_name)]['average_combat_score'][-5:].tolist() #selecting top 5...
     recent3_games = new_df.loc[(new_df['player_name']==player_name)]['average_combat_score'][-5:].tolist()
 
     all_scores = set(recent3_maps + recent3_games) # appends here does not add
@@ -271,8 +270,8 @@ for p_name in players:
     key_name = p_name + "_acs" # we are "predicting" the player's acs by taking their average 
     player_x_predict[key_name] = player_x_predict.get(key_name, 0) + acs_average
 
+#pprint(player_x_predict)
 '''Predict score difference of every combination of players in 2 teams (10 choose 5)'''
-        
 all_combs_storage =[]
 
 # this step is creating each x_train from each combintation 

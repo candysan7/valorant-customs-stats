@@ -53,7 +53,7 @@ new_df = pd.DataFrame(row_storage)
 
 # this is where you input the player names and map 
 players = ["andy","darwin","yang","steven","susu","steve","lindsey","josh","cade","sophie"] # 10 players
-map_name = "Haven"
+map_name = "Icebox"
 print('num of players entered',len(players))
 
 player_x_predict = {
