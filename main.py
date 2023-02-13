@@ -26,6 +26,31 @@ if __name__ == "__main__":
         json.dump(out_json, f, indent=2)
         f.close()
 
+    with open(os.path.join(output_dir, "team-synergy-data.json"), mode="w") as f:
+        out_json = []
+
+        for match in matches:
+            out_row = (
+                {player_name: DID_NOT_PLAY for player_name in PLAYER_NAMES}
+                | {player_name + "_acs": DID_NOT_PLAY for player_name in PLAYER_NAMES}
+                | {SCORE_DELTA: 0}
+            )
+
+            for player_name in filter_players(match.team_red):
+                out_row[player_name] = RED_TEAM
+            for player_name in filter_players(match.team_blue):
+                out_row[player_name] = BLUE_TEAM
+            for player_name in filter_players(match.all_players):
+                out_row[player_name + "_acs"] = match.all_players[
+                    player_name
+                ].average_combat_score
+            out_row[SCORE_DELTA] = match.score_red - match.score_blue
+
+            out_json.append(out_row)
+
+        json.dump(out_json, f, indent=2)
+        f.close()
+
     with open(os.path.join(output_dir, "data-frame-friendly.json"), mode="w") as f:
         out_json = {i: match_json for i, match_json in enumerate(data)}
         json.dump(out_json, f, indent=2)

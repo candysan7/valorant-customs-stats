@@ -4,6 +4,12 @@ OPPONENT_NAME = "opponent_name"
 ASSISTANT_NAME = "assistant_name"
 ASSISTED_NAME = "assisted_name"
 
+# Labels for ML algorithm
+SCORE_DELTA = "score_delta"
+DID_NOT_PLAY = 0
+RED_TEAM = 1
+BLUE_TEAM = -1
+
 WINRATE = "winrate"
 WINS = "wins"
 GAMES = "games"
