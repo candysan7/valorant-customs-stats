@@ -361,7 +361,6 @@ if __name__ == "__main__":
                     del out_json[player_name][MAPS][map_name][SCORE]
                     del out_json[player_name][MAPS][map_name][ROUNDS]
                 for agent_name in AGENT_NAMES:
-                    del out_json[player_name][AGENTS][agent_name][ROLE]
                     del out_json[player_name][AGENTS][agent_name][WINRATE]
                     del out_json[player_name][AGENTS][agent_name][WINS]
 
