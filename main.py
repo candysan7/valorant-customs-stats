@@ -1,4 +1,5 @@
-import json, os.path
+from io import TextIOWrapper
+import json, os.path, sys
 from datetime import datetime, timedelta, time
 from pytz import timezone
 
@@ -8,7 +9,20 @@ from constants.misc import *
 from constants.players import *
 from constants.valorant import *
 
-output_dir = "./out"
+
+def get_dump(minified: bool = False):
+    indent = 2
+    separators = None
+    if minified:
+        indent = None
+        separators = (",", ":")
+
+    def fn(out_json: any, f: TextIOWrapper):
+        json.dump(out_json, f, indent=indent, separators=separators)
+        f.close()
+
+    return fn
+
 
 matches: list[Match] = []
 with open("./data.json", mode="r") as f:
@@ -19,11 +33,19 @@ with open("./data.json", mode="r") as f:
     f.close()
 
 if __name__ == "__main__":
+    minified = False
+    output_dir = "./out"
+    if len(sys.argv) > 1 and sys.argv[1] == "--minified":
+        minified = True
+        output_dir = "./out-min"
+
+    dump = get_dump(minified)
+
     with open(os.path.join(output_dir, "meta.json"), mode="w") as f:
         out_json = {
             "most_recent_url": matches[-1].url,
         }
-        json.dump(out_json, f, indent=2)
+        dump(out_json, f)
         f.close()
 
     with open(os.path.join(output_dir, "team-synergy-data.json"), mode="w") as f:
@@ -48,12 +70,12 @@ if __name__ == "__main__":
 
             out_json.append(out_row)
 
-        json.dump(out_json, f, indent=2)
+        dump(out_json, f)
         f.close()
 
     with open(os.path.join(output_dir, "data-frame-friendly.json"), mode="w") as f:
         out_json = {i: match_json for i, match_json in enumerate(data)}
-        json.dump(out_json, f, indent=2)
+        dump(out_json, f)
         f.close()
 
     with open(os.path.join(output_dir, "wall-of-shame.json"), mode="w") as f:
@@ -183,7 +205,13 @@ if __name__ == "__main__":
                 / (lost_attack_rounds[player_name] * 1000)
             )
 
-        json.dump(out_json, f, indent=2)
+            if minified:
+                del out_json[player_name][HEADSHOTS]
+                del out_json[player_name][HEADSHOT_RATE]
+                del out_json[player_name][BODYSHOTS]
+                del out_json[player_name][LEGSHOTS]
+
+        dump(out_json, f)
         f.close()
 
     with open(os.path.join(output_dir, "recent-lobby-win-rates.json"), mode="w") as f:
@@ -223,7 +251,7 @@ if __name__ == "__main__":
                     100 * player_entry[WINS] / player_entry[GAMES]
                 )
 
-        json.dump(out_json, f, indent=2)
+        dump(out_json, f)
         f.close()
 
     with open(os.path.join(output_dir, "individual.json"), mode="w") as f:
@@ -324,15 +352,20 @@ if __name__ == "__main__":
                 ),
             )
             out_json[player_name][TOP_AGENTS] = [
-                agent_name
-                for agent_name in agents_sorted_by_plays[:3]
-                # {
-                #     AGENT: agent_name,
-                #     FULL_BODY_IMAGE_URL: AGENT_NAME_TO_FULL_BODY_IMAGE_URL[agent_name],
-                # }
-                # for agent_name in agents_sorted_by_plays[:3]
+                agent_name for agent_name in agents_sorted_by_plays[:3]
             ]
-        json.dump(out_json, f, indent=2)
+
+            if minified:
+                del out_json[player_name][WINS]
+                for map_name in MAP_NAMES:
+                    del out_json[player_name][MAPS][map_name][SCORE]
+                    del out_json[player_name][MAPS][map_name][ROUNDS]
+                for agent_name in AGENT_NAMES:
+                    del out_json[player_name][AGENTS][agent_name][ROLE]
+                    del out_json[player_name][AGENTS][agent_name][WINRATE]
+                    del out_json[player_name][AGENTS][agent_name][WINS]
+
+        dump(out_json, f)
         f.close()
 
     with open(
@@ -389,7 +422,7 @@ if __name__ == "__main__":
                 out_json[player_name].values(), key=lambda x: x[ASSISTANT_NAME]
             )
 
-        json.dump(out_json, f, indent=2)
+        dump(out_json, f)
         f.close()
 
     with open(
@@ -446,7 +479,7 @@ if __name__ == "__main__":
                 out_json[player_name].values(), key=lambda x: x[ASSISTED_NAME]
             )
 
-        json.dump(out_json, f, indent=2)
+        dump(out_json, f)
         f.close()
 
     with open(os.path.join(output_dir, "teammate-synergy.json"), mode="w") as f:
@@ -485,10 +518,16 @@ if __name__ == "__main__":
                     )
 
         for player_name in out_json:
+            if minified:
+                for teammate_name in PLAYER_NAMES:
+                    del out_json[player_name][teammate_name][WINS]
+                    del out_json[player_name][teammate_name][GAMES]
+
             out_json[player_name] = sorted(
                 out_json[player_name].values(), key=lambda x: x[TEAMMATE_NAME]
             )
-        json.dump(out_json, f, indent=2)
+
+        dump(out_json, f)
         f.close()
 
     with open(os.path.join(output_dir, "easiest-matchups.json"), mode="w") as f:
@@ -523,17 +562,22 @@ if __name__ == "__main__":
                     )
 
         for player_name in out_json:
+            if minified:
+                for opponent_name in PLAYER_NAMES:
+                    del out_json[player_name][opponent_name][WINS]
+                    del out_json[player_name][opponent_name][GAMES]
             out_json[player_name] = sorted(
                 out_json[player_name].values(), key=lambda x: x[OPPONENT_NAME]
             )
-        json.dump(out_json, f, indent=2)
+
+        dump(out_json, f)
         f.close()
 
     with open(os.path.join(output_dir, "maps.json"), mode="w") as f:
         out_json = {map: 0 for map in MAP_NAMES}
         for match in matches:
             out_json[match.map] += 1
-        json.dump(out_json, f, indent=2)
+        dump(out_json, f)
         f.close()
 
     with open(
@@ -581,7 +625,9 @@ if __name__ == "__main__":
                         100 * player_stats[WINS] / player_stats[GAMES]
                     )
 
-            out_json.append({"block_end_time": curr_date, "data": block_data})
+            out_json.append(
+                {"block_end_time": curr_date.isoformat(), "data": block_data}
+            )
 
             curr_date += time_increment
             curr_block_start_date += time_increment
@@ -607,9 +653,15 @@ if __name__ == "__main__":
                     100 * player_stats[WINS] / player_stats[GAMES]
                 )
 
-        out_json.append({"block_end_time": last_date, "data": block_data})
+        out_json.append({"block_end_time": last_date.isoformat(), "data": block_data})
 
-        json.dump(out_json, f, indent=2, default=str)
+        if minified:
+            for block in out_json:
+                for player_name in PLAYER_NAMES:
+                    del block["data"][player_name][WINS]
+                    del block["data"][player_name][GAMES]
+
+        dump(out_json, f)
         f.close()
 
     with open(os.path.join(output_dir, "roles.json"), mode="w") as f:
@@ -620,7 +672,7 @@ if __name__ == "__main__":
                 player_stats = match.all_players[player_name]
                 out_json[AGENT_NAME_TO_ROLE[player_stats.agent]] += 1
 
-        json.dump(out_json, f, indent=2)
+        dump(out_json, f)
         f.close()
 
 # Unused dataset functions
@@ -668,7 +720,7 @@ if __name__ == "__main__":
 #                 / out_json[player_name][metric][WITNESSED]
 #             )
 
-#     json.dump(out_json, f, indent=2)
+#     dump(out_json, f)
 #     f.close()
 
 # with open(os.path.join(output_dir, "winrate-over-time.json"), mode="w") as f:
