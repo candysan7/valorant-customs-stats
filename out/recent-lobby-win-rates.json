@@ -9,6 +9,11 @@
     "wins": 5,
     "games": 16
   },
+  "bree": {
+    "winrate": 38,
+    "wins": 3,
+    "games": 8
+  },
   "brian": {
     "winrate": 38,
     "wins": 20,

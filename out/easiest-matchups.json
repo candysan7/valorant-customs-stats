@@ -13,6 +13,12 @@
       "games": 6
     },
     {
+      "opponent_name": "bree",
+      "winrate": 33,
+      "wins": 1,
+      "games": 3
+    },
+    {
       "opponent_name": "brian",
       "winrate": 58,
       "wins": 14,
@@ -111,6 +117,12 @@
       "games": 0
     },
     {
+      "opponent_name": "bree",
+      "winrate": null,
+      "wins": 0,
+      "games": 0
+    },
+    {
       "opponent_name": "brian",
       "winrate": 44,
       "wins": 4,
@@ -195,6 +207,110 @@
       "games": 1
     }
   ],
+  "bree": [
+    {
+      "opponent_name": "andy",
+      "winrate": 67,
+      "wins": 2,
+      "games": 3
+    },
+    {
+      "opponent_name": "brandon",
+      "winrate": null,
+      "wins": 0,
+      "games": 0
+    },
+    {
+      "opponent_name": "bree",
+      "winrate": null,
+      "wins": 0,
+      "games": 0
+    },
+    {
+      "opponent_name": "brian",
+      "winrate": 33,
+      "wins": 1,
+      "games": 3
+    },
+    {
+      "opponent_name": "cade",
+      "winrate": 0,
+      "wins": 0,
+      "games": 1
+    },
+    {
+      "opponent_name": "darwin",
+      "winrate": 50,
+      "wins": 2,
+      "games": 4
+    },
+    {
+      "opponent_name": "josh",
+      "winrate": 50,
+      "wins": 2,
+      "games": 4
+    },
+    {
+      "opponent_name": "lindsey",
+      "winrate": 0,
+      "wins": 0,
+      "games": 1
+    },
+    {
+      "opponent_name": "sequential",
+      "winrate": null,
+      "wins": 0,
+      "games": 0
+    },
+    {
+      "opponent_name": "sophie",
+      "winrate": 20,
+      "wins": 1,
+      "games": 5
+    },
+    {
+      "opponent_name": "steve",
+      "winrate": 50,
+      "wins": 3,
+      "games": 6
+    },
+    {
+      "opponent_name": "steven",
+      "winrate": 0,
+      "wins": 0,
+      "games": 3
+    },
+    {
+      "opponent_name": "sun",
+      "winrate": 0,
+      "wins": 0,
+      "games": 2
+    },
+    {
+      "opponent_name": "susi",
+      "winrate": 0,
+      "wins": 0,
+      "games": 1
+    },
+    {
+      "opponent_name": "susu",
+      "winrate": null,
+      "wins": 0,
+      "games": 0
+    },
+    {
+      "opponent_name": "tang",
+      "winrate": 67,
+      "wins": 2,
+      "games": 3
+    },
+    {
+      "opponent_name": "yang",
+      "winrate": 100,
+      "wins": 1,
+      "games": 1
+    }
+  ],
   "brian": [
     {
       "opponent_name": "andy",
@@ -207,6 +323,12 @@
       "winrate": 56,
       "wins": 5,
       "games": 9
+    },
+    {
+      "opponent_name": "bree",
+      "winrate": 67,
+      "wins": 2,
+      "games": 3
     },
     {
       "opponent_name": "brian",
@@ -307,6 +429,12 @@
       "games": 5
     },
     {
+      "opponent_name": "bree",
+      "winrate": 100,
+      "wins": 1,
+      "games": 1
+    },
+    {
       "opponent_name": "brian",
       "winrate": 65,
       "wins": 15,
@@ -403,6 +531,12 @@
       "winrate": 73,
       "wins": 8,
       "games": 11
+    },
+    {
+      "opponent_name": "bree",
+      "winrate": 50,
+      "wins": 2,
+      "games": 4
     },
     {
       "opponent_name": "brian",
@@ -503,6 +637,12 @@
       "games": 7
     },
     {
+      "opponent_name": "bree",
+      "winrate": 50,
+      "wins": 2,
+      "games": 4
+    },
+    {
       "opponent_name": "brian",
       "winrate": 58,
       "wins": 14,
@@ -599,6 +739,12 @@
       "winrate": 78,
       "wins": 7,
       "games": 9
+    },
+    {
+      "opponent_name": "bree",
+      "winrate": 100,
+      "wins": 1,
+      "games": 1
     },
     {
       "opponent_name": "brian",
@@ -699,6 +845,12 @@
       "games": 4
     },
     {
+      "opponent_name": "bree",
+      "winrate": null,
+      "wins": 0,
+      "games": 0
+    },
+    {
       "opponent_name": "brian",
       "winrate": 60,
       "wins": 6,
@@ -795,6 +947,12 @@
       "winrate": 86,
       "wins": 6,
       "games": 7
+    },
+    {
+      "opponent_name": "bree",
+      "winrate": 80,
+      "wins": 4,
+      "games": 5
     },
     {
       "opponent_name": "brian",
@@ -895,6 +1053,12 @@
       "games": 7
     },
     {
+      "opponent_name": "bree",
+      "winrate": 50,
+      "wins": 3,
+      "games": 6
+    },
+    {
       "opponent_name": "brian",
       "winrate": 55,
       "wins": 11,
@@ -991,6 +1155,12 @@
       "winrate": 100,
       "wins": 4,
       "games": 4
+    },
+    {
+      "opponent_name": "bree",
+      "winrate": 100,
+      "wins": 3,
+      "games": 3
     },
     {
       "opponent_name": "brian",
@@ -1091,6 +1261,12 @@
       "games": 1
     },
     {
+      "opponent_name": "bree",
+      "winrate": 100,
+      "wins": 2,
+      "games": 2
+    },
+    {
       "opponent_name": "brian",
       "winrate": 65,
       "wins": 11,
@@ -1187,6 +1363,12 @@
       "winrate": null,
       "wins": 0,
       "games": 0
+    },
+    {
+      "opponent_name": "bree",
+      "winrate": 100,
+      "wins": 1,
+      "games": 1
     },
     {
       "opponent_name": "brian",
@@ -1287,6 +1469,12 @@
       "games": 3
     },
     {
+      "opponent_name": "bree",
+      "winrate": null,
+      "wins": 0,
+      "games": 0
+    },
+    {
       "opponent_name": "brian",
       "winrate": 80,
       "wins": 4,
@@ -1385,6 +1573,12 @@
       "games": 3
     },
     {
+      "opponent_name": "bree",
+      "winrate": 33,
+      "wins": 1,
+      "games": 3
+    },
+    {
       "opponent_name": "brian",
       "winrate": 67,
       "wins": 10,
@@ -1480,6 +1674,12 @@
       "opponent_name": "brandon",
       "winrate": 100,
       "wins": 1,
+      "games": 1
+    },
+    {
+      "opponent_name": "bree",
+      "winrate": 0,
+      "wins": 0,
       "games": 1
     },
     {
