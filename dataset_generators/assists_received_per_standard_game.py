@@ -41,7 +41,7 @@ class AssistsReceivedPerStandardGameGenerator(DatasetGenerator):
                 for assistant_name in filter_players(kill.assistants):
                     self.out_json[player_name][assistant_name][ASSISTS] += 1
 
-    def finalize(self):
+    def finalize(self, minified=False):
         for player_name in PLAYER_NAMES:
             for assistant_name in PLAYER_NAMES:
                 if self.out_json[player_name][assistant_name][ROUNDS] != 0:

@@ -55,7 +55,7 @@ if __name__ == "__main__":
             generator.accumulate(match)
 
     for generator in generators:
-        generator.finalize()
+        generator.finalize(minified=minified)
         generator.generate(output_dir=output_dir, minified=minified)
 
     with open(os.path.join(output_dir, "data-frame-friendly.json"), mode="w") as f:
