@@ -1,9 +1,10 @@
 from datetime import datetime, timedelta
-from pytz import timezone
 from typing import Callable
 
-from Match import Match
+from pytz import timezone
+
 from constants.players import PLAYER_NAMES
+from Match import Match
 
 
 class IntervalData:

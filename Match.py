@@ -1,6 +1,7 @@
-from dateutil.parser import isoparse
 from datetime import datetime
 from typing import Optional
+
+from dateutil.parser import isoparse
 
 
 class Player:

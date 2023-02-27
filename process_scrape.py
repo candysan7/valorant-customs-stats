@@ -1,6 +1,8 @@
-from dateutil.parser import isoparse
-from constants.players import *
 import json
+
+from dateutil.parser import isoparse
+
+from constants.players import *
 
 player_tags = {
     "Candysan": ANDY,

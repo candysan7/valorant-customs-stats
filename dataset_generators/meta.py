@@ -1,6 +1,7 @@
-from Match import Match
-from .DatasetGenerator import DatasetGenerator
 from constants.misc import *
+from Match import Match
+
+from .DatasetGenerator import DatasetGenerator
 
 MOST_RECENT_URL = "most_recent_url"
 

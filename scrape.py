@@ -1,12 +1,11 @@
 import json
+import os.path
 import time
 from random import uniform
-import os.path
 from urllib.parse import urlparse
 
-from selenium.webdriver.common.by import By
 import undetected_chromedriver as uc
-
+from selenium.webdriver.common.by import By
 
 options = uc.ChromeOptions()
 options.add_argument("--ignore-certificate-errors")

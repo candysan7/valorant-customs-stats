@@ -1,7 +1,8 @@
+from .assists_given_per_standard_game import \
+    AssistsGivenPerStandardGameGenerator
+from .assists_received_per_standard_game import \
+    AssistsReceivedPerStandardGameGenerator
 from .DatasetGenerator import DatasetGenerator
-
-from .assists_given_per_standard_game import AssistsGivenPerStandardGameGenerator
-from .assists_received_per_standard_game import AssistsReceivedPerStandardGameGenerator
 from .easiest_matchups import EasiestMatchupsGenerator
 from .individual import IndividualGenerator
 from .maps import MapsGenerator

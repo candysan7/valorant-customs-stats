@@ -1,8 +1,9 @@
-from .DatasetGenerator import DatasetGenerator
-from util import filter_players
-from Match import Match
 from constants.misc import *
 from constants.players import *
+from Match import Match
+from util import filter_players
+
+from .DatasetGenerator import DatasetGenerator
 
 SCORE_DELTA = "score_delta"
 DID_NOT_PLAY = 0

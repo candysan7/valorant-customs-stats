@@ -1,11 +1,13 @@
-from .DatasetGenerator import DatasetGenerator
-from util import filter_players
-from Match import Match
+from datetime import datetime, time, timedelta
+
+from pytz import timezone
+
 from constants.misc import *
 from constants.players import *
+from Match import Match
+from util import filter_players
 
-from datetime import datetime, timedelta, time
-from pytz import timezone
+from .DatasetGenerator import DatasetGenerator
 
 BLOCK_END_TIME = "block_end_time"
 DATA = "data"

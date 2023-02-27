@@ -1,9 +1,10 @@
-from .DatasetGenerator import DatasetGenerator
-from util import filter_players
-from Match import Match
 from constants.misc import *
 from constants.players import *
 from constants.valorant import *
+from Match import Match
+from util import filter_players
+
+from .DatasetGenerator import DatasetGenerator
 
 
 class IndividualGenerator(DatasetGenerator):

@@ -1,9 +1,9 @@
-from io import TextIOWrapper
-import json, os.path, sys
+import json
+import os.path
+import sys
 
-from Match import Match
 from dataset_generators import *
-
+from Match import Match
 
 matches: list[Match] = []
 with open("./data.json", mode="r") as f:

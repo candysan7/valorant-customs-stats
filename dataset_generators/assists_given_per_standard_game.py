@@ -1,8 +1,9 @@
-from .DatasetGenerator import DatasetGenerator
-from util import is_player_of_interest, filter_players
-from Match import Match
 from constants.misc import *
 from constants.players import *
+from Match import Match
+from util import filter_players, is_player_of_interest
+
+from .DatasetGenerator import DatasetGenerator
 
 ASSISTED_NAME = "assisted_name"
 
