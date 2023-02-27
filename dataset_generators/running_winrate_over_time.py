@@ -15,6 +15,7 @@ class RunningWinrateOverTimeGenerator(DatasetGenerator):
     def __init__(self):
         self.filename = "running-winrate-over-time.json"
         self.out_json = []
+        self.curr_block: list[Match] = []
 
         self.last_date = datetime.combine(
             datetime.today(), time.max, tzinfo=timezone("US/Pacific")
@@ -30,15 +31,10 @@ class RunningWinrateOverTimeGenerator(DatasetGenerator):
         self.curr_block_start_date = self.curr_block_end_date - timedelta(days=90)
 
     def accumulate(self, match: Match):
-        # Blocks look like (curr_block_start_date, curr_block_end_date]
-        if len(self.out_json) == 0 or match.time > self.curr_block_end_date:
-            if match.time > self.curr_block_end_date:
-                self.curr_block_start_date += self.time_increment
-                self.curr_block_end_date += self.time_increment
-
+        if len(self.out_json) == 0:
             self.out_json.append(
                 {
-                    BLOCK_END_TIME: self.curr_block_end_date,
+                    BLOCK_END_TIME: self.curr_block_end_date.isoformat(),
                     DATA: {
                         player_name: {WINRATE: None, WINS: 0, GAMES: 0}
                         for player_name in PLAYER_NAMES
@@ -46,16 +42,47 @@ class RunningWinrateOverTimeGenerator(DatasetGenerator):
                 }
             )
 
-        block_data = self.out_json[-1]
+        # Blocks look like (curr_block_start_date, curr_block_end_date]
+        while match.time > self.curr_block_end_date:
+            self.curr_block_start_date += self.time_increment
+            self.curr_block_end_date += self.time_increment
 
+            prev_block = self.out_json[-1]
+            next_block = {
+                BLOCK_END_TIME: self.curr_block_end_date.isoformat(),
+                DATA: {
+                    player_name: {
+                        WINRATE: None,
+                        WINS: prev_block[DATA][player_name][WINS],
+                        GAMES: prev_block[DATA][player_name][GAMES],
+                    }
+                    for player_name in PLAYER_NAMES
+                },
+            }
+
+            # Remove data from matches that are too old for this block
+            while (
+                len(self.curr_block) > 0
+                and self.curr_block[0].time <= self.curr_block_start_date
+            ):
+                removed_match = self.curr_block.pop(0)
+                for winner_name in filter_players(removed_match.winning_players):
+                    next_block[DATA][winner_name][WINS] -= 1
+                for player_name in filter_players(removed_match.all_players):
+                    next_block[DATA][player_name][GAMES] -= 1
+
+            self.out_json.append(next_block)
+
+        block_data = self.out_json[-1]
         for winner_name in filter_players(match.winning_players):
             block_data[DATA][winner_name][WINS] += 1
         for player_name in filter_players(match.all_players):
             block_data[DATA][player_name][GAMES] += 1
 
+        self.curr_block.append(match)
+
     def finalize(self, minified=False):
         for block_data in self.out_json:
-            block_data[BLOCK_END_TIME] = block_data[BLOCK_END_TIME].isoformat()
             for _, player_stats in block_data[DATA].items():
                 if player_stats[GAMES] != 0:
                     player_stats[WINRATE] = round(

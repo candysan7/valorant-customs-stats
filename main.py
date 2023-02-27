@@ -5,20 +5,6 @@ from Match import Match
 from dataset_generators import *
 
 
-def get_dump(minified: bool = False):
-    indent = 2
-    separators = None
-    if minified:
-        indent = None
-        separators = (",", ":")
-
-    def fn(out_json: any, f: TextIOWrapper):
-        json.dump(out_json, f, indent=indent, separators=separators)
-        f.close()
-
-    return fn
-
-
 matches: list[Match] = []
 with open("./data.json", mode="r") as f:
     data = json.load(f)
@@ -34,7 +20,6 @@ if __name__ == "__main__":
         minified = True
         output_dir = "./out-min"
 
-    dump = get_dump(minified)
     generators: list[DatasetGenerator] = [
         AssistsGivenPerStandardGameGenerator(),
         AssistsReceivedPerStandardGameGenerator(),
@@ -60,5 +45,10 @@ if __name__ == "__main__":
 
     with open(os.path.join(output_dir, "data-frame-friendly.json"), mode="w") as f:
         out_json = {i: match_json for i, match_json in enumerate(data)}
-        dump(out_json, f)
+        indent = 2
+        separators = None
+        if minified:
+            indent = None
+            separators = (",", ":")
+        json.dump(out_json, f, indent=indent, separators=separators)
         f.close()
