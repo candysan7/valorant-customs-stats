@@ -22,13 +22,14 @@ class RunningWinrateOverTimeGenerator(DatasetGenerator):
         )
 
         # TODO: Maybe time_increment and first curr_block_end_date should be actual inputs to the constructor
+        self.block_length = timedelta(days=90)
         self.time_increment = timedelta(weeks=1)
         self.curr_block_end_date = datetime.combine(
             datetime(year=2022, month=10, day=9),
             time.max,
             tzinfo=timezone("US/Pacific"),
         )
-        self.curr_block_start_date = self.curr_block_end_date - timedelta(days=90)
+        self.curr_block_start_date = self.curr_block_end_date - self.block_length
 
     def accumulate(self, match: Match):
         if len(self.out_json) == 0:
@@ -82,6 +83,30 @@ class RunningWinrateOverTimeGenerator(DatasetGenerator):
         self.curr_block.append(match)
 
     def finalize(self, minified=False):
+        # The last block corresponds to today
+        prev_block = self.out_json[-1]
+        next_block = {
+            BLOCK_END_TIME: self.last_date.isoformat(),
+            DATA: {
+                player_name: {
+                    WINRATE: None,
+                    WINS: prev_block[DATA][player_name][WINS],
+                    GAMES: prev_block[DATA][player_name][GAMES],
+                }
+                for player_name in PLAYER_NAMES
+            },
+        }
+
+        last_start_date = self.last_date - self.block_length
+        while len(self.curr_block) > 0 and self.curr_block[0].time <= last_start_date:
+            removed_match = self.curr_block.pop(0)
+            for winner_name in filter_players(removed_match.winning_players):
+                next_block[DATA][winner_name][WINS] -= 1
+            for player_name in filter_players(removed_match.all_players):
+                next_block[DATA][player_name][GAMES] -= 1
+
+        self.out_json.append(next_block)
+
         for block_data in self.out_json:
             for _, player_stats in block_data[DATA].items():
                 if player_stats[GAMES] != 0:
@@ -93,5 +118,4 @@ class RunningWinrateOverTimeGenerator(DatasetGenerator):
                     del player_stats[WINS]
                     del player_stats[GAMES]
 
-        self.out_json[-1][BLOCK_END_TIME] = self.last_date.isoformat()
         return self.out_json

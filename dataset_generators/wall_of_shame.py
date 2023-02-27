@@ -5,6 +5,21 @@ from constants.misc import *
 from constants.players import *
 from constants.valorant import *
 
+HEADSHOTS = "headshots"
+HEADSHOT_RATE = "headshot_rate"
+BODYSHOTS = "bodyshots"
+BODYSHOT_RATE = "bodyshot_rate"
+LEGSHOTS = "legshots"
+LEGSHOT_RATE = "legshot_rate"
+BULLETS = "bullets"
+KNIFE_KILLS = "knife_kills"
+KNIFE_DEATHS = "knife_deaths"
+TEAM_DAMAGE = "team_damage"
+SELF_DAMAGE = "self_damage"
+BOMB_DEATHS = "bomb_deaths"
+AVERAGE_TIME_ALIVE_ON_WON_ATTACK_ROUNDS = "average_time_alive_on_won_attack_rounds"
+AVERAGE_TIME_ALIVE_ON_LOST_ATTACK_ROUNDS = "average_time_alive_on_lost_attack_rounds"
+
 
 class WallOfShameGenerator(DatasetGenerator):
     def __init__(self):

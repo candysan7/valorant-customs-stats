@@ -4,6 +4,11 @@ from Match import Match
 from constants.misc import *
 from constants.players import *
 
+SCORE_DELTA = "score_delta"
+DID_NOT_PLAY = 0
+RED_TEAM = 1
+BLUE_TEAM = -1
+
 
 class TeamSynergyDataGenerator(DatasetGenerator):
     def __init__(self):

@@ -25,7 +25,7 @@ VALORANT_TAG = "valorant_tag"
 PLAYER_NAMES = [
     ANDY,
     BRANDON,
-    BREE,
+    # BREE,
     BRIAN,
     CADE,
     DARWIN,
@@ -52,10 +52,10 @@ PLAYER_INFO = {
         NAME: "Brandon",
         VALORANT_TAG: "BigBoiB",
     },
-    BREE: {
-        NAME: "Bree",
-        VALORANT_TAG: "Brioche",
-    },
+    # BREE: {
+    #     NAME: "Bree",
+    #     VALORANT_TAG: "Brioche",
+    # },
     BRIAN: {
         NAME: "Brian",
         VALORANT_TAG: "brianwoohoo",
