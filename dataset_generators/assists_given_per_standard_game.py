@@ -4,6 +4,8 @@ from Match import Match
 from constants.misc import *
 from constants.players import *
 
+ASSISTED_NAME = "assisted_name"
+
 
 class AssistsGivenPerStandardGameGenerator(DatasetGenerator):
     def __init__(self):

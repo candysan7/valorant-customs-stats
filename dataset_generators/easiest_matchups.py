@@ -4,6 +4,8 @@ from Match import Match
 from constants.misc import *
 from constants.players import *
 
+OPPONENT_NAME = "opponent_name"
+
 
 class EasiestMatchupsGenerator(DatasetGenerator):
     def __init__(self):

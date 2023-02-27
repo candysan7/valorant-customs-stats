@@ -4,6 +4,8 @@ from Match import Match
 from constants.misc import *
 from constants.players import *
 
+TEAMMATE_NAME = "teammate_name"
+
 
 class TeammateSynergyGenerator(DatasetGenerator):
     def __init__(self):
