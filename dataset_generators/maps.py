@@ -1,4 +1,4 @@
-from constants.valorant import *
+from constants import *
 from Match import Match
 
 from .DatasetGenerator import DatasetGenerator

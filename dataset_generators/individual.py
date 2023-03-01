@@ -1,6 +1,5 @@
-from constants.misc import *
-from constants.players import *
-from constants.valorant import *
+from config import PLAYER_NAMES
+from constants import *
 from Match import Match
 from util import filter_players
 
@@ -11,8 +10,7 @@ class IndividualGenerator(DatasetGenerator):
     def __init__(self):
         self.filename = "individual.json"
         self.out_json = {
-            player_name: PLAYER_INFO[player_name].copy()
-            | {
+            player_name: {
                 WINRATE: None,
                 WINS: 0,
                 GAMES: 0,

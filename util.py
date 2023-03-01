@@ -3,7 +3,8 @@ from typing import Callable
 
 from pytz import timezone
 
-from constants.players import PLAYER_NAMES
+from config import PLAYER_NAMES
+from constants import *
 from Match import Match
 
 

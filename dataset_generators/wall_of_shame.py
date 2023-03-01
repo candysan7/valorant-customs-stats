@@ -1,6 +1,5 @@
-from constants.misc import *
-from constants.players import *
-from constants.valorant import *
+from config import PLAYER_NAMES
+from constants import *
 from Match import Match
 from util import filter_players
 

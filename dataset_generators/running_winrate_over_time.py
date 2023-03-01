@@ -2,8 +2,8 @@ from datetime import datetime, time, timedelta
 
 from pytz import timezone
 
-from constants.misc import *
-from constants.players import *
+from config import PLAYER_NAMES
+from constants import *
 from Match import Match
 from util import filter_players
 
