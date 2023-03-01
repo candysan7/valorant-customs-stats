@@ -85,6 +85,9 @@ class RunningWinrateOverTimeGenerator(DatasetGenerator):
         self.curr_block.append(match)
 
     def finalize(self, minified=False):
+        if datetime.fromisoformat(self.out_json[-1][BLOCK_END_TIME]) > self.last_date:
+            self.out_json.pop()
+
         # The last block corresponds to today
         prev_block = self.out_json[-1]
         next_block = {
