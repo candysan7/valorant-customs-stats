@@ -33,6 +33,23 @@
     "average_time_alive_on_won_attack_rounds": 53,
     "average_time_alive_on_lost_attack_rounds": 42
   },
+  "bree": {
+    "headshots": 25,
+    "headshot_rate": 9,
+    "bodyshots": 198,
+    "bodyshot_rate": 75,
+    "legshots": 39,
+    "legshot_rate": 15,
+    "bullets": 265,
+    "knife_kills": 0,
+    "knife_deaths": 0,
+    "team_damage": 21,
+    "self_damage": 44,
+    "plants": 2,
+    "bomb_deaths": 1,
+    "average_time_alive_on_won_attack_rounds": 76,
+    "average_time_alive_on_lost_attack_rounds": 38
+  },
   "brian": {
     "headshots": 322,
     "headshot_rate": 12,
@@ -117,23 +134,6 @@
     "bomb_deaths": 20,
     "average_time_alive_on_won_attack_rounds": 61,
     "average_time_alive_on_lost_attack_rounds": 42
-  },
-  "sequential": {
-    "headshots": 606,
-    "headshot_rate": 25,
-    "bodyshots": 1642,
-    "bodyshot_rate": 69,
-    "legshots": 139,
-    "legshot_rate": 6,
-    "bullets": 2395,
-    "knife_kills": 2,
-    "knife_deaths": 3,
-    "team_damage": 59,
-    "self_damage": 164,
-    "plants": 14,
-    "bomb_deaths": 1,
-    "average_time_alive_on_won_attack_rounds": 49,
-    "average_time_alive_on_lost_attack_rounds": 39
   },
   "sophie": {
     "headshots": 805,

@@ -9,6 +9,11 @@
     "wins": 7,
     "games": 18
   },
+  "bree": {
+    "winrate": 38,
+    "wins": 3,
+    "games": 8
+  },
   "brian": {
     "winrate": 36,
     "wins": 20,
@@ -33,11 +38,6 @@
     "winrate": 56,
     "wins": 44,
     "games": 79
-  },
-  "sequential": {
-    "winrate": 53,
-    "wins": 16,
-    "games": 30
   },
   "sophie": {
     "winrate": 64,
