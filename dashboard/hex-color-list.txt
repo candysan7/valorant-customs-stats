@@ -2,6 +2,7 @@
 Player      | Main Hex  | Hex #2    | Hex #3    | Hex #4
 andy        | #F6DE64   | #2F5C81   | #4E95C3   | #CFD0CC
 brandon     | #9192BE   | #AA3824   | #EAD67D   | #C8A592
+bree        | #5C64F4   | #6C7Cf4   | #ACB4FC   | #D7DAFC
 brian       | #757E8A   | #447E8A   | #5C9DA4   | #FFFFFF
 cade        | #DBFF9E   | #0F793E   | #479D56   | #91CB9E
 darwin      | #CDDBFF   | #7F8CEB   | #FFC561   | #FFFD8F
