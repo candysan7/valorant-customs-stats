@@ -59,247 +59,268 @@ def puuid_to_name(puuid):
     return player_ids.get(puuid, puuid)
 
 
-matches = []
-with open("./scrape.json", mode="r") as f:
-    all_match_json = json.load(f)
+def process_scrape():
+    matches = []
+    with open("./scrape.json", mode="r") as f:
+        all_match_json = json.load(f)
 
-    for match_json in all_match_json:
-        match = {
-            "time": match_json["metadata"]["dateStarted"],
-            "url": match_json["tracker_url"],
-            "map": match_json["metadata"]["mapName"],
-            "score_red": None,
-            "score_blue": None,
-            "team_red": [],
-            "team_blue": [],
-            "rounds": [
-                {
-                    "winning_team": "",
-                    "winning_side": "",
-                    "win_method": "",
-                    "duration": None,
-                    "player_stats": [],
-                    "damage_events": [],
-                    "kills": [],
-                }
-                for _ in range(match_json["metadata"]["rounds"])
-            ],
-        }
+        for match_json in all_match_json:
+            match = {
+                "time": match_json["metadata"]["dateStarted"],
+                "url": match_json["tracker_url"],
+                "map": match_json["metadata"]["mapName"],
+                "score_red": None,
+                "score_blue": None,
+                "team_red": [],
+                "team_blue": [],
+                "rounds": [
+                    {
+                        "winning_team": "",
+                        "winning_side": "",
+                        "win_method": "",
+                        "duration": None,
+                        "player_stats": [],
+                        "damage_events": [],
+                        "kills": [],
+                    }
+                    for _ in range(match_json["metadata"]["rounds"])
+                ],
+            }
 
-        for segment in match_json["segments"]:
-            match segment["type"]:
-                case "round-summary":
-                    round_index = segment["attributes"]["round"] - 1
-                    match["rounds"][round_index]["winning_team"] = segment["stats"][
-                        "winningTeam"
-                    ]["value"].lower()
-                    match["rounds"][round_index]["win_method"] = segment["stats"][
-                        "roundResult"
-                    ]["value"].lower()
+            for segment in match_json["segments"]:
+                match segment["type"]:
+                    case "round-summary":
+                        round_index = segment["attributes"]["round"] - 1
+                        match["rounds"][round_index]["winning_team"] = segment["stats"][
+                            "winningTeam"
+                        ]["value"].lower()
+                        match["rounds"][round_index]["win_method"] = segment["stats"][
+                            "roundResult"
+                        ]["value"].lower()
 
-                case "player-round":
-                    round_index = segment["attributes"]["round"] - 1
-                    player_name = username_to_name(
-                        segment["attributes"]["platformUserIdentifier"].split("#")[0]
-                    )
-                    match["rounds"][round_index]["player_stats"].append(
-                        {
-                            "player_name": player_name,
-                            "team": segment["metadata"]["teamId"].lower(),
-                            "side": segment["metadata"]["teamSide"] + "s",
-                            "score": segment["stats"]["score"]["value"],
-                            "kills": segment["stats"]["kills"]["value"],
-                            "deaths": segment["stats"]["deaths"]["value"],
-                            "assists": segment["stats"]["assists"]["value"],
-                            "damage": segment["stats"]["damage"]["value"],
-                            "loadout_value": segment["stats"]["loadoutValue"]["value"],
-                            "remaining_credits": segment["stats"]["remainingCredits"][
-                                "value"
-                            ],
-                            "spent_credits": segment["stats"]["spentCredits"]["value"],
-                        }
-                    )
-
-                case "player-round-damage":
-                    round_index = segment["attributes"]["round"] - 1
-                    giver_name = username_to_name(
-                        segment["attributes"]["platformUserIdentifier"].split("#")[0]
-                    )
-                    receiver_name = username_to_name(
-                        segment["attributes"]["opponentPlatformUserIdentifier"].split(
-                            "#"
-                        )[0]
-                    )
-                    match["rounds"][round_index]["damage_events"].append(
-                        {
-                            "giver_name": giver_name,
-                            "receiver_name": receiver_name,
-                            "damage": segment["stats"]["damage"]["value"],
-                            "legshots": segment["stats"]["legshots"]["value"],
-                            "bodyshots": segment["stats"]["bodyshots"]["value"],
-                            "headshots": segment["stats"]["headshots"]["value"],
-                        }
-                    )
-
-                case "player-round-kills":
-                    round_index = segment["attributes"]["round"] - 1
-                    killer_name = username_to_name(
-                        segment["attributes"]["platformUserIdentifier"].split("#")[0]
-                    )
-                    victim_name = username_to_name(
-                        segment["attributes"]["opponentPlatformUserIdentifier"].split(
-                            "#"
-                        )[0]
-                    )
-
-                    match segment["metadata"]["finishingDamage"]["damageType"]:
-                        case "Melee":
-                            weapon = "Melee"
-                        case "Bomb":
-                            weapon = "Bomb"
-                        case "Weapon":
-                            weapon = segment["metadata"]["weaponName"]
-                        case other:
-                            # Ability
-                            weapon = segment["metadata"]["finishingDamage"][
-                                "damageItem"
+                    case "player-round":
+                        round_index = segment["attributes"]["round"] - 1
+                        player_name = username_to_name(
+                            segment["attributes"]["platformUserIdentifier"].split("#")[
+                                0
                             ]
+                        )
+                        match["rounds"][round_index]["player_stats"].append(
+                            {
+                                "player_name": player_name,
+                                "team": segment["metadata"]["teamId"].lower(),
+                                "side": segment["metadata"]["teamSide"] + "s",
+                                "score": segment["stats"]["score"]["value"],
+                                "kills": segment["stats"]["kills"]["value"],
+                                "deaths": segment["stats"]["deaths"]["value"],
+                                "assists": segment["stats"]["assists"]["value"],
+                                "damage": segment["stats"]["damage"]["value"],
+                                "loadout_value": segment["stats"]["loadoutValue"][
+                                    "value"
+                                ],
+                                "remaining_credits": segment["stats"][
+                                    "remainingCredits"
+                                ]["value"],
+                                "spent_credits": segment["stats"]["spentCredits"][
+                                    "value"
+                                ],
+                            }
+                        )
 
-                    player_locations = list(
-                        map(
-                            lambda d: {
-                                "player_name": puuid_to_name(d["puuid"]),
-                                "angle": d["viewRadians"],
-                                "location": {
-                                    "x": d["location"]["x"],
-                                    "y": d["location"]["y"],
+                    case "player-round-damage":
+                        round_index = segment["attributes"]["round"] - 1
+                        giver_name = username_to_name(
+                            segment["attributes"]["platformUserIdentifier"].split("#")[
+                                0
+                            ]
+                        )
+                        receiver_name = username_to_name(
+                            segment["attributes"][
+                                "opponentPlatformUserIdentifier"
+                            ].split("#")[0]
+                        )
+                        match["rounds"][round_index]["damage_events"].append(
+                            {
+                                "giver_name": giver_name,
+                                "receiver_name": receiver_name,
+                                "damage": segment["stats"]["damage"]["value"],
+                                "legshots": segment["stats"]["legshots"]["value"],
+                                "bodyshots": segment["stats"]["bodyshots"]["value"],
+                                "headshots": segment["stats"]["headshots"]["value"],
+                            }
+                        )
+
+                    case "player-round-kills":
+                        round_index = segment["attributes"]["round"] - 1
+                        killer_name = username_to_name(
+                            segment["attributes"]["platformUserIdentifier"].split("#")[
+                                0
+                            ]
+                        )
+                        victim_name = username_to_name(
+                            segment["attributes"][
+                                "opponentPlatformUserIdentifier"
+                            ].split("#")[0]
+                        )
+
+                        match segment["metadata"]["finishingDamage"]["damageType"]:
+                            case "Melee":
+                                weapon = "Melee"
+                            case "Bomb":
+                                weapon = "Bomb"
+                            case "Weapon":
+                                weapon = segment["metadata"]["weaponName"]
+                            case other:
+                                # Ability
+                                weapon = segment["metadata"]["finishingDamage"][
+                                    "damageItem"
+                                ]
+
+                        player_locations = list(
+                            map(
+                                lambda d: {
+                                    "player_name": puuid_to_name(d["puuid"]),
+                                    "angle": d["viewRadians"],
+                                    "location": {
+                                        "x": d["location"]["x"],
+                                        "y": d["location"]["y"],
+                                    },
                                 },
-                            },
-                            segment["metadata"]["playerLocations"],
-                        ),
+                                segment["metadata"]["playerLocations"],
+                            ),
+                        )
+
+                        killer_location = None
+                        for d in player_locations:
+                            if d["player_name"] == killer_name:
+                                killer_location = d
+
+                        match["rounds"][round_index]["kills"].append(
+                            {
+                                "killer_name": killer_name,
+                                "victim_name": victim_name,
+                                "assistants": list(
+                                    map(
+                                        lambda d: username_to_name(
+                                            d["platformUserIdentifier"].split("#")[0]
+                                        ),
+                                        segment["metadata"]["assistants"],
+                                    )
+                                ),
+                                "killer_location": killer_location,
+                                "victim_location": {
+                                    "x": segment["metadata"]["opponentLocation"]["x"],
+                                    "y": segment["metadata"]["opponentLocation"]["y"],
+                                },
+                                "player_locations": player_locations,
+                                "weapon_name": weapon,
+                                "game_time": segment["metadata"]["gameTime"],
+                                "round_time": segment["metadata"]["roundTime"],
+                                "damage": segment["stats"]["damage"]["value"],
+                            }
+                        )
+
+                    case "player-summary":
+                        player_name = username_to_name(
+                            segment["attributes"]["platformUserIdentifier"].split("#")[
+                                0
+                            ]
+                        )
+                        match[f"team_{segment['metadata']['teamId'].lower()}"].append(
+                            {
+                                "player_name": player_name,
+                                "agent": segment["metadata"]["agentName"],
+                                "average_combat_score": round(
+                                    segment["stats"]["scorePerRound"]["value"]
+                                ),
+                                "kills": segment["stats"]["kills"]["value"],
+                                "deaths": segment["stats"]["deaths"]["value"],
+                                "assists": segment["stats"]["assists"]["value"],
+                                "kill_deaths": round(
+                                    segment["stats"]["kdRatio"]["value"]
+                                ),
+                                "kill_assist_survive_traded": round(
+                                    segment["stats"]["kast"]["value"]
+                                ),
+                                "plants": segment["stats"]["plants"]["value"],
+                                "defuses": segment["stats"]["defuses"]["value"],
+                                "first_kills": segment["stats"]["firstKills"]["value"],
+                                "first_deaths": segment["stats"]["firstDeaths"][
+                                    "value"
+                                ],
+                                "multi_kills": segment["stats"]["multiKills"]["value"],
+                                "headshot_accuracy": round(
+                                    segment["stats"]["hsAccuracy"]["value"]
+                                ),
+                                "econ": segment["stats"]["econRating"]["value"],
+                            }
+                        )
+
+                    case "team-summary":
+                        if segment["attributes"]["teamId"] == "Red":
+                            match["score_red"] = segment["stats"]["roundsWon"]["value"]
+                        else:
+                            match["score_blue"] = segment["stats"]["roundsWon"]["value"]
+
+                    case "player-loadout":
+                        # Stats on how players performed on pistol/eco/force/full buy rounds
+                        pass
+                    case other:
+                        print(f"Missed type: {segment['type']}")
+
+            for i in range(len(match["rounds"])):
+                match["rounds"][i]["kills"].sort(key=lambda x: x["round_time"])
+                if (
+                    match["rounds"][i]["player_stats"][0]["team"]
+                    == match["rounds"][i]["winning_team"]
+                ):
+                    match["rounds"][i]["winning_side"] = match["rounds"][i][
+                        "player_stats"
+                    ][0]["side"]
+                else:
+                    match["rounds"][i]["winning_side"] = (
+                        "attackers"
+                        if match["rounds"][i]["player_stats"][0]["side"] == "defenders"
+                        else "defenders"
                     )
 
-                    killer_location = None
-                    for d in player_locations:
-                        if d["player_name"] == killer_name:
-                            killer_location = d
+                # Some surrender rounds are marked as elimination
+                # Not the most robust method, but no-kill rounds are extremely rare
+                if len(match["rounds"][i]["kills"]) == 0:
+                    match["rounds"][i]["win_method"] = "surrendered"
+                    match["rounds"][i]["duration"] = 0
+                    continue
 
-                    match["rounds"][round_index]["kills"].append(
-                        {
-                            "killer_name": killer_name,
-                            "victim_name": victim_name,
-                            "assistants": list(
-                                map(
-                                    lambda d: username_to_name(
-                                        d["platformUserIdentifier"].split("#")[0]
-                                    ),
-                                    segment["metadata"]["assistants"],
-                                )
-                            ),
-                            "killer_location": killer_location,
-                            "victim_location": {
-                                "x": segment["metadata"]["opponentLocation"]["x"],
-                                "y": segment["metadata"]["opponentLocation"]["y"],
-                            },
-                            "player_locations": player_locations,
-                            "weapon_name": weapon,
-                            "game_time": segment["metadata"]["gameTime"],
-                            "round_time": segment["metadata"]["roundTime"],
-                            "damage": segment["stats"]["damage"]["value"],
-                        }
-                    )
-
-                case "player-summary":
-                    player_name = username_to_name(
-                        segment["attributes"]["platformUserIdentifier"].split("#")[0]
-                    )
-                    match[f"team_{segment['metadata']['teamId'].lower()}"].append(
-                        {
-                            "player_name": player_name,
-                            "agent": segment["metadata"]["agentName"],
-                            "average_combat_score": round(
-                                segment["stats"]["scorePerRound"]["value"]
-                            ),
-                            "kills": segment["stats"]["kills"]["value"],
-                            "deaths": segment["stats"]["deaths"]["value"],
-                            "assists": segment["stats"]["assists"]["value"],
-                            "kill_deaths": round(segment["stats"]["kdRatio"]["value"]),
-                            "kill_assist_survive_traded": round(
-                                segment["stats"]["kast"]["value"]
-                            ),
-                            "plants": segment["stats"]["plants"]["value"],
-                            "defuses": segment["stats"]["defuses"]["value"],
-                            "first_kills": segment["stats"]["firstKills"]["value"],
-                            "first_deaths": segment["stats"]["firstDeaths"]["value"],
-                            "multi_kills": segment["stats"]["multiKills"]["value"],
-                            "headshot_accuracy": round(
-                                segment["stats"]["hsAccuracy"]["value"]
-                            ),
-                            "econ": segment["stats"]["econRating"]["value"],
-                        }
-                    )
-
-                case "team-summary":
-                    if segment["attributes"]["teamId"] == "Red":
-                        match["score_red"] = segment["stats"]["roundsWon"]["value"]
-                    else:
-                        match["score_blue"] = segment["stats"]["roundsWon"]["value"]
-
-                case "player-loadout":
-                    # Stats on how players performed on pistol/eco/force/full buy rounds
-                    pass
-                case other:
-                    print(f"Missed type: {segment['type']}")
-
-        for i in range(len(match["rounds"])):
-            match["rounds"][i]["kills"].sort(key=lambda x: x["round_time"])
-            if (
-                match["rounds"][i]["player_stats"][0]["team"]
-                == match["rounds"][i]["winning_team"]
-            ):
-                match["rounds"][i]["winning_side"] = match["rounds"][i]["player_stats"][
-                    0
-                ]["side"]
-            else:
-                match["rounds"][i]["winning_side"] = (
-                    "attackers"
-                    if match["rounds"][i]["player_stats"][0]["side"] == "defenders"
-                    else "defenders"
+                round_start = (
+                    match["rounds"][i]["kills"][0]["game_time"]
+                    - match["rounds"][i]["kills"][0]["round_time"]
                 )
 
-            # Some surrender rounds are marked as elimination
-            # Not the most robust method, but no-kill rounds are extremely rare
-            if len(match["rounds"][i]["kills"]) == 0:
-                match["rounds"][i]["win_method"] = "surrendered"
-                match["rounds"][i]["duration"] = 0
-                continue
+                if (
+                    i < len(match["rounds"]) - 1
+                    and len(match["rounds"][i + 1]["kills"]) > 0
+                ):
+                    # round end = (next round first kill round time) - (next round first kill game time) - (buy phase)
+                    round_end = (
+                        match["rounds"][i + 1]["kills"][0]["game_time"]
+                        - match["rounds"][i + 1]["kills"][0]["round_time"]
+                        - 1000
+                        * (30 if i + 1 != 12 else 45)  # Round 13 has a longer buy phase
+                    )
+                else:
+                    # round end is just the end of the match for the last round or rounds before surrenders
+                    round_end = match_json["metadata"]["duration"]
 
-            round_start = (
-                match["rounds"][i]["kills"][0]["game_time"]
-                - match["rounds"][i]["kills"][0]["round_time"]
-            )
+                match["rounds"][i]["duration"] = round_end - round_start
 
-            if (
-                i < len(match["rounds"]) - 1
-                and len(match["rounds"][i + 1]["kills"]) > 0
-            ):
-                # round end = (next round first kill round time) - (next round first kill game time) - (buy phase)
-                round_end = (
-                    match["rounds"][i + 1]["kills"][0]["game_time"]
-                    - match["rounds"][i + 1]["kills"][0]["round_time"]
-                    - 1000
-                    * (30 if i + 1 != 12 else 45)  # Round 13 has a longer buy phase
-                )
-            else:
-                # round end is just the end of the match for the last round or rounds before surrenders
-                round_end = match_json["metadata"]["duration"]
+            matches.append(match)
+        f.close()
 
-            match["rounds"][i]["duration"] = round_end - round_start
+    with open("./data.json", mode="w") as f:
+        matches.sort(key=lambda m: isoparse(m["time"]))
+        json.dump(matches, f, indent=2)
+        f.close()
 
-        matches.append(match)
-    f.close()
 
-with open("./data.json", mode="w") as f:
-    matches.sort(key=lambda m: isoparse(m["time"]))
-    json.dump(matches, f, indent=2)
-    f.close()
+if __name__ == "__main__":
+    process_scrape()
