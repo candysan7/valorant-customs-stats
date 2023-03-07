@@ -1,6 +1,6 @@
 __pycache__
 .DS_Store
 
-scrape.json
+scrape.jsonl
 models
 out-min

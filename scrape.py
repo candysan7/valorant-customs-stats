@@ -4,6 +4,7 @@ import time
 from random import uniform
 from urllib.parse import urlparse
 
+import jsonlines
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 
@@ -39,15 +40,17 @@ if __name__ == "__main__":
         f.close()
 
     matches = []
-    if os.path.exists("./scrape.json"):
-        with open("./scrape.json", mode="r") as f:
-            matches = json.load(f)
+    if os.path.exists("./scrape.jsonl"):
+        with jsonlines.open("./scrape.jsonl", mode="r") as f:
+            for match in f:
+                matches.append(match)
         f.close()
 
     for match in matches:
         if match["tracker_url"] in urls:
             urls.remove(match["tracker_url"])
 
+    new_matches = []
     for i, url in enumerate(urls, start=1):
         print(
             f"[{'0' if i <= 9 and len(urls) >= 10 else ''}{i}/{len(urls)}]: Scraping {url}... ",
@@ -59,7 +62,7 @@ if __name__ == "__main__":
             try:
                 time.sleep(0.5 + uniform(-0.125, 0.125))
                 match_json = scrape_url(url, driver=driver)
-                matches.append(match_json)
+                new_matches.append(match_json)
 
                 print("Success")
                 break
@@ -71,8 +74,8 @@ if __name__ == "__main__":
                 continue
 
     print("Saving...")
-    with open("./scrape.json", mode="w") as f:
-        json.dump(matches, f, separators=(",", ":"))
+    with jsonlines.open("./scrape.jsonl", mode="a") as f:
+        f.write_all(new_matches)
         f.close()
     print("Done")
 

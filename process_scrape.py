@@ -1,4 +1,5 @@
 import json
+import jsonlines
 
 from dateutil.parser import isoparse
 
@@ -61,10 +62,8 @@ def puuid_to_name(puuid):
 
 def process_scrape():
     matches = []
-    with open("./scrape.json", mode="r") as f:
-        all_match_json = json.load(f)
-
-        for match_json in all_match_json:
+    with jsonlines.open("./scrape.jsonl", mode="r") as f:
+        for match_json in f:
             match = {
                 "time": match_json["metadata"]["dateStarted"],
                 "url": match_json["tracker_url"],

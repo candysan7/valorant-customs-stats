@@ -5,6 +5,7 @@ import time
 from threading import Lock, Thread
 from urllib.parse import urlparse
 
+import jsonlines
 from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask, request
 from flask_cors import CORS
@@ -91,14 +92,8 @@ def add_url():
             match_json = scrape_url(url.geturl())
 
             app.logger.info("Updating scrape.json")
-            matches = []
-            with open("./scrape.json", mode="r") as f:
-                matches = json.load(f)
-                f.close()
-
-            with open("./scrape.json", mode="w") as f:
-                matches.append(match_json)
-                json.dump(matches, f, separators=(",", ":"))
+            with jsonlines.open("./scrape.jsonl", mode="a") as f:
+                f.write(match_json)
                 f.close()
 
             app.logger.info("Adding URL to tracker-urls.txt")
