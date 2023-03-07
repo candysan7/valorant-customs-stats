@@ -6,8 +6,8 @@ Dashboard statistics tracking of DARWIN Discord customs games. Using Power BI an
 
 ## Dashboards
 
-- [Website](https://valorant-customs-graphs.vercel.app/)
-- [Power BI](https://app.powerbi.com/view?r=eyJrIjoiNGUzNzMyOTctNTg2OC00YTEyLThmNjktOTJiOTE3ZGM0NjI3IiwidCI6IjlkZGFhY2ExLTM4OWYtNGNiMS1hMTEzLTA4MWJlNmNjMjVmYyIsImMiOjZ9)
+-   [Website](https://valorant-customs-graphs.vercel.app/)
+-   [Power BI](https://app.powerbi.com/view?r=eyJrIjoiNGUzNzMyOTctNTg2OC00YTEyLThmNjktOTJiOTE3ZGM0NjI3IiwidCI6IjlkZGFhY2ExLTM4OWYtNGNiMS1hMTEzLTA4MWJlNmNjMjVmYyIsImMiOjZ9)
 
 ## Documentation
 
@@ -29,14 +29,13 @@ Dashboard statistics tracking of DARWIN Discord customs games. Using Power BI an
 | `teammate-synergy.json`                   | Win rate when a certain player is on the same team                            |
 | `winrate-over-time.json`                  | Win rate over each 2 week block                                               |
 
-
 ### Dataset Generation
 
 All data is derived from [tracker.gg](https://tracker.gg/valorant) until Riot releases the API for personal use. All datasets used for dashboards can be found in the `out` directory. To generate them yourself:
 
 1. Run `scrape.py` to scrape the raw data. It will be saved to a huge minified file (~70 MB) called `scrape.json`. For an example of what each match looks like in a readable format, see `tracker-sample.json`.
 2. Run `process_scrape.py` to transform the data into something the main Python script can handle. See `data.json` for the output and `Match.py` for its representation in the main script.
-3. Run `main.py` to generate all the smaller datasets used by the front-end.
+3. Run `make_datasets.py` to generate all the smaller datasets used by the front-end.
 
 ### Architecture & Design
 
@@ -44,15 +43,15 @@ All data is derived from [tracker.gg](https://tracker.gg/valorant) until Riot re
 
 ### Future
 
-- Build discord bot or command to return dashboard link
-- Calculation: Biggest rat, most ratted, best duo role synergy, most games played together
-- Design: clip gallery, dashboard re-design
-- Front-end implementation: home page, wall of shame updates (biggest bait, master baiter, bomb bitches, turtles, biggest rat, most ratted), autobalance
+-   Build discord bot or command to return dashboard link
+-   Calculation: Biggest rat, most ratted, best duo role synergy, most games played together
+-   Design: clip gallery, dashboard re-design
+-   Front-end implementation: home page, wall of shame updates (biggest bait, master baiter, bomb bitches, turtles, biggest rat, most ratted), autobalance
 
 ### Why Power BI over Tableau?
 
-- Tableau was not able to display string and integer values on the same table
-- Power BI also allows for **free** desktop version
+-   Tableau was not able to display string and integer values on the same table
+-   Power BI also allows for **free** desktop version
 
 ### Credits
 
