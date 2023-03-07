@@ -1,14 +1,17 @@
+import atexit
 import json
+import logging
+import time
 from threading import Lock, Thread
 from urllib.parse import urlparse
-import logging
 
-from flask import Flask, request, current_app
+from apscheduler.schedulers.background import BackgroundScheduler
+from flask import Flask, request
 from flask_cors import CORS
 
 from generate_datasets import generate_datasets
 from process_scrape import process_scrape
-from scrape import scrape
+from scrape import scrape_url
 
 app = Flask(__name__)
 CORS(app)
@@ -20,7 +23,7 @@ gunicorn_logger = logging.getLogger("gunicorn.error")
 app.logger.handlers = gunicorn_logger.handlers
 app.logger.setLevel(gunicorn_logger.level)
 
-
+#### Routes
 @app.route("/api/dashboard")
 def dashboard():
     datasets = [
@@ -83,21 +86,35 @@ def add_url():
     def process_url():
         try:
             app.logger.info(f"Processing {url.geturl()}")
+
+            app.logger.info("Begin scraping")
+            match_json = scrape_url(url.geturl())
+
+            app.logger.info("Updating scrape.json")
+            matches = []
+            with open("./scrape.json", mode="r") as f:
+                matches = json.load(f)
+                f.close()
+
+            with open("./scrape.json", mode="w") as f:
+                matches.append(match_json)
+                json.dump(matches, f, separators=(",", ":"))
+                f.close()
+
             app.logger.info("Adding URL to tracker-urls.txt")
             with open("./tracker-urls.txt", mode="a") as f:
                 f.write(f"\n{url.geturl()}")
                 f.close()
 
-            app.logger.info("Begin scraping")
-            scrape()
-
             app.logger.info("Processing scraped data")
             process_scrape()
 
-            app.logger.info("Making datasets")
+            app.logger.info("Updating out-min")
             generate_datasets(output_dir="./out-min", minified=True)
 
-            app.logger.info("Successfully updated dashboard.json")
+            app.logger.info("Successfully processed URL")
+        except Exception as e:
+            app.logger.exception("Failed to process URL")
         finally:
             scrape_lock.release()
 

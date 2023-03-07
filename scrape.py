@@ -8,7 +8,23 @@ import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 
 
-def scrape():
+def scrape_url(url: str, driver=None):
+    if driver is None:
+        options = uc.ChromeOptions()
+        options.add_argument("--ignore-certificate-errors")
+        options.add_argument("--ignore-ssl-errors")
+        options.headless = True
+        driver = uc.Chrome(options=options)
+
+    api_url = f"https://api.tracker.gg/api/v2/valorant/standard/matches/{urlparse(url).path.split('/')[-1]}"
+    driver.get(api_url)
+
+    match_json = json.loads(driver.find_element(By.CSS_SELECTOR, "pre").text)["data"]
+    match_json["tracker_url"] = url
+    return match_json
+
+
+if __name__ == "__main__":
     options = uc.ChromeOptions()
     options.add_argument("--ignore-certificate-errors")
     options.add_argument("--ignore-ssl-errors")
@@ -33,21 +49,24 @@ def scrape():
             urls.remove(match["tracker_url"])
 
     for i, url in enumerate(urls, start=1):
-        print(f"[{i}/{len(urls)}]: {url}")
-        while True:
+        print(
+            f"[{'0' if i <= 9 and len(urls) >= 10 else ''}{i}/{len(urls)}]: Scraping {url}... ",
+            end="",
+        )
+        retries = 5
+        while retries > 0:
+            retries -= 1
             try:
-                api_url = f"https://api.tracker.gg/api/v2/valorant/standard/matches/{urlparse(url).path.split('/')[-1]}"
-                driver.get(api_url)
                 time.sleep(0.5 + uniform(-0.125, 0.125))
-
-                match_json = json.loads(
-                    driver.find_element(By.CSS_SELECTOR, "pre").text
-                )["data"]
-                match_json["tracker_url"] = url
-
+                match_json = scrape_url(url, driver=driver)
                 matches.append(match_json)
+
+                print("Success")
                 break
             except Exception as e:
+                if retries == 0:
+                    print("Failed")
+                    break
                 print(e)
                 continue
 
@@ -58,7 +77,3 @@ def scrape():
     print("Done")
 
     driver.close()
-
-
-if __name__ == "__main__":
-    scrape()

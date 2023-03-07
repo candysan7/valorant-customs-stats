@@ -15,7 +15,7 @@ def generate_datasets(output_dir, minified=False):
         matches = [Match(match_json) for match_json in data]
         f.close()
 
-    generators: list[DatasetGenerator] = [
+    dashboardGenerators: list[DatasetGenerator] = [
         AssistsGivenPerStandardGameGenerator(),
         AssistsReceivedPerStandardGameGenerator(),
         EasiestMatchupsGenerator(),
@@ -27,20 +27,19 @@ def generate_datasets(output_dir, minified=False):
         RunningWinrateOverTimeGenerator(),
         TeamSynergyDataGenerator(),
         TeammateSynergyGenerator(),
-        WallOfShameGenerator(),
     ]
-
-    all_json = {}
+    wallOfShameGenerator = WallOfShameGenerator()
 
     for match in matches:
-        for generator in generators:
+        for generator in dashboardGenerators:
             generator.accumulate(match)
+        wallOfShameGenerator.accumulate(match)
 
-    for generator in generators:
-        all_json[generator.name] = generator.finalize(minified=minified)
-
-        # Each dataset gets its own file with the below line
-        # generator.generate(output_dir=output_dir, minified=minified)
+    dashboard_json = {}
+    for generator in dashboardGenerators:
+        dashboard_json[generator.name] = generator.finalize(minified=minified)
+    wallOfShameGenerator.finalize()
+    wallOfShameGenerator.generate(output_dir=output_dir, minified=minified)
 
     indent = 2
     separators = None
@@ -49,7 +48,7 @@ def generate_datasets(output_dir, minified=False):
         separators = (",", ":")
 
     with open(os.path.join(output_dir, "dashboard.json"), mode="w") as f:
-        json.dump(all_json, f, indent=indent, separators=separators)
+        json.dump(dashboard_json, f, indent=indent, separators=separators)
         f.close()
 
     # with open(os.path.join(output_dir, "data-frame-friendly.json"), mode="w") as f:
