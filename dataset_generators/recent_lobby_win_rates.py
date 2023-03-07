@@ -12,7 +12,7 @@ from .DatasetGenerator import DatasetGenerator
 
 class RecentLobbyWinRatesGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "recent-lobby-win-rates.json"
+        super().__init__("recent-lobby-win-rates")
         self.out_json = {
             player_name: {
                 WINRATE: None,

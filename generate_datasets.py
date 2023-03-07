@@ -30,23 +30,32 @@ def generate_datasets(output_dir, minified=False):
         WallOfShameGenerator(),
     ]
 
+    all_json = {}
+
     for match in matches:
         for generator in generators:
             generator.accumulate(match)
 
     for generator in generators:
-        generator.finalize(minified=minified)
-        generator.generate(output_dir=output_dir, minified=minified)
+        all_json[generator.name] = generator.finalize(minified=minified)
 
-    with open(os.path.join(output_dir, "data-frame-friendly.json"), mode="w") as f:
-        out_json = {i: match_json for i, match_json in enumerate(data)}
-        indent = 2
-        separators = None
-        if minified:
-            indent = None
-            separators = (",", ":")
-        json.dump(out_json, f, indent=indent, separators=separators)
+        # Each dataset gets its own file with the below line
+        # generator.generate(output_dir=output_dir, minified=minified)
+
+    indent = 2
+    separators = None
+    if minified:
+        indent = None
+        separators = (",", ":")
+
+    with open(os.path.join(output_dir, "dashboard.json"), mode="w") as f:
+        json.dump(all_json, f, indent=indent, separators=separators)
         f.close()
+
+    # with open(os.path.join(output_dir, "data-frame-friendly.json"), mode="w") as f:
+    #     out_json = {i: match_json for i, match_json in enumerate(data)}
+    #     json.dump(out_json, f, indent=indent, separators=separators)
+    #     f.close()
 
 
 if __name__ == "__main__":

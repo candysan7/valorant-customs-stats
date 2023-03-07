@@ -10,7 +10,7 @@ TEAMMATE_NAME = "teammate_name"
 
 class TeammateSynergyGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "teammate-synergy.json"
+        super().__init__("teammate-synergy")
         self.out_json = {
             player_name: {
                 teammate_name: {

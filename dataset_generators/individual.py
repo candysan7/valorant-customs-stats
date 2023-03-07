@@ -8,7 +8,7 @@ from .DatasetGenerator import DatasetGenerator
 
 class IndividualGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "individual.json"
+        super().__init__("individual")
         self.out_json = {
             player_name: {
                 WINRATE: None,

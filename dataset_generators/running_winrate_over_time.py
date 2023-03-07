@@ -15,7 +15,7 @@ DATA = "data"
 
 class RunningWinrateOverTimeGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "running-winrate-over-time.json"
+        super().__init__("running-winrate-over-time")
         self.out_json = []
         self.curr_block: list[Match] = []
 

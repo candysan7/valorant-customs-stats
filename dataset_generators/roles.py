@@ -7,7 +7,7 @@ from .DatasetGenerator import DatasetGenerator
 
 class RolesGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "roles.json"
+        super().__init__("roles")
         self.out_json = {role_name: 0 for role_name in ROLE_NAMES}
 
     def accumulate(self, match: Match):

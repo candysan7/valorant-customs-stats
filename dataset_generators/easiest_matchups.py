@@ -10,7 +10,7 @@ OPPONENT_NAME = "opponent_name"
 
 class EasiestMatchupsGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "easiest-matchups.json"
+        super().__init__("easiest-matchups")
         self.out_json = {
             player_name: {
                 opponent_name: {

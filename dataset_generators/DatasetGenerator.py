@@ -8,7 +8,8 @@ JSON: TypeAlias = dict[str, "JSON"] | list["JSON"] | str | int | float | bool | 
 
 
 class DatasetGenerator:
-    def __init__(self, filename):
+    def __init__(self, name: str):
+        self.name = name
         self.out_json = None
         pass
 
@@ -28,6 +29,6 @@ class DatasetGenerator:
             indent = None
             separators = (",", ":")
 
-        with open(os.path.join(output_dir, self.filename), mode="w") as f:
+        with open(os.path.join(output_dir, f"{self.name}.json"), mode="w") as f:
             json.dump(self.out_json, f, indent=indent, separators=separators)
             f.close()

@@ -8,7 +8,7 @@ MOST_RECENT_URL = "most_recent_url"
 
 class MetaGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "meta.json"
+        super().__init__("meta")
         self.out_json = {
             MOST_RECENT_URL: "",
         }

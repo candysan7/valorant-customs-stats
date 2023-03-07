@@ -23,7 +23,7 @@ AVERAGE_TIME_ALIVE_ON_LOST_ATTACK_ROUNDS = "average_time_alive_on_lost_attack_ro
 
 class WallOfShameGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "wall-of-shame.json"
+        super().__init__("wall-of-shame")
         self.out_json = {
             player_name: {
                 HEADSHOTS: 0,

@@ -10,7 +10,7 @@ ASSISTANT_NAME = "assistant_name"
 
 class AssistsReceivedPerStandardGameGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "assists-received-per-standard-game.json"
+        super().__init__("assists-received-per-standard-game")
         self.out_json = {
             player_name: {
                 assistant_name: {

@@ -6,7 +6,7 @@ from .DatasetGenerator import DatasetGenerator
 
 class MapsGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "maps.json"
+        super().__init__("maps")
         self.out_json = {map: 0 for map in MAP_NAMES}
 
     def accumulate(self, match: Match):

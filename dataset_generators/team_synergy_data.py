@@ -13,7 +13,7 @@ BLUE_TEAM = -1
 
 class TeamSynergyDataGenerator(DatasetGenerator):
     def __init__(self):
-        self.filename = "team-synergy-data.json"
+        super().__init__("team-synergy-data")
         self.out_json = []
 
     def accumulate(self, match: Match):
