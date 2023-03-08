@@ -2,7 +2,8 @@ import atexit
 import json
 import logging
 import time
-from threading import Lock, Thread
+from threading import Thread
+from multiprocessing import Lock
 from urllib.parse import urlparse
 
 import jsonlines
@@ -14,38 +15,26 @@ from generate_datasets import generate_datasets
 from process_scrape import process_scrape
 from scrape import scrape_url
 
+# Makes URL processing atomic
+url_processing_lock = Lock()
+
 app = Flask(__name__)
 CORS(app)
-
-# Locks scrape.json, data.json, out-min
-scrape_lock = Lock()
 
 gunicorn_logger = logging.getLogger("gunicorn.error")
 app.logger.handlers = gunicorn_logger.handlers
 app.logger.setLevel(gunicorn_logger.level)
 
+# TODO: Cron job
+
 #### Routes
 @app.route("/api/dashboard")
 def dashboard():
-    datasets = [
-        "assists-given-per-standard-game",
-        "assists-received-per-standard-game",
-        "easiest-matchups",
-        "individual",
-        "maps",
-        "meta",
-        "recent-lobby-win-rates",
-        "roles",
-        "running-winrate-over-time",
-        "team-synergy-data",
-        "teammate-synergy",
-    ]
-
     out = {}
     with open("out-min/dashboard.json", mode="r") as f:
-        data = json.load(f)
-        for dataset in datasets:
-            out["_".join(dataset.split("-"))] = data[dataset]
+        data: dict = json.load(f)
+        for name, dataset in data.items():
+            out["_".join(name.split("-"))] = dataset
     return out
 
 
@@ -68,50 +57,53 @@ def add_url():
     if url.hostname != "tracker.gg":
         return "Invalid tracker url", 401
 
+    if not url_processing_lock.acquire(block=False):
+        return (
+            "Currently procesing a URL; please try again in a few seconds",
+            423,
+        )
+
     urls = []
     with open("./tracker-urls.txt", mode="r") as f:
         urls = [line.rstrip() for line in f]
         f.close()
 
     if url.geturl() in urls:
+        url_processing_lock.release()
         return "Match is already included on the dashboard", 200
 
-    if scrape_lock.locked():
-        return (
-            "Processing a previous add request; please try again in a few seconds",
-            423,
-        )
-
-    scrape_lock.acquire()
-
-    def process_url():
-        try:
-            app.logger.info(f"Processing {url.geturl()}")
-
-            app.logger.info("Begin scraping")
-            match_json = scrape_url(url.geturl())
-
-            app.logger.info("Updating scrape.json")
-            with jsonlines.open("./scrape.jsonl", mode="a") as f:
-                f.write(match_json)
-                f.close()
-
-            app.logger.info("Adding URL to tracker-urls.txt")
-            with open("./tracker-urls.txt", mode="a") as f:
-                f.write(f"\n{url.geturl()}")
-                f.close()
-
-            app.logger.info("Processing scraped data")
-            process_scrape()
-
-            app.logger.info("Updating out-min")
-            generate_datasets(output_dir="./out-min", minified=True)
-
-            app.logger.info("Successfully processed URL")
-        except Exception as e:
-            app.logger.exception("Failed to process URL")
-        finally:
-            scrape_lock.release()
-
-    Thread(target=process_url).start()
+    Thread(
+        target=process_url,
+        kwargs={"lock": url_processing_lock, "url": url.geturl()},
+    ).start()
     return "Request received", 202
+
+
+def process_url(lock, url: str):
+    try:
+        app.logger.info(f"Processing {url}")
+
+        app.logger.info("Begin scraping")
+        match_json = scrape_url(url)
+
+        app.logger.info("Updating scrape.json")
+        with jsonlines.open("./scrape.jsonl", mode="a") as f:
+            f.write(match_json)
+            f.close()
+
+        app.logger.info("Adding URL to tracker-urls.txt")
+        with open("./tracker-urls.txt", mode="a") as f:
+            f.write(f"\n{url}")
+            f.close()
+
+        app.logger.info("Processing scraped data")
+        process_scrape()
+
+        app.logger.info("Updating out-min")
+        generate_datasets(output_dir="./out-min", minified=True)
+
+        app.logger.info("Successfully processed URL")
+    except Exception as e:
+        app.logger.exception("Failed to process URL")
+    finally:
+        lock.release()
