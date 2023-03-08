@@ -39,7 +39,9 @@ def generate_datasets(output_dir, minified=False):
     # Data for api/dashboard
     dashboard_json = {}
     for generator in dashboardGenerators:
-        dashboard_json[generator.name] = generator.finalize(minified=minified)
+        dashboard_json["_".join(generator.name.split("-"))] = generator.finalize(
+            minified=minified
+        )
 
     # Data for api/wall-of-shame
     wallOfShameGenerator.finalize()

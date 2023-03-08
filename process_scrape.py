@@ -23,6 +23,7 @@ player_tags = {
     "spookslayer1": STEVE,
     "youngsmasher": STEVEN,
     "sun": SUN,
+    "Susi sushiserver": SUSI,
     "SusTwins": SUSI,
     "danielscutiegf": SUSU,
     "tangy": TANG,
