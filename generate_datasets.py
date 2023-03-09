@@ -15,7 +15,7 @@ def generate_datasets(output_dir, minified=False):
         matches = [Match(match_json) for match_json in data]
         f.close()
 
-    dashboardGenerators: list[DatasetGenerator] = [
+    dashboard_generators: list[DatasetGenerator] = [
         AssistsGivenPerStandardGameGenerator(),
         AssistsReceivedPerStandardGameGenerator(),
         EasiestMatchupsGenerator(),
@@ -28,9 +28,13 @@ def generate_datasets(output_dir, minified=False):
         TeamSynergyDataGenerator(),
         TeammateSynergyGenerator(),
     ]
-    wallOfShameGenerator = WallOfShameGenerator()
+    wall_of_shame_generator = WallOfShameGenerator()
+    teammate_synergy_data_generator = TeamSynergyDataGenerator()
 
-    all_generators = dashboardGenerators + [wallOfShameGenerator]
+    all_generators = dashboard_generators + [
+        wall_of_shame_generator,
+        teammate_synergy_data_generator,
+    ]
 
     for match in matches:
         for generator in all_generators:
@@ -38,14 +42,18 @@ def generate_datasets(output_dir, minified=False):
 
     # Data for api/dashboard
     dashboard_json = {}
-    for generator in dashboardGenerators:
+    for generator in dashboard_generators:
         dashboard_json["_".join(generator.name.split("-"))] = generator.finalize(
             minified=minified
         )
 
     # Data for api/wall-of-shame
-    wallOfShameGenerator.finalize()
-    wallOfShameGenerator.generate(output_dir=output_dir, minified=minified)
+    wall_of_shame_generator.finalize()
+    wall_of_shame_generator.generate(output_dir=output_dir, minified=minified)
+
+    # Data for training one of Andy's balancing algorithms
+    teammate_synergy_data_generator.finalize()
+    teammate_synergy_data_generator.generate(output_dir=output_dir, minified=minified)
 
     indent = 2
     separators = None
@@ -85,10 +93,7 @@ if __name__ == "__main__":
         IndividualGenerator(),
         MapsGenerator(),
         MetaGenerator(),
-        RecentLobbyWinRatesGenerator(),
-        RolesGenerator(),
         RunningWinrateOverTimeGenerator(),
-        TeamSynergyDataGenerator(),
         TeammateSynergyGenerator(),
         WallOfShameGenerator(),
     ]
