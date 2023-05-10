@@ -6,6 +6,7 @@ bree        | #5C64F4   | #6C7Cf4   | #ACB4FC   | #D7DAFC
 brian       | #757E8A   | #447E8A   | #5C9DA4   | #FFFFFF
 cade        | #DBFF9E   | #0F793E   | #479D56   | #91CB9E
 darwin      | #CDDBFF   | #7F8CEB   | #FFC561   | #FFFD8F
+elke        | #60111F   | #9B2127   | #E59755   | #DECDC2
 josh        | #FAA61A   | #FEAD5B   | #FDE7C1   | #FFFFFF
 lindsey     | #92CED5   | #D1988D   | #EBD5CA   | #FFFFFF
 sequential  | #A6735D   | #4E6B32   | #7B8769   | #DCE1CC
